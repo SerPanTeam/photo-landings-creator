@@ -1,0 +1,21 @@
+<!-- Legal Footer Section -->
+<section class="legal-footer" style="background-color: {{backgroundColor}};">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Links -->
+      <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+        <nav class="legal-links">
+          {{#each links}}
+          <a href="{{this.href}}" class="legal-link">{{this.text}}</a>
+          {{#unless @last}}<span class="legal-separator">|</span>{{/unless}}
+          {{/each}}
+        </nav>
+      </div>
+
+      <!-- Copyright -->
+      <div class="col-md-6 text-center text-md-end">
+        <p class="copyright mb-0">{{copyright}}</p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,34 @@
+/* About Section Specific Styles */
+
+.about {
+  position: relative;
+}
+
+.about-photo {
+  display: flex;
+  justify-content: center;
+}
+
+.about-photo img,
+.about-photo .img-placeholder {
+  max-width: 100%;
+  height: auto;
+}
+
+.about-content {
+  max-width: 100%;
+}
+
+.about .line-divider {
+  border-bottom: 1px solid var(--color-text);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-photo .img-placeholder {
+    width: 100%;
+    max-width: 466px;
+    height: auto;
+    aspect-ratio: 466 / 560;
+  }
+}

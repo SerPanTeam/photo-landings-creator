@@ -1,0 +1,53 @@
+<!-- Features/Family Memories Section -->
+<section class="features section-padding" style="background-color: {{backgroundColor}};">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Column - Text Content -->
+      <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+        <div class="features-content">
+          <!-- Main Heading -->
+          <h2 class="text-bold-big mb-4">{{title}}</h2>
+
+          <!-- Subheading and Description -->
+          <div class="text-medium-small mb-4" style="max-width: 520px;">
+            {{{description}}}
+          </div>
+
+          <!-- Line Divider -->
+          <div class="line-divider mb-4" style="max-width: 618px; border-bottom: 1px solid #3D3D3D;"></div>
+
+          <!-- CTA Link -->
+          {{#if cta}}
+          <div class="features-cta mb-4">
+            <a href="{{cta.link}}" class="text-bold-small text-decoration-none text-black d-inline-flex align-items-center">
+              {{cta.text}}
+              {{#if cta.showArrow}}
+              <span class="ms-2">→</span>
+              {{/if}}
+            </a>
+          </div>
+          {{/if}}
+        </div>
+      </div>
+
+      <!-- Right Column - Image Frame with Slogan -->
+      <div class="col-lg-6 col-md-12">
+        <div class="features-frame" style="background-color: #F8F8F8; padding: 32px 34px 40px 31px; max-width: 493px; margin-left: auto;">
+          <!-- Image inside frame -->
+          {{#if image}}
+          <img src="{{image}}" alt="{{imageAlt}}" class="img-fluid" style="width: 428px; height: 440px;">
+          {{else}}
+          <div class="img-placeholder" style="width: 428px; height: 440px; background-color: #7F7F7F;"></div>
+          {{/if}}
+
+          <!-- Slogan inside frame -->
+          {{#if slogan}}
+          <div class="features-slogan" style="margin-top: 36px;">
+            <p class="text-medium-small mb-0" style="color: {{sloganColor}};">{{slogan}}</p>
+          </div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

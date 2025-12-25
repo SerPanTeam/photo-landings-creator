@@ -1,0 +1,44 @@
+<!-- Hero Section -->
+<section class="hero section-padding" style="background-color: {{backgroundColor}}; min-height: 634px;">
+  <div class="container">
+    <div class="row">
+      <!-- Left Column - Text Content -->
+      <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+        <div class="hero-content" style="padding-top: 53px;">
+          <!-- Logo -->
+          <h2 class="text-h2 mb-5">{{logo}}</h2>
+
+          <!-- Main Heading -->
+          <h1 class="text-h1 mb-4" style="max-width: 629px;">{{title}}</h1>
+
+          <!-- Description -->
+          <p class="text-medium-small mb-4" style="max-width: 386px;">{{description}}</p>
+
+          <!-- CTA Button -->
+          {{#if cta}}
+          <a href="{{cta.link}}" class="btn btn-primary-custom mt-3">
+            {{cta.text}}
+          </a>
+          {{/if}}
+        </div>
+      </div>
+
+      <!-- Right Column - Images -->
+      <div class="col-lg-6 col-md-12">
+        <div class="hero-images position-relative" style="min-height: 474px;">
+          {{#if images}}
+          {{#each images}}
+          <div class="hero-image {{this.className}}" style="{{this.style}}">
+            {{#if this.src}}
+            <img src="{{this.src}}" alt="{{this.alt}}" class="img-fluid {{this.imgClass}}">
+            {{else}}
+            <div class="img-placeholder" style="width: {{this.width}}px; height: {{this.height}}px; background-color: {{this.placeholderColor}};"></div>
+            {{/if}}
+          </div>
+          {{/each}}
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

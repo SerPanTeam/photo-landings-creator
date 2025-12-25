@@ -1,0 +1,30 @@
+<!-- Benefits Section -->
+<section class="benefits section-padding" style="background-color: {{backgroundColor}};">
+  <div class="container">
+    <div class="row">
+      {{#each items}}
+      <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+        <div class="benefit-card">
+          <!-- Icon -->
+          <div class="benefit-icon mb-4">
+            {{#if this.icon}}
+            <img src="{{this.icon}}" alt="{{this.title}}" class="img-fluid">
+            {{else}}
+            <div class="img-placeholder" style="width: 150px; height: 150px; background-color: #7f7f7f;"></div>
+            {{/if}}
+          </div>
+
+          <!-- Title -->
+          <h3 class="text-bold-small mb-3">{{this.title}}</h3>
+
+          <!-- Line Divider -->
+          <div class="benefit-divider mb-4" style="max-width: 158px; border-bottom: 1px solid #3D3D3D;"></div>
+
+          <!-- Description -->
+          <p class="text-medium-small mb-0">{{this.description}}</p>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

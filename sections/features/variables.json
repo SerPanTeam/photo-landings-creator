@@ -1,0 +1,16 @@
+{
+  "backgroundColor": "#F5EDE0",
+  "title": "Für die schönsten Erinnerungen mit deinen Liebsten!",
+  "description": "<p class=\"mb-2\"><strong>Familien-Fotoshooting – liebevoll & natürlich</strong></p><p class=\"mb-2\">&nbsp;</p><p class=\"mb-0\">Ich nehme mir viel Zeit und schaffe eine entspannte Atmosphäre, in der echte, authentische Momente mit eurer Familie entstehen dürfen – voller Nähe, Herzlichkeit und echter Emotionen.</p>",
+  "lineDivider": "http://localhost:3845/assets/932c71d6227d55a53c1b3ab55238c8e600cf2095.svg",
+  "arrowIcon": "http://localhost:3845/assets/811ffed63ef81c658c7e47e5087e8ee325b790b2.svg",
+  "cta": {
+    "text": "Shootingplatz sichern",
+    "link": "#contact",
+    "showArrow": true
+  },
+  "slogan": "– für dich, für dein Kind, für immer –",
+  "sloganColor": "#E2C08D",
+  "image": "",
+  "imageAlt": "Familienfotografie"
+}

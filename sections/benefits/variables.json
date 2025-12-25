@@ -1,0 +1,21 @@
+{
+  "backgroundColor": "#F5EDE0",
+  "lineDivider": "http://localhost:3845/assets/1c9234bc8f2bb0d5efe7eaa21ca1eb3c0a2bb8eb.svg",
+  "items": [
+    {
+      "icon": "",
+      "title": "Viel Zeit & Raum",
+      "description": "für Momente für dich und deine Familie"
+    },
+    {
+      "icon": "",
+      "title": "Professionelle Fotografin",
+      "description": "aus  Leidenschaft und Professionalität"
+    },
+    {
+      "icon": "",
+      "title": "Hohe Qualität",
+      "description": "der Fotos hautnah erleben"
+    }
+  ]
+}

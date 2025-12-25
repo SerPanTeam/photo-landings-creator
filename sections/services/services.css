@@ -1,0 +1,56 @@
+/* Services Section Specific Styles */
+
+.services {
+  position: relative;
+}
+
+.service-card {
+  padding: 20px 10px;
+}
+
+/* Cascade effect - each card shifts down */
+.services .row > div:nth-child(2) .service-card {
+  margin-top: 26px;
+}
+
+.services .row > div:nth-child(3) .service-card {
+  margin-top: 56px;
+}
+
+.services .row > div:nth-child(4) .service-card {
+  margin-top: 86px;
+}
+
+.service-image {
+  display: flex;
+  justify-content: center;
+}
+
+.service-image img,
+.service-image .img-placeholder {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .service-card {
+    margin-bottom: 30px;
+  }
+
+  /* Reset cascade on tablet */
+  .services .row > div:nth-child(2) .service-card,
+  .services .row > div:nth-child(3) .service-card,
+  .services .row > div:nth-child(4) .service-card {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-image .img-placeholder {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+}

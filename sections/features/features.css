@@ -1,0 +1,50 @@
+/* Features/Family Memories Section Specific Styles */
+
+.features {
+  position: relative;
+}
+
+.features-content {
+  max-width: 100%;
+}
+
+.features-cta a:hover {
+  opacity: 0.8;
+}
+
+.features-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: var(--color-frame-bg);
+}
+
+.features-frame .img-placeholder,
+.features-frame img {
+  display: block;
+}
+
+.features-slogan {
+  text-align: right;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .features-frame {
+    margin: 40px auto 0;
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .features-frame .img-placeholder,
+  .features-frame img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 428 / 440;
+  }
+
+  .features-slogan {
+    text-align: center;
+  }
+}

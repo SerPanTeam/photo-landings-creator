@@ -1,0 +1,32 @@
+{
+  "backgroundColor": "#F5EDE0",
+  "logo": "Logo",
+  "title": "Hello, i am a photographer",
+  "description": "Description here",
+  "cta": {
+    "text": "Button",
+    "link": "#contact"
+  },
+  "images": [
+    {
+      "src": "",
+      "alt": "Photographer work showcase",
+      "className": "main-image",
+      "style": "",
+      "width": 428,
+      "height": 394,
+      "imgClass": "",
+      "placeholderColor": "#A19F9F"
+    },
+    {
+      "src": "",
+      "alt": "Photography portfolio",
+      "className": "secondary-image",
+      "style": "",
+      "width": 306,
+      "height": 290,
+      "imgClass": "",
+      "placeholderColor": "#7F7F7F"
+    }
+  ]
+}

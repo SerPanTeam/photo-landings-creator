@@ -1,0 +1,19 @@
+{
+  "backgroundColor": "#F5EDE0",
+  "title": "Häufige Fragen zum Fotoshooting",
+  "lineDivider": "http://localhost:3845/assets/a4b0dd910832a9876e7e3627a5d8d46b6b747bf1.svg",
+  "items": [
+    {
+      "q": "Question 1",
+      "a": "Answer"
+    },
+    {
+      "q": "Question 2",
+      "a": "Answer text will go here"
+    },
+    {
+      "q": "Question 3",
+      "a": "Answer text will go here"
+    }
+  ]
+}

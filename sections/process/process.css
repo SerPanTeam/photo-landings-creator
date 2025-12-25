@@ -1,0 +1,31 @@
+/* Process/Steps Section Specific Styles */
+
+.process {
+  position: relative;
+}
+
+.process-step {
+  padding: 20px 0;
+}
+
+.process-icon {
+  display: flex;
+  align-items: center;
+}
+
+.process-icon img,
+.process-icon .img-placeholder {
+  display: block;
+}
+
+.process-divider {
+  margin-top: 20px;
+  border-bottom: 1px solid var(--color-text);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .process-step {
+    margin-bottom: 30px;
+  }
+}

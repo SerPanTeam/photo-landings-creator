@@ -1,0 +1,14 @@
+{
+  "backgroundColor": "#EEE3D0",
+  "title": "Weihnachts-Fotoshooting-Aktion",
+  "description": "<p class=\"mb-2\">Familienbilder, die sich ideal als ein Weihnachtsgeschenk eignen.</p><p class=\"mb-2\">&nbsp;</p><p class=\"mb-2\">Nutze die Chance und halte eure Familienmomente in liebevollen Bildern fest – 30 Minuten Familien-Fotoshooting für nur 39 € statt 89 €!</p><p class=\"mb-2\">&nbsp;</p><p class=\"mb-0\">Diese Aktion gilt nur bis zum 06.12.25.</p>",
+  "image": "",
+  "imageAlt": "Weihnachts-Fotoshooting",
+  "lineDivider": "http://localhost:3845/assets/6093845857a90ade5addd0eed79f772f12f0bd20.svg",
+  "arrowIcon": "http://localhost:3845/assets/811ffed63ef81c658c7e47e5087e8ee325b790b2.svg",
+  "cta": {
+    "text": "Hier geht's zur Fotoshooting-Aktion",
+    "link": "#contact",
+    "showArrow": true
+  }
+}

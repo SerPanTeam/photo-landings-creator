@@ -1,0 +1,35 @@
+/* Promotional Section Specific Styles */
+
+.promotional {
+  position: relative;
+}
+
+.promotional-image {
+  width: 100%;
+  max-width: 428px;
+}
+
+.promotional-image img,
+.promotional-image .img-placeholder {
+  border-radius: 0;
+}
+
+.promotional-content {
+  max-width: 100%;
+}
+
+.promotional-cta a:hover {
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .promotional-content {
+    padding-left: 0;
+    margin-top: 30px;
+  }
+
+  .promotional-image {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,73 @@
+/* Hero Section Specific Styles */
+
+.hero {
+  position: relative;
+}
+
+.hero-content {
+  z-index: 2;
+}
+
+.hero-images {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hero-image {
+  position: absolute;
+}
+
+.hero-image:first-child {
+  right: 0;
+  top: 0;
+  width: 428px;
+  height: 394px;
+  z-index: 1;
+}
+
+.hero-image:nth-child(2) {
+  right: 92px;
+  top: 178px;
+  width: 306px;
+  height: 290px;
+  z-index: 2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .hero-images {
+    margin-top: 40px;
+    min-height: 400px;
+  }
+
+  .hero-image:first-child {
+    right: 50%;
+    transform: translateX(50%);
+    width: 80%;
+    height: auto;
+  }
+
+  .hero-image:nth-child(2) {
+    right: 50%;
+    transform: translateX(70%);
+    top: 120px;
+    width: 60%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero.section-padding {
+    min-height: auto;
+  }
+
+  .hero-content {
+    padding-top: 20px;
+  }
+
+  .hero-images {
+    min-height: 300px;
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "backgroundColor": "#EEE3D0",
+  "title": "Wie genau komme ich zum Fotoshooting?",
+  "lineDivider": "http://localhost:3845/assets/fe367fcece43d5ee3ee816818a8972b4d5ca8d66.svg",
+  "steps": [
+    {
+      "icon": "",
+      "title": "1. Eintragen",
+      "description": "Gehe das Quiz durch und beantworte die Fragen, damit ich genügend Zeit für dich einplanen kann. Melde dich für das Fotoshooting an und sichere dir deinen exklusiven Gutschein!"
+    },
+    {
+      "icon": "",
+      "title": "2. Shootingzeit",
+      "description": "Während des Fotoshootings entstehen vielfältige und einzigartige Aufnahmen, damit ihr eine große Auswahl an Bildern habt und eure persönlichen Favoriten wählen könnt."
+    },
+    {
+      "icon": "",
+      "title": "3. Wähle dein Lieblingsbild/er aus",
+      "description": "Nach dem Fotoshooting könnt ihr in Ruhe eure Lieblingsbilder auswählen."
+    },
+    {
+      "icon": "",
+      "title": "4. Ergebnis",
+      "description": "Unvergängliche Erinnerungen in digitaler Form – jederzeit abrufbar, zum Teilen mit euren Liebsten oder für den besonderen Moment zum Wiedererleben."
+    }
+  ],
+  "cta": {
+    "text": "Deine Fotoshooting-Aktion – jetzt sichern!",
+    "link": "#contact"
+  }
+}

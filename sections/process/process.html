@@ -1,0 +1,46 @@
+<!-- Process/Steps Section -->
+<section class="process section-padding" style="background-color: {{backgroundColor}};">
+  <div class="container">
+    <!-- Section Title + CTA Button -->
+    <div class="row mb-5 align-items-center">
+      <div class="col-md-6">
+        <h2 class="text-h3">{{title}}</h2>
+      </div>
+      {{#if cta}}
+      <div class="col-md-6 text-md-end mt-3 mt-md-0">
+        <a href="{{cta.link}}" class="btn btn-outline-custom">
+          {{cta.text}}
+        </a>
+      </div>
+      {{/if}}
+    </div>
+
+    <!-- Steps Grid -->
+    <div class="row">
+      {{#each steps}}
+      <div class="col-md-6 mb-5">
+        <div class="process-step">
+          <!-- Icon -->
+          <div class="process-icon mb-3">
+            {{#if this.icon}}
+            <img src="{{this.icon}}" alt="{{this.title}}" style="width: 76px; height: 75px;">
+            {{else}}
+            <div class="img-placeholder" style="width: 76px; height: 75px; background-color: #7f7f7f;"></div>
+            {{/if}}
+          </div>
+
+          <!-- Step Title -->
+          <h3 class="text-bold-small mb-3">{{this.title}}</h3>
+
+          <!-- Step Description -->
+          <p class="text-medium-small mb-4" style="max-width: 550px;">{{this.description}}</p>
+
+          <!-- Line Divider -->
+          <div class="process-divider" style="max-width: 521px; border-bottom: 1px solid #3D3D3D;"></div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+
+  </div>
+</section>

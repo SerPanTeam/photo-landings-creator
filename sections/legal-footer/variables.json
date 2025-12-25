@@ -1,0 +1,9 @@
+{
+  "backgroundColor": "#FFFFFF",
+  "links": [
+    { "text": "Impressum", "href": "/impressum" },
+    { "text": "Datenschutz", "href": "/datenschutz" },
+    { "text": "AGB", "href": "/agb" }
+  ],
+  "copyright": "© 2025 Alle Rechte vorbehalten."
+}

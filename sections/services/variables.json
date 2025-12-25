@@ -1,0 +1,30 @@
+{
+  "backgroundColor": "#EEE3D0",
+  "title": "Das ganze Jahr über finden immer wieder verschiedene Aktionen zu Fotoshootings statt.",
+  "items": [
+    {
+      "image": "",
+      "title": "Family Time",
+      "description": "Die magische Möglichkeit, lebendige Erinnerungen mit deinen Liebsten und engsten Vertrauten einzufangen."
+    },
+    {
+      "image": "",
+      "title": "Kinder-Fotoshooting",
+      "description": "Haltet die unbeschwerte Freude eurer Kinder in liebevollen, natürlichen Bildern fest."
+    },
+    {
+      "image": "",
+      "title": "Babybauch & Newborn",
+      "description": "Schwangerschaft und Neugeborene in liebevollen Bildern festhalten – Erinnerungen, die bleiben."
+    },
+    {
+      "image": "",
+      "title": "Portraitfotografie",
+      "description": "Authentisch, ausdrucksstark, zeitlos – ich halte deine Persönlichkeit in einzigartigen Bildern fest."
+    }
+  ],
+  "cta": {
+    "text": "Jetzt Familien-Fotoshooting anfragen",
+    "link": "#contact"
+  }
+}

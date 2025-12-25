@@ -1,0 +1,38 @@
+<!-- About Section -->
+<section class="about section-padding" style="background-color: {{backgroundColor}};">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Column - Photo -->
+      <div class="col-md-5 mb-4 mb-md-0">
+        <div class="about-photo">
+          {{#if photo}}
+          <img src="{{photo}}" alt="{{name}}" class="img-fluid">
+          {{else}}
+          <div class="img-placeholder mx-auto" style="width: 466px; height: 560px; background-color: #7f7f7f;"></div>
+          {{/if}}
+        </div>
+      </div>
+
+      <!-- Right Column - Text Content -->
+      <div class="col-md-7 ps-md-4 ps-lg-5">
+        <div class="about-content">
+          <!-- Greeting -->
+          <div class="text-medium-big mb-2">
+            {{{greeting}}}
+          </div>
+
+          <!-- Name -->
+          <h2 class="text-bold-big mb-4">{{name}}</h2>
+
+          <!-- Line Divider -->
+          <div class="line-divider mb-4" style="max-width: 471px; border-bottom: 1px solid #3D3D3D;"></div>
+
+          <!-- Bio Text -->
+          <div class="text-medium-small" style="max-width: 576px;">
+            {{{bio}}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
