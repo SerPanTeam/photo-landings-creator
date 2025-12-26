@@ -29,7 +29,7 @@
 
 .benefit-divider {
   height: 1px;
-  border-bottom: 1px solid var(--color-text);
+  border-bottom: 1px solid var(--brand-text);
 }
 
 /* 2x2 Grid Layout with Card Style */

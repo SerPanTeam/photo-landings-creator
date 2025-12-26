@@ -27,7 +27,7 @@
 
 .process-divider {
   margin-top: 20px;
-  border-bottom: 1px solid var(--color-text);
+  border-bottom: 1px solid var(--brand-text);
 }
 
 /* Horizontal 4-column Layout */

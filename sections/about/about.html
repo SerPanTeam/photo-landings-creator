@@ -29,8 +29,10 @@
           <p class="text-medium-big mb-4">{{subtitle}}</p>
           {{/if}}
 
-          <!-- Line Divider -->
+          <!-- Line Divider (optional) -->
+          {{#unless hideLineDivider}}
           <div class="line-divider mb-4" style="max-width: 471px; border-bottom: 1px solid #3D3D3D;"></div>
+          {{/unless}}
 
           <!-- Bio Text -->
           <div class="text-medium-small mb-4" style="max-width: 576px;">

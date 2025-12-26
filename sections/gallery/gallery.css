@@ -51,7 +51,7 @@
   border: none;
   padding: 8px;
   font-size: 24px;
-  color: var(--color-text);
+  color: var(--brand-text);
   line-height: 1;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .gallery-arrow:focus {
-  outline: 2px solid var(--color-text);
+  outline: 2px solid var(--brand-text);
   outline-offset: 2px;
 }
 

@@ -1,0 +1,40 @@
+<!-- FAQ Cards Section -->
+<section class="faq-cards section-padding" style="background-color: {{backgroundColor}};">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <!-- Section Title - CENTERED -->
+        <h2 class="text-h3 mb-5 text-center">{{title}}</h2>
+
+        <!-- FAQ Cards List -->
+        <div class="faq-cards-list">
+          {{#each items}}
+          <div class="faq-cards-item {{#if @first}}active{{/if}}" data-index="{{@index}}">
+            <div class="faq-card">
+              <button type="button" class="faq-card-question d-flex justify-content-between align-items-center w-100 text-start" aria-expanded="{{#if @first}}true{{else}}false{{/if}}" aria-controls="faq-card-answer-{{@index}}">
+                <h3 class="text-bold-small mb-0 flex-grow-1">{{this.q}}</h3>
+                <span class="faq-card-toggle">
+                  <span class="faq-card-toggle-icon">{{#if @first}}−{{else}}+{{/if}}</span>
+                </span>
+              </button>
+
+              <div class="faq-card-answer {{#unless @first}}d-none{{/unless}}" id="faq-card-answer-{{@index}}" role="region">
+                <p class="text-medium-small mb-0">{{this.a}}</p>
+              </div>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+
+        {{#if cta}}
+        <!-- CTA Button -->
+        <div class="faq-cards-cta mt-5 text-center">
+          <a href="{{cta.link}}" class="btn btn-primary-custom">
+            {{cta.text}}
+          </a>
+        </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</section>

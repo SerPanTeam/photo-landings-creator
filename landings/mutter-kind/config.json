@@ -39,6 +39,7 @@
         "backgroundColor": "#F5EDE0",
         "centeredTitle": "Für dich – für dein Kind – für immer!",
         "title": "Zeit für besondere Mutter-Kind-Momente!",
+        "hideLineDivider": true,
         "description": "<p>Egal, ob dein Kind noch ein Baby ist, in der Schulzeit steckt oder schon erwachsen – die besondere Verbindung zwischen Mutter und Kind bleibt ein Leben lang!</p><p>&nbsp;</p><p>Ein Geschenk voller Liebe und bleibender Erinnerungen.</p>",
         "cta": {
           "text": "Kostenloses Fotoshooting sichern",
@@ -123,6 +124,7 @@
       "type": "process",
       "content": {
         "backgroundColor": "#D9D9D9",
+        "titleBackgroundColor": "#F5EDE0",
         "title": "Wie genau komme ich zum kostenlosen Fotoshooting?",
         "layout": "horizontal",
         "cardStyle": "boxed",
@@ -151,7 +153,7 @@
       }
     },
     {
-      "type": "faq",
+      "type": "faq-cards",
       "content": {
         "backgroundColor": "#F5EDE0",
         "title": "Häufige Fragen zum Fotoshooting",
@@ -222,6 +224,7 @@
       "type": "about",
       "content": {
         "backgroundColor": "#F5EDE0",
+        "hideLineDivider": true,
         "greeting": "Willkommen bei",
         "name": "Möst Fotografie",
         "photo": "https://picsum.photos/seed/photographer/466/560",

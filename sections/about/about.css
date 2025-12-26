@@ -20,7 +20,7 @@
 }
 
 .about .line-divider {
-  border-bottom: 1px solid var(--color-text);
+  border-bottom: 1px solid var(--brand-text);
 }
 
 /* Photo on right - adjust content padding */

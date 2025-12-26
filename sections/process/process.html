@@ -1,7 +1,20 @@
 <!-- Process/Steps Section -->
-<section class="process section-padding {{#if layout}}process-{{layout}}{{/if}}" style="background-color: {{backgroundColor}};">
+{{#if titleBackgroundColor}}
+<!-- Title with separate background -->
+<div class="process-title-wrapper section-padding pb-0" style="background-color: {{titleBackgroundColor}};">
   <div class="container">
-    <!-- Section Title -->
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="text-h2 mb-5">{{title}}</h2>
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}
+<section class="process {{#unless titleBackgroundColor}}section-padding{{/unless}} {{#if layout}}process-{{layout}}{{/if}}" style="background-color: {{backgroundColor}}; {{#if titleBackgroundColor}}padding-top: 60px;{{/if}}">
+  <div class="container">
+    <!-- Section Title (when no separate title background) -->
+    {{#unless titleBackgroundColor}}
     {{#ifEquals layout 'horizontal'}}
     <div class="row mb-5">
       <div class="col-12 text-center">
@@ -23,6 +36,7 @@
       {{/if}}
     </div>
     {{/ifEquals}}
+    {{/unless}}
 
     <!-- Steps Grid -->
     <div class="row">

@@ -160,7 +160,7 @@ class LandingBuilder {
   <link href="css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom CSS -->
-  <link href="css/variables.css" rel="stylesheet">
+  <link href="css/base-styles.css" rel="stylesheet">
   <link href="css/common.css" rel="stylesheet">
 
   <!-- Section-specific CSS -->
@@ -202,10 +202,10 @@ ${bodyContent}
       path.join(outputJSDir, 'bootstrap.bundle.min.js')
     );
 
-    // Copy variables.css and common.css
+    // Copy base-styles.css and common.css
     await fs.copy(
-      path.join(this.rootDir, 'assets/css/variables.css'),
-      path.join(outputCSSDir, 'variables.css')
+      path.join(this.rootDir, 'assets/css/base-styles.css'),
+      path.join(outputCSSDir, 'base-styles.css')
     );
     await fs.copy(
       path.join(this.rootDir, 'assets/css/common.css'),

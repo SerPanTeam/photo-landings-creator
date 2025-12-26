@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateSlider();
   }
 
-  // FAQ Toggle Functionality
+  // FAQ Toggle Functionality (original faq section)
   const faqItems = document.querySelectorAll('.faq-item');
 
   faqItems.forEach(item => {
@@ -89,6 +89,31 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
           answer.classList.remove('d-none');
           toggle.textContent = '−';
+          question.setAttribute('aria-expanded', 'true');
+        }
+      });
+    }
+  });
+
+  // FAQ Cards Toggle Functionality (faq-cards section)
+  const faqCardItems = document.querySelectorAll('.faq-cards-item');
+
+  faqCardItems.forEach(item => {
+    const question = item.querySelector('.faq-card-question');
+    const answer = item.querySelector('.faq-card-answer');
+    const toggleIcon = item.querySelector('.faq-card-toggle-icon');
+
+    if (question && answer && toggleIcon) {
+      question.addEventListener('click', () => {
+        const isOpen = !answer.classList.contains('d-none');
+
+        if (isOpen) {
+          answer.classList.add('d-none');
+          toggleIcon.textContent = '+';
+          question.setAttribute('aria-expanded', 'false');
+        } else {
+          answer.classList.remove('d-none');
+          toggleIcon.textContent = '−';
           question.setAttribute('aria-expanded', 'true');
         }
       });

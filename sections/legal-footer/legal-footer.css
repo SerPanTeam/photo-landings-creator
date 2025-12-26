@@ -13,14 +13,14 @@
 }
 
 .legal-link {
-  color: var(--color-text);
+  color: var(--brand-text);
   text-decoration: none;
   font-size: 14px;
   transition: color 0.3s ease;
 }
 
 .legal-link:hover {
-  color: var(--color-text-black);
+  color: var(--brand-text-black);
   text-decoration: underline;
 }
 

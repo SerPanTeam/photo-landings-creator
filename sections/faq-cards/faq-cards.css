@@ -1,0 +1,77 @@
+/* FAQ Cards Section Styles */
+
+.faq-cards {
+  position: relative;
+}
+
+.faq-cards-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 25px 30px;
+}
+
+.faq-card-question {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.faq-card-question:hover {
+  opacity: 0.8;
+}
+
+.faq-card-question:focus {
+  outline: 2px solid var(--brand-text);
+  outline-offset: 4px;
+}
+
+/* Circle toggle icon */
+.faq-card-toggle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #3D3D3D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-left: 15px;
+}
+
+.faq-card-toggle-icon {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: bold;
+  user-select: none;
+}
+
+.faq-card-answer {
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq-card {
+    padding: 20px;
+  }
+
+  .faq-card-toggle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .faq-card-toggle-icon {
+    font-size: 16px;
+  }
+}
