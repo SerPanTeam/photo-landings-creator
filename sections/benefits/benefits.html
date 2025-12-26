@@ -1,8 +1,15 @@
-<!-- Benefits Section -->
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  BENEFITS - Секция с преимуществами (карточки с иконками)                 ║
+     ║  Фон: backgroundColor | Изменить: style="background-color: #EEE3D0;"      ║
+     ║  Варианты layout: 3col (3 колонки), 4col (4 колонки), 2x2 (сетка 2x2)     ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
 <section class="benefits section-padding {{#if layout}}benefits-{{layout}}{{/if}}" style="background-color: {{backgroundColor}};">
   <div class="container">
+
     {{#if title}}
-    <!-- Section Title -->
+    <!-- ══════════════════════════════════════════════════════════════════════════
+         ЗАГОЛОВОК СЕКЦИИ - центрированный
+         ══════════════════════════════════════════════════════════════════════════ -->
     <div class="row mb-5">
       <div class="col-12 text-center">
         <h2 class="text-h2">{{title}}</h2>
@@ -10,11 +17,16 @@
     </div>
     {{/if}}
 
+    <!-- ══════════════════════════════════════════════════════════════════════════
+         КАРТОЧКИ ПРЕИМУЩЕСТВ
+         Каждая карточка содержит: иконку, заголовок, описание
+         ══════════════════════════════════════════════════════════════════════════ -->
     <div class="row">
       {{#each items}}
       <div class="{{#if ../layout}}{{#ifEquals ../layout '2x2'}}col-lg-6{{else}}{{#ifEquals ../layout '4col'}}col-lg-3{{else}}col-lg-4{{/ifEquals}}{{/ifEquals}}{{else}}col-lg-4{{/if}} col-md-6 mb-4">
         <div class="benefit-card {{#if ../cardStyle}}benefit-card-{{../cardStyle}}{{/if}}">
-          <!-- Icon -->
+
+          <!-- ИКОНКА - изменить src="..." для замены -->
           <div class="benefit-icon">
             {{#if this.icon}}
             <img src="{{this.icon}}" alt="{{this.title}}" class="img-fluid">
@@ -23,22 +35,23 @@
             {{/if}}
           </div>
 
-          <!-- Text Content -->
           <div class="benefit-text">
-            <!-- Title -->
+            <!-- ЗАГОЛОВОК КАРТОЧКИ -->
             <h3 class="text-bold-small mb-3">{{this.title}}</h3>
 
+            <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ (убрать: hideLineDivider: true в config) -->
             {{#unless ../hideLineDivider}}
-            <!-- Line Divider -->
             <div class="benefit-divider mb-3" style="max-width: 158px; border-bottom: 1px solid #3D3D3D;"></div>
             {{/unless}}
 
-            <!-- Description -->
+            <!-- ОПИСАНИЕ КАРТОЧКИ -->
             <p class="text-medium-small mb-0">{{this.description}}</p>
           </div>
+
         </div>
       </div>
       {{/each}}
     </div>
+
   </div>
 </section>

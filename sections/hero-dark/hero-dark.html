@@ -1,58 +1,80 @@
-<!-- Hero Dark Section -->
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  HERO DARK - Главная секция с тёмным фоном                                ║
+     ║  Фон: backgroundColor | Изменить: style="background-color: #3D3D3D;"      ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
 <section class="hero-dark section-padding" style="background-color: {{backgroundColor}}; min-height: 709px;">
   <div class="container">
-    <!-- Logo -->
+
+    <!-- ══════════════════════════════════════════════════════════════════════════
+         ЛОГОТИП - текст в верхней части
+         ══════════════════════════════════════════════════════════════════════════ -->
     <div class="row">
       <div class="col-12">
         <h2 class="text-h2 hero-dark-logo" style="color: {{logoColor}};">{{logo}}</h2>
       </div>
     </div>
 
-    <!-- Main Content Row -->
     <div class="row hero-dark-content">
-      <!-- Left Column - Promotional Text -->
+
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ЛЕВАЯ КОЛОНКА - Промо текст
+           ════════════════════════════════════════════════════════════════════════ -->
       <div class="col-lg-6 col-md-12 hero-dark-left">
         <div class="hero-dark-promo">
+
+          <!-- ПРОМО ЗАГОЛОВОК - основной рекламный текст -->
           {{#if promoTitle}}
           <p class="hero-dark-promo-title" style="color: {{promoTitleColor}};">{{promoTitle}}</p>
           {{/if}}
 
+          <!-- ПРОМО АКЦЕНТ - выделенный текст (обычно золотой) -->
           {{#if promoHighlight}}
           <p class="hero-dark-promo-highlight" style="color: {{promoHighlightColor}};">{{promoHighlight}}</p>
           {{/if}}
 
+          <!-- ПРОМО ПРИМЕЧАНИЕ - важная информация (даты, ограничения) -->
           {{#if promoNote}}
           <p class="hero-dark-promo-note" style="color: {{promoNoteColor}};">{{promoNote}}</p>
           {{/if}}
 
+          <!-- ПРОМО ОПИСАНИЕ - дополнительный текст -->
           {{#if promoDescription}}
           <p class="hero-dark-promo-description" style="color: {{promoDescriptionColor}};">{{promoDescription}}</p>
           {{/if}}
+
         </div>
       </div>
 
-      <!-- Right Column - Main Title + CTA -->
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ПРАВАЯ КОЛОНКА - Главный заголовок и кнопка
+           ════════════════════════════════════════════════════════════════════════ -->
       <div class="col-lg-6 col-md-12 hero-dark-right">
         <div class="hero-dark-main">
-          <!-- Main Title -->
+
+          <!-- ГЛАВНЫЙ ЗАГОЛОВОК H1 - самый важный текст на странице -->
           <h1 class="hero-dark-title">
             {{#if titleHighlight}}
+            <!-- Выделенная часть заголовка -->
             <span style="color: {{titleHighlightColor}};">{{titleHighlight}}</span><br>
             {{/if}}
+            <!-- Основная часть заголовка -->
             <span style="color: {{titleColor}};">{{title}}</span>
           </h1>
 
-          <!-- Subtitle -->
+          <!-- ПОДЗАГОЛОВОК - текст под главным заголовком -->
           {{#if subtitle}}
           <p class="hero-dark-subtitle" style="color: {{subtitleColor}};">{{subtitle}}</p>
           {{/if}}
 
-          <!-- CTA Button -->
+          <!-- КНОПКА CTA - призыв к действию -->
+          <!-- Изменить текст: между > и </a> -->
+          <!-- Изменить ссылку: href="..." -->
           {{#if cta}}
           <a href="{{cta.link}}" class="btn btn-primary-custom hero-dark-cta">
             {{cta.text}}
           </a>
           {{/if}}
+
         </div>
       </div>
     </div>

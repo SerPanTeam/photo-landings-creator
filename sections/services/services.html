@@ -1,19 +1,30 @@
-<!-- Services Section -->
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  SERVICES - Секция с услугами (карточки с изображениями)                  ║
+     ║  Фон: backgroundColor | Изменить: style="background-color: #EEE3D0;"      ║
+     ║  Варианты layout: flat (центрированный), grid (сетка)                     ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
 <section class="services section-padding {{#if layout}}services-{{layout}}{{/if}}" style="background-color: {{backgroundColor}};">
   <div class="container">
-    <!-- Section Title -->
+
+    <!-- ══════════════════════════════════════════════════════════════════════════
+         ЗАГОЛОВОК СЕКЦИИ
+         ══════════════════════════════════════════════════════════════════════════ -->
     <div class="row mb-5">
       <div class="col-12 {{#ifEquals layout 'flat'}}text-center{{/ifEquals}}">
         <h2 class="text-h3 {{#ifEquals layout 'flat'}}mx-auto{{/ifEquals}}" style="max-width: 883px;">{{title}}</h2>
       </div>
     </div>
 
-    <!-- Services Cards -->
+    <!-- ══════════════════════════════════════════════════════════════════════════
+         КАРТОЧКИ УСЛУГ
+         Каждая карточка: изображение, заголовок, описание
+         ══════════════════════════════════════════════════════════════════════════ -->
     <div class="row">
       {{#each items}}
       <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
         <div class="service-card">
-          <!-- Service Image -->
+
+          <!-- ИЗОБРАЖЕНИЕ УСЛУГИ - изменить src="..." для замены -->
           <div class="service-image mb-3">
             {{#if this.image}}
             <img src="{{this.image}}" alt="{{this.title}}" class="img-fluid">
@@ -22,17 +33,20 @@
             {{/if}}
           </div>
 
-          <!-- Service Title -->
+          <!-- НАЗВАНИЕ УСЛУГИ -->
           <h3 class="text-bold-small mb-3">{{this.title}}</h3>
 
-          <!-- Service Description -->
+          <!-- ОПИСАНИЕ УСЛУГИ -->
           <p class="text-medium-small mb-0" style="max-width: 283px;">{{this.description}}</p>
+
         </div>
       </div>
       {{/each}}
     </div>
 
-    <!-- CTA Button -->
+    <!-- КНОПКА CTA - призыв к действию -->
+    <!-- Изменить текст: между > и </a> -->
+    <!-- Изменить ссылку: href="..." -->
     {{#if cta}}
     <div class="row mt-5">
       <div class="col-12 {{#ifEquals layout 'flat'}}text-center{{/ifEquals}}">
@@ -42,5 +56,6 @@
       </div>
     </div>
     {{/if}}
+
   </div>
 </section>

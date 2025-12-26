@@ -1,6 +1,14 @@
-<!-- Process/Steps Section -->
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  PROCESS - Секция с шагами/этапами процесса                               ║
+     ║  Фон карточек: backgroundColor | Фон заголовка: titleBackgroundColor      ║
+     ║  Варианты layout: horizontal (4 в ряд), vertical (2x2 сетка)              ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+
 {{#if titleBackgroundColor}}
-<!-- Title with separate background -->
+<!-- ══════════════════════════════════════════════════════════════════════════
+     ЗАГОЛОВОК НА ОТДЕЛЬНОМ ФОНЕ
+     Используется когда titleBackgroundColor отличается от backgroundColor
+     ══════════════════════════════════════════════════════════════════════════ -->
 <div class="process-title-wrapper section-padding pb-0" style="background-color: {{titleBackgroundColor}};">
   <div class="container">
     <div class="row">
@@ -11,9 +19,11 @@
   </div>
 </div>
 {{/if}}
+
 <section class="process {{#unless titleBackgroundColor}}section-padding{{/unless}} {{#if layout}}process-{{layout}}{{/if}}" style="background-color: {{backgroundColor}}; {{#if titleBackgroundColor}}padding-top: 60px;{{/if}}">
   <div class="container">
-    <!-- Section Title (when no separate title background) -->
+
+    <!-- ЗАГОЛОВОК СЕКЦИИ (когда нет отдельного фона для заголовка) -->
     {{#unless titleBackgroundColor}}
     {{#ifEquals layout 'horizontal'}}
     <div class="row mb-5">
@@ -22,8 +32,15 @@
       </div>
     </div>
     {{else}}
-    <!-- Default: Title + CTA in row -->
+    <!-- Заголовок (вертикальный layout) -->
     <div class="row mb-5 align-items-center">
+      {{#if ctaCentered}}
+      <!-- Только заголовок, CTA будет внизу по центру -->
+      <div class="col-12">
+        <h2 class="text-h3">{{title}}</h2>
+      </div>
+      {{else}}
+      <!-- Заголовок + кнопка в одной строке -->
       <div class="col-md-6">
         <h2 class="text-h3">{{title}}</h2>
       </div>
@@ -34,19 +51,23 @@
         </a>
       </div>
       {{/if}}
+      {{/if}}
     </div>
     {{/ifEquals}}
     {{/unless}}
 
-    <!-- Steps Grid -->
+    <!-- ══════════════════════════════════════════════════════════════════════════
+         КАРТОЧКИ ШАГОВ
+         Каждая карточка: номер/иконка, заголовок, описание
+         ══════════════════════════════════════════════════════════════════════════ -->
     <div class="row">
       {{#each steps}}
       <div class="{{#ifEquals ../layout 'horizontal'}}col-lg-3 col-md-6{{else}}col-md-6{{/ifEquals}} mb-4">
         <div class="process-step {{#if ../cardStyle}}process-step-{{../cardStyle}}{{/if}}">
-          <!-- Step Header (Icon + Title) -->
+
           <div class="process-step-header mb-3">
             {{#unlessEquals ../layout 'horizontal'}}
-            <!-- Icon (for default layout) -->
+            <!-- ИКОНКА ШАГА - изменить src="..." для замены -->
             <div class="process-icon">
               {{#if this.icon}}
               <img src="{{this.icon}}" alt="{{this.title}}" style="width: 76px; height: 75px;">
@@ -56,25 +77,34 @@
             </div>
             {{/unlessEquals}}
 
-            <!-- Step Title -->
+            <!-- ЗАГОЛОВОК ШАГА (например: "1. Eintragen") -->
             <h3 class="text-bold-small mb-0">{{this.title}}</h3>
           </div>
 
-          <!-- Step Description -->
+          <!-- ОПИСАНИЕ ШАГА -->
           <p class="text-medium-small mb-4">{{this.description}}</p>
 
           {{#unlessEquals ../layout 'horizontal'}}
-          <!-- Line Divider (for default layout) -->
           <div class="process-divider" style="max-width: 521px; border-bottom: 1px solid #3D3D3D;"></div>
           {{/unlessEquals}}
+
         </div>
       </div>
       {{/each}}
     </div>
 
-    {{#ifEquals layout 'horizontal'}}
-    <!-- CTA Button centered (for horizontal layout) -->
+    <!-- КНОПКА CTA - по центру (для horizontal layout или ctaCentered) -->
     {{#if cta}}
+    {{#ifEquals layout 'horizontal'}}
+    <div class="row mt-4">
+      <div class="col-12 text-center">
+        <a href="{{cta.link}}" class="btn btn-primary-custom">
+          {{cta.text}}
+        </a>
+      </div>
+    </div>
+    {{else}}
+    {{#if ctaCentered}}
     <div class="row mt-4">
       <div class="col-12 text-center">
         <a href="{{cta.link}}" class="btn btn-primary-custom">
@@ -84,6 +114,7 @@
     </div>
     {{/if}}
     {{/ifEquals}}
+    {{/if}}
 
   </div>
 </section>

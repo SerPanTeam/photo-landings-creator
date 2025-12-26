@@ -1,20 +1,29 @@
-<!-- Gallery Section -->
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  GALLERY - Галерея изображений (слайдер)                                  ║
+     ║  Фон: backgroundColor | Изменить: style="background-color: #F5EDE0;"      ║
+     ║  Стрелки: showArrows: true/false                                          ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
 <section class="gallery section-padding" style="background-color: {{backgroundColor}};" aria-label="Fotogalerie">
   <div class="container position-relative">
-    <!-- Navigation Arrow Left -->
+
+    <!-- СТРЕЛКА ВЛЕВО - навигация по галерее -->
     {{#if showArrows}}
     <button type="button" class="gallery-arrow gallery-arrow-left" data-direction="prev" aria-label="Vorheriges Bild">
       <span aria-hidden="true">←</span>
     </button>
     {{/if}}
 
-    <!-- Gallery Slider Wrapper -->
+    <!-- ══════════════════════════════════════════════════════════════════════════
+         СЛАЙДЫ ГАЛЕРЕИ
+         Каждый слайд содержит одно изображение
+         ══════════════════════════════════════════════════════════════════════════ -->
     <div class="gallery-wrapper">
       <div class="gallery-track" data-index="0">
         {{#each images}}
         <div class="gallery-slide">
           <div class="gallery-item">
             {{#if this.src}}
+            <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
             <img src="{{this.src}}" alt="{{this.alt}}" class="img-fluid" style="width: 400px; height: 400px; object-fit: cover;">
             {{else}}
             <div class="img-placeholder mx-auto" style="width: 400px; height: 400px; background-color: #7f7f7f;"></div>
@@ -25,11 +34,12 @@
       </div>
     </div>
 
-    <!-- Navigation Arrow Right -->
+    <!-- СТРЕЛКА ВПРАВО - навигация по галерее -->
     {{#if showArrows}}
     <button type="button" class="gallery-arrow gallery-arrow-right" data-direction="next" aria-label="Nächstes Bild">
       <span aria-hidden="true">→</span>
     </button>
     {{/if}}
+
   </div>
 </section>

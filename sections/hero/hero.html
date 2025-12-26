@@ -1,38 +1,53 @@
-<!-- Hero Section -->
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  HERO - Главная секция со светлым фоном                                   ║
+     ║  Фон: backgroundColor | Изменить: style="background-color: #F5EDE0;"      ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
 <section class="hero section-padding" style="background-color: {{backgroundColor}}; min-height: 634px;">
   <div class="container">
     <div class="row">
-      <!-- Left Column - Text Content -->
+
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ЛЕВАЯ КОЛОНКА - Текст
+           ════════════════════════════════════════════════════════════════════════ -->
       <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
         <div class="hero-content" style="padding-top: 53px;">
-          <!-- Logo -->
+
+          <!-- ЛОГОТИП - текст или название компании -->
           <h2 class="text-h2 mb-5">{{logo}}</h2>
 
-          <!-- Main Heading -->
+          <!-- ГЛАВНЫЙ ЗАГОЛОВОК H1 - самый важный текст на странице -->
           <h1 class="text-h1 mb-4" style="max-width: 629px;">
             {{#if titleHighlight}}
+            <!-- Выделенная часть (другой цвет) -->
             <span style="color: {{titleHighlightColor}};">{{titleHighlight}}</span><br>
             {{/if}}
+            <!-- Основной текст заголовка -->
             {{title}}
           </h1>
 
-          <!-- Description -->
+          <!-- ОПИСАНИЕ - краткий текст под заголовком -->
           <p class="text-medium-small mb-4" style="max-width: 386px;">{{description}}</p>
 
-          <!-- CTA Button -->
+          <!-- КНОПКА CTA - призыв к действию -->
+          <!-- Изменить текст: между > и </a> -->
+          <!-- Изменить ссылку: href="..." -->
           {{#if cta}}
           <a href="{{cta.link}}" class="btn btn-primary-custom mt-3">
             {{cta.text}}
           </a>
           {{/if}}
+
         </div>
       </div>
 
-      <!-- Right Column - Images -->
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ПРАВАЯ КОЛОНКА - Изображения
+           ════════════════════════════════════════════════════════════════════════ -->
       <div class="col-lg-6 col-md-12">
         <div class="hero-images position-relative" style="min-height: 474px;">
           {{#if images}}
           {{#each images}}
+          <!-- ИЗОБРАЖЕНИЕ: изменить src="..." для замены картинки -->
           <div class="hero-image {{this.className}}" style="{{this.style}}">
             {{#if this.src}}
             <img src="{{this.src}}" alt="{{this.alt}}" class="img-fluid {{this.imgClass}}">
@@ -44,6 +59,7 @@
           {{/if}}
         </div>
       </div>
+
     </div>
   </div>
 </section>

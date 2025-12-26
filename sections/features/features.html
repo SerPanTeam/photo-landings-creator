@@ -1,8 +1,14 @@
-<!-- Features/Family Memories Section -->
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  FEATURES - Секция с описанием и изображениями                            ║
+     ║  Фон: backgroundColor | Изменить: style="background-color: #F5EDE0;"      ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
 <section class="features section-padding {{#if layout}}features-{{layout}}{{/if}}" style="background-color: {{backgroundColor}};">
   <div class="container">
+
     {{#if centeredTitle}}
-    <!-- Centered Section Title -->
+    <!-- ══════════════════════════════════════════════════════════════════════════
+         ЦЕНТРИРОВАННЫЙ ЗАГОЛОВОК - отображается над основным контентом
+         ══════════════════════════════════════════════════════════════════════════ -->
     <div class="row mb-5">
       <div class="col-12 text-center">
         <h2 class="text-h2">{{centeredTitle}}</h2>
@@ -11,25 +17,30 @@
     {{/if}}
 
     <div class="row align-items-center {{#ifEquals imagePosition 'left'}}flex-row-reverse{{/ifEquals}}">
-      <!-- Left Column - Text Content -->
+
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ЛЕВАЯ КОЛОНКА - Текстовый контент
+           ════════════════════════════════════════════════════════════════════════ -->
       <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
         <div class="features-content">
+
           {{#unless centeredTitle}}
-          <!-- Main Heading (when no centered title) -->
+          <!-- ЗАГОЛОВОК - основной заголовок секции (если нет центрированного) -->
           <h2 class="text-bold-big mb-4">{{title}}</h2>
           {{else}}
-          <!-- Subtitle (when centered title exists) -->
           {{#if title}}
+          <!-- ПОДЗАГОЛОВОК - дополнительный заголовок (если есть центрированный) -->
           <h3 class="text-bold-big mb-4">{{title}}</h3>
           {{/if}}
           {{/unless}}
 
-          <!-- Subheading and Description -->
+          <!-- ОПИСАНИЕ - основной текст секции -->
+          <!-- Поддерживает HTML: <p>, <br>, <strong>, <em> -->
           <div class="text-medium-small mb-4" style="max-width: 520px;">
             {{{description}}}
           </div>
 
-          <!-- Bullet Points -->
+          <!-- СПИСОК - пункты с буллетами (опционально) -->
           {{#if bulletPoints}}
           <ul class="features-bullets">
             {{#each bulletPoints}}
@@ -38,12 +49,14 @@
           </ul>
           {{/if}}
 
-          <!-- Line Divider (optional) -->
+          <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ (убрать: hideLineDivider: true в config) -->
           {{#unless hideLineDivider}}
           <div class="line-divider mb-4" style="max-width: 618px; border-bottom: 1px solid #3D3D3D;"></div>
           {{/unless}}
 
-          <!-- CTA Link or Button -->
+          <!-- КНОПКА CTA - призыв к действию -->
+          <!-- Изменить текст: между > и </a> -->
+          <!-- Изменить ссылку: href="..." -->
           {{#if cta}}
           <div class="features-cta mb-4">
             {{#if cta.isButton}}
@@ -60,15 +73,19 @@
             {{/if}}
           </div>
           {{/if}}
+
         </div>
       </div>
 
-      <!-- Right Column - Image(s) -->
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ПРАВАЯ КОЛОНКА - Изображения
+           ════════════════════════════════════════════════════════════════════════ -->
       <div class="col-lg-6 col-md-12">
         {{#if images}}
-        <!-- Multiple Overlapping Images Layout -->
+        <!-- НЕСКОЛЬКО ИЗОБРАЖЕНИЙ - с наложением друг на друга -->
         <div class="features-images position-relative" style="min-height: 500px;">
           {{#each images}}
+          <!-- ИЗОБРАЖЕНИЕ: изменить src="..." для замены картинки -->
           <div class="features-image {{this.className}}" style="{{this.style}}">
             {{#if this.src}}
             <img src="{{this.src}}" alt="{{this.alt}}" class="img-fluid {{this.imgClass}}" style="border-radius: {{this.borderRadius}};">
@@ -79,16 +96,15 @@
           {{/each}}
         </div>
         {{else}}
-        <!-- Single Image Frame with Slogan -->
+        <!-- ОДНО ИЗОБРАЖЕНИЕ В РАМКЕ - со слоганом внизу -->
         <div class="features-frame" style="background-color: #F8F8F8; padding: 32px 34px 40px 31px; max-width: 493px; margin-left: auto;">
-          <!-- Image inside frame -->
           {{#if image}}
           <img src="{{image}}" alt="{{imageAlt}}" class="img-fluid" style="width: 428px; height: 440px;">
           {{else}}
           <div class="img-placeholder" style="width: 428px; height: 440px; background-color: #7F7F7F;"></div>
           {{/if}}
 
-          <!-- Slogan inside frame -->
+          <!-- СЛОГАН - текст под изображением в рамке -->
           {{#if slogan}}
           <div class="features-slogan" style="margin-top: 36px;">
             <p class="text-medium-small mb-0" style="color: {{sloganColor}};">{{slogan}}</p>
@@ -97,6 +113,7 @@
         </div>
         {{/if}}
       </div>
+
     </div>
   </div>
 </section>
