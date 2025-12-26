@@ -2,6 +2,15 @@ const fs = require('fs-extra');
 const path = require('path');
 const Handlebars = require('handlebars');
 
+// Register custom Handlebars helpers
+Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
+  return (arg1 === arg2) ? options.fn(this) : options.inverse(this);
+});
+
+Handlebars.registerHelper('unlessEquals', function(arg1, arg2, options) {
+  return (arg1 !== arg2) ? options.fn(this) : options.inverse(this);
+});
+
 class LandingBuilder {
   constructor(landingName) {
     this.landingName = landingName;

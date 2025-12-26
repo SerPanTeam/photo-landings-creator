@@ -1,27 +1,41 @@
 <!-- Benefits Section -->
-<section class="benefits section-padding" style="background-color: {{backgroundColor}};">
+<section class="benefits section-padding {{#if layout}}benefits-{{layout}}{{/if}}" style="background-color: {{backgroundColor}};">
   <div class="container">
+    {{#if title}}
+    <!-- Section Title -->
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <h2 class="text-h2">{{title}}</h2>
+      </div>
+    </div>
+    {{/if}}
+
     <div class="row">
       {{#each items}}
-      <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-        <div class="benefit-card">
+      <div class="{{#if ../layout}}{{#ifEquals ../layout '2x2'}}col-lg-6{{else}}{{#ifEquals ../layout '4col'}}col-lg-3{{else}}col-lg-4{{/ifEquals}}{{/ifEquals}}{{else}}col-lg-4{{/if}} col-md-6 mb-4">
+        <div class="benefit-card {{#if ../cardStyle}}benefit-card-{{../cardStyle}}{{/if}}">
           <!-- Icon -->
-          <div class="benefit-icon mb-4">
+          <div class="benefit-icon">
             {{#if this.icon}}
             <img src="{{this.icon}}" alt="{{this.title}}" class="img-fluid">
             {{else}}
-            <div class="img-placeholder" style="width: 150px; height: 150px; background-color: #7f7f7f;"></div>
+            <div class="img-placeholder" style="width: {{#if ../iconSize}}{{../iconSize}}{{else}}150{{/if}}px; height: {{#if ../iconSize}}{{../iconSize}}{{else}}150{{/if}}px; background-color: #7f7f7f;"></div>
             {{/if}}
           </div>
 
-          <!-- Title -->
-          <h3 class="text-bold-small mb-3">{{this.title}}</h3>
+          <!-- Text Content -->
+          <div class="benefit-text">
+            <!-- Title -->
+            <h3 class="text-bold-small mb-3">{{this.title}}</h3>
 
-          <!-- Line Divider -->
-          <div class="benefit-divider mb-4" style="max-width: 158px; border-bottom: 1px solid #3D3D3D;"></div>
+            {{#unless ../hideLineDivider}}
+            <!-- Line Divider -->
+            <div class="benefit-divider mb-3" style="max-width: 158px; border-bottom: 1px solid #3D3D3D;"></div>
+            {{/unless}}
 
-          <!-- Description -->
-          <p class="text-medium-small mb-0">{{this.description}}</p>
+            <!-- Description -->
+            <p class="text-medium-small mb-0">{{this.description}}</p>
+          </div>
         </div>
       </div>
       {{/each}}

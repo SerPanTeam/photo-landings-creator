@@ -1,7 +1,15 @@
 <!-- Process/Steps Section -->
-<section class="process section-padding" style="background-color: {{backgroundColor}};">
+<section class="process section-padding {{#if layout}}process-{{layout}}{{/if}}" style="background-color: {{backgroundColor}};">
   <div class="container">
-    <!-- Section Title + CTA Button -->
+    <!-- Section Title -->
+    {{#ifEquals layout 'horizontal'}}
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <h2 class="text-h2">{{title}}</h2>
+      </div>
+    </div>
+    {{else}}
+    <!-- Default: Title + CTA in row -->
     <div class="row mb-5 align-items-center">
       <div class="col-md-6">
         <h2 class="text-h3">{{title}}</h2>
@@ -14,33 +22,54 @@
       </div>
       {{/if}}
     </div>
+    {{/ifEquals}}
 
     <!-- Steps Grid -->
     <div class="row">
       {{#each steps}}
-      <div class="col-md-6 mb-5">
-        <div class="process-step">
-          <!-- Icon -->
-          <div class="process-icon mb-3">
-            {{#if this.icon}}
-            <img src="{{this.icon}}" alt="{{this.title}}" style="width: 76px; height: 75px;">
-            {{else}}
-            <div class="img-placeholder" style="width: 76px; height: 75px; background-color: #7f7f7f;"></div>
-            {{/if}}
+      <div class="{{#ifEquals ../layout 'horizontal'}}col-lg-3 col-md-6{{else}}col-md-6{{/ifEquals}} mb-4">
+        <div class="process-step {{#if ../cardStyle}}process-step-{{../cardStyle}}{{/if}}">
+          <!-- Step Header (Icon + Title) -->
+          <div class="process-step-header mb-3">
+            {{#unlessEquals ../layout 'horizontal'}}
+            <!-- Icon (for default layout) -->
+            <div class="process-icon">
+              {{#if this.icon}}
+              <img src="{{this.icon}}" alt="{{this.title}}" style="width: 76px; height: 75px;">
+              {{else}}
+              <div class="img-placeholder" style="width: 76px; height: 75px; background-color: #7f7f7f;"></div>
+              {{/if}}
+            </div>
+            {{/unlessEquals}}
+
+            <!-- Step Title -->
+            <h3 class="text-bold-small mb-0">{{this.title}}</h3>
           </div>
 
-          <!-- Step Title -->
-          <h3 class="text-bold-small mb-3">{{this.title}}</h3>
-
           <!-- Step Description -->
-          <p class="text-medium-small mb-4" style="max-width: 550px;">{{this.description}}</p>
+          <p class="text-medium-small mb-4">{{this.description}}</p>
 
-          <!-- Line Divider -->
+          {{#unlessEquals ../layout 'horizontal'}}
+          <!-- Line Divider (for default layout) -->
           <div class="process-divider" style="max-width: 521px; border-bottom: 1px solid #3D3D3D;"></div>
+          {{/unlessEquals}}
         </div>
       </div>
       {{/each}}
     </div>
+
+    {{#ifEquals layout 'horizontal'}}
+    <!-- CTA Button centered (for horizontal layout) -->
+    {{#if cta}}
+    <div class="row mt-4">
+      <div class="col-12 text-center">
+        <a href="{{cta.link}}" class="btn btn-primary-custom">
+          {{cta.text}}
+        </a>
+      </div>
+    </div>
+    {{/if}}
+    {{/ifEquals}}
 
   </div>
 </section>

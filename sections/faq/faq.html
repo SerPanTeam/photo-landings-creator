@@ -25,6 +25,15 @@
           </div>
           {{/each}}
         </div>
+
+        {{#if cta}}
+        <!-- CTA Button -->
+        <div class="faq-cta mt-5 text-center">
+          <a href="{{cta.link}}" class="btn btn-primary-custom">
+            {{cta.text}}
+          </a>
+        </div>
+        {{/if}}
       </div>
     </div>
   </div>

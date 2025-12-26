@@ -1,10 +1,10 @@
 <!-- Services Section -->
-<section class="services section-padding" style="background-color: {{backgroundColor}};">
+<section class="services section-padding {{#if layout}}services-{{layout}}{{/if}}" style="background-color: {{backgroundColor}};">
   <div class="container">
     <!-- Section Title -->
     <div class="row mb-5">
-      <div class="col-12">
-        <h2 class="text-h3" style="max-width: 883px;">{{title}}</h2>
+      <div class="col-12 {{#ifEquals layout 'flat'}}text-center{{/ifEquals}}">
+        <h2 class="text-h3 {{#ifEquals layout 'flat'}}mx-auto{{/ifEquals}}" style="max-width: 883px;">{{title}}</h2>
       </div>
     </div>
 
@@ -32,11 +32,11 @@
       {{/each}}
     </div>
 
-    <!-- CTA Button - Left aligned -->
+    <!-- CTA Button -->
     {{#if cta}}
     <div class="row mt-5">
-      <div class="col-12">
-        <a href="{{cta.link}}" class="btn btn-outline-custom">
+      <div class="col-12 {{#ifEquals layout 'flat'}}text-center{{/ifEquals}}">
+        <a href="{{cta.link}}" class="btn {{#ifEquals layout 'flat'}}btn-primary-custom{{else}}btn-outline-custom{{/ifEquals}}">
           {{cta.text}}
         </a>
       </div>

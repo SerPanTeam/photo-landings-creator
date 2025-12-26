@@ -1,0 +1,23 @@
+{
+  "backgroundColor": "#3D3D3D",
+  "logo": "Logo",
+  "logoColor": "#F5EDE0",
+  "promoTitle": "Promotional text here",
+  "promoTitleColor": "#FFFFFF",
+  "promoHighlight": "Highlight text with golden color",
+  "promoHighlightColor": "#E2C08D",
+  "promoNote": "Additional note text",
+  "promoNoteColor": "#FFFFFF",
+  "promoDescription": "Description text explaining the offer",
+  "promoDescriptionColor": "#FFFFFF",
+  "titleHighlight": "Kostenloses",
+  "titleHighlightColor": "#E2C08D",
+  "title": "Mutter-Kind-Fotoshooting!",
+  "titleColor": "#E2C08D",
+  "subtitle": "Subtitle text here",
+  "subtitleColor": "#FFFFFF",
+  "cta": {
+    "text": "Jetzt Rabatt sichern",
+    "link": "#contact"
+  }
+}

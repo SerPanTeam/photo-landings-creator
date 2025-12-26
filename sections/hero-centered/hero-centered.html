@@ -1,0 +1,58 @@
+<!-- Hero Centered Section -->
+<section class="hero-centered section-padding" style="background-color: {{backgroundColor}}; min-height: {{minHeight}};">
+  <div class="container">
+    <!-- Logo -->
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="text-h2 hero-centered-logo" style="color: {{logoColor}};">{{logo}}</h2>
+      </div>
+    </div>
+
+    <!-- Images + Text Layout -->
+    <div class="hero-centered-content">
+      <!-- Left Image -->
+      {{#if images.[0]}}
+      <div class="hero-centered-img hero-centered-img-left">
+        {{#if images.[0].src}}
+        <img src="{{images.[0].src}}" alt="{{images.[0].alt}}" style="width: {{images.[0].width}}px; height: {{images.[0].height}}px; object-fit: cover; border-radius: {{images.[0].borderRadius}};">
+        {{else}}
+        <div class="img-placeholder" style="width: {{images.[0].width}}px; height: {{images.[0].height}}px; background: {{images.[0].placeholderColor}}; border-radius: {{images.[0].borderRadius}};"></div>
+        {{/if}}
+      </div>
+      {{/if}}
+
+      <!-- Center Content -->
+      <div class="hero-centered-text text-center">
+        <h1 class="hero-centered-title" style="color: {{titleColor}};">{{title}}</h1>
+        {{#if subtitle}}
+        <p class="hero-centered-subtitle" style="color: {{subtitleColor}};">{{subtitle}}</p>
+        {{/if}}
+        {{#if cta}}
+        <a href="{{cta.link}}" class="btn btn-primary-custom hero-centered-cta">{{cta.text}}</a>
+        {{/if}}
+      </div>
+
+      <!-- Right Image -->
+      {{#if images.[1]}}
+      <div class="hero-centered-img hero-centered-img-right">
+        {{#if images.[1].src}}
+        <img src="{{images.[1].src}}" alt="{{images.[1].alt}}" style="width: {{images.[1].width}}px; height: {{images.[1].height}}px; object-fit: cover; border-radius: {{images.[1].borderRadius}};">
+        {{else}}
+        <div class="img-placeholder" style="width: {{images.[1].width}}px; height: {{images.[1].height}}px; background: {{images.[1].placeholderColor}}; border-radius: {{images.[1].borderRadius}};"></div>
+        {{/if}}
+      </div>
+      {{/if}}
+
+      <!-- Bottom Image -->
+      {{#if images.[2]}}
+      <div class="hero-centered-img hero-centered-img-bottom">
+        {{#if images.[2].src}}
+        <img src="{{images.[2].src}}" alt="{{images.[2].alt}}" style="width: {{images.[2].width}}px; height: {{images.[2].height}}px; object-fit: cover; border-radius: {{images.[2].borderRadius}};">
+        {{else}}
+        <div class="img-placeholder" style="width: {{images.[2].width}}px; height: {{images.[2].height}}px; background: {{images.[2].placeholderColor}}; border-radius: {{images.[2].borderRadius}};"></div>
+        {{/if}}
+      </div>
+      {{/if}}
+    </div>
+  </div>
+</section>

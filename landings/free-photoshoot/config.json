@@ -1,0 +1,264 @@
+{
+  "name": "Free Photoshoot Landing - Dorett Dornbusch",
+  "lang": "de",
+  "meta": {
+    "title": "Kostenloses Familien-Fotoshooting | Dorett Dornbusch",
+    "description": "Jetzt kostenloses Familien-Fotoshooting sichern! Professionelle Fotografin in Dortmund für authentische Familienbilder.",
+    "keywords": "kostenloses fotoshooting, familienfotografie, dortmund, fotograf, familie, kinder, gratis"
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "figmaNode": "121:9",
+      "content": {
+        "backgroundColor": "#F5EDE0",
+        "logo": "Logo",
+        "titleHighlight": "Kostenloses",
+        "titleHighlightColor": "#E2C08D",
+        "title": "Familien-Fotoshooting!",
+        "description": "Description here",
+        "cta": {
+          "text": "Button",
+          "link": "#contact"
+        },
+        "images": [
+          {
+            "src": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=428&h=394&fit=crop",
+            "alt": "Professionelle Familienfotografie",
+            "className": "main-image",
+            "width": 428,
+            "height": 394,
+            "placeholderColor": "#A19F9F"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=306&h=290&fit=crop",
+            "alt": "Authentische Familienmomente",
+            "className": "secondary-image",
+            "width": 306,
+            "height": 290,
+            "placeholderColor": "#7F7F7F"
+          }
+        ]
+      }
+    },
+    {
+      "type": "features",
+      "figmaNode": "121:20",
+      "content": {
+        "backgroundColor": "#EEE3D0",
+        "title": "Für die schönsten Erinnerungen mit deinen Liebsten!",
+        "description": "<p class=\"mb-2\"><strong>Familien-Fotoshooting – liebevoll & natürlich</strong></p><p class=\"mb-0\">Ich nehme mir viel Zeit und schaffe eine entspannte Atmosphäre, in der echte, authentische Momente mit eurer Familie entstehen dürfen – voller Nähe, Herzlichkeit und echter Emotionen.</p>",
+        "image": "https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=428&h=440&fit=crop",
+        "imageAlt": "Familienmomente",
+        "cta": {
+          "text": "Kostenloses Fotoshooting sichern",
+          "link": "#contact",
+          "showArrow": true
+        },
+        "slogan": "",
+        "sloganColor": "#E2C08D"
+      }
+    },
+    {
+      "type": "promotional",
+      "figmaNode": "121:10",
+      "content": {
+        "backgroundColor": "#F5EDE0",
+        "title": "Liebe Familien, aufgepasst!",
+        "description": "<p class=\"mb-2\">Jetzt kostenloses Familien-Fotoshooting sichern – bei mir im Studio!</p><p class=\"mb-2\">Die kostenlosen Fotoshootings sind nur bis zum 13.11.25</p><p class=\"mb-2\">&nbsp;</p><p class=\"mb-2\"><strong>Warum kostenlos?</strong></p><p class=\"mb-2\">&nbsp;</p><p class=\"mb-2\">Weil ich auf meine Qualität vertraue – und sicher bin, dass du deine Bilder lieben wirst.</p><p class=\"mb-0\">Du entscheidest selbst, ob und welche du kaufen möchtest – ganz ohne Risiko.</p>",
+        "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=440&h=440&fit=crop",
+        "imageAlt": "Kostenloses Familien-Fotoshooting",
+        "cta": {
+          "text": "Hier geht's zu den Gutscheinen",
+          "link": "#contact",
+          "showArrow": true
+        }
+      }
+    },
+    {
+      "type": "gallery",
+      "figmaNode": "121:37",
+      "content": {
+        "backgroundColor": "#EEE3D0",
+        "showArrows": true,
+        "images": [
+          {
+            "src": "https://images.unsplash.com/photo-1581952976147-5a2d15560349?w=400&h=400&fit=crop",
+            "alt": "Familienfoto 1"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400&h=400&fit=crop",
+            "alt": "Familienfoto 2"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=400&h=400&fit=crop",
+            "alt": "Familienfoto 3"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=400&h=400&fit=crop",
+            "alt": "Familienfoto 4"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=400&h=400&fit=crop",
+            "alt": "Familienfoto 5"
+          },
+          {
+            "src": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=400&h=400&fit=crop",
+            "alt": "Familienfoto 6"
+          }
+        ]
+      }
+    },
+    {
+      "type": "benefits",
+      "figmaNode": "121:11",
+      "content": {
+        "backgroundColor": "#F5EDE0",
+        "items": [
+          {
+            "icon": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
+            "title": "Viel Zeit & Raum",
+            "description": "für Momente für dich und deine Familie"
+          },
+          {
+            "icon": "https://images.unsplash.com/photo-1554151228-14d9def656e4?w=150&h=150&fit=crop",
+            "title": "Professionelle Fotografin",
+            "description": "aus Leidenschaft und Professionalität"
+          },
+          {
+            "icon": "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=150&h=150&fit=crop",
+            "title": "Hohe Qualität",
+            "description": "der Fotos hautnah erleben"
+          }
+        ]
+      }
+    },
+    {
+      "type": "process",
+      "figmaNode": "121:22",
+      "content": {
+        "backgroundColor": "#EEE3D0",
+        "title": "Wie genau komme ich zum Fotoshooting?",
+        "cta": {
+          "text": "Deine Fotoshooting-Aktion – jetzt sichern!",
+          "link": "#contact"
+        },
+        "steps": [
+          {
+            "icon": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=76&h=75&fit=crop",
+            "title": "1. Eintragen",
+            "description": "Gehe das Quiz durch und beantworte die Fragen, damit ich genügend Zeit für dich einplanen kann. Melde dich für das Fotoshooting an und sichere dir deinen exklusiven Gutschein!"
+          },
+          {
+            "icon": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=76&h=75&fit=crop",
+            "title": "2. Shootingzeit",
+            "description": "Während des Fotoshootings entstehen vielfältige und einzigartige Aufnahmen, damit ihr eine große Auswahl an Bildern habt und eure persönlichen Favoriten wählen könnt."
+          },
+          {
+            "icon": "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=76&h=75&fit=crop",
+            "title": "3. Wähle dein Lieblingsbild/er aus",
+            "description": "Nach dem Fotoshooting könnt ihr in Ruhe eure Lieblingsbilder auswählen."
+          },
+          {
+            "icon": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=76&h=75&fit=crop",
+            "title": "4. Ergebnis",
+            "description": "Unvergängliche Erinnerungen in digitaler Form – jederzeit abrufbar, zum Teilen mit euren Liebsten oder für den besonderen Moment zum Wiedererleben."
+          }
+        ]
+      }
+    },
+    {
+      "type": "fullwidth-image",
+      "figmaNode": "121:76",
+      "content": {
+        "src": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=1440&h=656&fit=crop",
+        "alt": "Glückliche Familie beim Fotoshooting"
+      }
+    },
+    {
+      "type": "faq",
+      "figmaNode": "121:12",
+      "content": {
+        "backgroundColor": "#F5EDE0",
+        "title": "Häufige Fragen zum Fotoshooting",
+        "items": [
+          {
+            "q": "Wie lange dauert ein Fotoshooting?",
+            "a": "Ein typisches Familien-Fotoshooting dauert etwa 30-60 Minuten."
+          },
+          {
+            "q": "Wie viele Bilder erhalte ich?",
+            "a": "Nach dem Shooting erhältst du eine Auswahl an Bildern zur Ansicht. Du kannst dann deine Lieblingsbilder auswählen."
+          },
+          {
+            "q": "Wo findet das Fotoshooting statt?",
+            "a": "Das Fotoshooting findet in meinem Studio in Dortmund-Huckarde statt. Ich schaffe eine entspannte Atmosphäre, damit natürliche und emotionale Aufnahmen entstehen."
+          }
+        ]
+      }
+    },
+    {
+      "type": "services",
+      "figmaNode": "121:23",
+      "content": {
+        "backgroundColor": "#EEE3D0",
+        "title": "Das ganze Jahr über finden immer wieder verschiedene Aktionen zu Fotoshootings statt.",
+        "cta": {
+          "text": "Jetzt Familien-Fotoshooting anfragen",
+          "link": "#contact"
+        },
+        "items": [
+          {
+            "image": "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=300&h=300&fit=crop",
+            "title": "Family Time",
+            "description": "Die magische Möglichkeit, lebendige Erinnerungen mit deinen Liebsten und engsten Vertrauten einzufangen."
+          },
+          {
+            "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=300&h=300&fit=crop",
+            "title": "Kinder-Fotoshooting",
+            "description": "Haltet die unbeschwerte Freude eurer Kinder in liebevollen, natürlichen Bildern fest."
+          },
+          {
+            "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=300&h=300&fit=crop",
+            "title": "Babybauch & Newborn",
+            "description": "Schwangerschaft und Neugeborene in liebevollen Bildern festhalten – Erinnerungen, die bleiben."
+          },
+          {
+            "image": "https://images.unsplash.com/photo-1457449940276-e8deed18bfff?w=300&h=300&fit=crop",
+            "title": "Portraitfotografie",
+            "description": "Authentisch, ausdrucksstark, zeitlos – ich halte deine Persönlichkeit in einzigartigen Bildern fest."
+          }
+        ]
+      }
+    },
+    {
+      "type": "about",
+      "figmaNode": "121:13",
+      "content": {
+        "backgroundColor": "#F5EDE0",
+        "name": "Dorett Dornbusch",
+        "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=466&h=560&fit=crop",
+        "greeting": "<p class=\"mb-0\">Willkommen bei</p><p>&nbsp;</p>",
+        "bio": "<p class=\"mb-2\">Ich bin Dorett (Fotografenmeisterin), und liebe es, besondere Momente in authentischen Bildern festzuhalten.</p><p class=\"mb-2\">&nbsp;</p><p class=\"mb-2\">In meinem Studio in Dortmund-Huckarde sorge ich für eine entspannte Atmosphäre, damit natürliche und emotionale Aufnahmen entstehen.</p><p class=\"mb-2\">&nbsp;</p><p class=\"mb-0\">Mit meiner positiven Art nehme ich dir die Nervosität und mache das Shooting zu einem entspannten Erlebnis – gerne per Du!</p>"
+      }
+    },
+    {
+      "type": "footer",
+      "figmaNode": "121:footer",
+      "content": {
+        "mapPlaceholder": "Maps here ..."
+      }
+    },
+    {
+      "type": "legal-footer",
+      "content": {
+        "links": [
+          { "text": "Impressum", "href": "/impressum" },
+          { "text": "Datenschutz", "href": "/datenschutz" },
+          { "text": "AGB", "href": "/agb" }
+        ],
+        "copyright": "© 2025 Dorett Dornbusch. Alle Rechte vorbehalten."
+      }
+    }
+  ]
+}

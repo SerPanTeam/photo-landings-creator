@@ -1,0 +1,60 @@
+<!-- Hero Dark Section -->
+<section class="hero-dark section-padding" style="background-color: {{backgroundColor}}; min-height: 709px;">
+  <div class="container">
+    <!-- Logo -->
+    <div class="row">
+      <div class="col-12">
+        <h2 class="text-h2 hero-dark-logo" style="color: {{logoColor}};">{{logo}}</h2>
+      </div>
+    </div>
+
+    <!-- Main Content Row -->
+    <div class="row hero-dark-content">
+      <!-- Left Column - Promotional Text -->
+      <div class="col-lg-6 col-md-12 hero-dark-left">
+        <div class="hero-dark-promo">
+          {{#if promoTitle}}
+          <p class="hero-dark-promo-title" style="color: {{promoTitleColor}};">{{promoTitle}}</p>
+          {{/if}}
+
+          {{#if promoHighlight}}
+          <p class="hero-dark-promo-highlight" style="color: {{promoHighlightColor}};">{{promoHighlight}}</p>
+          {{/if}}
+
+          {{#if promoNote}}
+          <p class="hero-dark-promo-note" style="color: {{promoNoteColor}};">{{promoNote}}</p>
+          {{/if}}
+
+          {{#if promoDescription}}
+          <p class="hero-dark-promo-description" style="color: {{promoDescriptionColor}};">{{promoDescription}}</p>
+          {{/if}}
+        </div>
+      </div>
+
+      <!-- Right Column - Main Title + CTA -->
+      <div class="col-lg-6 col-md-12 hero-dark-right">
+        <div class="hero-dark-main">
+          <!-- Main Title -->
+          <h1 class="hero-dark-title">
+            {{#if titleHighlight}}
+            <span style="color: {{titleHighlightColor}};">{{titleHighlight}}</span><br>
+            {{/if}}
+            <span style="color: {{titleColor}};">{{title}}</span>
+          </h1>
+
+          <!-- Subtitle -->
+          {{#if subtitle}}
+          <p class="hero-dark-subtitle" style="color: {{subtitleColor}};">{{subtitle}}</p>
+          {{/if}}
+
+          <!-- CTA Button -->
+          {{#if cta}}
+          <a href="{{cta.link}}" class="btn btn-primary-custom hero-dark-cta">
+            {{cta.text}}
+          </a>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

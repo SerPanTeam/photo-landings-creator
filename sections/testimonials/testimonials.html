@@ -1,0 +1,66 @@
+<!-- Testimonials Section -->
+<section class="testimonials section-padding" style="background-color: {{backgroundColor}};">
+  <div class="container position-relative">
+    <!-- Navigation Arrow Left -->
+    {{#if showArrows}}
+    <button type="button" class="testimonials-arrow testimonials-arrow-left" data-direction="prev" aria-label="Vorheriger Bewertung">
+      <span aria-hidden="true">←</span>
+    </button>
+    {{/if}}
+
+    <!-- Title -->
+    {{#if title}}
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <h2 class="text-h3">{{title}}</h2>
+      </div>
+    </div>
+    {{/if}}
+
+    <!-- Testimonials Slider -->
+    <div class="testimonials-wrapper">
+      <div class="testimonials-track" data-index="0">
+        {{#each items}}
+        <div class="testimonials-slide">
+          <div class="testimonial-card">
+            <!-- Photo -->
+            {{#if this.photo}}
+            <div class="testimonial-photo mb-3">
+              <img src="{{this.photo}}" alt="{{this.author}}" class="img-fluid">
+            </div>
+            {{else}}
+            <div class="testimonial-photo mb-3">
+              <div class="img-placeholder" style="width: 100%; aspect-ratio: 1; background-color: #7f7f7f;"></div>
+            </div>
+            {{/if}}
+
+            <!-- Author Name -->
+            <h3 class="text-bold-small mb-2">{{this.author}}</h3>
+
+            <!-- Review Text -->
+            <p class="text-medium-small mb-0">{{this.text}}</p>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+
+    <!-- Navigation Arrow Right -->
+    {{#if showArrows}}
+    <button type="button" class="testimonials-arrow testimonials-arrow-right" data-direction="next" aria-label="Nächste Bewertung">
+      <span aria-hidden="true">→</span>
+    </button>
+    {{/if}}
+
+    <!-- CTA Button -->
+    {{#if cta}}
+    <div class="row mt-5">
+      <div class="col-12 text-center">
+        <a href="{{cta.link}}" class="btn btn-primary-custom">
+          {{cta.text}}
+        </a>
+      </div>
+    </div>
+    {{/if}}
+  </div>
+</section>

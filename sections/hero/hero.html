@@ -9,7 +9,12 @@
           <h2 class="text-h2 mb-5">{{logo}}</h2>
 
           <!-- Main Heading -->
-          <h1 class="text-h1 mb-4" style="max-width: 629px;">{{title}}</h1>
+          <h1 class="text-h1 mb-4" style="max-width: 629px;">
+            {{#if titleHighlight}}
+            <span style="color: {{titleHighlightColor}};">{{titleHighlight}}</span><br>
+            {{/if}}
+            {{title}}
+          </h1>
 
           <!-- Description -->
           <p class="text-medium-small mb-4" style="max-width: 386px;">{{description}}</p>

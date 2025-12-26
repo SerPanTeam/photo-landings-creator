@@ -1,37 +1,83 @@
 <!-- Features/Family Memories Section -->
-<section class="features section-padding" style="background-color: {{backgroundColor}};">
+<section class="features section-padding {{#if layout}}features-{{layout}}{{/if}}" style="background-color: {{backgroundColor}};">
   <div class="container">
-    <div class="row align-items-center">
+    {{#if centeredTitle}}
+    <!-- Centered Section Title -->
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <h2 class="text-h2">{{centeredTitle}}</h2>
+      </div>
+    </div>
+    {{/if}}
+
+    <div class="row align-items-center {{#ifEquals imagePosition 'left'}}flex-row-reverse{{/ifEquals}}">
       <!-- Left Column - Text Content -->
       <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
         <div class="features-content">
-          <!-- Main Heading -->
+          {{#unless centeredTitle}}
+          <!-- Main Heading (when no centered title) -->
           <h2 class="text-bold-big mb-4">{{title}}</h2>
+          {{else}}
+          <!-- Subtitle (when centered title exists) -->
+          {{#if title}}
+          <h3 class="text-bold-big mb-4">{{title}}</h3>
+          {{/if}}
+          {{/unless}}
 
           <!-- Subheading and Description -->
           <div class="text-medium-small mb-4" style="max-width: 520px;">
             {{{description}}}
           </div>
 
+          <!-- Bullet Points -->
+          {{#if bulletPoints}}
+          <ul class="features-bullets">
+            {{#each bulletPoints}}
+            <li class="text-medium-small">{{this}}</li>
+            {{/each}}
+          </ul>
+          {{/if}}
+
           <!-- Line Divider -->
           <div class="line-divider mb-4" style="max-width: 618px; border-bottom: 1px solid #3D3D3D;"></div>
 
-          <!-- CTA Link -->
+          <!-- CTA Link or Button -->
           {{#if cta}}
           <div class="features-cta mb-4">
+            {{#if cta.isButton}}
+            <a href="{{cta.link}}" class="btn btn-primary-custom">
+              {{cta.text}}
+            </a>
+            {{else}}
             <a href="{{cta.link}}" class="text-bold-small text-decoration-none text-black d-inline-flex align-items-center">
               {{cta.text}}
               {{#if cta.showArrow}}
               <span class="ms-2">→</span>
               {{/if}}
             </a>
+            {{/if}}
           </div>
           {{/if}}
         </div>
       </div>
 
-      <!-- Right Column - Image Frame with Slogan -->
+      <!-- Right Column - Image(s) -->
       <div class="col-lg-6 col-md-12">
+        {{#if images}}
+        <!-- Multiple Overlapping Images Layout -->
+        <div class="features-images position-relative" style="min-height: 500px;">
+          {{#each images}}
+          <div class="features-image {{this.className}}" style="{{this.style}}">
+            {{#if this.src}}
+            <img src="{{this.src}}" alt="{{this.alt}}" class="img-fluid {{this.imgClass}}" style="border-radius: {{this.borderRadius}};">
+            {{else}}
+            <div class="img-placeholder" style="width: {{this.width}}px; height: {{this.height}}px; background-color: {{this.placeholderColor}}; border-radius: {{this.borderRadius}};"></div>
+            {{/if}}
+          </div>
+          {{/each}}
+        </div>
+        {{else}}
+        <!-- Single Image Frame with Slogan -->
         <div class="features-frame" style="background-color: #F8F8F8; padding: 32px 34px 40px 31px; max-width: 493px; margin-left: auto;">
           <!-- Image inside frame -->
           {{#if image}}
@@ -47,6 +93,7 @@
           </div>
           {{/if}}
         </div>
+        {{/if}}
       </div>
     </div>
   </div>

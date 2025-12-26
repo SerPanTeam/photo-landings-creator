@@ -1,6 +1,8 @@
 {
   "backgroundColor": "#F5EDE0",
   "logo": "Logo",
+  "titleHighlight": "",
+  "titleHighlightColor": "#E2C08D",
   "title": "Hello, i am a photographer",
   "description": "Description here",
   "cta": {

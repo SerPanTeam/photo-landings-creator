@@ -1,0 +1,49 @@
+:root {
+  --brand-primary: #e67ea6;
+  --brand-secondary: #ffc857;
+  --brand-dark: #171717;
+  --brand-muted: #6c757d;
+  --brand-bg: #ffffff;
+  --brand-border: #efefef;
+
+  --brand-font-main: system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+  background: var(--brand-bg);
+  color: var(--brand-dark);
+  font-family: var(--brand-font-main);
+}
+
+.custom-navbar {
+  background: var(--brand-bg) !important;
+  border-bottom: 1px solid var(--brand-border);
+}
+
+.custom-logo {
+  color: var(--brand-dark) !important;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.custom-link {
+  color: var(--brand-dark) !important;
+  font-weight: 500;
+  margin-left: 8px;
+}
+
+.custom-link:hover {
+  color: var(--brand-primary) !important;
+}
+
+.custom-btn {
+  background-color: var(--brand-primary) !important;
+  border-color: var(--brand-primary) !important;
+  font-weight: 500;
+  padding: 6px 16px;
+}
+
+.custom-btn:hover {
+  background-color: #d56b96 !important;
+  border-color: #d56b96 !important;
+}

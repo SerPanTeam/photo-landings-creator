@@ -24,12 +24,32 @@
 
 /* Responsive adjustments */
 @media (max-width: 991px) {
+  /* Text first, image second on mobile */
+  .promotional .row {
+    flex-direction: column-reverse;
+  }
+
   .promotional-content {
-    padding-left: 0;
-    margin-top: 30px;
+    padding-left: 0 !important;
+    margin-bottom: 30px;
   }
 
   .promotional-image {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .promotional-image .img-placeholder {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@media (max-width: 576px) {
+  .promotional-image .img-placeholder {
+    max-width: 280px;
   }
 }

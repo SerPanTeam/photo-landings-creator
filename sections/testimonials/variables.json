@@ -1,0 +1,31 @@
+{
+  "backgroundColor": "#EEE3D0",
+  "title": "Was Eltern sagen",
+  "showArrows": true,
+  "items": [
+    {
+      "title": "Wunderschöne Erinnerungen",
+      "text": "Die Fotos sind absolut traumhaft geworden. Die entspannte Atmosphäre hat dafür gesorgt, dass sich unser Baby wohl gefühlt hat.",
+      "author": "Familie Müller",
+      "childAge": "3 Wochen"
+    },
+    {
+      "title": "Professionell und einfühlsam",
+      "text": "Von Anfang bis Ende ein tolles Erlebnis. Die Fotografin hat sich viel Zeit genommen und jedes Detail liebevoll eingefangen.",
+      "author": "Sarah K.",
+      "childAge": "2 Monate"
+    },
+    {
+      "title": "Über alle Erwartungen",
+      "text": "Wir sind begeistert! Die Bilder zeigen genau die zarten Momente, die wir festhalten wollten. Absolute Empfehlung!",
+      "author": "Familie Weber",
+      "childAge": "4 Wochen"
+    },
+    {
+      "title": "Ein unvergessliches Erlebnis",
+      "text": "Die Fotografin hat eine magische Art, die kleinsten Details einzufangen. Unsere Bilder sind jetzt unser größter Schatz.",
+      "author": "Lisa & Thomas",
+      "childAge": "6 Wochen"
+    }
+  ]
+}

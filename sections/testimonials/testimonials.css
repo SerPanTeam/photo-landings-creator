@@ -1,0 +1,118 @@
+/* Testimonials Section Specific Styles */
+
+.testimonials {
+  position: relative;
+  overflow: visible;
+}
+
+.testimonials .container {
+  position: relative;
+}
+
+/* Testimonials Slider */
+.testimonials-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.testimonials-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 20px;
+}
+
+.testimonials-slide {
+  flex: 0 0 calc(25% - 15px);
+  min-width: calc(25% - 15px);
+}
+
+.testimonial-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-photo {
+  width: 100%;
+}
+
+.testimonial-photo img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.testimonial-photo .img-placeholder {
+  width: 100%;
+}
+
+/* Navigation Arrows */
+.testimonials-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  background: transparent;
+  border: none;
+  padding: 8px;
+  font-size: 24px;
+  color: var(--color-text);
+  line-height: 1;
+}
+
+.testimonials-arrow:hover {
+  opacity: 1;
+}
+
+.testimonials-arrow:focus {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+}
+
+.testimonials-arrow-left {
+  left: -70px;
+}
+
+.testimonials-arrow-right {
+  right: -70px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .testimonials-arrow-left {
+    left: -50px;
+  }
+
+  .testimonials-arrow-right {
+    right: -50px;
+  }
+}
+
+@media (max-width: 991px) {
+  .testimonials-arrow-left {
+    left: 10px;
+  }
+
+  .testimonials-arrow-right {
+    right: 10px;
+  }
+
+  .testimonials-slide {
+    flex: 0 0 calc(50% - 10px);
+    min-width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
+
+  .testimonials-arrow span {
+    font-size: 20px;
+  }
+}

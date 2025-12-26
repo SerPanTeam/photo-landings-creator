@@ -1,7 +1,7 @@
 <!-- About Section -->
 <section class="about section-padding" style="background-color: {{backgroundColor}};">
   <div class="container">
-    <div class="row align-items-center">
+    <div class="row align-items-center {{#ifEquals photoPosition 'right'}}flex-row-reverse{{/ifEquals}}">
       <!-- Left Column - Photo -->
       <div class="col-md-5 mb-4 mb-md-0">
         <div class="about-photo">
@@ -24,13 +24,23 @@
           <!-- Name -->
           <h2 class="text-bold-big mb-4">{{name}}</h2>
 
+          {{#if subtitle}}
+          <!-- Subtitle -->
+          <p class="text-medium-big mb-4">{{subtitle}}</p>
+          {{/if}}
+
           <!-- Line Divider -->
           <div class="line-divider mb-4" style="max-width: 471px; border-bottom: 1px solid #3D3D3D;"></div>
 
           <!-- Bio Text -->
-          <div class="text-medium-small" style="max-width: 576px;">
+          <div class="text-medium-small mb-4" style="max-width: 576px;">
             {{{bio}}}
           </div>
+
+          {{#if closingText}}
+          <!-- Closing Text -->
+          <p class="text-bold-small">{{closingText}}</p>
+          {{/if}}
         </div>
       </div>
     </div>

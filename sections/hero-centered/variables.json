@@ -1,0 +1,40 @@
+{
+  "backgroundColor": "#F5EDE0",
+  "minHeight": "800px",
+  "logo": "Logo",
+  "logoColor": "#3D3D3D",
+  "title": "Newborn Fotoshooting",
+  "titleColor": "#3D3D3D",
+  "subtitle": "Die ersten Wochen eures Babys – zart, einzigartig und voller Wunder. Ich halte diese kostbaren Momente in liebevollen Bildern fest.",
+  "subtitleColor": "#3D3D3D",
+  "cta": {
+    "text": "Termin anfragen",
+    "link": "#contact"
+  },
+  "images": [
+    {
+      "src": "",
+      "alt": "Newborn Foto 1",
+      "width": 320,
+      "height": 320,
+      "borderRadius": "10px",
+      "placeholderColor": "#7f7f7f"
+    },
+    {
+      "src": "",
+      "alt": "Newborn Foto 2",
+      "width": 320,
+      "height": 400,
+      "borderRadius": "10px",
+      "placeholderColor": "#7f7f7f"
+    },
+    {
+      "src": "",
+      "alt": "Newborn Foto 3",
+      "width": 280,
+      "height": 280,
+      "borderRadius": "10px",
+      "placeholderColor": "#7f7f7f"
+    }
+  ]
+}
