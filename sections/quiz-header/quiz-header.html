@@ -1,0 +1,35 @@
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  QUIZ HEADER - Шапка страницы квиза (лого + прогресс)                     ║
+     ║  Фон: backgroundColor | Текст: textColor                                   ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+<header class="quiz-header" style="background-color: {{backgroundColor}};">
+  <div class="container">
+    <div class="quiz-header__content">
+
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ЛОГОТИП
+           ════════════════════════════════════════════════════════════════════════ -->
+      <div class="quiz-header__logo">
+        {{#if logoSrc}}
+        <a href="{{logoLink}}">
+          <img src="{{logoSrc}}" alt="{{logo}}" class="quiz-header__logo-img">
+        </a>
+        {{else}}
+        <a href="{{logoLink}}" class="quiz-header__logo-text text-bold-big" style="color: {{textColor}};">
+          {{logo}}
+        </a>
+        {{/if}}
+      </div>
+
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ПРОГРЕСС / ПОДЗАГОЛОВОК
+           ════════════════════════════════════════════════════════════════════════ -->
+      {{#if progress}}
+      <div class="quiz-header__progress">
+        <p class="text-medium-small" style="color: {{textColor}};">{{progress}}</p>
+      </div>
+      {{/if}}
+
+    </div>
+  </div>
+</header>

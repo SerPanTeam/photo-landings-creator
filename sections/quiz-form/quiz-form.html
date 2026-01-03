@@ -1,0 +1,125 @@
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  QUIZ FORM - Форма регистрации на фотосессию                               ║
+     ║  Включает: поля ввода, чекбокс согласия, кнопку отправки                   ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+<section class="quiz-form" style="background-color: {{backgroundColor}};">
+  <div class="container">
+    <div class="row">
+
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ЛЕВАЯ КОЛОНКА - Форма
+           ════════════════════════════════════════════════════════════════════════ -->
+      <div class="col-lg-6">
+        <div class="quiz-form__content">
+
+          <!-- Заголовок -->
+          <div class="quiz-form__header">
+            <p class="quiz-form__subtitle text-bold-small" style="color: {{textColor}};">{{subtitle}}</p>
+            <h2 class="quiz-form__title text-bold-big" style="color: {{textColor}};">{{title}}</h2>
+            {{#if deadline}}
+            <p class="quiz-form__deadline text-medium-small" style="color: {{textColor}};">{{deadline}}</p>
+            {{/if}}
+          </div>
+
+          <!-- Форма -->
+          <form id="quiz-registration-form" class="quiz-form__form" onsubmit="return submitQuizForm(event)">
+
+            <!-- Имя -->
+            <div class="quiz-form__field">
+              <input type="text"
+                     name="name"
+                     id="form-name"
+                     class="quiz-form__input"
+                     placeholder="{{namePlaceholder}}"
+                     required>
+            </div>
+
+            <!-- Email -->
+            <div class="quiz-form__field">
+              <input type="email"
+                     name="email"
+                     id="form-email"
+                     class="quiz-form__input"
+                     placeholder="{{emailPlaceholder}}"
+                     required>
+            </div>
+
+            <!-- Телефон -->
+            <div class="quiz-form__field">
+              <input type="tel"
+                     name="phone"
+                     id="form-phone"
+                     class="quiz-form__input"
+                     placeholder="{{phonePlaceholder}}"
+                     required>
+            </div>
+
+            <!-- Доступность -->
+            <div class="quiz-form__field">
+              <select name="availability"
+                      id="form-availability"
+                      class="quiz-form__input quiz-form__select"
+                      required>
+                <option value="" disabled selected>{{availabilityPlaceholder}}</option>
+                {{#each availabilityOptions}}
+                <option value="{{this.value}}">{{this.text}}</option>
+                {{/each}}
+              </select>
+            </div>
+
+            <!-- Согласие на обработку данных -->
+            <div class="quiz-form__checkbox-wrapper">
+              <input type="checkbox"
+                     name="privacy"
+                     id="form-privacy"
+                     class="quiz-form__checkbox"
+                     required>
+              <label for="form-privacy" class="quiz-form__checkbox-label text-medium-small">
+                {{privacyText}}
+                <a href="{{privacyLink}}" target="_blank" class="quiz-form__privacy-link">{{privacyLinkText}}</a>.
+              </label>
+            </div>
+
+            <!-- Кнопка отправки -->
+            <button type="submit" class="quiz-form__submit btn-primary-custom">
+              {{submitText}}
+            </button>
+
+          </form>
+        </div>
+      </div>
+
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ПРАВАЯ КОЛОНКА - Изображение и информация
+           ════════════════════════════════════════════════════════════════════════ -->
+      <div class="col-lg-6">
+        <div class="quiz-form__sidebar">
+
+          <!-- Изображение -->
+          <div class="quiz-form__image-wrapper">
+            {{#if sideImage}}
+            <img src="{{sideImage}}" alt="{{sideImageAlt}}" class="quiz-form__image">
+            {{else}}
+            <div class="quiz-form__image-placeholder"></div>
+            {{/if}}
+          </div>
+
+          <!-- Текст под изображением -->
+          {{#if sideText}}
+          <p class="quiz-form__side-text text-medium-small" style="color: {{textColor}};">{{sideText}}</p>
+          {{/if}}
+
+          {{#if importantTitle}}
+          <p class="quiz-form__important-title text-bold-small" style="color: {{textColor}};">{{importantTitle}}</p>
+          {{/if}}
+
+          {{#if importantText}}
+          <p class="quiz-form__important-text text-medium-small" style="color: {{textColor}};">{{importantText}}</p>
+          {{/if}}
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

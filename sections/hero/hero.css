@@ -19,20 +19,28 @@
   position: absolute;
 }
 
+/* FIGMA: Image 1 - right side, top: 80px, 428x394px */
 .hero-image:first-child {
   right: 0;
-  top: 0;
+  top: 80px;
   width: 428px;
   height: 394px;
   z-index: 1;
 }
 
+/* FIGMA: Image 2 - overlaps from bottom-left of image 1, top: 258px, 306x290px */
 .hero-image:nth-child(2) {
-  right: 92px;
-  top: 178px;
+  right: 230px;
+  top: 258px;
   width: 306px;
   height: 290px;
   z-index: 2;
+}
+
+/* FIGMA: Hero button - 286x70px */
+.hero .btn-primary-custom {
+  min-width: 286px;
+  min-height: 70px;
 }
 
 /* Responsive adjustments */

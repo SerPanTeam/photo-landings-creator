@@ -188,26 +188,43 @@ class LandingBuilder {
       errors.push('Missing or invalid field: name (must be a string)');
     }
 
-    if (!config.sections || !Array.isArray(config.sections)) {
-      errors.push('Missing or invalid field: sections (must be an array)');
-    } else if (config.sections.length === 0) {
-      errors.push('sections array cannot be empty');
-    } else {
-      // Validate each section
-      const validSectionTypes = this.getValidSectionTypes();
+    // Support both single-page (sections) and multi-page (pages) formats
+    const isMultiPage = config.pages && Array.isArray(config.pages);
+    const isSinglePage = config.sections && Array.isArray(config.sections);
 
-      config.sections.forEach((section, index) => {
-        if (!section.type) {
-          errors.push(`Section ${index + 1}: missing required field "type"`);
-        } else if (!validSectionTypes.includes(section.type)) {
-          errors.push(`Section ${index + 1}: unknown section type "${section.type}". Valid types: ${validSectionTypes.join(', ')}`);
-        }
+    if (!isMultiPage && !isSinglePage) {
+      errors.push('Missing required field: "sections" (array) or "pages" (array for multi-page)');
+    }
 
-        // Validate URLs in section content
-        if (section.content) {
-          this.validateUrls(section.content, `Section ${index + 1}`, errors);
-        }
-      });
+    const validSectionTypes = this.getValidSectionTypes();
+
+    if (isMultiPage) {
+      // Multi-page validation
+      if (config.pages.length === 0) {
+        errors.push('pages array cannot be empty');
+      } else {
+        config.pages.forEach((page, pageIndex) => {
+          if (!page.filename || typeof page.filename !== 'string') {
+            errors.push(`Page ${pageIndex + 1}: missing required field "filename"`);
+          }
+          if (!page.sections || !Array.isArray(page.sections)) {
+            errors.push(`Page ${pageIndex + 1} (${page.filename}): missing or invalid field "sections"`);
+          } else {
+            page.sections.forEach((section, sectionIndex) => {
+              this.validateSection(section, sectionIndex, validSectionTypes, `Page "${page.filename}"`, errors);
+            });
+          }
+        });
+      }
+    } else if (isSinglePage) {
+      // Single-page validation (legacy format)
+      if (config.sections.length === 0) {
+        errors.push('sections array cannot be empty');
+      } else {
+        config.sections.forEach((section, index) => {
+          this.validateSection(section, index, validSectionTypes, 'Root', errors);
+        });
+      }
     }
 
     // Check meta fields
@@ -224,6 +241,20 @@ class LandingBuilder {
 
     if (errors.length > 0) {
       throw new Error(`Config validation failed:\n  - ${errors.join('\n  - ')}`);
+    }
+  }
+
+  // Validate a single section
+  validateSection(section, index, validSectionTypes, context, errors) {
+    if (!section.type) {
+      errors.push(`${context} Section ${index + 1}: missing required field "type"`);
+    } else if (!validSectionTypes.includes(section.type)) {
+      errors.push(`${context} Section ${index + 1}: unknown section type "${section.type}". Valid types: ${validSectionTypes.join(', ')}`);
+    }
+
+    // Validate URLs in section content
+    if (section.content) {
+      this.validateUrls(section.content, `${context} Section ${index + 1}`, errors);
     }
   }
 
@@ -286,29 +317,79 @@ class LandingBuilder {
     return template(variables);
   }
 
-  // Build all sections
-  buildHTML() {
-    console.log(`\n📦 Building landing: ${this.landingName}\n`);
-
+  // Build sections for a single page
+  buildPageHTML(sections, pageTitle = null) {
     let sectionsHTML = '';
-    let sectionCSS = [];
+    let sectionCSS = new Set();
 
-    this.config.sections.forEach((section, index) => {
-      console.log(`  ${index + 1}. Loading section: ${section.type}`);
+    sections.forEach((section, index) => {
+      console.log(`    ${index + 1}. Loading section: ${section.type}`);
 
       const sectionHTML = this.loadSection(section.type, section.content || {});
       sectionsHTML += sectionHTML + '\n\n';
 
-      // Track CSS files
+      // Track CSS files (use Set to avoid duplicates)
       const cssPath = path.join(this.rootDir, 'sections', section.type, `${section.type}.css`);
       if (fs.existsSync(cssPath)) {
-        sectionCSS.push(`${section.type}.css`);
+        sectionCSS.add(`${section.type}.css`);
       }
     });
 
+    return {
+      html: sectionsHTML,
+      css: Array.from(sectionCSS),
+      title: pageTitle
+    };
+  }
+
+  // Build all sections (legacy single-page format)
+  buildHTML() {
+    console.log(`\n📦 Building landing: ${this.landingName}\n`);
+
+    const result = this.buildPageHTML(this.config.sections);
+
     console.log(`\n✓ All sections loaded`);
 
-    return this.wrapLayout(sectionsHTML, sectionCSS);
+    return this.wrapLayout(result.html, result.css);
+  }
+
+  // Build all pages (multi-page format)
+  buildMultiPageHTML() {
+    console.log(`\n📦 Building multi-page landing: ${this.landingName}\n`);
+
+    const pages = [];
+    const allCSS = new Set();
+    const allJS = new Set();
+
+    // Check for custom JS files
+    if (this.config.scripts && Array.isArray(this.config.scripts)) {
+      this.config.scripts.forEach(script => allJS.add(script));
+    }
+
+    this.config.pages.forEach((page, pageIndex) => {
+      console.log(`\n  📄 Page ${pageIndex + 1}: ${page.filename}`);
+
+      const result = this.buildPageHTML(page.sections, page.title);
+
+      // Collect all CSS
+      result.css.forEach(css => allCSS.add(css));
+
+      pages.push({
+        filename: page.filename,
+        title: page.title || this.config.meta?.title,
+        html: result.html,
+        css: result.css,
+        scripts: page.scripts || []
+      });
+    });
+
+    console.log(`\n✓ All pages loaded (${pages.length} total)`);
+
+    return {
+      pages,
+      allCSS: Array.from(allCSS),
+      allJS: Array.from(allJS)
+    };
   }
 
   // Escape HTML special characters for safe attribute values
@@ -323,22 +404,25 @@ class LandingBuilder {
   }
 
   // Wrap sections in HTML layout
-  wrapLayout(bodyContent, sectionCSS) {
+  wrapLayout(bodyContent, sectionCSS, options = {}) {
     const lang = this.config.lang || 'de';
-    const title = this.escapeHtml(this.config.meta?.title || this.landingName);
+    const title = this.escapeHtml(options.title || this.config.meta?.title || this.landingName);
     const description = this.escapeHtml(this.config.meta?.description || '');
     const keywords = this.escapeHtml(this.config.meta?.keywords || '');
+    const additionalScripts = options.scripts || [];
 
     // SECURITY: Content Security Policy
     const csp = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline'",
+      "script-src 'self' 'unsafe-inline' https://script.google.com",
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' https: data:",
       "font-src 'self' https:",
       "frame-src https://www.google.com https://maps.google.com",
-      "connect-src 'self'"
+      "connect-src 'self' https://script.google.com https://script.googleusercontent.com"
     ].join('; ');
+
+    const scriptTags = additionalScripts.map(script => `  <script src="js/${script}"></script>`).join('\n');
 
     return `<!DOCTYPE html>
 <html lang="${lang}">
@@ -374,12 +458,13 @@ ${bodyContent}
 
   <!-- Common JS -->
   <script src="js/common.js"></script>
+${scriptTags ? '\n  <!-- Page-specific JS -->\n' + scriptTags : ''}
 </body>
 </html>`;
   }
 
   // Copy assets to output directory
-  async copyAssets() {
+  async copyAssets(allCSS = [], allJS = []) {
     console.log(`\n📂 Copying assets...\n`);
 
     const outputCSSDir = path.join(this.outputDir, 'css');
@@ -417,8 +502,17 @@ ${bodyContent}
       path.join(outputJSDir, 'common.js')
     );
 
-    // Copy section-specific CSS
-    for (const section of this.config.sections) {
+    // Collect all sections from config (supports both formats)
+    const sections = this.config.pages
+      ? this.config.pages.flatMap(page => page.sections)
+      : this.config.sections;
+
+    // Copy section-specific CSS (unique only)
+    const copiedCSS = new Set();
+    for (const section of sections) {
+      if (copiedCSS.has(section.type)) continue;
+      copiedCSS.add(section.type);
+
       const sectionCSSPath = path.join(this.rootDir, 'sections', section.type, `${section.type}.css`);
       if (fs.existsSync(sectionCSSPath)) {
         await fs.copy(
@@ -427,6 +521,31 @@ ${bodyContent}
         );
         console.log(`  ✓ Copied ${section.type}.css`);
       }
+    }
+
+    // Copy custom JS files from landing directory
+    for (const jsFile of allJS) {
+      const jsPath = path.join(this.rootDir, 'landings', this.landingName, 'js', jsFile);
+      if (fs.existsSync(jsPath)) {
+        await fs.copy(jsPath, path.join(outputJSDir, jsFile));
+        console.log(`  ✓ Copied ${jsFile}`);
+      } else {
+        // Try from assets/js
+        const globalJsPath = path.join(this.rootDir, 'assets/js', jsFile);
+        if (fs.existsSync(globalJsPath)) {
+          await fs.copy(globalJsPath, path.join(outputJSDir, jsFile));
+          console.log(`  ✓ Copied ${jsFile} (from assets)`);
+        } else {
+          console.warn(`  ⚠ Warning: JS file not found: ${jsFile}`);
+        }
+      }
+    }
+
+    // Copy global icons if they exist
+    const globalIconsDir = path.join(this.rootDir, 'assets/icons');
+    if (fs.existsSync(globalIconsDir)) {
+      await fs.copy(globalIconsDir, path.join(outputAssetsDir, 'icons'));
+      console.log(`  ✓ Copied global icons`);
     }
 
     // Copy landing-specific assets if they exist
@@ -446,30 +565,67 @@ ${bodyContent}
       console.log(`  LANDING BUILDER`);
       console.log(`${'='.repeat(60)}`);
 
-      // Build HTML
-      const html = this.buildHTML();
-
       // Ensure output directory exists
       await fs.ensureDir(this.outputDir);
 
-      // Write HTML file
-      const indexPath = path.join(this.outputDir, 'index.html');
-      await fs.writeFile(indexPath, html, 'utf8');
+      const isMultiPage = this.config.pages && Array.isArray(this.config.pages);
+      let allJS = [];
+      let generatedFiles = [];
 
-      // Copy assets
-      await this.copyAssets();
+      if (isMultiPage) {
+        // Multi-page build
+        const result = this.buildMultiPageHTML();
+        allJS = result.allJS;
 
-      console.log(`\n${'='.repeat(60)}`);
-      console.log(`\n✅ Landing built successfully!`);
-      console.log(`\n📁 Output: ${this.outputDir}`);
-      console.log(`🌐 Open: ${indexPath}\n`);
-      console.log(`${'='.repeat(60)}\n`);
+        // Write each page
+        for (const page of result.pages) {
+          const pagePath = path.join(this.outputDir, page.filename);
+          const pageScripts = [...result.allJS, ...page.scripts];
+          const html = this.wrapLayout(page.html, result.allCSS, {
+            title: page.title,
+            scripts: pageScripts
+          });
+          await fs.writeFile(pagePath, html, 'utf8');
+          console.log(`  ✓ Generated: ${page.filename}`);
+          generatedFiles.push(pagePath);
+        }
 
-      return {
-        success: true,
-        outputDir: this.outputDir,
-        indexPath
-      };
+        // Copy assets
+        await this.copyAssets(result.allCSS, allJS);
+
+        console.log(`\n${'='.repeat(60)}`);
+        console.log(`\n✅ Multi-page landing built successfully!`);
+        console.log(`\n📁 Output: ${this.outputDir}`);
+        console.log(`📄 Pages: ${result.pages.length}`);
+        result.pages.forEach(p => console.log(`   - ${p.filename}`));
+        console.log(`\n${'='.repeat(60)}\n`);
+
+        return {
+          success: true,
+          outputDir: this.outputDir,
+          pages: generatedFiles
+        };
+      } else {
+        // Single-page build (legacy)
+        const html = this.buildHTML();
+        const indexPath = path.join(this.outputDir, 'index.html');
+        await fs.writeFile(indexPath, html, 'utf8');
+
+        // Copy assets
+        await this.copyAssets();
+
+        console.log(`\n${'='.repeat(60)}`);
+        console.log(`\n✅ Landing built successfully!`);
+        console.log(`\n📁 Output: ${this.outputDir}`);
+        console.log(`🌐 Open: ${indexPath}\n`);
+        console.log(`${'='.repeat(60)}\n`);
+
+        return {
+          success: true,
+          outputDir: this.outputDir,
+          indexPath
+        };
+      }
     } catch (error) {
       console.error(`\n❌ Build failed: ${error.message}\n`);
       throw error;

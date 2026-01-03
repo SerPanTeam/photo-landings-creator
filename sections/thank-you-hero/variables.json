@@ -1,0 +1,24 @@
+{
+  "backgroundColor": "#F5EDE0",
+  "textColor": "#000000",
+  "title": "Herzlichen Glückwunsch!",
+  "subtitle": "Deine Anfrage ist bei uns eingegangen!",
+  "description": "<p>Wir melden uns bald bei dir.</p><p>Du hast die Möglichkeit, dich direkt in unseren Kalender einzutragen und dir deine bevorzugte Zeit zu sichern!</p>",
+  "ctaPrimary": {
+    "text": "Jetzt Termin wählen & sichern!",
+    "link": "#"
+  },
+  "additionalText": "Natürlich kannst du uns auch ganz unkompliziert telefonisch oder per E-Mail erreichen – wir freuen uns auf deine Nachricht!",
+  "secondaryButtons": [
+    {
+      "text": "Jetzt anrufen",
+      "link": "tel:+4912345678"
+    },
+    {
+      "text": "Mail uns!",
+      "link": "mailto:info@example.com"
+    }
+  ],
+  "image": "",
+  "imageAlt": "Thank you"
+}

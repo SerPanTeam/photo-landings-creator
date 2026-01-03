@@ -1,0 +1,50 @@
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  AUTHOR FOOTER - Блок информации об авторе + соц.сети                      ║
+     ║  Используется на Thank You странице                                        ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+<section class="author-footer" style="background-color: {{backgroundColor}};">
+  <div class="container">
+    <div class="author-footer__content">
+
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ИНФОРМАЦИЯ ОБ АВТОРЕ
+           ════════════════════════════════════════════════════════════════════════ -->
+      <div class="author-footer__info">
+        <!-- Имя -->
+        <h2 class="author-footer__name text-h3" style="color: {{textColor}};">{{name}}</h2>
+
+        <!-- Специализация -->
+        {{#if specialization}}
+        <p class="author-footer__specialization text-medium-big" style="color: {{accentColor}};">{{specialization}}</p>
+        {{/if}}
+
+        <!-- Описание -->
+        {{#if description}}
+        <div class="author-footer__description text-medium-small" style="color: {{textColor}};">
+          {{{description}}}
+        </div>
+        {{/if}}
+
+        <!-- Социальные сети - иконки из Figma (icons8) -->
+        {{#if socialLinks}}
+        <div class="author-footer__social">
+          {{#each socialLinks}}
+          <a href="{{this.link}}" target="_blank" rel="noopener noreferrer" class="author-footer__social-link" title="{{this.title}}">
+            {{#ifEquals this.type "facebook"}}
+            <img src="assets/icons/icon-facebook.svg" alt="Facebook" width="50" height="50">
+            {{/ifEquals}}
+            {{#ifEquals this.type "instagram"}}
+            <img src="assets/icons/icon-instagram.svg" alt="Instagram" width="50" height="50">
+            {{/ifEquals}}
+            {{#ifEquals this.type "website"}}
+            <img src="assets/icons/icon-website.png" alt="Website" width="50" height="50">
+            {{/ifEquals}}
+          </a>
+          {{/each}}
+        </div>
+        {{/if}}
+      </div>
+
+    </div>
+  </div>
+</section>

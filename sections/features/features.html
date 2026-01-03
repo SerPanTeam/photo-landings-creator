@@ -34,6 +34,11 @@
           {{/if}}
           {{/unless}}
 
+          {{#if subtitle}}
+          <!-- ПОДЗАГОЛОВОК - дополнительный текст под заголовком -->
+          <p class="text-medium-small mb-3" style="font-style: italic;">{{subtitle}}</p>
+          {{/if}}
+
           <!-- ОПИСАНИЕ - основной текст секции -->
           <!-- Поддерживает HTML: <p>, <br>, <strong>, <em> -->
           <div class="text-medium-small mb-4" style="max-width: 520px;">
@@ -104,11 +109,17 @@
           <div class="img-placeholder" style="width: 428px; height: 440px; background-color: #7F7F7F;"></div>
           {{/if}}
 
-          <!-- СЛОГАН - текст под изображением в рамке -->
+          <!-- СЛОГАН/TAGLINE - текст под изображением в рамке -->
+          {{#if tagline}}
+          <div class="features-slogan" style="margin-top: 36px;">
+            <p class="text-medium-small mb-0" style="color: {{taglineColor}};">{{tagline}}</p>
+          </div>
+          {{else}}
           {{#if slogan}}
           <div class="features-slogan" style="margin-top: 36px;">
             <p class="text-medium-small mb-0" style="color: {{sloganColor}};">{{slogan}}</p>
           </div>
+          {{/if}}
           {{/if}}
         </div>
         {{/if}}

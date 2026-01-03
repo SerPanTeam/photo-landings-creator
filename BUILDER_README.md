@@ -1,181 +1,236 @@
 # Landing Builder System
 
-Компонентная система для сборки лендингов из переиспользуемых секций, извлеченных из Figma.
+Component-based landing page builder for photographer websites. Build complete landing pages by combining reusable sections through JSON configuration.
 
-## Что реализовано
+## Quick Start
 
-### ✅ Базовая инфраструктура
-- Структура папок для модульной системы
-- Bootstrap 5 для адаптивности
-- Handlebars для шаблонизации
-- CSS переменные из дизайна Figma
-- Автоматическая сборка через CLI
+```bash
+# Install dependencies
+npm install
 
-### ✅ Готовые секции (4 из 10)
+# Build a landing
+node builder/builder.js <landing-name>
 
-1. **Hero** - Заголовок, описание, CTA кнопка, изображения
-2. **Promotional** - Рекламная секция (Weihnachts-Aktion)
-3. **Benefits** - 3 карточки преимуществ
-4. **FAQ** - Интерактивные вопросы/ответы с toggle
+# Examples
+node builder/builder.js photographer
+node builder/builder.js family-quiz
+node builder/builder.js mutter-kind
+```
 
-### ✅ Система сборки
-- `builder/builder.js` - CLI для сборки лендингов
-- Автоматическое копирование assets (CSS, JS, изображения)
-- JSON конфигурация для управления контентом
-- Handlebars шаблоны с переменными
+Output directory: `projects/<landing-name>/`
 
-## Структура проекта
+## Project Structure
 
 ```
 landing/
-├── sections/              # Переиспользуемые секции
+├── sections/              # 18 reusable section components
 │   ├── hero/
-│   │   ├── hero.html      # Bootstrap шаблон
-│   │   ├── hero.css       # Стили секции
-│   │   └── variables.json # Дефолтные переменные
-│   ├── promotional/
-│   ├── benefits/
-│   └── faq/
+│   │   ├── hero.html      # Handlebars template
+│   │   ├── hero.css       # Section styles
+│   │   └── variables.json # Default values
+│   └── ...
 │
-├── assets/                # Общие ресурсы
+├── landings/              # Landing configurations
+│   └── <landing-name>/
+│       ├── config.json    # Sections + content
+│       ├── FIGMA.md       # Figma node references
+│       ├── js/            # Custom scripts (quiz.js)
+│       └── assets/        # Landing-specific images
+│
+├── projects/              # Built output (generated)
+│   └── <landing-name>/
+│       ├── index.html
+│       ├── css/
+│       ├── js/
+│       └── assets/
+│
+├── assets/                # Shared assets
 │   ├── css/
 │   │   ├── bootstrap.min.css
-│   │   ├── variables.css  # CSS переменные из Figma
-│   │   └── common.css     # Общие стили
+│   │   ├── base-styles.css
+│   │   └── common.css
 │   └── js/
 │       ├── bootstrap.bundle.min.js
-│       └── common.js      # FAQ toggle, smooth scroll
+│       └── common.js
 │
-├── landings/              # Конфигурации лендингов
-│   └── photographer/
-│       ├── config.json    # Конфиг: секции, контент, мета
-│       └── assets/        # Специфичные изображения
-│
-├── projects/              # Собранные лендинги (output)
-│   └── photographer/
-│       ├── index.html     # Готовая страница
-│       ├── css/           # Все необходимые CSS
-│       ├── js/            # Все необходимые JS
-│       └── assets/        # Изображения
-│
-├── builder/               # Система сборки
-│   └── builder.js         # CLI для сборки
-│
-├── package.json
-└── README.md
+└── builder/
+    └── builder.js         # Build system
 ```
 
-## Быстрый старт
+## Design System
 
-### 1. Сборка существующего лендинга
+### Colors
+| Name | Hex | Usage |
+|------|-----|-------|
+| Primary BG | `#F5EDE0` | Main sections background |
+| Secondary BG | `#EEE3D0` | Alternating sections |
+| Accent | `#E2C08D` | Buttons, highlights |
+| Text Dark | `#3D3D3D` | Primary text |
+| Text Black | `#000000` | Headings |
+| Placeholder | `#7F7F7F` | Image placeholders |
 
-```bash
-# Собрать photographer лендинг
-node builder/builder.js photographer
+### Typography (Inter)
+| Style | Size | Weight | Class |
+|-------|------|--------|-------|
+| Header 1 | 55px | Bold (700) | `.text-h1` |
+| Header 2 | 45px | Bold (700) | `.text-h2` |
+| Header 3 | 35px | Bold (700) | `.text-h3` |
+| Text Bold Big | 28px | Bold (700) | `.text-bold-big` |
+| Text Medium Big | 28px | Medium (500) | `.text-medium-big` |
+| Text Bold Small | 22px | Bold (700) | `.text-bold-small` |
+| Text Medium Small | 22px | Medium (500) | `.text-medium-small` |
 
-# Открыть результат
-open projects/photographer/index.html
-```
+### Buttons
+| Class | Style | Height |
+|-------|-------|--------|
+| `.btn-primary-custom` | Solid #E2C08D, white text | 70px |
+| `.btn-outline-custom` | Transparent, black border | 60px |
 
-### 2. Создание нового лендинга
+## Config.json Format
 
-#### Шаг 1: Создать config.json
-
-```bash
-mkdir -p landings/my-landing
-```
-
-Создать `landings/my-landing/config.json`:
-
+### Single Page Landing
 ```json
 {
-  "name": "My Landing",
+  "name": "Landing Name",
   "lang": "de",
   "meta": {
-    "title": "My Landing Page Title",
-    "description": "Description for SEO",
+    "title": "Page Title",
+    "description": "SEO description",
     "keywords": "keyword1, keyword2"
   },
   "sections": [
     {
       "type": "hero",
       "content": {
-        "logo": "My Logo",
-        "title": "My Title",
-        "description": "My description",
-        "cta": {
-          "text": "Button Text",
-          "link": "#contact"
-        }
-      }
-    },
-    {
-      "type": "benefits",
-      "content": {
-        "items": [
-          {
-            "title": "Benefit 1",
-            "description": "Description 1"
-          }
-        ]
+        "title": "Custom Title",
+        "cta": { "text": "Button", "link": "#" }
       }
     }
   ]
 }
 ```
 
-#### Шаг 2: Собрать
-
-```bash
-node builder/builder.js my-landing
+### Multi-Page Landing (Quiz)
+```json
+{
+  "name": "Quiz Landing",
+  "lang": "de",
+  "meta": { ... },
+  "scripts": ["quiz.js"],
+  "pages": [
+    {
+      "filename": "index.html",
+      "title": "Main Page",
+      "sections": [ ... ]
+    },
+    {
+      "filename": "quiz-1.html",
+      "title": "Quiz Question 1",
+      "sections": [ ... ]
+    }
+  ]
+}
 ```
 
-#### Шаг 3: Открыть
+---
 
-```
-projects/my-landing/index.html
-```
+## Available Sections (18)
 
-## Доступные секции
+### 1. hero
+Main header section with logo, title, CTA, and images.
 
-### Hero
-**Использование:**
 ```json
 {
   "type": "hero",
   "content": {
-    "logo": "Logo Text",
-    "title": "Main Heading",
-    "description": "Subtitle",
+    "backgroundColor": "#F5EDE0",
+    "textColor": "#3D3D3D",
+    "logo": "Logo",
+    "title": "Hello, i am a photographer",
+    "titleHighlight": "photographer",
+    "titleHighlightColor": "#E2C08D",
+    "subtitle": "Description here",
     "cta": {
       "text": "Button",
       "link": "#contact"
     },
-    "images": [...]
+    "images": [
+      {
+        "src": "image1.jpg",
+        "width": 428,
+        "height": 394,
+        "placeholderColor": "#A19F9F"
+      },
+      {
+        "src": "image2.jpg",
+        "width": 306,
+        "height": 290,
+        "placeholderColor": "#7F7F7F"
+      }
+    ]
   }
 }
 ```
 
-**Параметры:**
-- `backgroundColor` - Цвет фона (default: #F5EDE0)
-- `logo` - Текст логотипа
-- `title` - Заголовок H1
-- `description` - Описание
-- `cta.text` - Текст кнопки
-- `cta.link` - Ссылка кнопки
-- `images[]` - Массив изображений
+### 2. hero-dark
+Dark theme hero with promotional text block.
 
-### Promotional
-**Использование:**
+```json
+{
+  "type": "hero-dark",
+  "content": {
+    "backgroundColor": "#3D3D3D",
+    "logo": "Logo",
+    "logoColor": "#F5EDE0",
+    "promoTitle": "Promotional text",
+    "promoHighlight": "Highlight text",
+    "promoHighlightColor": "#E2C08D",
+    "titleHighlight": "Kostenloses",
+    "title": "Mutter-Kind-Fotoshooting!",
+    "titleColor": "#E2C08D",
+    "subtitle": "Subtitle text",
+    "cta": {
+      "text": "Jetzt Rabatt sichern",
+      "link": "#contact"
+    }
+  }
+}
+```
+
+### 3. hero-centered
+Centered layout with multiple images.
+
+```json
+{
+  "type": "hero-centered",
+  "content": {
+    "backgroundColor": "#F5EDE0",
+    "logo": "Logo",
+    "title": "Newborn Fotoshooting",
+    "subtitle": "Subtitle description",
+    "cta": { "text": "Button", "link": "#" },
+    "images": [
+      { "src": "img1.jpg", "width": 320, "height": 320, "borderRadius": "10px" },
+      { "src": "img2.jpg", "width": 320, "height": 400, "borderRadius": "10px" },
+      { "src": "img3.jpg", "width": 280, "height": 280, "borderRadius": "10px" }
+    ]
+  }
+}
+```
+
+### 4. promotional
+Promotional block with image on left, text on right.
+
 ```json
 {
   "type": "promotional",
   "content": {
-    "title": "Promo Title",
-    "description": "<p>HTML content</p>",
-    "image": "path/to/image.jpg",
+    "backgroundColor": "#EEE3D0",
+    "title": "Weihnachts-Fotoshooting-Aktion",
+    "description": "Text with <br> HTML support",
+    "image": "promo.jpg",
     "cta": {
-      "text": "Link text",
+      "text": "Hier geht's zur Aktion",
       "link": "#",
       "showArrow": true
     }
@@ -183,124 +238,492 @@ projects/my-landing/index.html
 }
 ```
 
-### Benefits
-**Использование:**
+### 5. features
+Feature description with image and tagline.
+
+```json
+{
+  "type": "features",
+  "content": {
+    "backgroundColor": "#F5EDE0",
+    "title": "Main Title",
+    "subtitle": "Subtitle",
+    "description": "Description with HTML",
+    "image": "feature.jpg",
+    "tagline": "– für dich, für dein Kind, für immer –",
+    "cta": {
+      "text": "Shootingplatz sichern",
+      "link": "#",
+      "showArrow": true
+    }
+  }
+}
+```
+
+### 6. benefits
+Three benefit cards with icons.
+
 ```json
 {
   "type": "benefits",
   "content": {
+    "backgroundColor": "#F5EDE0",
     "items": [
       {
-        "icon": "path/to/icon.svg",
-        "title": "Benefit Title",
-        "description": "Benefit description"
+        "icon": "icon1.jpg",
+        "title": "Viel Zeit & Raum",
+        "description": "für Momente für dich und deine Familie"
+      },
+      {
+        "icon": "icon2.jpg",
+        "title": "Professionelle Fotografin",
+        "description": "aus Leidenschaft"
+      },
+      {
+        "icon": "icon3.jpg",
+        "title": "Hohe Qualität",
+        "description": "der Fotos hautnah erleben"
       }
     ]
   }
 }
 ```
 
-### FAQ
-**Использование:**
+### 7. process
+Four-step process with icons.
+
+```json
+{
+  "type": "process",
+  "content": {
+    "backgroundColor": "#EEE3D0",
+    "title": "Wie genau komme ich zum Fotoshooting?",
+    "steps": [
+      {
+        "icon": "step1.jpg",
+        "title": "1. Eintragen",
+        "description": "Step description"
+      },
+      {
+        "icon": "step2.jpg",
+        "title": "2. Shootingzeit",
+        "description": "Step description"
+      },
+      {
+        "icon": "step3.jpg",
+        "title": "3. Wähle dein Lieblingsbild",
+        "description": "Step description"
+      },
+      {
+        "icon": "step4.jpg",
+        "title": "4. Ergebnis",
+        "description": "Step description"
+      }
+    ],
+    "cta": {
+      "text": "Jetzt sichern!",
+      "link": "#"
+    }
+  }
+}
+```
+
+### 8. faq
+Accordion-style FAQ section.
+
 ```json
 {
   "type": "faq",
   "content": {
-    "title": "FAQ Title",
+    "backgroundColor": "#F5EDE0",
+    "title": "Häufige Fragen zum Fotoshooting",
     "items": [
       {
-        "q": "Question?",
-        "a": "Answer"
+        "q": "Wie lange dauert ein Fotoshooting?",
+        "a": "Ein Fotoshooting dauert 30-60 Minuten."
+      },
+      {
+        "q": "Was sollen wir anziehen?",
+        "a": "Am besten abgestimmte Farben."
       }
     ]
   }
 }
 ```
 
-## Дизайн-система (Figma)
+**IMPORTANT**: Use `q` and `a` keys, NOT `question` and `answer`!
 
-### Цвета
-```css
---color-primary: #F5EDE0;       /* Основной фон */
---color-secondary: #EEE3D0;     /* Вторичный фон */
---color-text: #3D3D3D;          /* Текст */
---color-accent: #E2C08D;        /* Кнопки */
---color-white: #FFFFFF;
-```
+### 9. faq-cards
+Card-based FAQ layout.
 
-### Типографика
-```css
---font-h1: 55px;    /* Header 1 */
---font-h2: 45px;    /* Header 2 */
---font-h3: 35px;    /* Header 3 */
---font-h4: 28px;    /* Text Bold/Regular Big */
---font-body: 22px;  /* Text Bold/Regular Small */
-```
-
-### Классы типографики
-- `.text-h1` - Заголовок 1 (55px, bold)
-- `.text-h2` - Заголовок 2 (45px, bold)
-- `.text-h3` - Заголовок 3 (35px, bold)
-- `.text-bold-big` - Жирный большой текст (28px)
-- `.text-medium-big` - Средний большой текст (28px)
-- `.text-bold-small` - Жирный маленький текст (22px)
-- `.text-medium-small` - Средний маленький текст (22px)
-
-### Кнопки
-- `.btn-primary-custom` - Основная кнопка (акцентный цвет)
-- `.btn-outline-custom` - Outlined кнопка
-
-## CLI Команды
-
-### Сборка лендинга
-```bash
-node builder/builder.js <landing-name>
-```
-
-Примеры:
-```bash
-node builder/builder.js photographer
-node builder/builder.js my-landing
-```
-
-## Добавление новой секции
-
-### 1. Создать папку секции
-```bash
-mkdir -p sections/my-section
-```
-
-### 2. Создать шаблон HTML
-
-`sections/my-section/my-section.html`:
-```html
-<section class="my-section section-padding" style="background-color: {{backgroundColor}};">
-  <div class="container">
-    <h2>{{title}}</h2>
-    <p>{{description}}</p>
-  </div>
-</section>
-```
-
-### 3. Создать стили
-
-`sections/my-section/my-section.css`:
-```css
-.my-section {
-  position: relative;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .my-section {
-    padding: 40px 0 !important;
+```json
+{
+  "type": "faq-cards",
+  "content": {
+    "backgroundColor": "#F5EDE0",
+    "title": "Häufige Fragen",
+    "items": [
+      { "q": "Question?", "a": "Answer" }
+    ],
+    "cta": { "text": "More questions?", "link": "#" }
   }
 }
 ```
 
-### 4. Создать дефолтные переменные
+### 10. services
+Four service cards in a grid.
 
-`sections/my-section/variables.json`:
+```json
+{
+  "type": "services",
+  "content": {
+    "backgroundColor": "#EEE3D0",
+    "title": "Das ganze Jahr über...",
+    "items": [
+      {
+        "image": "service1.jpg",
+        "title": "Family Time",
+        "description": "Service description"
+      },
+      {
+        "image": "service2.jpg",
+        "title": "Kinder-Fotoshooting",
+        "description": "Service description"
+      },
+      {
+        "image": "service3.jpg",
+        "title": "Babybauch & Newborn",
+        "description": "Service description"
+      },
+      {
+        "image": "service4.jpg",
+        "title": "Portraitfotografie",
+        "description": "Service description"
+      }
+    ],
+    "cta": {
+      "text": "Jetzt anfragen",
+      "link": "#"
+    }
+  }
+}
+```
+
+### 11. about
+Bio section with photo.
+
+```json
+{
+  "type": "about",
+  "content": {
+    "backgroundColor": "#F5EDE0",
+    "photo": "photographer.jpg",
+    "greeting": "Willkommen bei",
+    "name": "Dorett Dornbusch",
+    "bio": "Ich bin Dorett (Fotografenmeisterin)...<br><br>Bio text with HTML support."
+  }
+}
+```
+
+### 12. gallery
+Image slider with navigation arrows.
+
+```json
+{
+  "type": "gallery",
+  "content": {
+    "backgroundColor": "#EEE3D0",
+    "showArrows": true,
+    "images": [
+      { "src": "gallery1.jpg", "alt": "Familienfoto 1" },
+      { "src": "gallery2.jpg", "alt": "Familienfoto 2" },
+      { "src": "gallery3.jpg", "alt": "Familienfoto 3" }
+    ]
+  }
+}
+```
+
+### 13. fullwidth-image
+Full-width image or placeholder.
+
+```json
+{
+  "type": "fullwidth-image",
+  "content": {
+    "src": "fullwidth.jpg",
+    "alt": "Description",
+    "backgroundColor": "#7F7F7F",
+    "height": 656
+  }
+}
+```
+
+### 14. testimonials
+Client reviews slider.
+
+```json
+{
+  "type": "testimonials",
+  "content": {
+    "backgroundColor": "#EEE3D0",
+    "title": "Was Eltern sagen",
+    "showArrows": true,
+    "items": [
+      {
+        "title": "Review Title",
+        "text": "Review text",
+        "author": "Familie Müller",
+        "childAge": "3 Wochen"
+      }
+    ]
+  }
+}
+```
+
+**IMPORTANT**: Use `author`, NOT `name`!
+
+### 15. footer
+Google Maps embed.
+
+```json
+{
+  "type": "footer",
+  "content": {
+    "backgroundColor": "#FFFFFF",
+    "mapUrl": "https://www.google.com/maps/embed?pb=...",
+    "height": "450"
+  }
+}
+```
+
+**Default map**: Ansbach, Germany (49.3009, 10.5478)
+
+### 16. legal-footer
+Legal links and copyright.
+
+```json
+{
+  "type": "legal-footer",
+  "content": {
+    "backgroundColor": "#F5EDE0",
+    "links": [
+      { "text": "Impressum", "href": "impressum.html" },
+      { "text": "Datenschutz", "href": "datenschutz.html" }
+    ],
+    "copyright": "© 2025 Company. Alle Rechte vorbehalten."
+  }
+}
+```
+
+---
+
+## Quiz Sections
+
+### 17. quiz-header
+Header for quiz pages.
+
+```json
+{
+  "type": "quiz-header",
+  "content": {
+    "backgroundColor": "#F5EDE0",
+    "textColor": "#3D3D3D",
+    "logo": "Logo",
+    "logoLink": "index.html",
+    "progress": "Weiter zum Gutschein"
+  }
+}
+```
+
+### 18. quiz-question
+Question with image options.
+
+```json
+{
+  "type": "quiz-question",
+  "content": {
+    "backgroundColor": "#F5EDE0",
+    "textColor": "#000000",
+    "questionId": "q1",
+    "question": "Kennst du mich bereits?",
+    "optionsCount": "4",
+    "options": [
+      {
+        "text": "Ja, vom Hören",
+        "value": "vom_hoeren",
+        "link": "quiz-2.html",
+        "image": "option1.jpg"
+      },
+      {
+        "text": "Ja, na klar!",
+        "value": "na_klar",
+        "link": "quiz-2.html",
+        "image": "option2.jpg"
+      },
+      {
+        "text": "Schon sehr lang",
+        "value": "sehr_lang",
+        "link": "quiz-2.html",
+        "image": "option3.jpg",
+        "multiline": false
+      },
+      {
+        "text": "Nein, noch nicht",
+        "value": "noch_nicht",
+        "link": "quiz-2.html",
+        "image": "option4.jpg"
+      }
+    ]
+  }
+}
+```
+
+### 19. quiz-form
+Registration form.
+
+```json
+{
+  "type": "quiz-form",
+  "content": {
+    "backgroundColor": "#F5EDE0",
+    "textColor": "#000000",
+    "subtitle": "Trage dich jetzt ein",
+    "title": "Familien-Fotoshooting zu Weihnachten!",
+    "deadline": "Diese Aktion gilt nur bis zum 06.12.25.",
+    "namePlaceholder": "Dein Vor- und Nachname",
+    "emailPlaceholder": "Deine E-Mail Adresse",
+    "phonePlaceholder": "Deine Telefonnummer",
+    "availabilityPlaceholder": "Wann seid ihr erreichbar",
+    "availabilityOptions": [
+      { "value": "morgens", "text": "Morgens (9-12 Uhr)" },
+      { "value": "mittags", "text": "Mittags (12-15 Uhr)" }
+    ],
+    "privacyText": "Ich akzeptiere die",
+    "privacyLinkText": "Datenschutzbestimmungen",
+    "privacyLink": "datenschutz.html",
+    "submitText": "Jetzt Gutschein sichern!",
+    "sideImage": "sidebar.jpg",
+    "sideText": "Privacy text",
+    "importantTitle": "WICHTIG!",
+    "importantText": "Important details text"
+  }
+}
+```
+
+### 20. thank-you-hero
+Success page content.
+
+```json
+{
+  "type": "thank-you-hero",
+  "content": {
+    "backgroundColor": "#F5EDE0",
+    "textColor": "#000000",
+    "title": "Herzlichen Glückwunsch!",
+    "subtitle": "Deine Anfrage ist eingegangen!",
+    "description": "<p>Wir melden uns bald.</p>",
+    "image": "thankyou.jpg",
+    "ctaPrimary": {
+      "text": "Jetzt Termin wählen!",
+      "link": "#calendar"
+    },
+    "additionalText": "Du kannst uns auch anrufen",
+    "secondaryButtons": [
+      { "text": "Jetzt anrufen", "link": "tel:+4912345678" },
+      { "text": "Mail uns!", "link": "mailto:info@example.com" }
+    ]
+  }
+}
+```
+
+### 21. author-footer
+Author info with social links.
+
+```json
+{
+  "type": "author-footer",
+  "content": {
+    "backgroundColor": "#EEE3D0",
+    "textColor": "#000000",
+    "accentColor": "#E2C08D",
+    "name": "Yvonne Jadke – Fotograf Hannover",
+    "specialization": "Familienfotos, Businessportraits",
+    "description": "<p>Description with HTML</p>",
+    "socialLinks": [
+      { "type": "facebook", "link": "https://facebook.com/", "title": "Facebook" },
+      { "type": "instagram", "link": "https://instagram.com/", "title": "Instagram" },
+      { "type": "website", "link": "https://example.com/", "title": "Website" }
+    ]
+  }
+}
+```
+
+---
+
+## Typical Section Order
+
+### Standard Landing Page
+```
+hero
+promotional
+features
+gallery
+benefits
+process
+fullwidth-image
+faq
+services
+about
+footer
+legal-footer
+```
+
+### Quiz Landing Flow
+```
+Page: index.html
+  hero, promotional, features, gallery, benefits, process,
+  fullwidth-image, faq, services, about, footer, legal-footer
+
+Page: quiz-1.html → quiz-4.html
+  quiz-header, quiz-question, legal-footer
+
+Page: quiz-form.html
+  quiz-header, quiz-form, footer, legal-footer
+
+Page: thank-you.html
+  quiz-header, thank-you-hero, author-footer, footer, legal-footer
+```
+
+---
+
+## Adding a New Section
+
+1. Create folder: `sections/my-section/`
+
+2. Create template `my-section.html`:
+```html
+<section class="my-section" style="background-color: {{backgroundColor}};">
+  <div class="container">
+    <h2 class="text-h2">{{title}}</h2>
+    <p class="text-medium-small">{{description}}</p>
+  </div>
+</section>
+```
+
+3. Create styles `my-section.css`:
+```css
+.my-section {
+  padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+  .my-section {
+    padding: 40px 0;
+  }
+}
+```
+
+4. Create defaults `variables.json`:
 ```json
 {
   "backgroundColor": "#F5EDE0",
@@ -309,61 +732,28 @@ mkdir -p sections/my-section
 }
 ```
 
-### 5. Использовать в config.json
+5. Use in config.json:
 ```json
 {
-  "sections": [
-    {
-      "type": "my-section",
-      "content": {
-        "title": "Custom Title",
-        "description": "Custom description"
-      }
-    }
-  ]
+  "type": "my-section",
+  "content": {
+    "title": "Custom Title"
+  }
 }
 ```
 
-## Что дальше (TODO)
+---
 
-### Оставшиеся секции для извлечения
-- [ ] Features/Family Memories - текст слева, изображение справа
-- [ ] Gallery - галерея изображений (3 в ряд)
-- [ ] Process - 4 шага процесса (2×2 grid)
-- [ ] Services - 4 карточки услуг
-- [ ] About - био фотографа
-- [ ] Footer - контакты, карта
+## Technical Info
 
-### Дополнительные инструменты
-- [ ] `builder/figma-sync.js` - автоматическое извлечение секций из Figma
-- [ ] `builder/validator.js` - валидация config.json
+- **Templating**: Handlebars 4.7.8
+- **CSS Framework**: Bootstrap 5.3.2
+- **Node.js**: Required for build
+- **Browser Support**: All modern browsers
 
-### Улучшения
-- [ ] Hot reload для разработки
-- [ ] Минификация CSS/JS для production
-- [ ] Image optimization
-- [ ] Lighthouse optimization
+## Security Features
 
-## Production Checklist
-
-Перед размещением на production:
-
-- [ ] Заменить `http://localhost:3845/assets/*` на реальные URL
-- [ ] Добавить реальные изображения вместо плейсхолдеров
-- [ ] Заполнить все тексты в config.json
-- [ ] Протестировать на всех разрешениях
-- [ ] Проверить SEO мета-теги
-- [ ] Добавить Google Analytics
-- [ ] Настроить формы обратной связи
-- [ ] Оптимизировать изображения (WebP, lazy loading)
-
-## Техническая информация
-
-- **Bootstrap**: 5.3.2
-- **Handlebars**: 4.7.8
-- **Node.js**: требуется для сборки
-- **Браузеры**: все современные браузеры
-
-## Поддержка
-
-Для добавления новых секций или модификации существующих, см. раздел "Добавление новой секции" выше.
+- HTML sanitization for user content
+- URL validation (blocks javascript: etc.)
+- Content Security Policy headers
+- Path traversal protection

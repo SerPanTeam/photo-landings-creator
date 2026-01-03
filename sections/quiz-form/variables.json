@@ -1,0 +1,26 @@
+{
+  "backgroundColor": "#F5EDE0",
+  "textColor": "#000000",
+  "subtitle": "Trage dich jetzt ein und sichere dir dein Platz für ein",
+  "title": "Familien-Fotoshooting zu Weihnachten!",
+  "deadline": "Diese Aktion gilt nur bis zum 06.12.25.",
+  "namePlaceholder": "Dein Vor- und Nachname",
+  "emailPlaceholder": "Deine E-Mail Adresse",
+  "phonePlaceholder": "Deine Telefonnummer",
+  "availabilityPlaceholder": "Wann seid ihr erreichbar (Mehrfachauswahl)",
+  "availabilityOptions": [
+    { "value": "morgens", "text": "Morgens (9-12 Uhr)" },
+    { "value": "mittags", "text": "Mittags (12-15 Uhr)" },
+    { "value": "nachmittags", "text": "Nachmittags (15-18 Uhr)" },
+    { "value": "abends", "text": "Abends (18-20 Uhr)" }
+  ],
+  "privacyText": "Ich akzeptiere die",
+  "privacyLinkText": "Datenschutzbestimmungen",
+  "privacyLink": "datenschutz.html",
+  "submitText": "Jetzt Gutschein sichern!",
+  "sideImage": "",
+  "sideImageAlt": "Familien-Fotoshooting",
+  "sideText": "Deine Privatsphäre ist bei mir sicher – ich schätze dein Vertrauen.",
+  "importantTitle": "WICHTIG! Bitte halte deinen Termin ein oder informiere mich rechtzeitig über eventuelle Änderungen.",
+  "importantText": "Da mein Zeitplan während des Aktionszeitraums besonders straff ist, plane ich meine Termine äußerst präzise. Kurzfristige Absagen bedeuten leider, dass andere diese einzigartige Gelegenheit verpassen könnten. Vielen Dank für dein Verständnis und deine Kooperation."
+}

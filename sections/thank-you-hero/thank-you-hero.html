@@ -1,0 +1,67 @@
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  THANK YOU HERO - Страница благодарности после отправки формы              ║
+     ║  Включает: заголовок, CTA календарь, контакты                              ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+<section class="thank-you-hero" style="background-color: {{backgroundColor}};">
+  <div class="container">
+    <div class="row">
+
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ЛЕВАЯ КОЛОНКА - Текст и кнопки
+           ════════════════════════════════════════════════════════════════════════ -->
+      <div class="col-lg-6">
+        <div class="thank-you-hero__content">
+
+          <!-- Заголовок -->
+          <h1 class="thank-you-hero__title text-h2" style="color: {{textColor}};">{{title}}</h1>
+
+          <!-- Подзаголовок -->
+          <p class="thank-you-hero__subtitle text-bold-small" style="color: {{textColor}};">{{subtitle}}</p>
+
+          <!-- Описание -->
+          <div class="thank-you-hero__description text-medium-small" style="color: {{textColor}};">
+            {{{description}}}
+          </div>
+
+          <!-- Основная CTA кнопка -->
+          {{#if ctaPrimary}}
+          <a href="{{ctaPrimary.link}}" class="thank-you-hero__cta-primary">
+            {{ctaPrimary.text}}
+          </a>
+          {{/if}}
+
+          <!-- Дополнительный текст -->
+          {{#if additionalText}}
+          <p class="thank-you-hero__additional text-medium-small" style="color: {{textColor}};">{{additionalText}}</p>
+          {{/if}}
+
+          <!-- Вторичные кнопки (телефон, email) -->
+          {{#if secondaryButtons}}
+          <div class="thank-you-hero__secondary-buttons">
+            {{#each secondaryButtons}}
+            <a href="{{this.link}}" class="thank-you-hero__btn-secondary">
+              {{this.text}}
+            </a>
+            {{/each}}
+          </div>
+          {{/if}}
+
+        </div>
+      </div>
+
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ПРАВАЯ КОЛОНКА - Изображение
+           ════════════════════════════════════════════════════════════════════════ -->
+      <div class="col-lg-6">
+        <div class="thank-you-hero__image-wrapper">
+          {{#if image}}
+          <img src="{{image}}" alt="{{imageAlt}}" class="thank-you-hero__image">
+          {{else}}
+          <div class="thank-you-hero__image-placeholder"></div>
+          {{/if}}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
