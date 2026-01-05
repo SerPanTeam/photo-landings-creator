@@ -98,7 +98,12 @@
 }
 
 @media (max-width: 576px) {
-  /* Переупорядочивание: Лого -> Картинки -> Заголовок -> Описание -> Кнопка */
+  /* Убираем фиксированную высоту секции */
+  .hero {
+    min-height: auto !important;
+  }
+
+  /* Порядок: Лого (вне row) -> Картинки -> Текст -> Кнопка */
   .hero-row {
     display: flex;
     flex-direction: column;
@@ -106,47 +111,56 @@
 
   .hero-text-col {
     order: 2;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
   }
 
   .hero-images-col {
     order: 1;
+    margin-bottom: 25px !important;
   }
 
   .hero-content {
-    padding-top: 20px !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
   }
 
-  .hero-logo {
-    position: absolute;
-    top: 20px;
-    left: 0;
-    margin-bottom: 0 !important;
+  .hero-title {
+    margin-top: 0 !important;
   }
 
   .hero-images {
-    min-height: 260px;
+    position: relative;
+    display: flex;
     justify-content: center;
+    align-items: flex-start;
     width: 100%;
-    margin-top: 60px;
+    min-height: auto !important;
   }
 
-  /* Первая картинка - справа сверху, большая */
+  /* Убираем absolute позиционирование на мобильном */
+  .hero-image {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    transform: none !important;
+  }
+
+  /* Первая картинка */
   .hero-image:first-child {
-    width: 65%;
+    width: 55%;
     max-width: none;
-    right: -5%;
-    top: 0;
-    transform: none;
+    z-index: 1;
   }
 
-  /* Вторая картинка - слева снизу, накладывается */
+  /* Вторая картинка - накладывается */
   .hero-image:nth-child(2) {
     width: 55%;
     max-width: none;
-    top: 80px;
-    right: auto;
-    left: -5%;
-    transform: none;
+    margin-left: -15%;
+    margin-top: 25px;
+    z-index: 2;
   }
 
   .hero .btn-primary-custom {
