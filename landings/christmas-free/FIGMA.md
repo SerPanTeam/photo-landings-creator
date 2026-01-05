@@ -1,4 +1,4 @@
-# Family Quiz - Figma Reference
+# Christmas Free - Figma Reference
 
 ## Figma File
 **URL**: https://www.figma.com/design/Z3oVQjpn1llrZnkIFL5MGW/
@@ -7,7 +7,7 @@
 
 | Page | File | Figma Node ID | Figma URL |
 |------|------|---------------|-----------|
-| Главная | `index.html` | `1-3` | [Open](https://www.figma.com/design/Z3oVQjpn1llrZnkIFL5MGW/?node-id=1-3&m=dev) |
+| Главная | `index.html` | `233-22` | [Open](https://www.figma.com/design/Z3oVQjpn1llrZnkIFL5MGW/?node-id=233-22&m=dev) |
 | Quiz 1 | `quiz-1.html` | `137-51` | [Open](https://www.figma.com/design/Z3oVQjpn1llrZnkIFL5MGW/?node-id=137-51&m=dev) |
 | Quiz 2 | `quiz-2.html` | `137-159` | [Open](https://www.figma.com/design/Z3oVQjpn1llrZnkIFL5MGW/?node-id=137-159&m=dev) |
 | Quiz 3 | `quiz-3.html` | `137-71` | [Open](https://www.figma.com/design/Z3oVQjpn1llrZnkIFL5MGW/?node-id=137-71&m=dev) |
@@ -18,7 +18,7 @@
 ## User Flow
 
 ```
-index.html (Главная)
+index.html (Kostenloses Fotoshooting)
     │
     └──> quiz-1.html (Kennst du mich bereits?)
             │
@@ -35,37 +35,53 @@ index.html (Главная)
 
 ## Sections Used
 
-### index.html
-1. hero
-2. promotional
-3. features
+### index.html (DIFFERENT from family-quiz!)
+1. hero (with "Kostenloses" highlight in gold)
+2. promotional (with "Warum kostenlos?" section)
+3. features (with different tagline)
 4. gallery
-5. benefits
-6. process
+5. benefits ("Was dich erwartet" - WITH title!)
+6. process (with PRIMARY CTA button 476x71 at bottom)
 7. fullwidth-image
-8. faq
-9. services
-10. about
+8. faq (4 questions - different content)
+9. services ("Rund ums Jahr..." - different content)
+10. about ("Hi, ich bin Jenni" - different person)
 11. footer
 12. legal-footer
 
-### quiz-*.html (all quiz pages)
+### quiz-*.html (same as family-quiz)
 1. quiz-header
 2. quiz-question
 3. legal-footer
 
-### quiz-form.html
+### quiz-form.html (same as family-quiz)
 1. quiz-header
 2. quiz-form
 3. footer
 4. legal-footer
 
-### thank-you.html
+### thank-you.html (same as family-quiz)
 1. quiz-header
 2. thank-you-hero
 3. author-footer
 4. footer
 5. legal-footer
+
+## Key Differences from family-quiz
+
+| Element | family-quiz | christmas-free |
+|---------|-------------|----------------|
+| Hero title | "Hello, i am a photographer" | "Kostenloses Familien und Kinder- Fotoshooting!" |
+| Hero highlight | None | "Kostenloses" in gold #E2C08D |
+| Promotional | "Weihnachts-Fotoshooting-Aktion" | "Liebe Familien, aufgepasst!" + "Warum kostenlos?" |
+| Promotional line | After all text | BETWEEN description and description2 |
+| Benefits title | (none) | "Was dich erwartet" |
+| Process button | OUTLINE style (right) | **PRIMARY gold button 476x71 (centered)** |
+| FAQ questions | 5 questions | 4 questions |
+| About person | "Dorett Dornbusch" | "Jenni - dein Kameramädle" |
+| About greeting | "Willkommen bei" | (empty - full title in name) |
+| Services title | Different | "Rund ums Jahr warten spannende..." |
+| Services last item | With description | "Und vieles mehr!" (NO description) |
 
 ## Design Tokens
 
@@ -77,51 +93,62 @@ index.html (Главная)
 
 ## Verified Elements (2026-01-05) ✅ ПОЛНАЯ ВЕРИФИКАЦИЯ
 
-### Hero Section (4:43-4:58) ✅
+### Hero Section (233:138) ✅
 - [x] Image 1: top=80px, right=0, 428x394px, z-index=1
 - [x] Image 2: top=258px, right=230px, 306x290px, z-index=2
 - [x] Button: 286x70px (btn-primary-custom)
-- [x] Title: "Hello, i am a photographer"
-- [x] Description: "Description here"
+- [x] Title highlight "Kostenloses" in #E2C08D
+- [x] Description with bold "Familienbilder" and "Weihnachtsgeschenk"
 
-### Promotional Section ✅
-- [x] Title: "Weihnachts-Fotoshooting-Aktion"
-- [x] Текст про 39€ statt 89€
-- [x] Линия-разделитель
+### Promotional Section (233:137) ✅
+- [x] Title: "Liebe Familien, aufgepasst!"
+- [x] description: Текст до линии (Weihnachts-Familien-Fotoshooting bold)
+- [x] **Линия-разделитель**: МЕЖДУ description и description2
+- [x] description2: "Warum kostenlos?" + explanation
 - [x] CTA со стрелкой
 
-### Features Section ✅
+### Features Section (233:139) ✅
 - [x] Title: "Für die schönsten Erinnerungen mit deinen Liebsten!"
-- [x] Subtitle italic: "Familien-Fotoshooting – liebevoll & natürlich"
+- [x] Subtitle italic
 - [x] Линия-разделитель перед CTA
-- [x] Tagline золотой #E2C08D
+- [x] Tagline: "Familienmomente, die das Herz berühren" в #E2C08D
 
-### Benefits Section ✅
+### Gallery Section (233:140) ✅
+- [x] 6 images slider
+- [x] Arrows navigation
+
+### Benefits Section (233:141) ✅
+- [x] **Заголовок "Was dich erwartet"** (h2, text-h2)
 - [x] 3 карточки с иконками 150x150
 - [x] Линии под заголовками карточек
-- [x] БЕЗ заголовка секции (в отличие от christmas-free)
+- [x] Тексты карточек сверены
 
-### Process Section ✅
-- [x] Title: "Wie genau komme ich zum Fotoshooting?"
+### Process Section (233:142) ✅
+- [x] Title: "Wie genau komme ich zum kostenlosen Fotoshooting?"
 - [x] 4 шага с иконками 76x75
 - [x] Линии под каждым шагом
-- [x] **OUTLINE кнопка справа** "Deine Fotoshooting-Aktion – jetzt sichern!"
+- [x] **ctaCentered: true** → PRIMARY кнопка по центру
+- [x] **PRIMARY CTA button: 476x71px** (btn-primary-custom с min-width/min-height)
 
-### FAQ Section ✅
+### Fullwidth Image ✅
+- [x] Height: 656px
+- [x] Background: #7F7F7F
+
+### FAQ Section (233:143) ✅
 - [x] Title: "Häufige Fragen zum Fotoshooting"
-- [x] **5 вопросов** (accordion)
-- [x] +/- иконки
+- [x] **4 вопроса** (последние 2 дубликаты - так в Figma!)
+- [x] Accordion с +/- иконками
 
-### Services Section ✅
-- [x] Title: "Das ganze Jahr über finden immer wieder verschiedene Aktionen..."
-- [x] 4 карточки с описаниями
+### Services Section (233:144) ✅
+- [x] Title: "Rund ums Jahr warten spannende Fotoshooting-Aktionen auf dich."
+- [x] 4 карточки (последняя "Und vieles mehr!" БЕЗ описания)
 - [x] Outline кнопка
 
-### About Section ✅
-- [x] greeting: "Willkommen bei"
-- [x] name: "Dorett Dornbusch"
+### About Section (233:145) ✅
+- [x] **greeting: ""** (пустой!)
+- [x] **name: "Hi, ich bin Jenni – dein Kameramädle!"** (весь заголовок)
 - [x] Линия-разделитель после name, перед bio
-- [x] Bio текст
+- [x] Bio текст сверен
 
 ### Quiz Pages ✅
 - [x] Quiz-1 (137:51): 4 опции, `--4` класс, space-between
@@ -133,20 +160,20 @@ index.html (Главная)
 ### Quiz Form (137:111) ✅
 - [x] Форма слева: Name, Email, Phone, Availability
 - [x] Checkbox Datenschutz
-- [x] Button "Jetzt Gutschein sichern!"
+- [x] Button "Jetzt kostenloses Shooting sichern!"
 - [x] Справа: изображение + WICHTIG блок
 
 ### Thank You (137:84) ✅
 - [x] Title: "Herzlichen Glückwunsch!"
 - [x] Primary CTA: "Jetzt Termin wählen & sichern!"
 - [x] Secondary buttons: "Jetzt anrufen", "Mail uns!"
-- [x] Author footer: "Yvonne Jadke – Fotograf Hannover"
+- [x] Author footer: "Jenni – dein Kameramädle"
 - [x] Social icons: Facebook, Instagram, Website
 
 ## Build Command
 
 ```bash
-node builder/builder.js family-quiz
+node builder/builder.js christmas-free
 ```
 
-Output: `projects/family-quiz/`
+Output: `projects/christmas-free/`

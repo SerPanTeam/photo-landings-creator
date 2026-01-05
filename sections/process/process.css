@@ -30,6 +30,12 @@
   border-bottom: 1px solid var(--brand-text);
 }
 
+/* FIGMA: Центрированная кнопка CTA - 476x71px */
+.process .btn-primary-custom {
+  min-width: 476px;
+  min-height: 71px;
+}
+
 /* Horizontal 4-column Layout */
 .process-horizontal .process-step-boxed {
   background-color: rgba(255, 255, 255, 0.4);

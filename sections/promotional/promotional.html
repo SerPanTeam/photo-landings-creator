@@ -19,13 +19,20 @@
           <!-- Title -->
           <h2 class="text-bold-big mb-4">{{title}}</h2>
 
-          <!-- Description -->
+          <!-- Description (первая часть - до линии) -->
           <div class="text-medium-small mb-4" style="max-width: 608px;">
             {{{description}}}
           </div>
 
           <!-- Line Divider -->
           <div class="line-divider mb-4" style="max-width: 588px; border-bottom: 1px solid #3D3D3D;"></div>
+
+          <!-- Description2 (вторая часть - после линии, перед CTA) -->
+          {{#if description2}}
+          <div class="text-medium-small mb-4" style="max-width: 608px;">
+            {{{description2}}}
+          </div>
+          {{/if}}
 
           <!-- CTA Link -->
           {{#if cta}}

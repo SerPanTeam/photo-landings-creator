@@ -166,12 +166,14 @@ Body: 22px Medium
   "content": {
     "backgroundColor": "#EEE3D0",
     "title": "Promo Title",
-    "description": "Text with HTML",
+    "description": "Text BEFORE line divider",
+    "description2": "Text AFTER line divider (optional)",
     "image": "url",
     "cta": { "text": "Link text", "link": "#", "showArrow": true }
   }
 }
 ```
+**NOTE**: Line divider is BETWEEN `description` and `description2`. Use both when Figma has line in middle of text!
 
 ### features
 ```json
@@ -473,6 +475,8 @@ Store Figma references in `landings/<name>/FIGMA.md`:
 | Wrong icon style | Compare SVG visually with Figma - icons8 style differs from generic |
 | Custom SVG instead of Figma asset | DOWNLOAD icons from Figma, don't create manually |
 | Missing text element | Count ALL text blocks in Figma - verify each renders |
+| **Line divider wrong position** | Check WHERE the line is in Figma - between which elements? |
+| Line between texts, not before CTA | Use `description` + `description2` fields for split content |
 
 ### 5. Verification Process
 ```
@@ -483,8 +487,20 @@ Store Figma references in `landings/<name>/FIGMA.md`:
 5. Compare with CSS in sections/<name>/<name>.css
 6. COUNT all text elements - verify each has matching field in config
 7. CHECK icons - if Figma uses images, download them (don't create SVGs)
-8. Fix discrepancies BEFORE marking as verified
+8. CHECK line dividers - WHERE exactly is each line? Between which elements?
+9. Fix discrepancies BEFORE marking as verified
 ```
+
+### 5a. Line Dividers - CRITICAL
+Check the EXACT position of line dividers in Figma:
+| Section | Line Position |
+|---------|---------------|
+| promotional | BETWEEN description and description2 (use both fields!) |
+| features | After description, BEFORE CTA link |
+| about | After name/title, BEFORE bio |
+| benefits | Under each card title (built into template) |
+
+**Common mistake**: Assuming line is always before CTA. CHECK in Figma!
 
 ### 6. Icons - CRITICAL
 ```bash
