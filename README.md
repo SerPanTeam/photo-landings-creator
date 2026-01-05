@@ -1,212 +1,219 @@
-# Лендинг для фотографа Dorett Dornbusch
+# Photo Landing Builder
 
-Пиксель-перфект лендинг, созданный на основе дизайна из Figma для рождественской акции на семейные фотосессии.
+Component-based landing page builder for photographer websites. Build complete landing pages by combining reusable sections through JSON configuration.
 
-## Структура проекта
+## Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Build a landing
+node builder/builder.js <landing-name>
+
+# Examples
+node builder/builder.js family-quiz
+node builder/builder.js christmas-free
+```
+
+Output: `projects/<landing-name>/`
+
+## Available Landings
+
+| Name | Type | Pages | Description |
+|------|------|-------|-------------|
+| `family-quiz` | Multi-page | 7 | Quiz funnel for family photoshoot |
+| `christmas-free` | Multi-page | 7 | Free Christmas photoshoot promo |
+| `christmas-family` | Single-page | 1 | Christmas family landing |
+| `photographer` | Single-page | 1 | Basic photographer portfolio |
+| `newborn` | Single-page | 1 | Newborn photography |
+| `mutter-kind` | Single-page | 1 | Mother & child photoshoot |
+| `free-photoshoot` | Single-page | 1 | Free photoshoot promo |
+
+## Project Structure
 
 ```
 landing/
-├── index.html      # HTML с точными позициями из Figma
-├── style.css       # CSS с абсолютным позиционированием
-├── script.js       # JavaScript для интерактивности FAQ
-└── README.md       # Документация
+├── sections/              # 21 reusable section components
+│   ├── hero/
+│   │   ├── hero.html      # Handlebars template
+│   │   ├── hero.css       # Section styles
+│   │   └── variables.json # Default values
+│   └── ...
+│
+├── landings/              # Landing configurations
+│   └── <landing-name>/
+│       ├── config.json    # Sections + content
+│       ├── FIGMA.md       # Figma node references
+│       ├── js/            # Custom scripts
+│       └── assets/        # Landing-specific images
+│
+├── projects/              # Built output (generated)
+├── assets/                # Shared CSS/JS/icons
+└── builder/builder.js     # Build system
 ```
 
-## Особенности реализации
+## Available Sections (21)
 
-### Пиксель-перфект верстка
-- Используется абсолютное позиционирование для точного соответствия дизайну
-- Все элементы размещены по координатам из Figma
-- Ширина лендинга: 1440px
-- Высота: ~7359px
+### Page Structure
+| Section | Purpose |
+|---------|---------|
+| `hero` | Main header with logo, title, CTA, images |
+| `hero-dark` | Dark theme hero with promo text |
+| `hero-centered` | Centered layout with multiple images |
+| `footer` | Google Maps embed |
+| `legal-footer` | Impressum/Datenschutz links |
 
-### Изображения из Figma MCP
-Все SVG изображения загружаются с локального MCP сервера Figma:
-- `http://localhost:3845/assets/*.svg`
-- Линии-разделители
-- Стрелки
-- Иконки FAQ (плюс/минус)
-- Галерея изображений
+### Content Sections
+| Section | Purpose |
+|---------|---------|
+| `promotional` | Promo block with image + text (supports `description2`) |
+| `features` | Description + image + tagline |
+| `benefits` | 3 icon cards (supports optional `title`) |
+| `process` | 4-step process (supports `ctaCentered` for primary button) |
+| `services` | 4 service cards grid |
+| `about` | Bio section with photo |
+| `gallery` | Image slider with arrows |
+| `fullwidth-image` | Full-width image/placeholder |
+| `faq` | Accordion Q&A |
+| `faq-cards` | Card-based Q&A |
+| `testimonials` | Client reviews slider |
 
-## Технологии
+### Quiz Sections
+| Section | Purpose |
+|---------|---------|
+| `quiz-header` | Logo + progress text |
+| `quiz-question` | Question with 2-4 image options |
+| `quiz-form` | Registration form |
+| `thank-you-hero` | Success page content |
+| `author-footer` | Author info + social links |
 
-- **HTML5** - семантическая разметка с data-атрибутами
-- **CSS3** - абсолютное позиционирование, calc() для адаптивных позиций
-- **Vanilla JavaScript** - интерактивность FAQ
-- **Google Fonts** - шрифт Inter (Medium 500, Bold 700)
+## Design System
 
-## Дизайн-система из Figma
+### Colors
+| Name | Hex | Usage |
+|------|-----|-------|
+| Primary BG | `#F5EDE0` | Main sections |
+| Secondary BG | `#EEE3D0` | Alternating sections |
+| Accent | `#E2C08D` | Buttons, highlights |
+| Text Dark | `#3D3D3D` | Primary text |
+| Text Black | `#000000` | Headings |
 
-### Цветовая палитра
-```css
---bg-primary: #F5EDE0;           /* Основной фон */
---bg-secondary: #EEE3D0;         /* Вторичный фон */
---text-color: #3D3D3D;           /* Основной текст */
---button-color: #E2C08D;         /* Цвет кнопок */
---gray: #7F7F7F;                 /* Серый для плейсхолдеров */
---black: #000000;                /* Чёрный текст */
---white: #FFFFFF;                /* Белый текст */
+### Typography (Inter)
+| Style | Size | Class |
+|-------|------|-------|
+| Header 1 | 55px Bold | `.text-h1` |
+| Header 2 | 45px Bold | `.text-h2` |
+| Header 3 | 35px Bold | `.text-h3` |
+| Text Bold | 28px/22px Bold | `.text-bold-big`, `.text-bold-small` |
+| Text Medium | 28px/22px Medium | `.text-medium-big`, `.text-medium-small` |
+
+### Buttons
+| Class | Style | Size |
+|-------|-------|------|
+| `.btn-primary-custom` | Solid #E2C08D | 286x70 (hero), 476x71 (process centered) |
+| `.btn-outline-custom` | Black border | auto x 60px |
+
+## Config.json Examples
+
+### Single Page
+```json
+{
+  "name": "Landing Name",
+  "lang": "de",
+  "meta": { "title": "...", "description": "..." },
+  "sections": [
+    { "type": "hero", "content": { "title": "..." } },
+    { "type": "faq", "content": { "items": [...] } }
+  ]
+}
 ```
 
-### Типографика
+### Multi-Page (Quiz)
+```json
+{
+  "name": "Quiz Landing",
+  "scripts": ["quiz.js"],
+  "pages": [
+    { "filename": "index.html", "sections": [...] },
+    { "filename": "quiz-1.html", "sections": [...] }
+  ]
+}
 ```
-Header 1:           Inter Bold, 55px, line-height: 100%
-Header 2:           Inter Bold, 45px, line-height: 100%
-Text Bold Big:      Inter Bold, 28px, line-height: normal
-Text Regular Big:   Inter Medium, 28px, line-height: normal
-Text Bold Small:    Inter Bold, 22px, line-height: normal
-Text Regular Small: Inter Medium, 22px, line-height: normal
+
+## Key Section Features
+
+### promotional - Split text with line divider
+```json
+{
+  "type": "promotional",
+  "content": {
+    "description": "Text BEFORE line divider",
+    "description2": "Text AFTER line divider (optional)"
+  }
+}
 ```
 
-## Секции лендинга (по порядку)
+### benefits - Optional title
+```json
+{
+  "type": "benefits",
+  "content": {
+    "title": "Was dich erwartet",
+    "items": [...]
+  }
+}
+```
 
-1. **Hero (0-634px)**
-   - Логотип
-   - Заголовок "Hello, i am a photographer"
-   - Описание
-   - Кнопка CTA
-   - Две фото-плейсхолдера
+### process - Centered primary button
+```json
+{
+  "type": "process",
+  "content": {
+    "ctaCentered": true,
+    "cta": { "text": "Button", "link": "#" }
+  }
+}
+```
 
-2. **Christmas Action (634-1326px)**
-   - Фото слева
-   - Информация о рождественской акции справа
-   - Цена: 39€ вместо 89€
-   - Срок: до 06.12.25
+### quiz-question - 2/3/4 options
+```json
+{
+  "type": "quiz-question",
+  "content": {
+    "optionsCount": "4",
+    "options": [
+      { "text": "Option", "link": "next.html", "image": "url", "multiline": false }
+    ]
+  }
+}
+```
 
-3. **Family Memories (1326-2048px)**
-   - Описание семейных фотосессий
-   - Фото справа
-   - Слоган: "– для dich, für dein Kind, für immer –"
+## Quiz Page Flow
 
-4. **Group Gallery (2042-2681px)**
-   - SVG галерея с несколькими изображениями
+```
+index.html (main landing)
+    └──> quiz-1.html (4 options)
+            └──> quiz-2.html (4 options)
+                    └──> quiz-3.html (2 options, centered)
+                            └──> quiz-4.html (3 options, centered)
+                                    └──> quiz-form.html (registration)
+                                            └──> thank-you.html (success)
+```
 
-5. **Benefits (2681-3226px)**
-   - 3 преимущества:
-     - Viel Zeit & Raum
-     - Professionelle Fotografin
-     - Hohe Qualität
+## Figma Integration
 
-6. **Process (3226-4190px)**
-   - "Wie genau komme ich zum Fotoshooting?"
-   - 4 шага процесса:
-     1. Eintragen
-     2. Shootingzeit
-     3. Wähle dein Lieblingsbild/er aus
-     4. Ergebnis
-
-7. **Gray Section (4189-4845px)**
-   - Серый placeholder блок
-
-8. **FAQ (4845-5565px)**
-   - "Häufige Fragen zum Fotoshooting"
-   - 3 вопроса с toggle (открыть/закрыть)
-
-9. **Year Actions (5565-6600px)**
-   - "Das ganze Jahr über finden..."
-   - 4 карточки услуг:
-     - Family Time
-     - Kinder-Fotoshooting
-     - Babybauch & Newborn
-     - Portraitfotografie
-
-10. **About (6599-7359px)**
-    - Фото фотографа слева
-    - "Willkommen bei Dorett Dornbusch"
-    - Информация о фотографе
-
-11. **Contact (7359px+)**
-    - Placeholder для карты
-
-## Интерактивность
-
-- **FAQ Toggle** - клик на вопрос открывает/закрывает ответ
-- **Smooth Scrolling** - плавная прокрутка к якорям
-- **Button Hover** - эффекты при наведении на кнопки
-
-## Запуск
-
-### Простой способ
-Откройте `index.html` в браузере.
-
-**ВАЖНО**: Для корректного отображения изображений необходим запущенный Figma MCP сервер на `http://localhost:3845`
-
-### С локальным сервером
+Each landing has a `FIGMA.md` with node IDs for design verification:
 
 ```bash
-# Python 3
-python -m http.server 8000
-
-# Node.js
-npx serve
-
-# PHP
-php -S localhost:8000
+# Use Figma MCP tools
+mcp__figma__get_screenshot({ nodeId: "233-22" })
+mcp__figma__get_design_context({ nodeId: "233-22" })
 ```
 
-Откройте: http://localhost:8000
+## Technical Info
 
-## Адаптивность
-
-Реализовано масштабирование для разных разрешений:
-
-- **>1440px** - оригинальный размер
-- **<1440px** - пропорциональное масштабирование через CSS `transform: scale()`
-- **<768px** - масштаб 0.5x
-
-Для полноценной адаптивности потребуется переделка с flexbox/grid вместо абсолютного позиционирования.
-
-## Figma MCP Server
-
-Лендинг использует локальный MCP сервер Figma для изображений:
-
-```
-Проверка подключения:
-claude mcp list
-
-Должен показать:
-✓ figma: http://127.0.0.1:3845/mcp (HTTP) - Connected
-```
-
-## Что использовано из Figma
-
-- Точные координаты всех элементов
-- Размеры блоков
-- Цветовая схема
-- Типографика (размеры, веса, семейства шрифтов)
-- SVG изображения (линии, стрелки, иконки)
-- Структура контента
-
-## Production Checklist
-
-Перед размещением на production:
-
-- [ ] Заменить все `http://localhost:3845/assets/*` на реальные URL изображений
-- [ ] Экспортировать SVG из Figma и разместить в `/assets/`
-- [ ] Добавить реальные фотографии вместо серых плейсхолдеров
-- [ ] Интегрировать Google Maps для секции контактов
-- [ ] Добавить реальный текст вопросов/ответов в FAQ
-- [ ] Настроить формы обратной связи
-- [ ] Подключить аналитику
-- [ ] Оптимизировать изображения (WebP, lazy loading)
-- [ ] Добавить мета-теги (OpenGraph, Twitter Cards)
-- [ ] Настроить SEO (title, description, schema.org)
-
-## Возможные улучшения
-
-1. **Адаптивная верстка** - переделать на flexbox/grid для мобильных
-2. **Анимации** - добавить AOS или GSAP для эффектов при скролле
-3. **Формы** - добавить форму записи на фотосессию
-4. **Галерея** - добавить lightbox для просмотра работ
-5. **Оптимизация** - минификация CSS/JS, сжатие изображений
-6. **Доступность** - ARIA-атрибуты, навигация с клавиатуры
-
-## Структура данных из Figma
-
-Лендинг создан из node ID: `1:3` дизайн-файла Figma.
-
-Использованы следующие стили:
-- Hintergrundfarbe: #F5EDE0
-- Scriftfarbe: #3D3D3D
-- Buttonfarbe: #E2C08D
-- Secundare Hintergrundfarbe: #EEE3D0
+- **Templating**: Handlebars 4.7.8
+- **CSS Framework**: Bootstrap 5.3.2
+- **Node.js**: Required for build
+- **Output**: Static HTML/CSS/JS (no runtime dependencies)
