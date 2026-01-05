@@ -4,6 +4,18 @@ Universal landing page generator for photographers. Create professional landing 
 
 **For any photographer** - just customize the `config.json` with your content, images, and branding.
 
+## Live Demos
+
+| Demo | Type | Description |
+|------|------|-------------|
+| [Family Quiz](https://serpanteam.github.io/photo-landings-creator/projects/family-quiz/) | Multi-page | Quiz funnel (7 pages) |
+| [Christmas Free](https://serpanteam.github.io/photo-landings-creator/projects/christmas-free/) | Multi-page | Free photoshoot promo (7 pages) |
+| [Christmas Family](https://serpanteam.github.io/photo-landings-creator/projects/christmas-family/) | Single-page | Christmas landing |
+| [Photographer](https://serpanteam.github.io/photo-landings-creator/projects/photographer/) | Single-page | Basic portfolio |
+| [Newborn](https://serpanteam.github.io/photo-landings-creator/projects/newborn/) | Single-page | Newborn photography |
+| [Mutter & Kind](https://serpanteam.github.io/photo-landings-creator/projects/mutter-kind/) | Single-page | Mother & child |
+| [Free Photoshoot](https://serpanteam.github.io/photo-landings-creator/projects/free-photoshoot/) | Single-page | Free photoshoot promo |
+
 ## Quick Start
 
 ```bash

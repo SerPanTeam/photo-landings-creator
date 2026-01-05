@@ -1,0 +1,145 @@
+/* Hero Centered Section Specific Styles */
+
+.hero-centered {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-centered-logo {
+  margin-bottom: 40px;
+}
+
+/* CSS Grid Layout for proper positioning */
+.hero-centered-content {
+  display: grid;
+  grid-template-columns: 280px 1fr 280px;
+  grid-template-rows: 1fr auto;
+  gap: 20px;
+  min-height: 500px;
+  align-items: start;
+}
+
+/* Left Image */
+.hero-centered-img-left {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+  align-self: start;
+}
+
+/* Right Image */
+.hero-centered-img-right {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+  align-self: center;
+}
+
+/* Center Text */
+.hero-centered-text {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+/* Bottom Image */
+.hero-centered-img-bottom {
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: center;
+  align-self: end;
+}
+
+.hero-centered-title {
+  font-family: var(--font-secondary);
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-centered-subtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-centered-cta {
+  margin-top: 10px;
+}
+
+/* Images */
+.hero-centered-img img,
+.hero-centered-img .img-placeholder {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .hero-centered-content {
+    grid-template-columns: 220px 1fr 220px;
+  }
+
+  .hero-centered-title {
+    font-size: 48px;
+  }
+
+  .hero-centered-img img,
+  .hero-centered-img .img-placeholder {
+    max-width: 220px !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero-centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+    padding-top: 20px;
+  }
+
+  .hero-centered-img-left,
+  .hero-centered-img-right {
+    display: none;
+  }
+
+  .hero-centered-img-bottom {
+    order: -1;
+    margin-bottom: 30px;
+  }
+
+  .hero-centered-text {
+    order: 1;
+  }
+
+  .hero-centered-title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-centered-title {
+    font-size: 32px;
+  }
+
+  .hero-centered-subtitle {
+    font-size: 16px;
+  }
+
+  .hero-centered-img-bottom img,
+  .hero-centered-img-bottom .img-placeholder {
+    max-width: 200px !important;
+    height: auto !important;
+  }
+}

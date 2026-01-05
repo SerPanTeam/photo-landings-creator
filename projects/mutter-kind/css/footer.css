@@ -1,0 +1,23 @@
+/* Footer Section Specific Styles */
+
+.footer {
+  position: relative;
+}
+
+.footer iframe {
+  display: block;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer iframe {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer iframe {
+    height: 250px;
+  }
+}

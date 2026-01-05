@@ -1,0 +1,93 @@
+/* Benefits Section Specific Styles */
+
+.benefits {
+  position: relative;
+}
+
+.benefit-card {
+  padding: 20px;
+}
+
+.benefit-icon {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.benefit-icon img {
+  max-width: 100%;
+  height: auto;
+}
+
+.benefit-text {
+  flex: 1;
+}
+
+.benefit-divider {
+  height: 1px;
+  border-bottom: 1px solid var(--brand-text);
+}
+
+/* 2x2 Grid Layout with Card Style */
+.benefits-2x2 .benefit-card-boxed {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  padding: 25px 30px;
+  height: 100%;
+}
+
+.benefits-2x2 .benefit-card-boxed .benefit-icon {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 10px;
+}
+
+.benefits-2x2 .benefit-card-boxed .benefit-icon .img-placeholder {
+  width: 35px !important;
+  height: 35px !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .benefit-card {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Horizontal layout: icon left, text right */
+  .benefit-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .benefit-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0;
+  }
+
+  .benefit-icon .img-placeholder {
+    width: 80px !important;
+    height: 80px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .benefit-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .benefit-icon .img-placeholder {
+    width: 70px !important;
+    height: 70px !important;
+  }
+}

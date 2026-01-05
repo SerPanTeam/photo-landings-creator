@@ -1,8 +1,8 @@
 # Dependencies
 node_modules/
 
-# Build output
-projects/
+# Build output (commented out for GitHub Pages)
+# projects/
 
 # OS files
 .DS_Store

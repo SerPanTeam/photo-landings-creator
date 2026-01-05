@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sichere dir jetzt dein Familien-Fotoshooting zu Weihnachten!">
+  <meta name="keywords" content="fotoshooting, familie, weihnachten, gutschein">
+  <title>Kennst du mich bereits? - Quiz</title>
+
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://script.google.com; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; font-src 'self' https:; frame-src https://www.google.com https://maps.google.com; connect-src 'self' https://script.google.com https://script.googleusercontent.com">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="css/base-styles.css" rel="stylesheet">
+  <link href="css/common.css" rel="stylesheet">
+
+  <!-- Section-specific CSS -->
+  <link href="css/hero.css" rel="stylesheet">
+  <link href="css/promotional.css" rel="stylesheet">
+  <link href="css/features.css" rel="stylesheet">
+  <link href="css/gallery.css" rel="stylesheet">
+  <link href="css/benefits.css" rel="stylesheet">
+  <link href="css/process.css" rel="stylesheet">
+  <link href="css/fullwidth-image.css" rel="stylesheet">
+  <link href="css/faq.css" rel="stylesheet">
+  <link href="css/services.css" rel="stylesheet">
+  <link href="css/about.css" rel="stylesheet">
+  <link href="css/footer.css" rel="stylesheet">
+  <link href="css/legal-footer.css" rel="stylesheet">
+  <link href="css/quiz-header.css" rel="stylesheet">
+  <link href="css/quiz-question.css" rel="stylesheet">
+  <link href="css/quiz-form.css" rel="stylesheet">
+  <link href="css/thank-you-hero.css" rel="stylesheet">
+  <link href="css/author-footer.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  QUIZ HEADER - Шапка страницы квиза (лого + прогресс)                     ║
+     ║  Фон: backgroundColor | Текст: textColor                                   ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+<header class="quiz-header" style="background-color: #F5EDE0;">
+  <div class="container">
+    <div class="quiz-header__content">
+
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ЛОГОТИП
+           ════════════════════════════════════════════════════════════════════════ -->
+      <div class="quiz-header__logo">
+        <a href="index.html" class="quiz-header__logo-text text-bold-big" style="color: #3D3D3D;">
+          Logo
+        </a>
+      </div>
+
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ПРОГРЕСС / ПОДЗАГОЛОВОК
+           ════════════════════════════════════════════════════════════════════════ -->
+      <div class="quiz-header__progress">
+        <p class="text-medium-small" style="color: #3D3D3D;">Weiter zum Gutschein</p>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  QUIZ QUESTION - Секция вопроса с вариантами ответов                       ║
+     ║  Поддерживает 2-4 варианта ответа с изображениями                          ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+<section class="quiz-question" style="background-color: #F5EDE0;" data-question-id="q1">
+  <div class="container">
+
+    <!-- ════════════════════════════════════════════════════════════════════════
+         ЗАГОЛОВОК ВОПРОСА
+         ════════════════════════════════════════════════════════════════════════ -->
+    <div class="quiz-question__title">
+      <h1 class="text-h2" style="color: #000000;">Kennst du mich bereits?</h1>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════════════
+         ИЗОБРАЖЕНИЯ ВАРИАНТОВ
+         ════════════════════════════════════════════════════════════════════════ -->
+    <div class="quiz-question__images quiz-question__images--4">
+      <div class="quiz-question__image-wrapper">
+        <img src="https://picsum.photos/seed/q1a/300/300" alt="Ja, vom Hören" class="quiz-question__image">
+      </div>
+      <div class="quiz-question__image-wrapper">
+        <img src="https://picsum.photos/seed/q1b/300/300" alt="Ja, na klar!" class="quiz-question__image">
+      </div>
+      <div class="quiz-question__image-wrapper">
+        <img src="https://picsum.photos/seed/q1c/300/300" alt="Schon sehr lang" class="quiz-question__image">
+      </div>
+      <div class="quiz-question__image-wrapper">
+        <img src="https://picsum.photos/seed/q1d/300/300" alt="Nein, noch nicht" class="quiz-question__image">
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════════════
+         КНОПКИ ВАРИАНТОВ ОТВЕТА
+         ════════════════════════════════════════════════════════════════════════ -->
+    <div class="quiz-question__options quiz-question__options--4">
+      <a href="quiz-2.html"
+         class="quiz-question__option"
+         data-answer="vom_hoeren"
+         onclick="saveQuizAnswer('q1', 'vom_hoeren')">
+        <span class="quiz-question__option-text">Ja, vom Hören</span>
+      </a>
+      <a href="quiz-2.html"
+         class="quiz-question__option"
+         data-answer="na_klar"
+         onclick="saveQuizAnswer('q1', 'na_klar')">
+        <span class="quiz-question__option-text">Ja, na klar!</span>
+      </a>
+      <a href="quiz-2.html"
+         class="quiz-question__option"
+         data-answer="sehr_lang"
+         onclick="saveQuizAnswer('q1', 'sehr_lang')">
+        <span class="quiz-question__option-text">Schon sehr lang</span>
+      </a>
+      <a href="quiz-2.html"
+         class="quiz-question__option"
+         data-answer="noch_nicht"
+         onclick="saveQuizAnswer('q1', 'noch_nicht')">
+        <span class="quiz-question__option-text">Nein, noch nicht</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  LEGAL FOOTER - Юридический подвал (ссылки + копирайт)                    ║
+     ║  Фон: backgroundColor | Изменить: style="background-color: #F5EDE0;"      ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+<section class="legal-footer" style="background-color: #F5EDE0;">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ЮРИДИЧЕСКИЕ ССЫЛКИ
+           Impressum, Datenschutz, AGB и т.д.
+           ════════════════════════════════════════════════════════════════════════ -->
+      <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+        <nav class="legal-links">
+          <!-- ССЫЛКА - изменить href="..." и текст между > и </a> -->
+          <a href="impressum.html" class="legal-link">Impressum</a>
+          <span class="legal-separator">|</span>
+          <!-- ССЫЛКА - изменить href="..." и текст между > и </a> -->
+          <a href="datenschutz.html" class="legal-link">Datenschutz</a>
+          
+        </nav>
+      </div>
+
+      <!-- ════════════════════════════════════════════════════════════════════════
+           КОПИРАЙТ
+           Например: "© 2025 Möst Fotografie. Alle Rechte vorbehalten."
+           ════════════════════════════════════════════════════════════════════════ -->
+      <div class="col-md-6 text-center text-md-end">
+        <p class="copyright mb-0">© 2025 Dorett Dornbusch. Alle Rechte vorbehalten.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <!-- Common JS -->
+  <script src="js/common.js"></script>
+
+  <!-- Page-specific JS -->
+  <script src="js/quiz.js"></script>
+</body>
+</html>

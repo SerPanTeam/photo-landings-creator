@@ -1,0 +1,24 @@
+/* Full Width Image Section Styles */
+
+.fullwidth-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.fullwidth-image__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.fullwidth-image__placeholder {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .fullwidth-image__img {
+    min-height: 300px;
+    object-fit: cover;
+  }
+}

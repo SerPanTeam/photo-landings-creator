@@ -1,0 +1,49 @@
+/* Legal Footer Section Styles */
+
+.legal-footer {
+  padding: 24px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.legal-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.legal-link {
+  color: var(--brand-text);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.legal-link:hover {
+  color: var(--brand-text-black);
+  text-decoration: underline;
+}
+
+.legal-separator {
+  color: var(--color-gray-light);
+  font-size: 14px;
+}
+
+.copyright {
+  color: var(--color-gray-medium);
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .legal-footer {
+    padding: 20px 0;
+  }
+
+  .legal-links {
+    justify-content: center;
+  }
+
+  .copyright {
+    font-size: 12px;
+  }
+}
