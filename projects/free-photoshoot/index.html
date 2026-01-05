@@ -202,70 +202,123 @@
 
 
 <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  GALLERY - Галерея изображений (слайдер)                                  ║
+     ║  GALLERY - Галерея изображений (Swiper.js слайдер)                        ║
      ║  Фон: backgroundColor | Изменить: style="background-color: #F5EDE0;"      ║
      ║  Стрелки: showArrows: true/false                                          ║
+     ║  Пагинация: showPagination: true/false                                    ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-<section class="gallery section-padding" style="background-color: #EEE3D0;" aria-label="Fotogalerie">
-  <div class="container position-relative">
 
-    <!-- СТРЕЛКА ВЛЕВО - навигация по галерее -->
-    <button type="button" class="gallery-arrow gallery-arrow-left" data-direction="prev" aria-label="Vorheriges Bild">
-      <span aria-hidden="true">←</span>
-    </button>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<section class="gallery section-padding" style="background-color: #EEE3D0;" aria-label="Fotogalerie">
+  <div class="container">
 
     <!-- ══════════════════════════════════════════════════════════════════════════
-         СЛАЙДЫ ГАЛЕРЕИ
-         Каждый слайд содержит одно изображение
+         SWIPER ГАЛЕРЕЯ
          ══════════════════════════════════════════════════════════════════════════ -->
-    <div class="gallery-wrapper">
-      <div class="gallery-track" data-index="0">
-        <div class="gallery-slide">
+    <div class="swiper gallery-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
           <div class="gallery-item">
             <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-            <img src="https://images.unsplash.com/photo-1581952976147-5a2d15560349?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Familienfoto 1" class="img-fluid" style="width: 400px; height: 400px; object-fit: cover;">
+            <img src="https://images.unsplash.com/photo-1581952976147-5a2d15560349?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Familienfoto 1" class="img-fluid" loading="lazy">
           </div>
         </div>
-        <div class="gallery-slide">
+        <div class="swiper-slide">
           <div class="gallery-item">
             <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Familienfoto 2" class="img-fluid" style="width: 400px; height: 400px; object-fit: cover;">
+            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Familienfoto 2" class="img-fluid" loading="lazy">
           </div>
         </div>
-        <div class="gallery-slide">
+        <div class="swiper-slide">
           <div class="gallery-item">
             <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-            <img src="https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Familienfoto 3" class="img-fluid" style="width: 400px; height: 400px; object-fit: cover;">
+            <img src="https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Familienfoto 3" class="img-fluid" loading="lazy">
           </div>
         </div>
-        <div class="gallery-slide">
+        <div class="swiper-slide">
           <div class="gallery-item">
             <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-            <img src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Familienfoto 4" class="img-fluid" style="width: 400px; height: 400px; object-fit: cover;">
+            <img src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Familienfoto 4" class="img-fluid" loading="lazy">
           </div>
         </div>
-        <div class="gallery-slide">
+        <div class="swiper-slide">
           <div class="gallery-item">
             <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-            <img src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Familienfoto 5" class="img-fluid" style="width: 400px; height: 400px; object-fit: cover;">
+            <img src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Familienfoto 5" class="img-fluid" loading="lazy">
           </div>
         </div>
-        <div class="gallery-slide">
+        <div class="swiper-slide">
           <div class="gallery-item">
             <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-            <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Familienfoto 6" class="img-fluid" style="width: 400px; height: 400px; object-fit: cover;">
+            <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Familienfoto 6" class="img-fluid" loading="lazy">
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- СТРЕЛКА ВПРАВО - навигация по галерее -->
-    <button type="button" class="gallery-arrow gallery-arrow-right" data-direction="next" aria-label="Nächstes Bild">
-      <span aria-hidden="true">→</span>
-    </button>
+      <!-- Пагинация (точки) -->
+      <div class="swiper-pagination"></div>
+
+      <!-- Стрелки навигации -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
 
   </div>
 </section>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    new Swiper('.gallery-swiper', {
+      // Количество слайдов
+      slidesPerView: 1,
+      spaceBetween: 15,
+
+      // Бесконечный скролл
+      loop: true,
+
+      // Пагинация (точки)
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+      // Стрелки
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // Респонсив брейкпоинты
+      breakpoints: {
+        // >= 576px
+        576: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        // >= 768px
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        // >= 992px
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
+
+      // Touch/Swipe
+      grabCursor: true,
+
+      // Автоматическая высота
+      autoHeight: false,
+    });
+  });
+</script>
 
 
 <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
