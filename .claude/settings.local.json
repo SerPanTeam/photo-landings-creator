@@ -5,7 +5,8 @@
       "Bash(node builder/builder.js:*)",
       "mcp__figma__get_design_context",
       "mcp__figma__get_screenshot",
-      "mcp__figma__get_metadata"
+      "mcp__figma__get_metadata",
+      "Bash(cat:*)"
     ]
   }
 }

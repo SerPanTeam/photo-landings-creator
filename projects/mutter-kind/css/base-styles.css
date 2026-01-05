@@ -49,8 +49,15 @@
 }
 
 /* Apply base styles globally */
-body {
+html, body {
   font-family: var(--font-family);
   color: var(--color-black);
   background: var(--brand-bg);
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Prevent horizontal scroll from any element */
+*, *::before, *::after {
+  box-sizing: border-box;
 }

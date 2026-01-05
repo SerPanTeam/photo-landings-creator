@@ -49,11 +49,30 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .faq-list {
+    max-width: 100%;
+  }
+
   .faq-item {
     padding: 15px 0;
   }
 
   .faq-toggle {
     font-size: 24px;
+  }
+
+  .faq-answer {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .faq-item {
+    padding: 12px 0;
+  }
+
+  .faq-toggle {
+    font-size: 20px;
+    min-width: 24px;
   }
 }

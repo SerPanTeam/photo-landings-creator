@@ -157,4 +157,41 @@
   .text-medium-small {
     font-size: 18px;
   }
+
+  /* Buttons responsive */
+  .btn-primary-custom,
+  .btn-outline-custom {
+    max-width: 100%;
+    padding: 0 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .text-h1 {
+    font-size: 28px;
+  }
+
+  .text-h2 {
+    font-size: 26px;
+  }
+
+  .text-h3 {
+    font-size: 22px;
+  }
+
+  .text-bold-big,
+  .text-medium-big {
+    font-size: 18px;
+  }
+
+  .text-bold-small,
+  .text-medium-small {
+    font-size: 16px;
+  }
+
+  .btn-primary-custom,
+  .btn-outline-custom {
+    min-height: 56px;
+    font-size: 16px;
+  }
 }

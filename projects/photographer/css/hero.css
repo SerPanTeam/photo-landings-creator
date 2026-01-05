@@ -41,6 +41,7 @@
 .hero .btn-primary-custom {
   min-width: 286px;
   min-height: 70px;
+  max-width: 100%;
 }
 
 /* Responsive adjustments */
@@ -97,18 +98,61 @@
 }
 
 @media (max-width: 576px) {
+  /* Переупорядочивание: Лого -> Картинки -> Заголовок -> Описание -> Кнопка */
+  .hero-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-text-col {
+    order: 2;
+  }
+
+  .hero-images-col {
+    order: 1;
+  }
+
+  .hero-content {
+    padding-top: 20px !important;
+  }
+
+  .hero-logo {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    margin-bottom: 0 !important;
+  }
+
   .hero-images {
-    min-height: 180px;
+    min-height: 260px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 60px;
   }
 
+  /* Первая картинка - справа сверху, большая */
   .hero-image:first-child {
-    width: 50%;
-    max-width: 170px;
+    width: 65%;
+    max-width: none;
+    right: -5%;
+    top: 0;
+    transform: none;
   }
 
+  /* Вторая картинка - слева снизу, накладывается */
   .hero-image:nth-child(2) {
-    width: 40%;
-    max-width: 130px;
-    top: 40px;
+    width: 55%;
+    max-width: none;
+    top: 80px;
+    right: auto;
+    left: -5%;
+    transform: none;
+  }
+
+  .hero .btn-primary-custom {
+    display: flex;
+    min-width: auto;
+    width: 100%;
+    padding: 0 20px;
   }
 }

@@ -2,7 +2,7 @@
 
 .gallery {
   position: relative;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .gallery .container {
@@ -113,5 +113,24 @@
 
   .gallery-arrow span {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-track {
+    gap: 10px;
+  }
+
+  .gallery-arrow {
+    padding: 5px;
+    font-size: 20px;
+  }
+
+  .gallery-arrow-left {
+    left: 5px;
+  }
+
+  .gallery-arrow-right {
+    right: 5px;
   }
 }

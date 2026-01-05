@@ -34,6 +34,7 @@
 .process .btn-primary-custom {
   min-width: 476px;
   min-height: 71px;
+  max-width: 100%;
 }
 
 /* Horizontal 4-column Layout */
@@ -86,5 +87,12 @@
   .process-icon .img-placeholder {
     width: 50px !important;
     height: 50px !important;
+  }
+
+  .process .btn-primary-custom {
+    display: flex;
+    min-width: auto;
+    width: 100%;
+    padding: 0 20px;
   }
 }

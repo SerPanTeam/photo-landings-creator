@@ -44,6 +44,7 @@
   align-items: center;
   justify-content: center;
   min-width: 369px;
+  max-width: 100%;
   height: 66px;
   padding: 0 30px;
   font-size: 22px;
@@ -151,6 +152,7 @@
   .thank-you-hero__description,
   .thank-you-hero__additional {
     font-size: 18px;
+    max-width: 100%;
   }
 
   .thank-you-hero__cta-primary {
@@ -169,5 +171,50 @@
 
   .thank-you-hero__image-wrapper {
     height: 300px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .thank-you-hero {
+    padding: 30px 0 50px 0;
+  }
+
+  .thank-you-hero__title {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+
+  .thank-you-hero__subtitle,
+  .thank-you-hero__description,
+  .thank-you-hero__additional {
+    font-size: 16px;
+  }
+
+  .thank-you-hero__description {
+    margin-bottom: 20px;
+  }
+
+  .thank-you-hero__cta-primary {
+    height: 52px;
+    font-size: 16px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+
+  .thank-you-hero__secondary-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .thank-you-hero__btn-secondary {
+    width: 100%;
+    height: 52px;
+    font-size: 14px;
+  }
+
+  .thank-you-hero__image-wrapper {
+    height: 250px;
+    margin-top: 30px;
   }
 }

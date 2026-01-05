@@ -228,7 +228,8 @@
               { "text": "Impressum", "href": "impressum.html" },
               { "text": "Datenschutz", "href": "datenschutz.html" }
             ],
-            "copyright": "© 2025 Jenni - Kameramädle. Alle Rechte vorbehalten."
+            "copyright": "© 2025 Jenni - Kameramädle. Alle Rechte vorbehalten.",
+            "cookieText": "Diese Website verwendet Cookies, um Ihnen das beste Erlebnis zu bieten. Mit der Nutzung dieser Website stimmen Sie unserer <a href='datenschutz.html'>Datenschutzerklärung</a> zu."
           }
         }
       ]

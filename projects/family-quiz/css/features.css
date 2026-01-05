@@ -69,7 +69,7 @@
 }
 
 .features-image:nth-child(2) {
-  right: 322px;
+  right: min(322px, 50%);
   top: 200px;
   z-index: 2;
 }
