@@ -1,6 +1,8 @@
 # Photo Landing Builder
 
-Component-based landing page builder for photographer websites. Build complete landing pages by combining reusable sections through JSON configuration.
+Universal landing page generator for photographers. Create professional landing pages by combining reusable sections through simple JSON configuration.
+
+**For any photographer** - just customize the `config.json` with your content, images, and branding.
 
 ## Quick Start
 
@@ -18,10 +20,12 @@ node builder/builder.js christmas-free
 
 Output: `projects/<landing-name>/`
 
-## Available Landings
+## Example Templates
 
-| Name | Type | Pages | Description |
-|------|------|-------|-------------|
+Ready-to-use templates (copy and customize for your needs):
+
+| Template | Type | Pages | Use Case |
+|----------|------|-------|----------|
 | `family-quiz` | Multi-page | 7 | Quiz funnel for family photoshoot |
 | `christmas-free` | Multi-page | 7 | Free Christmas photoshoot promo |
 | `christmas-family` | Single-page | 1 | Christmas family landing |
@@ -29,6 +33,8 @@ Output: `projects/<landing-name>/`
 | `newborn` | Single-page | 1 | Newborn photography |
 | `mutter-kind` | Single-page | 1 | Mother & child photoshoot |
 | `free-photoshoot` | Single-page | 1 | Free photoshoot promo |
+
+To create your own: copy any template folder in `landings/`, rename it, and edit `config.json`.
 
 ## Project Structure
 
