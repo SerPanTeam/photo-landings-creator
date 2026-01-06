@@ -13,33 +13,25 @@
     </div>
 
     <!-- ════════════════════════════════════════════════════════════════════════
-         ИЗОБРАЖЕНИЯ ВАРИАНТОВ
+         КАРТОЧКИ ВАРИАНТОВ (картинка + кнопка)
          ════════════════════════════════════════════════════════════════════════ -->
-    {{#if options}}
-    <div class="quiz-question__images quiz-question__images--{{optionsCount}}">
+    <div class="quiz-question__cards quiz-question__cards--{{optionsCount}}">
       {{#each options}}
-      <div class="quiz-question__image-wrapper">
-        {{#if this.image}}
-        <img src="{{this.image}}" alt="{{this.text}}" class="quiz-question__image">
-        {{else}}
-        <div class="quiz-question__image-placeholder"></div>
-        {{/if}}
+      <div class="quiz-question__card">
+        <div class="quiz-question__image-wrapper">
+          {{#if this.image}}
+          <img src="{{this.image}}" alt="{{this.text}}" class="quiz-question__image">
+          {{else}}
+          <div class="quiz-question__image-placeholder"></div>
+          {{/if}}
+        </div>
+        <a href="{{this.link}}"
+           class="quiz-question__option{{#if this.multiline}} quiz-question__option--multiline{{/if}}"
+           data-answer="{{this.value}}"
+           onclick="saveQuizAnswer('{{../questionId}}', '{{this.value}}')">
+          <span class="quiz-question__option-text">{{this.text}}</span>
+        </a>
       </div>
-      {{/each}}
-    </div>
-    {{/if}}
-
-    <!-- ════════════════════════════════════════════════════════════════════════
-         КНОПКИ ВАРИАНТОВ ОТВЕТА
-         ════════════════════════════════════════════════════════════════════════ -->
-    <div class="quiz-question__options quiz-question__options--{{optionsCount}}">
-      {{#each options}}
-      <a href="{{this.link}}"
-         class="quiz-question__option{{#if this.multiline}} quiz-question__option--multiline{{/if}}"
-         data-answer="{{this.value}}"
-         onclick="saveQuizAnswer('{{../questionId}}', '{{this.value}}')">
-        <span class="quiz-question__option-text">{{this.text}}</span>
-      </a>
       {{/each}}
     </div>
 

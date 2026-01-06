@@ -84,51 +84,53 @@
     </div>
 
     <!-- ════════════════════════════════════════════════════════════════════════
-         ИЗОБРАЖЕНИЯ ВАРИАНТОВ
+         КАРТОЧКИ ВАРИАНТОВ (картинка + кнопка)
          ════════════════════════════════════════════════════════════════════════ -->
-    <div class="quiz-question__images quiz-question__images--4">
-      <div class="quiz-question__image-wrapper">
-        <img src="https://picsum.photos/seed/xmasq1a/300/300" alt="Ja, vom Hören" class="quiz-question__image">
+    <div class="quiz-question__cards quiz-question__cards--4">
+      <div class="quiz-question__card">
+        <div class="quiz-question__image-wrapper">
+          <img src="https://picsum.photos/seed/xmasq1a/300/300" alt="Ja, vom Hören" class="quiz-question__image">
+        </div>
+        <a href="quiz-2.html"
+           class="quiz-question__option"
+           data-answer="vom_hoeren"
+           onclick="saveQuizAnswer('q1', 'vom_hoeren')">
+          <span class="quiz-question__option-text">Ja, vom Hören</span>
+        </a>
       </div>
-      <div class="quiz-question__image-wrapper">
-        <img src="https://picsum.photos/seed/xmasq1b/300/300" alt="Ja, na klar!" class="quiz-question__image">
+      <div class="quiz-question__card">
+        <div class="quiz-question__image-wrapper">
+          <img src="https://picsum.photos/seed/xmasq1b/300/300" alt="Ja, na klar!" class="quiz-question__image">
+        </div>
+        <a href="quiz-2.html"
+           class="quiz-question__option"
+           data-answer="na_klar"
+           onclick="saveQuizAnswer('q1', 'na_klar')">
+          <span class="quiz-question__option-text">Ja, na klar!</span>
+        </a>
       </div>
-      <div class="quiz-question__image-wrapper">
-        <img src="https://picsum.photos/seed/xmasq1c/300/300" alt="Schon sehr lang" class="quiz-question__image">
+      <div class="quiz-question__card">
+        <div class="quiz-question__image-wrapper">
+          <img src="https://picsum.photos/seed/xmasq1c/300/300" alt="Schon sehr lang" class="quiz-question__image">
+        </div>
+        <a href="quiz-2.html"
+           class="quiz-question__option"
+           data-answer="sehr_lang"
+           onclick="saveQuizAnswer('q1', 'sehr_lang')">
+          <span class="quiz-question__option-text">Schon sehr lang</span>
+        </a>
       </div>
-      <div class="quiz-question__image-wrapper">
-        <img src="https://picsum.photos/seed/xmasq1d/300/300" alt="Nein, noch nicht" class="quiz-question__image">
+      <div class="quiz-question__card">
+        <div class="quiz-question__image-wrapper">
+          <img src="https://picsum.photos/seed/xmasq1d/300/300" alt="Nein, noch nicht" class="quiz-question__image">
+        </div>
+        <a href="quiz-2.html"
+           class="quiz-question__option"
+           data-answer="noch_nicht"
+           onclick="saveQuizAnswer('q1', 'noch_nicht')">
+          <span class="quiz-question__option-text">Nein, noch nicht</span>
+        </a>
       </div>
-    </div>
-
-    <!-- ════════════════════════════════════════════════════════════════════════
-         КНОПКИ ВАРИАНТОВ ОТВЕТА
-         ════════════════════════════════════════════════════════════════════════ -->
-    <div class="quiz-question__options quiz-question__options--4">
-      <a href="quiz-2.html"
-         class="quiz-question__option"
-         data-answer="vom_hoeren"
-         onclick="saveQuizAnswer('q1', 'vom_hoeren')">
-        <span class="quiz-question__option-text">Ja, vom Hören</span>
-      </a>
-      <a href="quiz-2.html"
-         class="quiz-question__option"
-         data-answer="na_klar"
-         onclick="saveQuizAnswer('q1', 'na_klar')">
-        <span class="quiz-question__option-text">Ja, na klar!</span>
-      </a>
-      <a href="quiz-2.html"
-         class="quiz-question__option"
-         data-answer="sehr_lang"
-         onclick="saveQuizAnswer('q1', 'sehr_lang')">
-        <span class="quiz-question__option-text">Schon sehr lang</span>
-      </a>
-      <a href="quiz-2.html"
-         class="quiz-question__option"
-         data-answer="noch_nicht"
-         onclick="saveQuizAnswer('q1', 'noch_nicht')">
-        <span class="quiz-question__option-text">Nein, noch nicht</span>
-      </a>
     </div>
 
   </div>

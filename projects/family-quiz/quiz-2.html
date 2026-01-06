@@ -84,51 +84,53 @@
     </div>
 
     <!-- ════════════════════════════════════════════════════════════════════════
-         ИЗОБРАЖЕНИЯ ВАРИАНТОВ
+         КАРТОЧКИ ВАРИАНТОВ (картинка + кнопка)
          ════════════════════════════════════════════════════════════════════════ -->
-    <div class="quiz-question__images quiz-question__images--4">
-      <div class="quiz-question__image-wrapper">
-        <img src="https://picsum.photos/seed/q2a/300/300" alt="1" class="quiz-question__image">
+    <div class="quiz-question__cards quiz-question__cards--4">
+      <div class="quiz-question__card">
+        <div class="quiz-question__image-wrapper">
+          <img src="https://picsum.photos/seed/q2a/300/300" alt="1" class="quiz-question__image">
+        </div>
+        <a href="quiz-3.html"
+           class="quiz-question__option"
+           data-answer="1"
+           onclick="saveQuizAnswer('q2', '1')">
+          <span class="quiz-question__option-text">1</span>
+        </a>
       </div>
-      <div class="quiz-question__image-wrapper">
-        <img src="https://picsum.photos/seed/q2b/300/300" alt="2" class="quiz-question__image">
+      <div class="quiz-question__card">
+        <div class="quiz-question__image-wrapper">
+          <img src="https://picsum.photos/seed/q2b/300/300" alt="2" class="quiz-question__image">
+        </div>
+        <a href="quiz-3.html"
+           class="quiz-question__option"
+           data-answer="2"
+           onclick="saveQuizAnswer('q2', '2')">
+          <span class="quiz-question__option-text">2</span>
+        </a>
       </div>
-      <div class="quiz-question__image-wrapper">
-        <img src="https://picsum.photos/seed/q2c/300/300" alt="3" class="quiz-question__image">
+      <div class="quiz-question__card">
+        <div class="quiz-question__image-wrapper">
+          <img src="https://picsum.photos/seed/q2c/300/300" alt="3" class="quiz-question__image">
+        </div>
+        <a href="quiz-3.html"
+           class="quiz-question__option"
+           data-answer="3"
+           onclick="saveQuizAnswer('q2', '3')">
+          <span class="quiz-question__option-text">3</span>
+        </a>
       </div>
-      <div class="quiz-question__image-wrapper">
-        <img src="https://picsum.photos/seed/q2d/300/300" alt="4" class="quiz-question__image">
+      <div class="quiz-question__card">
+        <div class="quiz-question__image-wrapper">
+          <img src="https://picsum.photos/seed/q2d/300/300" alt="4" class="quiz-question__image">
+        </div>
+        <a href="quiz-3.html"
+           class="quiz-question__option"
+           data-answer="4"
+           onclick="saveQuizAnswer('q2', '4')">
+          <span class="quiz-question__option-text">4</span>
+        </a>
       </div>
-    </div>
-
-    <!-- ════════════════════════════════════════════════════════════════════════
-         КНОПКИ ВАРИАНТОВ ОТВЕТА
-         ════════════════════════════════════════════════════════════════════════ -->
-    <div class="quiz-question__options quiz-question__options--4">
-      <a href="quiz-3.html"
-         class="quiz-question__option"
-         data-answer="1"
-         onclick="saveQuizAnswer('q2', '1')">
-        <span class="quiz-question__option-text">1</span>
-      </a>
-      <a href="quiz-3.html"
-         class="quiz-question__option"
-         data-answer="2"
-         onclick="saveQuizAnswer('q2', '2')">
-        <span class="quiz-question__option-text">2</span>
-      </a>
-      <a href="quiz-3.html"
-         class="quiz-question__option"
-         data-answer="3"
-         onclick="saveQuizAnswer('q2', '3')">
-        <span class="quiz-question__option-text">3</span>
-      </a>
-      <a href="quiz-3.html"
-         class="quiz-question__option"
-         data-answer="4"
-         onclick="saveQuizAnswer('q2', '4')">
-        <span class="quiz-question__option-text">4</span>
-      </a>
     </div>
 
   </div>

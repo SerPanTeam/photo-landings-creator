@@ -84,42 +84,42 @@
     </div>
 
     <!-- ════════════════════════════════════════════════════════════════════════
-         ИЗОБРАЖЕНИЯ ВАРИАНТОВ
+         КАРТОЧКИ ВАРИАНТОВ (картинка + кнопка)
          ════════════════════════════════════════════════════════════════════════ -->
-    <div class="quiz-question__images quiz-question__images--3">
-      <div class="quiz-question__image-wrapper">
-        <img src="https://picsum.photos/seed/q4a/300/300" alt="Nur wir als Elternpaar" class="quiz-question__image">
+    <div class="quiz-question__cards quiz-question__cards--3">
+      <div class="quiz-question__card">
+        <div class="quiz-question__image-wrapper">
+          <img src="https://picsum.photos/seed/q4a/300/300" alt="Nur wir als Elternpaar" class="quiz-question__image">
+        </div>
+        <a href="quiz-form.html"
+           class="quiz-question__option"
+           data-answer="elternpaar"
+           onclick="saveQuizAnswer('q4', 'elternpaar')">
+          <span class="quiz-question__option-text">Nur wir als Elternpaar</span>
+        </a>
       </div>
-      <div class="quiz-question__image-wrapper">
-        <img src="https://picsum.photos/seed/q4b/300/300" alt="Eltern und die Kinder" class="quiz-question__image">
+      <div class="quiz-question__card">
+        <div class="quiz-question__image-wrapper">
+          <img src="https://picsum.photos/seed/q4b/300/300" alt="Eltern und die Kinder" class="quiz-question__image">
+        </div>
+        <a href="quiz-form.html"
+           class="quiz-question__option"
+           data-answer="mit_kindern"
+           onclick="saveQuizAnswer('q4', 'mit_kindern')">
+          <span class="quiz-question__option-text">Eltern und die Kinder</span>
+        </a>
       </div>
-      <div class="quiz-question__image-wrapper">
-        <img src="https://picsum.photos/seed/q4c/300/300" alt="Wir nehmen auch unser Haustier mit" class="quiz-question__image">
+      <div class="quiz-question__card">
+        <div class="quiz-question__image-wrapper">
+          <img src="https://picsum.photos/seed/q4c/300/300" alt="Wir nehmen auch unser Haustier mit" class="quiz-question__image">
+        </div>
+        <a href="quiz-form.html"
+           class="quiz-question__option quiz-question__option--multiline"
+           data-answer="mit_haustier"
+           onclick="saveQuizAnswer('q4', 'mit_haustier')">
+          <span class="quiz-question__option-text">Wir nehmen auch unser Haustier mit</span>
+        </a>
       </div>
-    </div>
-
-    <!-- ════════════════════════════════════════════════════════════════════════
-         КНОПКИ ВАРИАНТОВ ОТВЕТА
-         ════════════════════════════════════════════════════════════════════════ -->
-    <div class="quiz-question__options quiz-question__options--3">
-      <a href="quiz-form.html"
-         class="quiz-question__option"
-         data-answer="elternpaar"
-         onclick="saveQuizAnswer('q4', 'elternpaar')">
-        <span class="quiz-question__option-text">Nur wir als Elternpaar</span>
-      </a>
-      <a href="quiz-form.html"
-         class="quiz-question__option"
-         data-answer="mit_kindern"
-         onclick="saveQuizAnswer('q4', 'mit_kindern')">
-        <span class="quiz-question__option-text">Eltern und die Kinder</span>
-      </a>
-      <a href="quiz-form.html"
-         class="quiz-question__option quiz-question__option--multiline"
-         data-answer="mit_haustier"
-         onclick="saveQuizAnswer('q4', 'mit_haustier')">
-        <span class="quiz-question__option-text">Wir nehmen auch unser Haustier mit</span>
-      </a>
     </div>
 
   </div>
