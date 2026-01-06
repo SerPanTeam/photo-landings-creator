@@ -2,13 +2,19 @@
 
 .gallery {
   position: relative;
+  overflow: visible;
+}
+
+.gallery > .container {
+  position: static;
 }
 
 /* Swiper Container */
 .gallery-swiper {
   width: 100%;
-  padding: 0 60px 50px 60px; /* Space for arrows and pagination */
-  position: relative;
+  padding: 0 50px 50px 50px;
+  position: static !important;  /* Стрелки позиционируются от .gallery */
+  box-sizing: border-box;
 }
 
 /* Gallery Item */
@@ -51,22 +57,22 @@
 }
 
 /* Swiper Navigation Arrows - Figma style */
-.gallery-swiper .swiper-button-prev,
-.gallery-swiper .swiper-button-next {
+.gallery .swiper-button-prev,
+.gallery .swiper-button-next {
   color: #3D3D3D !important;
-  width: 40px !important;
-  height: 40px !important;
+  width: 30px !important;
+  height: 30px !important;
   background: transparent !important;
   top: calc(50% - 25px) !important;
   z-index: 10 !important;
 }
 
-.gallery-swiper .swiper-button-prev {
-  left: 10px !important;
+.gallery .swiper-button-prev {
+  left: 15px !important;
 }
 
-.gallery-swiper .swiper-button-next {
-  right: 10px !important;
+.gallery .swiper-button-next {
+  right: 15px !important;
 }
 
 .gallery-swiper .swiper-button-prev:hover,
@@ -75,26 +81,34 @@
 }
 
 /* Override Swiper default arrow icons completely */
-.gallery-swiper .swiper-button-prev::after,
-.gallery-swiper .swiper-button-next::after {
+.gallery .swiper-button-prev::after,
+.gallery .swiper-button-next::after {
   font-family: 'Inter', Arial, sans-serif !important;
-  font-size: 40px !important;
+  font-size: 28px !important;
   font-weight: 300 !important;
   line-height: 1 !important;
 }
 
-.gallery-swiper .swiper-button-prev::after {
+.gallery .swiper-button-prev::after {
   content: '←' !important;
 }
 
-.gallery-swiper .swiper-button-next::after {
+.gallery .swiper-button-next::after {
   content: '→' !important;
 }
 
 /* Responsive */
 @media (max-width: 991px) {
   .gallery-swiper {
-    padding: 0 40px 50px 40px;
+    padding: 0 50px 50px 50px;
+  }
+
+  .gallery-swiper .swiper-button-prev {
+    left: 10px !important;
+  }
+
+  .gallery-swiper .swiper-button-next {
+    right: 10px !important;
   }
 
   .gallery-item img,
