@@ -7,7 +7,7 @@
 /* Swiper Container */
 .gallery-swiper {
   width: 100%;
-  padding: 0 50px 50px 50px; /* Space for arrows and pagination */
+  padding: 0 60px 50px 60px; /* Space for arrows and pagination */
   position: relative;
 }
 
@@ -62,11 +62,11 @@
 }
 
 .gallery-swiper .swiper-button-prev {
-  left: 0 !important;
+  left: 10px !important;
 }
 
 .gallery-swiper .swiper-button-next {
-  right: 0 !important;
+  right: 10px !important;
 }
 
 .gallery-swiper .swiper-button-prev:hover,
@@ -84,11 +84,11 @@
 }
 
 .gallery-swiper .swiper-button-prev::after {
-  content: '<' !important;
+  content: '←' !important;
 }
 
 .gallery-swiper .swiper-button-next::after {
-  content: '>' !important;
+  content: '→' !important;
 }
 
 /* Responsive */
