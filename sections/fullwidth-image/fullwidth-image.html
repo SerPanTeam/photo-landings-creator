@@ -1,8 +1,17 @@
-<!-- Full Width Image Section -->
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  FULLWIDTH IMAGE - Полноширинное изображение                              ║
+     ║  Растягивается на всю ширину экрана (без container)                       ║
+     ║  Идеально для больших атмосферных фото между секциями                     ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
 <section class="fullwidth-image" aria-label="{{alt}}">
+
   {{#if src}}
+  <!-- ИЗОБРАЖЕНИЕ - изменить src="..." и alt="..." -->
   <img src="{{src}}" alt="{{alt}}" class="fullwidth-image__img">
   {{else}}
+  <!-- Placeholder - показывается если нет изображения -->
+  <!-- Изменить: background-color и height в style="..." -->
   <div class="fullwidth-image__placeholder" style="background-color: {{backgroundColor}}; height: {{height}}px;"></div>
   {{/if}}
+
 </section>

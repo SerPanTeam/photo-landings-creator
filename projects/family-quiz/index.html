@@ -101,24 +101,34 @@
 </section>
 
 
-<!-- Promotional Section - Christmas Action -->
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  PROMOTIONAL - Промо-секция с изображением слева и текстом справа         ║
+     ║  Фон: изменить style="background-color: ..."                              ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
 <section class="promotional section-padding" style="background-color: #EEE3D0;">
   <div class="container">
     <div class="row align-items-center">
-      <!-- Left Column - Image -->
+
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ЛЕВАЯ КОЛОНКА - Изображение
+           ════════════════════════════════════════════════════════════════════════ -->
       <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
         <div class="promotional-image">
+          <!-- ИЗОБРАЖЕНИЕ - изменить src="..." и alt="..." -->
           <img src="https://picsum.photos/seed/promo/500/440" alt="Weihnachts-Fotoshooting" class="img-fluid">
         </div>
       </div>
 
-      <!-- Right Column - Content -->
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ПРАВАЯ КОЛОНКА - Контент
+           ════════════════════════════════════════════════════════════════════════ -->
       <div class="col-lg-7 col-md-12">
         <div class="promotional-content" style="padding-left: 100px;">
-          <!-- Title -->
+
+          <!-- ЗАГОЛОВОК - изменить текст между тегами -->
           <h2 class="text-bold-big mb-4">Weihnachts-Fotoshooting-Aktion</h2>
 
-          <!-- Description (первая часть - до линии) -->
+          <!-- ОПИСАНИЕ - изменить текст (можно использовать <br> и <p>) -->
           <div class="text-medium-small mb-4" style="max-width: 608px;">
             Familienbilder, die sich ideal als ein Weihnachtsgeschenk eignen.
 
@@ -127,19 +137,21 @@ Nutze die Chance und halte eure Familienmomente in liebevollen Bildern fest – 
 Diese Aktion gilt nur bis zum 06.12.25.
           </div>
 
-          <!-- Line Divider -->
+          <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ -->
           <div class="line-divider mb-4" style="max-width: 588px; border-bottom: 1px solid #3D3D3D;"></div>
 
-          <!-- Description2 (вторая часть - после линии, перед CTA) -->
+          <!-- ОПИСАНИЕ 2 (после линии) - изменить текст -->
 
-          <!-- CTA Link -->
+          <!-- ССЫЛКА - изменить текст и href="..." -->
           <div class="promotional-cta">
             <a href="quiz-1.html" class="text-bold-small text-decoration-none text-black d-inline-flex align-items-center">
               Hier geht&#x27;s zur Fotoshooting-Aktion
             </a>
           </div>
+
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -175,7 +187,7 @@ Diese Aktion gilt nur bis zum 06.12.25.
 
           <!-- СПИСОК - пункты с буллетами (опционально) -->
 
-          <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ (убрать: hideLineDivider: true в config) -->
+          <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ - удалить этот блок если не нужна -->
           <div class="line-divider mb-4" style="max-width: 618px; border-bottom: 1px solid #3D3D3D;"></div>
 
           <!-- КНОПКА CTA - призыв к действию -->
@@ -339,7 +351,7 @@ Diese Aktion gilt nur bis zum 06.12.25.
             <!-- ЗАГОЛОВОК КАРТОЧКИ -->
             <h3 class="text-bold-small mb-3">Viel Zeit &amp; Raum</h3>
 
-            <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ (убрать: hideLineDivider: true в config) -->
+            <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ - удалить этот блок если не нужна -->
             <div class="benefit-divider mb-3" style="max-width: 158px; border-bottom: 1px solid #3D3D3D;"></div>
 
             <!-- ОПИСАНИЕ КАРТОЧКИ -->
@@ -360,7 +372,7 @@ Diese Aktion gilt nur bis zum 06.12.25.
             <!-- ЗАГОЛОВОК КАРТОЧКИ -->
             <h3 class="text-bold-small mb-3">Professionelle Fotografin</h3>
 
-            <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ (убрать: hideLineDivider: true в config) -->
+            <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ - удалить этот блок если не нужна -->
             <div class="benefit-divider mb-3" style="max-width: 158px; border-bottom: 1px solid #3D3D3D;"></div>
 
             <!-- ОПИСАНИЕ КАРТОЧКИ -->
@@ -381,7 +393,7 @@ Diese Aktion gilt nur bis zum 06.12.25.
             <!-- ЗАГОЛОВОК КАРТОЧКИ -->
             <h3 class="text-bold-small mb-3">Hohe Qualität</h3>
 
-            <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ (убрать: hideLineDivider: true в config) -->
+            <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ - удалить этот блок если не нужна -->
             <div class="benefit-divider mb-3" style="max-width: 158px; border-bottom: 1px solid #3D3D3D;"></div>
 
             <!-- ОПИСАНИЕ КАРТОЧКИ -->
@@ -513,82 +525,124 @@ Diese Aktion gilt nur bis zum 06.12.25.
 </section>
 
 
-<!-- Full Width Image Section -->
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  FULLWIDTH IMAGE - Полноширинное изображение                              ║
+     ║  Растягивается на всю ширину экрана (без container)                       ║
+     ║  Идеально для больших атмосферных фото между секциями                     ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
 <section class="fullwidth-image" aria-label="Familienfotografie">
+
+  <!-- ИЗОБРАЖЕНИЕ - изменить src="..." и alt="..." -->
   <img src="https://picsum.photos/seed/fullwidth/1440/656" alt="Familienfotografie" class="fullwidth-image__img">
+
 </section>
 
 
-<!-- FAQ Section -->
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  FAQ - Часто задаваемые вопросы (аккордеон)                               ║
+     ║  Фон: изменить style="background-color: ..."                              ║
+     ║  Первый вопрос открыт по умолчанию, остальные закрыты                     ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
 <section class="faq section-padding" style="background-color: #F5EDE0;">
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <!-- Section Title -->
+
+        <!-- ЗАГОЛОВОК СЕКЦИИ - изменить текст между тегами -->
         <h2 class="text-h3 mb-5">Häufige Fragen zum Fotoshooting</h2>
 
-        <!-- FAQ Items -->
+        <!-- ════════════════════════════════════════════════════════════════════════
+             СПИСОК ВОПРОСОВ (Аккордеон)
+             Для каждого вопроса: изменить текст в <h3> и <p>
+             ════════════════════════════════════════════════════════════════════════ -->
         <div class="faq-list">
           <div class="faq-item active" data-index="0">
+
+            <!-- ВОПРОС - изменить текст в <h3> -->
             <button type="button" class="faq-question d-flex justify-content-between align-items-start w-100 text-start bg-transparent border-0 p-0" aria-expanded="true" aria-controls="faq-answer-0">
               <h3 class="text-bold-big mb-0 flex-grow-1">Wie lange dauert ein Familien-Fotoshooting?</h3>
               <span class="faq-toggle ms-3" aria-hidden="true">−</span>
             </button>
 
+            <!-- ОТВЕТ - изменить текст в <p> -->
             <div class="faq-answer mt-3 " id="faq-answer-0" role="region">
               <p class="text-medium-small mb-0">Ein Familien-Fotoshooting dauert in der Regel 30-60 Minuten. Bei der Weihnachtsaktion sind es 30 Minuten – genug Zeit für entspannte, natürliche Aufnahmen ohne Stress.</p>
             </div>
 
+            <!-- Разделитель между вопросами -->
             <div class="faq-divider my-4" style="border-bottom: 1px solid #3D3D3D;"></div>
+
           </div>
           <div class="faq-item " data-index="1">
+
+            <!-- ВОПРОС - изменить текст в <h3> -->
             <button type="button" class="faq-question d-flex justify-content-between align-items-start w-100 text-start bg-transparent border-0 p-0" aria-expanded="false" aria-controls="faq-answer-1">
               <h3 class="text-bold-big mb-0 flex-grow-1">Was sollen wir zum Fotoshooting anziehen?</h3>
               <span class="faq-toggle ms-3" aria-hidden="true">+</span>
             </button>
 
+            <!-- ОТВЕТ - изменить текст в <p> -->
             <div class="faq-answer mt-3 d-none" id="faq-answer-1" role="region">
               <p class="text-medium-small mb-0">Am besten tragt ihr aufeinander abgestimmte Farben (keine identischen Outfits). Natürliche Töne wie Beige, Weiß, Creme oder sanfte Pastellfarben wirken besonders harmonisch auf Familienfotos.</p>
             </div>
 
+            <!-- Разделитель между вопросами -->
             <div class="faq-divider my-4" style="border-bottom: 1px solid #3D3D3D;"></div>
+
           </div>
           <div class="faq-item " data-index="2">
+
+            <!-- ВОПРОС - изменить текст в <h3> -->
             <button type="button" class="faq-question d-flex justify-content-between align-items-start w-100 text-start bg-transparent border-0 p-0" aria-expanded="false" aria-controls="faq-answer-2">
               <h3 class="text-bold-big mb-0 flex-grow-1">Können wir unser Haustier mitbringen?</h3>
               <span class="faq-toggle ms-3" aria-hidden="true">+</span>
             </button>
 
+            <!-- ОТВЕТ - изменить текст в <p> -->
             <div class="faq-answer mt-3 d-none" id="faq-answer-2" role="region">
               <p class="text-medium-small mb-0">Ja, natürlich! Haustiere sind herzlich willkommen und gehören zur Familie. Bitte gebt mir vorher Bescheid, damit ich entsprechend planen kann.</p>
             </div>
 
+            <!-- Разделитель между вопросами -->
             <div class="faq-divider my-4" style="border-bottom: 1px solid #3D3D3D;"></div>
+
           </div>
           <div class="faq-item " data-index="3">
+
+            <!-- ВОПРОС - изменить текст в <h3> -->
             <button type="button" class="faq-question d-flex justify-content-between align-items-start w-100 text-start bg-transparent border-0 p-0" aria-expanded="false" aria-controls="faq-answer-3">
               <h3 class="text-bold-big mb-0 flex-grow-1">Wann erhalten wir die fertigen Bilder?</h3>
               <span class="faq-toggle ms-3" aria-hidden="true">+</span>
             </button>
 
+            <!-- ОТВЕТ - изменить текст в <p> -->
             <div class="faq-answer mt-3 d-none" id="faq-answer-3" role="region">
               <p class="text-medium-small mb-0">Die bearbeiteten Bilder erhaltet ihr innerhalb von 7-14 Tagen nach dem Shooting per Online-Galerie zum Download.</p>
             </div>
 
+            <!-- Разделитель между вопросами -->
             <div class="faq-divider my-4" style="border-bottom: 1px solid #3D3D3D;"></div>
+
           </div>
           <div class="faq-item " data-index="4">
+
+            <!-- ВОПРОС - изменить текст в <h3> -->
             <button type="button" class="faq-question d-flex justify-content-between align-items-start w-100 text-start bg-transparent border-0 p-0" aria-expanded="false" aria-controls="faq-answer-4">
               <h3 class="text-bold-big mb-0 flex-grow-1">Was passiert, wenn mein Kind nicht mitmachen möchte?</h3>
               <span class="faq-toggle ms-3" aria-hidden="true">+</span>
             </button>
 
+            <!-- ОТВЕТ - изменить текст в <p> -->
             <div class="faq-answer mt-3 d-none" id="faq-answer-4" role="region">
               <p class="text-medium-small mb-0">Keine Sorge! Ich habe viel Erfahrung mit Kindern und schaffe eine spielerische Atmosphäre. Authentische Momente entstehen oft gerade dann, wenn Kinder einfach sie selbst sein dürfen.</p>
             </div>
 
+            <!-- Разделитель между вопросами -->
+
           </div>
         </div>
+
+        <!-- КНОПКА - изменить текст и href="..." -->
 
       </div>
     </div>
@@ -733,7 +787,7 @@ Diese Aktion gilt nur bis zum 06.12.25.
           <h2 class="text-bold-big mb-4">Dorett Dornbusch</h2>
 
 
-          <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ (убрать: hideLineDivider: true в config) -->
+          <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ - удалить этот блок если не нужна -->
           <div class="line-divider mb-4" style="max-width: 471px; border-bottom: 1px solid #3D3D3D;"></div>
 
           <!-- БИОГРАФИЯ / ОПИСАНИЕ - основной текст -->

@@ -1,16 +1,23 @@
-<!-- Hero Centered Section -->
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  HERO CENTERED - Центрированная hero секция с изображениями по бокам      ║
+     ║  Фон: изменить style="background-color: ..."                              ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
 <section class="hero-centered section-padding" style="background-color: {{backgroundColor}}; min-height: {{minHeight}};">
   <div class="container">
-    <!-- Logo -->
+
+    <!-- ЛОГОТИП - изменить текст между тегами -->
     <div class="row">
       <div class="col-12 text-center">
         <h2 class="text-h2 hero-centered-logo" style="color: {{logoColor}};">{{logo}}</h2>
       </div>
     </div>
 
-    <!-- Images + Text Layout -->
+    <!-- ════════════════════════════════════════════════════════════════════════
+         ОСНОВНОЙ КОНТЕНТ: Изображения + Текст по центру
+         ════════════════════════════════════════════════════════════════════════ -->
     <div class="hero-centered-content">
-      <!-- Left Image -->
+
+      <!-- ЛЕВОЕ ИЗОБРАЖЕНИЕ - изменить src="..." и alt="..." -->
       {{#if images.[0]}}
       <div class="hero-centered-img hero-centered-img-left">
         {{#if images.[0].src}}
@@ -21,18 +28,23 @@
       </div>
       {{/if}}
 
-      <!-- Center Content -->
+      <!-- ЦЕНТРАЛЬНЫЙ ТЕКСТ -->
       <div class="hero-centered-text text-center">
+        <!-- ЗАГОЛОВОК H1 - изменить текст между тегами -->
         <h1 class="hero-centered-title" style="color: {{titleColor}};">{{title}}</h1>
+
+        <!-- ПОДЗАГОЛОВОК - изменить текст между тегами -->
         {{#if subtitle}}
         <p class="hero-centered-subtitle" style="color: {{subtitleColor}};">{{subtitle}}</p>
         {{/if}}
+
+        <!-- КНОПКА - изменить текст и href="..." -->
         {{#if cta}}
         <a href="{{cta.link}}" class="btn btn-primary-custom hero-centered-cta">{{cta.text}}</a>
         {{/if}}
       </div>
 
-      <!-- Right Image -->
+      <!-- ПРАВОЕ ИЗОБРАЖЕНИЕ - изменить src="..." и alt="..." -->
       {{#if images.[1]}}
       <div class="hero-centered-img hero-centered-img-right">
         {{#if images.[1].src}}
@@ -43,7 +55,7 @@
       </div>
       {{/if}}
 
-      <!-- Bottom Image -->
+      <!-- НИЖНЕЕ ИЗОБРАЖЕНИЕ - изменить src="..." и alt="..." -->
       {{#if images.[2]}}
       <div class="hero-centered-img hero-centered-img-bottom">
         {{#if images.[2].src}}
@@ -53,6 +65,7 @@
         {{/if}}
       </div>
       {{/if}}
+
     </div>
   </div>
 </section>

@@ -1,14 +1,18 @@
-<!-- Testimonials Section -->
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  TESTIMONIALS - Отзывы клиентов (слайдер)                                 ║
+     ║  Фон: изменить style="background-color: ..."                              ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
 <section class="testimonials section-padding" style="background-color: {{backgroundColor}};">
   <div class="container position-relative">
-    <!-- Navigation Arrow Left -->
+
+    <!-- СТРЕЛКА ВЛЕВО -->
     {{#if showArrows}}
     <button type="button" class="testimonials-arrow testimonials-arrow-left" data-direction="prev" aria-label="Vorheriger Bewertung">
       <span aria-hidden="true">←</span>
     </button>
     {{/if}}
 
-    <!-- Title -->
+    <!-- ЗАГОЛОВОК СЕКЦИИ - изменить текст между тегами -->
     {{#if title}}
     <div class="row mb-5">
       <div class="col-12 text-center">
@@ -17,42 +21,48 @@
     </div>
     {{/if}}
 
-    <!-- Testimonials Slider -->
+    <!-- ════════════════════════════════════════════════════════════════════════
+         СЛАЙДЕР ОТЗЫВОВ
+         Для каждого отзыва: изменить фото (src), имя (<h3>), текст (<p>)
+         ════════════════════════════════════════════════════════════════════════ -->
     <div class="testimonials-wrapper">
       <div class="testimonials-track" data-index="0">
         {{#each items}}
         <div class="testimonials-slide">
           <div class="testimonial-card">
-            <!-- Photo -->
+
+            <!-- ФОТО КЛИЕНТА - изменить src="..." и alt="..." -->
             {{#if this.photo}}
             <div class="testimonial-photo mb-3">
               <img src="{{this.photo}}" alt="{{this.author}}" class="img-fluid">
             </div>
             {{else}}
+            <!-- Placeholder - показывается если нет фото -->
             <div class="testimonial-photo mb-3">
               <div class="img-placeholder" style="width: 100%; aspect-ratio: 1; background-color: #7f7f7f;"></div>
             </div>
             {{/if}}
 
-            <!-- Author Name -->
+            <!-- ИМЯ АВТОРА - изменить текст между тегами -->
             <h3 class="text-bold-small mb-2">{{this.author}}</h3>
 
-            <!-- Review Text -->
+            <!-- ТЕКСТ ОТЗЫВА - изменить текст между тегами -->
             <p class="text-medium-small mb-0">{{this.text}}</p>
+
           </div>
         </div>
         {{/each}}
       </div>
     </div>
 
-    <!-- Navigation Arrow Right -->
+    <!-- СТРЕЛКА ВПРАВО -->
     {{#if showArrows}}
     <button type="button" class="testimonials-arrow testimonials-arrow-right" data-direction="next" aria-label="Nächste Bewertung">
       <span aria-hidden="true">→</span>
     </button>
     {{/if}}
 
-    <!-- CTA Button -->
+    <!-- КНОПКА - изменить текст и href="..." -->
     {{#if cta}}
     <div class="row mt-5">
       <div class="col-12 text-center">
@@ -62,5 +72,6 @@
       </div>
     </div>
     {{/if}}
+
   </div>
 </section>

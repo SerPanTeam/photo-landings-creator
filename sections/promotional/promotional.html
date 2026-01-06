@@ -1,40 +1,51 @@
-<!-- Promotional Section - Christmas Action -->
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  PROMOTIONAL - Промо-секция с изображением слева и текстом справа         ║
+     ║  Фон: изменить style="background-color: ..."                              ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
 <section class="promotional section-padding" style="background-color: {{backgroundColor}};">
   <div class="container">
     <div class="row align-items-center">
-      <!-- Left Column - Image -->
+
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ЛЕВАЯ КОЛОНКА - Изображение
+           ════════════════════════════════════════════════════════════════════════ -->
       <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
         <div class="promotional-image">
           {{#if image}}
+          <!-- ИЗОБРАЖЕНИЕ - изменить src="..." и alt="..." -->
           <img src="{{image}}" alt="{{imageAlt}}" class="img-fluid">
           {{else}}
+          <!-- Placeholder - показывается если нет изображения -->
           <div class="img-placeholder" style="width: 100%; height: 440px; background-color: #7f7f7f;"></div>
           {{/if}}
         </div>
       </div>
 
-      <!-- Right Column - Content -->
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ПРАВАЯ КОЛОНКА - Контент
+           ════════════════════════════════════════════════════════════════════════ -->
       <div class="col-lg-7 col-md-12">
         <div class="promotional-content" style="padding-left: 100px;">
-          <!-- Title -->
+
+          <!-- ЗАГОЛОВОК - изменить текст между тегами -->
           <h2 class="text-bold-big mb-4">{{title}}</h2>
 
-          <!-- Description (первая часть - до линии) -->
+          <!-- ОПИСАНИЕ - изменить текст (можно использовать <br> и <p>) -->
           <div class="text-medium-small mb-4" style="max-width: 608px;">
             {{{description}}}
           </div>
 
-          <!-- Line Divider -->
+          <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ -->
           <div class="line-divider mb-4" style="max-width: 588px; border-bottom: 1px solid #3D3D3D;"></div>
 
-          <!-- Description2 (вторая часть - после линии, перед CTA) -->
+          <!-- ОПИСАНИЕ 2 (после линии) - изменить текст -->
           {{#if description2}}
           <div class="text-medium-small mb-4" style="max-width: 608px;">
             {{{description2}}}
           </div>
           {{/if}}
 
-          <!-- CTA Link -->
+          <!-- ССЫЛКА - изменить текст и href="..." -->
           {{#if cta}}
           <div class="promotional-cta">
             <a href="{{cta.link}}" class="text-bold-small text-decoration-none text-black d-inline-flex align-items-center">
@@ -45,8 +56,10 @@
             </a>
           </div>
           {{/if}}
+
         </div>
       </div>
+
     </div>
   </div>
 </section>
