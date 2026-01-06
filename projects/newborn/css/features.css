@@ -15,7 +15,7 @@
 .features-frame {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   background-color: var(--color-frame-bg);
 }
 
@@ -25,8 +25,12 @@
 }
 
 .features-slogan {
-  text-align: right;
+  text-align: left;
   width: 100%;
+}
+
+.features-slogan p {
+  white-space: nowrap;
 }
 
 /* Bullet Points List */

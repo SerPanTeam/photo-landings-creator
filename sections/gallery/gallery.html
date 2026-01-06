@@ -46,51 +46,34 @@
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    new Swiper('.gallery-swiper', {
-      // Количество слайдов
-      slidesPerView: 1,
-      spaceBetween: 15,
-
-      // Бесконечный скролл
-      loop: true,
-
-      // Пагинация (точки)
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-
-      // Стрелки
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-
-      // Респонсив брейкпоинты
-      breakpoints: {
-        // >= 576px
-        576: {
-          slidesPerView: 2,
-          spaceBetween: 15,
+  (function() {
+    function initGallerySwiper() {
+      new Swiper('.gallery-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 15,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
         },
-        // >= 768px
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 20,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
         },
-        // >= 992px
-        992: {
-          slidesPerView: 3,
-          spaceBetween: 20,
+        breakpoints: {
+          576: { slidesPerView: 2, spaceBetween: 15 },
+          768: { slidesPerView: 2, spaceBetween: 20 },
+          992: { slidesPerView: 3, spaceBetween: 20 },
         },
-      },
+        grabCursor: true,
+      });
+    }
 
-      // Touch/Swipe
-      grabCursor: true,
-
-      // Автоматическая высота
-      autoHeight: false,
-    });
-  });
+    // Инициализация: если DOM уже загружен - сразу, иначе ждём
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initGallerySwiper);
+    } else {
+      initGallerySwiper();
+    }
+  })();
 </script>

@@ -414,12 +414,12 @@ class LandingBuilder {
     // SECURITY: Content Security Policy
     const csp = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' https://script.google.com",
-      "style-src 'self' 'unsafe-inline'",
+      "script-src 'self' 'unsafe-inline' https://script.google.com https://cdn.jsdelivr.net",
+      "style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com",
       "img-src 'self' https: data:",
-      "font-src 'self' https:",
+      "font-src 'self' https: data:",
       "frame-src https://www.google.com https://maps.google.com",
-      "connect-src 'self' https://script.google.com https://script.googleusercontent.com"
+      "connect-src 'self' https://script.google.com https://script.googleusercontent.com https://cdn.jsdelivr.net"
     ].join('; ');
 
     const scriptTags = additionalScripts.map(script => `  <script src="js/${script}"></script>`).join('\n');
@@ -436,7 +436,6 @@ class LandingBuilder {
   <!-- Security Headers -->
   <meta http-equiv="Content-Security-Policy" content="${csp}">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
   <!-- Bootstrap CSS -->

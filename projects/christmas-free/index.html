@@ -8,9 +8,8 @@
   <title>Kostenloses Familien-Fotoshooting - Weihnachtsaktion</title>
 
   <!-- Security Headers -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://script.google.com; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; font-src 'self' https:; frame-src https://www.google.com https://maps.google.com; connect-src 'self' https://script.google.com https://script.googleusercontent.com">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://script.google.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; img-src 'self' https: data:; font-src 'self' https: data:; frame-src https://www.google.com https://maps.google.com; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://cdn.jsdelivr.net">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
   <!-- Bootstrap CSS -->
@@ -283,53 +282,36 @@
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    new Swiper('.gallery-swiper', {
-      // Количество слайдов
-      slidesPerView: 1,
-      spaceBetween: 15,
-
-      // Бесконечный скролл
-      loop: true,
-
-      // Пагинация (точки)
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-
-      // Стрелки
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-
-      // Респонсив брейкпоинты
-      breakpoints: {
-        // >= 576px
-        576: {
-          slidesPerView: 2,
-          spaceBetween: 15,
+  (function() {
+    function initGallerySwiper() {
+      new Swiper('.gallery-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 15,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
         },
-        // >= 768px
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 20,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
         },
-        // >= 992px
-        992: {
-          slidesPerView: 3,
-          spaceBetween: 20,
+        breakpoints: {
+          576: { slidesPerView: 2, spaceBetween: 15 },
+          768: { slidesPerView: 2, spaceBetween: 20 },
+          992: { slidesPerView: 3, spaceBetween: 20 },
         },
-      },
+        grabCursor: true,
+      });
+    }
 
-      // Touch/Swipe
-      grabCursor: true,
-
-      // Автоматическая высота
-      autoHeight: false,
-    });
-  });
+    // Инициализация: если DOM уже загружен - сразу, иначе ждём
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initGallerySwiper);
+    } else {
+      initGallerySwiper();
+    }
+  })();
 </script>
 
 
