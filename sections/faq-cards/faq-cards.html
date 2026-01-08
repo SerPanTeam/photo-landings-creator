@@ -2,8 +2,9 @@
      ║  FAQ CARDS - Секция "Частые вопросы" (карточки с аккордеоном)             ║
      ║  Фон: backgroundColor | Изменить: style="background-color: #F5EDE0;"      ║
      ║  Карточки: белый фон, скруглённые углы, иконка +/-                        ║
+     ║  layout: "2x2" - сетка 2 столбца                                          ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-<section class="faq-cards section-padding" style="background-color: {{backgroundColor}};">
+<section class="faq-cards section-padding {{#ifEquals layout '2x2'}}faq-cards--grid{{/ifEquals}}" style="background-color: {{backgroundColor}};">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12">
@@ -17,7 +18,7 @@
              СПИСОК ВОПРОСОВ-ОТВЕТОВ
              Каждая карточка: вопрос (кликабельный) + ответ (скрытый/видимый)
              ══════════════════════════════════════════════════════════════════════════ -->
-        <div class="faq-cards-list">
+        <div class="faq-cards-list {{#ifEquals layout '2x2'}}faq-cards-list--grid{{/ifEquals}}">
           {{#each items}}
           <div class="faq-cards-item {{#if @first}}active{{/if}}" data-index="{{@index}}">
             <div class="faq-card">

@@ -1,9 +1,50 @@
 <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  PROMOTIONAL - Промо-секция с изображением слева и текстом справа         ║
      ║  Фон: изменить style="background-color: ..."                              ║
+     ║  centered: true - режим без изображения, центрированный текст             ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-<section class="promotional section-padding" style="background-color: {{backgroundColor}};">
+<section class="promotional section-padding {{#if centered}}promotional--centered{{/if}}" style="background-color: {{backgroundColor}};">
   <div class="container">
+    {{#if centered}}
+    <!-- ════════════════════════════════════════════════════════════════════════
+         ЦЕНТРИРОВАННЫЙ РЕЖИМ - без изображения
+         ════════════════════════════════════════════════════════════════════════ -->
+    <div class="row justify-content-center">
+      <div class="col-12 text-center">
+        <!-- ЗАГОЛОВОК - центрированный -->
+        <h2 class="text-bold-big mb-4">{{title}}</h2>
+
+        <!-- ОПИСАНИЕ - центрированное -->
+        <div class="text-medium-small mb-4" style="max-width: 688px; margin: 0 auto;">
+          {{{description}}}
+        </div>
+
+        {{#if description2}}
+        <div class="text-medium-small mb-4" style="max-width: 688px; margin: 0 auto;">
+          {{{description2}}}
+        </div>
+        {{/if}}
+
+        <!-- КНОПКА CTA - центрированная -->
+        {{#if cta}}
+        <div class="promotional-cta mt-4">
+          {{#if cta.isButton}}
+          <a href="{{cta.link}}" class="btn btn-primary-custom">
+            {{cta.text}}
+          </a>
+          {{else}}
+          <a href="{{cta.link}}" class="text-bold-small text-decoration-none text-black d-inline-flex align-items-center justify-content-center">
+            {{cta.text}}
+            {{#if cta.showArrow}}
+            <span class="ms-2">→</span>
+            {{/if}}
+          </a>
+          {{/if}}
+        </div>
+        {{/if}}
+      </div>
+    </div>
+    {{else}}
     <div class="row align-items-center">
 
       <!-- ════════════════════════════════════════════════════════════════════════
@@ -61,5 +102,6 @@
       </div>
 
     </div>
+    {{/if}}
   </div>
 </section>

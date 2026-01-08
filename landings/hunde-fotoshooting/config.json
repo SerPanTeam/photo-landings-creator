@@ -39,15 +39,15 @@
           "type": "promotional",
           "content": {
             "backgroundColor": "#F5EDE0",
+            "centered": true,
             "title": "Warum kostenlos?",
             "description": "Weil ich auf meine Qualität vertraue – und sicher bin, dass du deine Bilder lieben wirst.",
             "description2": "Du entscheidest selbst, ob und welche du kaufen möchtest – ganz ohne Risiko.",
             "cta": {
               "text": "Kostenloses Fotoshooting sichern",
               "link": "quiz-1.html",
-              "showArrow": false
-            },
-            "image": ""
+              "isButton": true
+            }
           }
         },
         {
@@ -110,11 +110,12 @@
           "content": {
             "backgroundColor": "#F5EDE0",
             "textOnly": true,
+            "title": "",
             "centeredTitle": "Sichert euch jetzt einen Gutschein für ein",
             "centeredTitleColor": "#3D3D3D",
             "centeredTitleHighlight": "kostenloses Hunde-Fotoshooting.",
             "centeredTitleHighlightColor": "#000000",
-            "description": "Dauer bis zum Gutschein: ≈ 30 Sekunden",
+            "description": "<span class=\"text-bold-big\">Dauer bis zum Gutschein: ≈ 30 Sekunden</span>",
             "ctaAlign": "right",
             "cta": {
               "text": "Jetzt Gutschein sichern",
@@ -129,6 +130,7 @@
           "content": {
             "backgroundColor": "#F5EDE0",
             "title": "Wie läuft das mit dem kostenlosen Hunde-Fotoshooting ab?",
+            "cardStyle": "boxed",
             "ctaCentered": true,
             "cta": {
               "text": "Kostenloses Fotoshooting sichern",
@@ -221,6 +223,7 @@
           "content": {
             "backgroundColor": "#F5EDE0",
             "title": "Häufige Fragen zum Fotoshooting",
+            "layout": "2x2",
             "items": [
               {
                 "q": "Question 1",
@@ -246,9 +249,11 @@
           "content": {
             "backgroundColor": "#F5EDE0",
             "title": "Das ganze Jahr über finden immer wieder verschiedene Aktionen zu Fotoshootings statt.",
+            "ctaCentered": true,
             "cta": {
               "text": "Jetzt kostenloses Fotoshooting sichern",
-              "link": "quiz-1.html"
+              "link": "quiz-1.html",
+              "isButton": true
             },
             "items": [
               {
@@ -641,7 +646,9 @@
             "privacyLink": "datenschutz.html",
             "submitText": "Jetzt Gutschein sichern!",
             "sideText": "Deine Privatsphäre ist bei mir sicher – ich schätze dein Vertrauen.",
-            "sideImage": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=549&h=822&fit=crop"
+            "sideImage": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=549&h=822&fit=crop",
+            "importantTitle": "",
+            "importantText": ""
           }
         },
         {

@@ -12,6 +12,20 @@
   gap: 20px;
 }
 
+/* 2x2 Grid Layout */
+.faq-cards-list--grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 33px;
+  max-width: 1233px;
+}
+
+.faq-cards--grid .faq-card {
+  background: #F8F8F8;
+  border-radius: 30px;
+  min-height: 117px;
+}
+
 .faq-card {
   background: #FFFFFF;
   border-radius: 20px;
@@ -61,6 +75,13 @@
 }
 
 /* Responsive */
+@media (max-width: 991px) {
+  .faq-cards-list--grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .faq-card {
     padding: 20px;

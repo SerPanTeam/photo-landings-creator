@@ -47,10 +47,11 @@
     <!-- КНОПКА CTA - призыв к действию -->
     <!-- Изменить текст: между > и </a> -->
     <!-- Изменить ссылку: href="..." -->
+    <!-- cta.isButton: true для золотой кнопки, иначе outline -->
     {{#if cta}}
     <div class="row mt-5">
-      <div class="col-12 {{#ifEquals layout 'flat'}}text-center{{/ifEquals}}">
-        <a href="{{cta.link}}" class="btn {{#ifEquals layout 'flat'}}btn-primary-custom{{else}}btn-outline-custom{{/ifEquals}}">
+      <div class="col-12 {{#ifEquals layout 'flat'}}text-center{{/ifEquals}} {{#if ctaCentered}}text-center{{/if}}">
+        <a href="{{cta.link}}" class="btn {{#if cta.isButton}}btn-primary-custom{{else}}{{#ifEquals layout 'flat'}}btn-primary-custom{{else}}btn-outline-custom{{/ifEquals}}{{/if}}">
           {{cta.text}}
         </a>
       </div>
