@@ -2,16 +2,34 @@
      ║  FULLWIDTH IMAGE - Полноширинное изображение                              ║
      ║  Растягивается на всю ширину экрана (без container)                       ║
      ║  Идеально для больших атмосферных фото между секциями                     ║
+     ║  Поддерживает overlappingImages для накладывающихся изображений           ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-<section class="fullwidth-image" aria-label="{{alt}}">
+<section class="fullwidth-image {{#if overlappingImages}}fullwidth-image--with-overlaps{{/if}}" aria-label="{{alt}}" style="{{#if sectionBackgroundColor}}background-color: {{sectionBackgroundColor}};{{/if}}">
+  <div class="{{#if overlappingImages}}container{{/if}}">
+    <div class="fullwidth-image__wrapper">
 
-  {{#if src}}
-  <!-- ИЗОБРАЖЕНИЕ - изменить src="..." и alt="..." -->
-  <img src="{{src}}" alt="{{alt}}" class="fullwidth-image__img">
-  {{else}}
-  <!-- Placeholder - показывается если нет изображения -->
-  <!-- Изменить: background-color и height в style="..." -->
-  <div class="fullwidth-image__placeholder" style="background-color: {{backgroundColor}}; height: {{height}}px;"></div>
-  {{/if}}
+      {{#if src}}
+      <!-- ОСНОВНОЕ ИЗОБРАЖЕНИЕ - изменить src="..." и alt="..." -->
+      <img src="{{src}}" alt="{{alt}}" class="fullwidth-image__img" style="{{#if borderRadius}}border-radius: {{borderRadius}}px;{{/if}}">
+      {{else}}
+      <!-- Placeholder - показывается если нет изображения -->
+      <!-- Изменить: background-color и height в style="..." -->
+      <div class="fullwidth-image__placeholder" style="background-color: {{backgroundColor}}; height: {{height}}px; {{#if borderRadius}}border-radius: {{borderRadius}}px;{{/if}}"></div>
+      {{/if}}
 
+      {{#if overlappingImages}}
+      <!-- НАКЛАДЫВАЮЩИЕСЯ ИЗОБРАЖЕНИЯ -->
+      {{#each overlappingImages}}
+      <div class="fullwidth-image__overlap fullwidth-image__overlap--{{this.position}}" style="{{#if this.width}}width: {{this.width}}px;{{/if}} {{#if this.height}}height: {{this.height}}px;{{/if}}">
+        {{#if this.src}}
+        <img src="{{this.src}}" alt="{{this.alt}}" style="{{#if this.borderRadius}}border-radius: {{this.borderRadius}}px;{{/if}}">
+        {{else}}
+        <div class="fullwidth-image__overlap-placeholder" style="background-color: {{this.placeholderColor}}; {{#if this.borderRadius}}border-radius: {{this.borderRadius}}px;{{/if}}"></div>
+        {{/if}}
+      </div>
+      {{/each}}
+      {{/if}}
+
+    </div>
+  </div>
 </section>

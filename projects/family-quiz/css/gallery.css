@@ -37,6 +37,17 @@
   border-radius: 8px;
 }
 
+/* Single Image Mode */
+.gallery--single .gallery-item img,
+.gallery--single .gallery-item .img-placeholder {
+  height: 746px;
+  border-radius: 50px;
+}
+
+.gallery--single .gallery-swiper {
+  padding: 0;
+}
+
 /* Swiper Pagination (dots) */
 .gallery-swiper .swiper-pagination {
   bottom: 10px;
@@ -115,6 +126,13 @@
   .gallery-item .img-placeholder {
     height: 300px;
   }
+
+  /* Single mode responsive */
+  .gallery--single .gallery-item img,
+  .gallery--single .gallery-item .img-placeholder {
+    height: 500px;
+    border-radius: 35px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -132,6 +150,19 @@
   .gallery-swiper .swiper-button-next {
     display: none !important;
   }
+
+  /* Single mode responsive */
+  .gallery--single .gallery-item img,
+  .gallery--single .gallery-item .img-placeholder {
+    height: 350px;
+    border-radius: 25px;
+  }
+
+  /* Show arrows in single mode on tablets */
+  .gallery--single .swiper-button-prev,
+  .gallery--single .swiper-button-next {
+    display: flex !important;
+  }
 }
 
 @media (max-width: 576px) {
@@ -144,5 +175,18 @@
   .gallery-swiper .swiper-pagination-bullet {
     width: 8px;
     height: 8px;
+  }
+
+  /* Single mode responsive */
+  .gallery--single .gallery-item img,
+  .gallery--single .gallery-item .img-placeholder {
+    height: 280px;
+    border-radius: 20px;
+  }
+
+  /* Hide arrows on mobile for single mode too */
+  .gallery--single .swiper-button-prev,
+  .gallery--single .swiper-button-next {
+    display: none !important;
   }
 }

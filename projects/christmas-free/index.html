@@ -167,13 +167,13 @@
   <div class="container">
 
 
-    <div class="row align-items-center ">
+    <div class="row align-items-center  ">
 
       <!-- ════════════════════════════════════════════════════════════════════════
            ЛЕВАЯ КОЛОНКА - Текстовый контент
            ════════════════════════════════════════════════════════════════════════ -->
       <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
-        <div class="features-content">
+        <div class="features-content " >
 
           <!-- ЗАГОЛОВОК - основной заголовок секции (если нет центрированного) -->
           <h2 class="text-bold-big mb-4">Für die schönsten Erinnerungen mit deinen Liebsten!</h2>
@@ -195,7 +195,8 @@
           <!-- КНОПКА CTA - призыв к действию -->
           <!-- Изменить текст: между > и </a> -->
           <!-- Изменить ссылку: href="..." -->
-          <div class="features-cta mb-4">
+          <!-- ctaAlign: left, right, center (default: left) -->
+          <div class="features-cta mb-4  ">
             <a href="quiz-1.html" class="text-bold-small text-decoration-none text-black d-inline-flex align-items-center">
               Kostenlosses Fotoshooting sichern
             </a>
@@ -234,53 +235,56 @@
 <!-- Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-<section class="gallery section-padding" style="background-color: #EEE3D0;" aria-label="Fotogalerie">
+<section class="gallery section-padding " style="background-color: #EEE3D0;" aria-label="Fotogalerie">
   <div class="container">
 
     <!-- ══════════════════════════════════════════════════════════════════════════
          SWIPER ГАЛЕРЕЯ
+         singleImage: true - режим одного большого изображения
+         imageHeight: высота изображений в пикселях (по умолчанию 350)
+         imageBorderRadius: border-radius в пикселях
          ══════════════════════════════════════════════════════════════════════════ -->
-    <div class="swiper gallery-swiper">
+    <div class="swiper gallery-swiper " >
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="gallery-item">
             <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-            <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Weihnachtsfamilie" class="img-fluid" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Weihnachtsfamilie" class="img-fluid" loading="lazy" style=" ">
           </div>
         </div>
         <div class="swiper-slide">
           <div class="gallery-item">
             <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-            <img src="https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Familie Weihnachten" class="img-fluid" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Familie Weihnachten" class="img-fluid" loading="lazy" style=" ">
           </div>
         </div>
         <div class="swiper-slide">
           <div class="gallery-item">
             <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-            <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Kinder Weihnachten" class="img-fluid" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Kinder Weihnachten" class="img-fluid" loading="lazy" style=" ">
           </div>
         </div>
         <div class="swiper-slide">
           <div class="gallery-item">
             <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-            <img src="https://images.unsplash.com/photo-1576919228236-a097c32a5cd4?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Weihnachtsfoto" class="img-fluid" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1576919228236-a097c32a5cd4?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Weihnachtsfoto" class="img-fluid" loading="lazy" style=" ">
           </div>
         </div>
         <div class="swiper-slide">
           <div class="gallery-item">
             <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-            <img src="https://images.unsplash.com/photo-1543589077-47d81606c1bf?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Familie Geschenke" class="img-fluid" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1543589077-47d81606c1bf?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Familie Geschenke" class="img-fluid" loading="lazy" style=" ">
           </div>
         </div>
         <div class="swiper-slide">
           <div class="gallery-item">
             <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-            <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Weihnachtsshooting" class="img-fluid" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Weihnachtsshooting" class="img-fluid" loading="lazy" style=" ">
           </div>
         </div>
       </div>
 
-      <!-- Пагинация (точки) -->
+      <!-- Пагинация (точки) - скрыта в режиме singleImage -->
       <div class="swiper-pagination"></div>
 
       <!-- Стрелки навигации -->
@@ -296,7 +300,11 @@
 <script>
   (function() {
     function initGallerySwiper() {
-      new Swiper('.gallery-swiper', {
+      // Проверяем режим single image
+      var swiperEl = document.querySelector('.gallery-swiper');
+      var isSingle = swiperEl && swiperEl.classList.contains('gallery-swiper--single');
+
+      var swiperConfig = {
         slidesPerView: 1,
         spaceBetween: 15,
         loop: true,
@@ -308,13 +316,19 @@
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
-        breakpoints: {
+        grabCursor: true,
+      };
+
+      // В режиме single всегда показываем 1 слайд
+      if (!isSingle) {
+        swiperConfig.breakpoints = {
           576: { slidesPerView: 2, spaceBetween: 15 },
           768: { slidesPerView: 2, spaceBetween: 20 },
           992: { slidesPerView: 3, spaceBetween: 20 },
-        },
-        grabCursor: true,
-      });
+        };
+      }
+
+      new Swiper('.gallery-swiper', swiperConfig);
     }
 
     // Инициализация: если DOM уже загружен - сразу, иначе ждём
@@ -352,9 +366,9 @@
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="benefit-card ">
 
-          <!-- ИКОНКА - изменить src="..." для замены -->
-          <div class="benefit-icon">
-            <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w&#x3D;150&amp;h&#x3D;150&amp;fit&#x3D;crop" alt="Liebevoll dekoriertes Set mit Weihnachtszauber" class="img-fluid">
+          <!-- ИКОНКА/ИЗОБРАЖЕНИЕ - изменить src="..." для замены -->
+          <div class="benefit-icon" style="">
+            <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w&#x3D;150&amp;h&#x3D;150&amp;fit&#x3D;crop" alt="Liebevoll dekoriertes Set mit Weihnachtszauber" class="img-fluid" style="">
           </div>
 
           <div class="benefit-text">
@@ -373,9 +387,9 @@
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="benefit-card ">
 
-          <!-- ИКОНКА - изменить src="..." для замены -->
-          <div class="benefit-icon">
-            <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w&#x3D;150&amp;h&#x3D;150&amp;fit&#x3D;crop" alt="Ganz viel Raum für echte Familienmomente" class="img-fluid">
+          <!-- ИКОНКА/ИЗОБРАЖЕНИЕ - изменить src="..." для замены -->
+          <div class="benefit-icon" style="">
+            <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w&#x3D;150&amp;h&#x3D;150&amp;fit&#x3D;crop" alt="Ganz viel Raum für echte Familienmomente" class="img-fluid" style="">
           </div>
 
           <div class="benefit-text">
@@ -394,9 +408,9 @@
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="benefit-card ">
 
-          <!-- ИКОНКА - изменить src="..." для замены -->
-          <div class="benefit-icon">
-            <img src="https://images.unsplash.com/photo-1543589077-47d81606c1bf?w&#x3D;150&amp;h&#x3D;150&amp;fit&#x3D;crop" alt="Wunderschöne Erinnerungen zum Verschenken" class="img-fluid">
+          <!-- ИКОНКА/ИЗОБРАЖЕНИЕ - изменить src="..." для замены -->
+          <div class="benefit-icon" style="">
+            <img src="https://images.unsplash.com/photo-1543589077-47d81606c1bf?w&#x3D;150&amp;h&#x3D;150&amp;fit&#x3D;crop" alt="Wunderschöne Erinnerungen zum Verschenken" class="img-fluid" style="">
           </div>
 
           <div class="benefit-text">
@@ -544,12 +558,18 @@ Ich melde mich so schnell wie möglich bei dir.</p>
      ║  FULLWIDTH IMAGE - Полноширинное изображение                              ║
      ║  Растягивается на всю ширину экрана (без container)                       ║
      ║  Идеально для больших атмосферных фото между секциями                     ║
+     ║  Поддерживает overlappingImages для накладывающихся изображений           ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-<section class="fullwidth-image" aria-label="Familienfotografie">
+<section class="fullwidth-image " aria-label="Familienfotografie" style="">
+  <div class="">
+    <div class="fullwidth-image__wrapper">
 
-  <!-- ИЗОБРАЖЕНИЕ - изменить src="..." и alt="..." -->
-  <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?w&#x3D;1439&amp;h&#x3D;656&amp;fit&#x3D;crop" alt="Familienfotografie" class="fullwidth-image__img">
+      <!-- ОСНОВНОЕ ИЗОБРАЖЕНИЕ - изменить src="..." и alt="..." -->
+      <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?w&#x3D;1439&amp;h&#x3D;656&amp;fit&#x3D;crop" alt="Familienfotografie" class="fullwidth-image__img" style="">
 
+
+    </div>
+  </div>
 </section>
 
 

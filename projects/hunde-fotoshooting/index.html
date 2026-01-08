@@ -20,7 +20,7 @@
   <link href="css/common.css" rel="stylesheet">
 
   <!-- Section-specific CSS -->
-  <link href="css/hero.css" rel="stylesheet">
+  <link href="css/hero-fullwidth.css" rel="stylesheet">
   <link href="css/promotional.css" rel="stylesheet">
   <link href="css/benefits.css" rel="stylesheet">
   <link href="css/gallery.css" rel="stylesheet">
@@ -41,60 +41,46 @@
 <body>
 
 <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  HERO - Главная секция со светлым фоном                                   ║
+     ║  HERO FULLWIDTH - Hero секция с полноширинным изображением и текстом     ║
+     ║  поверх изображения (overlay)                                             ║
      ║  Фон: backgroundColor | Изменить: style="background-color: #F5EDE0;"      ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-<section class="hero section-padding" style="background-color: #F5EDE0; min-height: 634px;">
+<section class="hero-fullwidth section-padding" style="background-color: #F5EDE0;">
   <div class="container">
 
-    <!-- ЛОГОТИП - отдельно для мобильной версии -->
-    <h2 class="text-h2 hero-logo-mobile d-lg-none mb-4">Logo</h2>
-
-    <div class="row hero-row">
-
-      <!-- ════════════════════════════════════════════════════════════════════════
-           ЛЕВАЯ КОЛОНКА - Текст
-           ════════════════════════════════════════════════════════════════════════ -->
-      <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 hero-text-col">
-        <div class="hero-content" style="padding-top: 53px;">
-
-          <!-- ЛОГОТИП - только для десктопа -->
-          <h2 class="text-h2 mb-5 hero-logo d-none d-lg-block">Logo</h2>
-
-          <!-- ГЛАВНЫЙ ЗАГОЛОВОК H1 - самый важный текст на странице -->
-          <h1 class="text-h1 mb-4 hero-title" style="max-width: 629px;">
-            <!-- Выделенная часть (другой цвет) -->
-            <span style="color: #E2C08D;">Kostenloses</span><br>
-            <!-- Основной текст заголовка -->
-            Hunde-Fotoshooting
-          </h1>
-
-          <!-- ОПИСАНИЕ - краткий текст под заголовком (поддерживает HTML) -->
-          <p class="text-medium-small mb-4 hero-description" style="max-width: 386px;">Hallo an alle Hundebesitzer!<br>Aufgepasst: Sichert euch frühzeitig euren Termin!<br>Die Fotoshootings finden nur bis zum<br>23.07.25 statt!</p>
-
-          <!-- КНОПКА CTA - призыв к действию -->
-          <!-- Изменить текст: между > и </a> -->
-          <!-- Изменить ссылку: href="..." -->
-          <a href="quiz-1.html" class="btn btn-primary-custom mt-3 hero-cta">
-            Hier geht&#x27;s zu den Gutscheinen
-          </a>
-
-        </div>
-      </div>
-
-      <!-- ════════════════════════════════════════════════════════════════════════
-           ПРАВАЯ КОЛОНКА - Изображения
-           ════════════════════════════════════════════════════════════════════════ -->
-      <div class="col-lg-6 col-md-12 hero-images-col">
-        <div class="hero-images position-relative" style="min-height: 474px;">
-          <!-- ИЗОБРАЖЕНИЕ: изменить src="..." для замены картинки -->
-          <div class="hero-image " style="">
-            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w&#x3D;1237&amp;h&#x3D;641&amp;fit&#x3D;crop" alt="" class="img-fluid ">
-          </div>
-        </div>
-      </div>
-
+    <!-- ════════════════════════════════════════════════════════════════════════
+         ЛОГОТИП
+         ════════════════════════════════════════════════════════════════════════ -->
+    <div class="hero-fullwidth__logo mb-4">
+      <h2 class="text-h2" style="color: #3D3D3D;">Logo</h2>
     </div>
+
+    <!-- ════════════════════════════════════════════════════════════════════════
+         ГЛАВНОЕ ИЗОБРАЖЕНИЕ С ТЕКСТОМ OVERLAY
+         ════════════════════════════════════════════════════════════════════════ -->
+    <div class="hero-fullwidth__wrapper">
+      <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w&#x3D;1237&amp;h&#x3D;641&amp;fit&#x3D;crop" alt="Hunde-Fotoshooting" class="hero-fullwidth__image">
+
+      <!-- ТЕКСТОВЫЙ OVERLAY - текст поверх изображения -->
+      <div class="hero-fullwidth__overlay">
+        <!-- ЗАГОЛОВОК H1 -->
+        <h1 class="hero-fullwidth__title text-h2" style="color: #FFFFFF;">
+          <span>Kostenloses</span><br>
+          Hunde-Fotoshooting
+        </h1>
+
+        <!-- ОПИСАНИЕ - поддерживает HTML -->
+        <div class="hero-fullwidth__description text-medium-small" style="color: #FFFFFF;">
+          <p>Hallo an alle Hundebesitzer!</p><p>Aufgepasst: Sichert euch frühzeitig euren Termin!</p><p>Die Fotoshootings finden nur bis zum</p><p>23.07.25 statt!</p>
+        </div>
+
+        <!-- КНОПКА CTA -->
+        <a href="quiz-1.html" class="btn btn-primary-custom hero-fullwidth__cta">
+          Hier geht&#x27;s zu den Gutscheinen
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -171,9 +157,9 @@
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="benefit-card ">
 
-          <!-- ИКОНКА - изменить src="..." для замены -->
-          <div class="benefit-icon">
-            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w&#x3D;350&amp;h&#x3D;300&amp;fit&#x3D;crop" alt="Hunde-Fotoshooting – liebevoll &amp; natürlich" class="img-fluid">
+          <!-- ИКОНКА/ИЗОБРАЖЕНИЕ - изменить src="..." для замены -->
+          <div class="benefit-icon" style="width: 350px; height: 300px;">
+            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w&#x3D;350&amp;h&#x3D;300&amp;fit&#x3D;crop" alt="Hunde-Fotoshooting – liebevoll &amp; natürlich" class="img-fluid" style="border-radius: 35px;width: 350px; height: 300px; object-fit: cover;">
           </div>
 
           <div class="benefit-text">
@@ -181,7 +167,6 @@
             <h3 class="text-bold-small mb-3">Hunde-Fotoshooting – liebevoll &amp; natürlich</h3>
 
             <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ - удалить этот блок если не нужна -->
-            <div class="benefit-divider mb-3" style="max-width: 158px; border-bottom: 1px solid #3D3D3D;"></div>
 
             <!-- ОПИСАНИЕ КАРТОЧКИ -->
             <p class="text-medium-small mb-0">Viel Zeit und Raum für besondere Momente mit deinem Haustier – ganz entspannt, in vertrauter Umgebung und mit viel Geduld für einzigartige Aufnahmen.</p>
@@ -192,9 +177,9 @@
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="benefit-card ">
 
-          <!-- ИКОНКА - изменить src="..." для замены -->
-          <div class="benefit-icon">
-            <img src="https://images.unsplash.com/photo-1534361960057-19889db9621e?w&#x3D;350&amp;h&#x3D;300&amp;fit&#x3D;crop" alt="Professionelles Hunde-Fotoshooting" class="img-fluid">
+          <!-- ИКОНКА/ИЗОБРАЖЕНИЕ - изменить src="..." для замены -->
+          <div class="benefit-icon" style="width: 350px; height: 300px;">
+            <img src="https://images.unsplash.com/photo-1534361960057-19889db9621e?w&#x3D;350&amp;h&#x3D;300&amp;fit&#x3D;crop" alt="Professionelles Hunde-Fotoshooting" class="img-fluid" style="border-radius: 35px;width: 350px; height: 300px; object-fit: cover;">
           </div>
 
           <div class="benefit-text">
@@ -202,7 +187,6 @@
             <h3 class="text-bold-small mb-3">Professionelles Hunde-Fotoshooting</h3>
 
             <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ - удалить этот блок если не нужна -->
-            <div class="benefit-divider mb-3" style="max-width: 158px; border-bottom: 1px solid #3D3D3D;"></div>
 
             <!-- ОПИСАНИЕ КАРТОЧКИ -->
             <p class="text-medium-small mb-0">Ich nehme mir Zeit für euch und halte mit viel Geduld und einem geschulten Auge die besondere Verbindung zwischen dir und deinem Tier in liebevollen Bildern fest.</p>
@@ -213,9 +197,9 @@
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="benefit-card ">
 
-          <!-- ИКОНКА - изменить src="..." для замены -->
-          <div class="benefit-icon">
-            <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w&#x3D;350&amp;h&#x3D;300&amp;fit&#x3D;crop" alt="Hunde-Fotoshooting mit Herz, Stil und Persönlichkeit" class="img-fluid">
+          <!-- ИКОНКА/ИЗОБРАЖЕНИЕ - изменить src="..." для замены -->
+          <div class="benefit-icon" style="width: 350px; height: 300px;">
+            <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w&#x3D;350&amp;h&#x3D;300&amp;fit&#x3D;crop" alt="Hunde-Fotoshooting mit Herz, Stil und Persönlichkeit" class="img-fluid" style="border-radius: 35px;width: 350px; height: 300px; object-fit: cover;">
           </div>
 
           <div class="benefit-text">
@@ -223,7 +207,6 @@
             <h3 class="text-bold-small mb-3">Hunde-Fotoshooting mit Herz, Stil und Persönlichkeit</h3>
 
             <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ - удалить этот блок если не нужна -->
-            <div class="benefit-divider mb-3" style="max-width: 158px; border-bottom: 1px solid #3D3D3D;"></div>
 
             <!-- ОПИСАНИЕ КАРТОЧКИ -->
             <p class="text-medium-small mb-0">Professionelle Aufnahmen, mit viel Geduld und Liebe zum Detail – individuell auf euch abgestimmt. Denn jedes Tier ist einzigartig, und genau das soll man auf den Bildern sehen und spüren.</p>
@@ -247,54 +230,43 @@
 <!-- Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-<section class="gallery section-padding" style="background-color: #F5EDE0;" aria-label="Fotogalerie">
+<section class="gallery section-padding gallery--single" style="background-color: #F5EDE0;" aria-label="Fotogalerie">
   <div class="container">
 
     <!-- ══════════════════════════════════════════════════════════════════════════
          SWIPER ГАЛЕРЕЯ
+         singleImage: true - режим одного большого изображения
+         imageHeight: высота изображений в пикселях (по умолчанию 350)
+         imageBorderRadius: border-radius в пикселях
          ══════════════════════════════════════════════════════════════════════════ -->
-    <div class="swiper gallery-swiper">
+    <div class="swiper gallery-swiper gallery-swiper--single" data-image-height="746">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="gallery-item">
             <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Hund Portrait" class="img-fluid" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w&#x3D;1233&amp;h&#x3D;746&amp;fit&#x3D;crop" alt="Hund Portrait" class="img-fluid" loading="lazy" style="height: 746px; border-radius: 50px;">
           </div>
         </div>
         <div class="swiper-slide">
           <div class="gallery-item">
             <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-            <img src="https://images.unsplash.com/photo-1534361960057-19889db9621e?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Hund spielend" class="img-fluid" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1534361960057-19889db9621e?w&#x3D;1233&amp;h&#x3D;746&amp;fit&#x3D;crop" alt="Hund spielend" class="img-fluid" loading="lazy" style="height: 746px; border-radius: 50px;">
           </div>
         </div>
         <div class="swiper-slide">
           <div class="gallery-item">
             <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-            <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Golden Retriever" class="img-fluid" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w&#x3D;1233&amp;h&#x3D;746&amp;fit&#x3D;crop" alt="Golden Retriever" class="img-fluid" loading="lazy" style="height: 746px; border-radius: 50px;">
           </div>
         </div>
         <div class="swiper-slide">
           <div class="gallery-item">
             <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-            <img src="https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Hund im Freien" class="img-fluid" loading="lazy">
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="gallery-item">
-            <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-            <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Welpe" class="img-fluid" loading="lazy">
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="gallery-item">
-            <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-            <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?w&#x3D;400&amp;h&#x3D;400&amp;fit&#x3D;crop" alt="Hund lächelnd" class="img-fluid" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?w&#x3D;1233&amp;h&#x3D;746&amp;fit&#x3D;crop" alt="Hund im Freien" class="img-fluid" loading="lazy" style="height: 746px; border-radius: 50px;">
           </div>
         </div>
       </div>
 
-      <!-- Пагинация (точки) -->
-      <div class="swiper-pagination"></div>
 
       <!-- Стрелки навигации -->
       <div class="swiper-button-prev"></div>
@@ -309,7 +281,11 @@
 <script>
   (function() {
     function initGallerySwiper() {
-      new Swiper('.gallery-swiper', {
+      // Проверяем режим single image
+      var swiperEl = document.querySelector('.gallery-swiper');
+      var isSingle = swiperEl && swiperEl.classList.contains('gallery-swiper--single');
+
+      var swiperConfig = {
         slidesPerView: 1,
         spaceBetween: 15,
         loop: true,
@@ -321,13 +297,19 @@
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
-        breakpoints: {
+        grabCursor: true,
+      };
+
+      // В режиме single всегда показываем 1 слайд
+      if (!isSingle) {
+        swiperConfig.breakpoints = {
           576: { slidesPerView: 2, spaceBetween: 15 },
           768: { slidesPerView: 2, spaceBetween: 20 },
           992: { slidesPerView: 3, spaceBetween: 20 },
-        },
-        grabCursor: true,
-      });
+        };
+      }
+
+      new Swiper('.gallery-swiper', swiperConfig);
     }
 
     // Инициализация: если DOM уже загружен - сразу, иначе ждём
@@ -349,20 +331,24 @@
 
     <!-- ══════════════════════════════════════════════════════════════════════════
          ЦЕНТРИРОВАННЫЙ ЗАГОЛОВОК - отображается над основным контентом
+         Поддерживает centeredTitleHighlight для выделения части заголовка другим цветом
          ══════════════════════════════════════════════════════════════════════════ -->
     <div class="row mb-5">
-      <div class="col-12 text-center">
-        <h2 class="text-h2">Sichert euch jetzt einen Gutschein für ein kostenloses Hunde-Fotoshooting.</h2>
+      <div class="col-12 ">
+        <h2 class="text-h2">
+          <span style="color: #3D3D3D;">Sichert euch jetzt einen Gutschein für ein</span>
+          <span style="color: #000000;">kostenloses Hunde-Fotoshooting.</span>
+        </h2>
       </div>
     </div>
 
-    <div class="row align-items-center ">
+    <div class="row align-items-center  justify-content-center">
 
       <!-- ════════════════════════════════════════════════════════════════════════
            ЛЕВАЯ КОЛОНКА - Текстовый контент
            ════════════════════════════════════════════════════════════════════════ -->
-      <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
-        <div class="features-content">
+      <div class="col-lg-12 col-md-12 mb-4 mb-lg-0">
+        <div class="features-content text-center" style="max-width: 800px; margin: 0 auto;">
 
           <!-- ПОДЗАГОЛОВОК - дополнительный заголовок (если есть центрированный) -->
           <h3 class="text-bold-big mb-4">Für die schönsten Erinnerungen mit deinen Liebsten!</h3>
@@ -381,7 +367,8 @@
           <!-- КНОПКА CTA - призыв к действию -->
           <!-- Изменить текст: между > и </a> -->
           <!-- Изменить ссылку: href="..." -->
-          <div class="features-cta mb-4">
+          <!-- ctaAlign: left, right, center (default: left) -->
+          <div class="features-cta mb-4 text-end ">
             <a href="quiz-1.html" class="btn btn-primary-custom">
               Jetzt Gutschein sichern
             </a>
@@ -390,20 +377,6 @@
         </div>
       </div>
 
-      <!-- ════════════════════════════════════════════════════════════════════════
-           ПРАВАЯ КОЛОНКА - Изображения
-           ════════════════════════════════════════════════════════════════════════ -->
-      <div class="col-lg-6 col-md-12">
-        <!-- ОДНО ИЗОБРАЖЕНИЕ В РАМКЕ - со слоганом внизу -->
-        <div class="features-frame" style="background-color: #F8F8F8; padding: 32px 34px 40px 31px; max-width: 493px; margin-left: auto;">
-          <div class="img-placeholder" style="width: 428px; height: 440px; background-color: #7F7F7F;"></div>
-
-          <!-- СЛОГАН/TAGLINE - текст под изображением в рамке -->
-          <div class="features-slogan" style="margin-top: 36px;">
-            <p class="text-medium-small mb-0" style="color: #E2C08D;">– für dich, für dein Kind, für immer –</p>
-          </div>
-        </div>
-      </div>
 
     </div>
   </div>
@@ -550,9 +523,9 @@ Du kaufst nur, was dich begeistert – ganz ohne Druck oder Verpflichtung.</p>
       <div class="col-lg-6 col-md-6 mb-4">
         <div class="benefit-card benefit-card-plain">
 
-          <!-- ИКОНКА - изменить src="..." для замены -->
-          <div class="benefit-icon">
-            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w&#x3D;74&amp;h&#x3D;75&amp;fit&#x3D;crop" alt="Ganz viel Zeit &amp; Raum für dich und deinen pelzigen Freund" class="img-fluid">
+          <!-- ИКОНКА/ИЗОБРАЖЕНИЕ - изменить src="..." для замены -->
+          <div class="benefit-icon" style="width: 75px; height: 75px;">
+            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w&#x3D;74&amp;h&#x3D;75&amp;fit&#x3D;crop" alt="Ganz viel Zeit &amp; Raum für dich und deinen pelzigen Freund" class="img-fluid" style="">
           </div>
 
           <div class="benefit-text">
@@ -571,9 +544,9 @@ Du kaufst nur, was dich begeistert – ganz ohne Druck oder Verpflichtung.</p>
       <div class="col-lg-6 col-md-6 mb-4">
         <div class="benefit-card benefit-card-plain">
 
-          <!-- ИКОНКА - изменить src="..." для замены -->
-          <div class="benefit-icon">
-            <img src="https://images.unsplash.com/photo-1534361960057-19889db9621e?w&#x3D;71&amp;h&#x3D;75&amp;fit&#x3D;crop" alt="Professionelle Fotografin aus Leidenschaft und Professionalität" class="img-fluid">
+          <!-- ИКОНКА/ИЗОБРАЖЕНИЕ - изменить src="..." для замены -->
+          <div class="benefit-icon" style="width: 75px; height: 75px;">
+            <img src="https://images.unsplash.com/photo-1534361960057-19889db9621e?w&#x3D;71&amp;h&#x3D;75&amp;fit&#x3D;crop" alt="Professionelle Fotografin aus Leidenschaft und Professionalität" class="img-fluid" style="">
           </div>
 
           <div class="benefit-text">
@@ -592,9 +565,9 @@ Du kaufst nur, was dich begeistert – ganz ohne Druck oder Verpflichtung.</p>
       <div class="col-lg-6 col-md-6 mb-4">
         <div class="benefit-card benefit-card-plain">
 
-          <!-- ИКОНКА - изменить src="..." для замены -->
-          <div class="benefit-icon">
-            <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w&#x3D;74&amp;h&#x3D;79&amp;fit&#x3D;crop" alt="Kostenfreies Fotoshooting" class="img-fluid">
+          <!-- ИКОНКА/ИЗОБРАЖЕНИЕ - изменить src="..." для замены -->
+          <div class="benefit-icon" style="width: 75px; height: 75px;">
+            <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w&#x3D;74&amp;h&#x3D;79&amp;fit&#x3D;crop" alt="Kostenfreies Fotoshooting" class="img-fluid" style="">
           </div>
 
           <div class="benefit-text">
@@ -613,9 +586,9 @@ Du kaufst nur, was dich begeistert – ganz ohne Druck oder Verpflichtung.</p>
       <div class="col-lg-6 col-md-6 mb-4">
         <div class="benefit-card benefit-card-plain">
 
-          <!-- ИКОНКА - изменить src="..." для замены -->
-          <div class="benefit-icon">
-            <img src="https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?w&#x3D;72&amp;h&#x3D;75&amp;fit&#x3D;crop" alt="Hohe Qualität der Fotos hautnah erleben" class="img-fluid">
+          <!-- ИКОНКА/ИЗОБРАЖЕНИЕ - изменить src="..." для замены -->
+          <div class="benefit-icon" style="width: 75px; height: 75px;">
+            <img src="https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?w&#x3D;72&amp;h&#x3D;75&amp;fit&#x3D;crop" alt="Hohe Qualität der Fotos hautnah erleben" class="img-fluid" style="">
           </div>
 
           <div class="benefit-text">
@@ -641,12 +614,25 @@ Du kaufst nur, was dich begeistert – ganz ohne Druck oder Verpflichtung.</p>
      ║  FULLWIDTH IMAGE - Полноширинное изображение                              ║
      ║  Растягивается на всю ширину экрана (без container)                       ║
      ║  Идеально для больших атмосферных фото между секциями                     ║
+     ║  Поддерживает overlappingImages для накладывающихся изображений           ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-<section class="fullwidth-image" aria-label="Hunde-Fotoshooting">
+<section class="fullwidth-image fullwidth-image--with-overlaps" aria-label="Hunde-Fotoshooting" style="background-color: #F5EDE0;">
+  <div class="container">
+    <div class="fullwidth-image__wrapper">
 
-  <!-- ИЗОБРАЖЕНИЕ - изменить src="..." и alt="..." -->
-  <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w&#x3D;1233&amp;h&#x3D;656&amp;fit&#x3D;crop" alt="Hunde-Fotoshooting" class="fullwidth-image__img">
+      <!-- ОСНОВНОЕ ИЗОБРАЖЕНИЕ - изменить src="..." и alt="..." -->
+      <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w&#x3D;1233&amp;h&#x3D;656&amp;fit&#x3D;crop" alt="Hunde-Fotoshooting" class="fullwidth-image__img" style="border-radius: 50px;">
 
+      <!-- НАКЛАДЫВАЮЩИЕСЯ ИЗОБРАЖЕНИЯ -->
+      <div class="fullwidth-image__overlap fullwidth-image__overlap--top-right" style="width: 300px; height: 200px;">
+        <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w&#x3D;300&amp;h&#x3D;200&amp;fit&#x3D;crop" alt="Hund" style="border-radius: 50px;">
+      </div>
+      <div class="fullwidth-image__overlap fullwidth-image__overlap--bottom-left" style="width: 300px; height: 200px;">
+        <img src="https://images.unsplash.com/photo-1534361960057-19889db9621e?w&#x3D;300&amp;h&#x3D;200&amp;fit&#x3D;crop" alt="Hund" style="border-radius: 50px;">
+      </div>
+
+    </div>
+  </div>
 </section>
 
 

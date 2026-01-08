@@ -1,0 +1,51 @@
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  HERO FULLWIDTH - Hero секция с полноширинным изображением и текстом     ║
+     ║  поверх изображения (overlay)                                             ║
+     ║  Фон: backgroundColor | Изменить: style="background-color: #F5EDE0;"      ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+<section class="hero-fullwidth section-padding" style="background-color: {{backgroundColor}};">
+  <div class="container">
+
+    <!-- ════════════════════════════════════════════════════════════════════════
+         ЛОГОТИП
+         ════════════════════════════════════════════════════════════════════════ -->
+    <div class="hero-fullwidth__logo mb-4">
+      <h2 class="text-h2" style="color: {{textColor}};">{{logo}}</h2>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════════════
+         ГЛАВНОЕ ИЗОБРАЖЕНИЕ С ТЕКСТОМ OVERLAY
+         ════════════════════════════════════════════════════════════════════════ -->
+    <div class="hero-fullwidth__wrapper">
+      {{#if image.src}}
+      <img src="{{image.src}}" alt="{{image.alt}}" class="hero-fullwidth__image">
+      {{else}}
+      <div class="hero-fullwidth__placeholder" style="background-color: {{image.placeholderColor}};"></div>
+      {{/if}}
+
+      <!-- ТЕКСТОВЫЙ OVERLAY - текст поверх изображения -->
+      <div class="hero-fullwidth__overlay">
+        <!-- ЗАГОЛОВОК H1 -->
+        <h1 class="hero-fullwidth__title text-h2" style="color: {{overlayTextColor}};">
+          {{#if titleHighlight}}
+          <span>{{titleHighlight}}</span><br>
+          {{/if}}
+          {{title}}
+        </h1>
+
+        <!-- ОПИСАНИЕ - поддерживает HTML -->
+        <div class="hero-fullwidth__description text-medium-small" style="color: {{overlayTextColor}};">
+          {{{description}}}
+        </div>
+
+        <!-- КНОПКА CTA -->
+        {{#if cta}}
+        <a href="{{cta.link}}" class="btn btn-primary-custom hero-fullwidth__cta">
+          {{cta.text}}
+        </a>
+        {{/if}}
+      </div>
+    </div>
+
+  </div>
+</section>

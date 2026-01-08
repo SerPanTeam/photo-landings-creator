@@ -26,12 +26,12 @@
       <div class="{{#if ../layout}}{{#ifEquals ../layout '2x2'}}col-lg-6{{else}}{{#ifEquals ../layout '4col'}}col-lg-3{{else}}col-lg-4{{/ifEquals}}{{/ifEquals}}{{else}}col-lg-4{{/if}} col-md-6 mb-4">
         <div class="benefit-card {{#if ../cardStyle}}benefit-card-{{../cardStyle}}{{/if}}">
 
-          <!-- ИКОНКА - изменить src="..." для замены -->
-          <div class="benefit-icon">
+          <!-- ИКОНКА/ИЗОБРАЖЕНИЕ - изменить src="..." для замены -->
+          <div class="benefit-icon" style="{{#if ../iconWidth}}width: {{../iconWidth}}px; height: {{../iconHeight}}px;{{else if ../iconSize}}width: {{../iconSize}}px; height: {{../iconSize}}px;{{/if}}">
             {{#if this.icon}}
-            <img src="{{this.icon}}" alt="{{this.title}}" class="img-fluid">
+            <img src="{{this.icon}}" alt="{{this.title}}" class="img-fluid" style="{{#if ../imageBorderRadius}}border-radius: {{../imageBorderRadius}}px;{{/if}}{{#if ../iconWidth}}width: {{../iconWidth}}px; height: {{../iconHeight}}px; object-fit: cover;{{/if}}">
             {{else}}
-            <div class="img-placeholder" style="width: {{#if ../iconSize}}{{../iconSize}}{{else}}150{{/if}}px; height: {{#if ../iconSize}}{{../iconSize}}{{else}}150{{/if}}px; background-color: #7f7f7f;"></div>
+            <div class="img-placeholder" style="width: {{#if ../iconWidth}}{{../iconWidth}}{{else if ../iconSize}}{{../iconSize}}{{else}}150{{/if}}px; height: {{#if ../iconHeight}}{{../iconHeight}}{{else if ../iconSize}}{{../iconSize}}{{else}}150{{/if}}px; background-color: #7f7f7f; {{#if ../imageBorderRadius}}border-radius: {{../imageBorderRadius}}px;{{/if}}"></div>
             {{/if}}
           </div>
 

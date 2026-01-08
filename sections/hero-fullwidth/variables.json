@@ -1,0 +1,20 @@
+{
+  "backgroundColor": "#F5EDE0",
+  "textColor": "#3D3D3D",
+  "overlayTextColor": "#FFFFFF",
+  "logo": "Logo",
+  "titleHighlight": "Kostenloses",
+  "title": "Hunde-Fotoshooting",
+  "description": "Description here",
+  "cta": {
+    "text": "Button",
+    "link": "#"
+  },
+  "image": {
+    "src": "",
+    "alt": "Hero image",
+    "width": 1237,
+    "height": 641,
+    "placeholderColor": "#7F7F7F"
+  }
+}

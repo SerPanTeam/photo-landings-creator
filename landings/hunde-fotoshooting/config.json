@@ -15,27 +15,24 @@
       "title": "Kostenloses Hunde-Fotoshooting",
       "sections": [
         {
-          "type": "hero",
+          "type": "hero-fullwidth",
           "content": {
             "backgroundColor": "#F5EDE0",
-            "textColor": "#FFFFFF",
+            "textColor": "#3D3D3D",
+            "overlayTextColor": "#FFFFFF",
             "logo": "Logo",
             "title": "Hunde-Fotoshooting",
             "titleHighlight": "Kostenloses",
-            "titleHighlightColor": "#E2C08D",
-            "description": "Hallo an alle Hundebesitzer!<br>Aufgepasst: Sichert euch frühzeitig euren Termin!<br>Die Fotoshootings finden nur bis zum<br>23.07.25 statt!",
+            "description": "<p>Hallo an alle Hundebesitzer!</p><p>Aufgepasst: Sichert euch frühzeitig euren Termin!</p><p>Die Fotoshootings finden nur bis zum</p><p>23.07.25 statt!</p>",
             "cta": {
               "text": "Hier geht's zu den Gutscheinen",
               "link": "quiz-1.html"
             },
-            "images": [
-              {
-                "src": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1237&h=641&fit=crop",
-                "width": 1237,
-                "height": 641,
-                "placeholderColor": "#7F7F7F"
-              }
-            ]
+            "image": {
+              "src": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1237&h=641&fit=crop",
+              "alt": "Hunde-Fotoshooting",
+              "placeholderColor": "#7F7F7F"
+            }
           }
         },
         {
@@ -57,6 +54,10 @@
           "type": "benefits",
           "content": {
             "backgroundColor": "#F5EDE0",
+            "hideLineDivider": true,
+            "iconWidth": 350,
+            "iconHeight": 300,
+            "imageBorderRadius": 35,
             "items": [
               {
                 "title": "Hunde-Fotoshooting – liebevoll & natürlich",
@@ -81,30 +82,25 @@
           "content": {
             "backgroundColor": "#F5EDE0",
             "showArrows": true,
+            "singleImage": true,
+            "imageHeight": 746,
+            "imageBorderRadius": 50,
             "images": [
               {
-                "src": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=400&fit=crop",
+                "src": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1233&h=746&fit=crop",
                 "alt": "Hund Portrait"
               },
               {
-                "src": "https://images.unsplash.com/photo-1534361960057-19889db9621e?w=400&h=400&fit=crop",
+                "src": "https://images.unsplash.com/photo-1534361960057-19889db9621e?w=1233&h=746&fit=crop",
                 "alt": "Hund spielend"
               },
               {
-                "src": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=400&h=400&fit=crop",
+                "src": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=1233&h=746&fit=crop",
                 "alt": "Golden Retriever"
               },
               {
-                "src": "https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?w=400&h=400&fit=crop",
+                "src": "https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?w=1233&h=746&fit=crop",
                 "alt": "Hund im Freien"
-              },
-              {
-                "src": "https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=400&h=400&fit=crop",
-                "alt": "Welpe"
-              },
-              {
-                "src": "https://images.unsplash.com/photo-1558788353-f76d92427f16?w=400&h=400&fit=crop",
-                "alt": "Hund lächelnd"
               }
             ]
           }
@@ -113,8 +109,13 @@
           "type": "features",
           "content": {
             "backgroundColor": "#F5EDE0",
-            "centeredTitle": "Sichert euch jetzt einen Gutschein für ein kostenloses Hunde-Fotoshooting.",
+            "textOnly": true,
+            "centeredTitle": "Sichert euch jetzt einen Gutschein für ein",
+            "centeredTitleColor": "#3D3D3D",
+            "centeredTitleHighlight": "kostenloses Hunde-Fotoshooting.",
+            "centeredTitleHighlightColor": "#000000",
             "description": "Dauer bis zum Gutschein: ≈ 30 Sekunden",
+            "ctaAlign": "right",
             "cta": {
               "text": "Jetzt Gutschein sichern",
               "link": "quiz-1.html",
@@ -190,7 +191,29 @@
             "src": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1233&h=656&fit=crop",
             "alt": "Hunde-Fotoshooting",
             "backgroundColor": "#7F7F7F",
-            "height": 656
+            "height": 656,
+            "borderRadius": 50,
+            "sectionBackgroundColor": "#F5EDE0",
+            "overlappingImages": [
+              {
+                "position": "top-right",
+                "width": 300,
+                "height": 200,
+                "borderRadius": 50,
+                "src": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=300&h=200&fit=crop",
+                "alt": "Hund",
+                "placeholderColor": "#3D3D3D"
+              },
+              {
+                "position": "bottom-left",
+                "width": 300,
+                "height": 200,
+                "borderRadius": 50,
+                "src": "https://images.unsplash.com/photo-1534361960057-19889db9621e?w=300&h=200&fit=crop",
+                "alt": "Hund",
+                "placeholderColor": "#3D3D3D"
+              }
+            ]
           }
         },
         {

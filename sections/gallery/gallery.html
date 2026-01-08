@@ -8,30 +8,35 @@
 <!-- Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-<section class="gallery section-padding" style="background-color: {{backgroundColor}};" aria-label="Fotogalerie">
+<section class="gallery section-padding {{#if singleImage}}gallery--single{{/if}}" style="background-color: {{backgroundColor}};" aria-label="Fotogalerie">
   <div class="container">
 
     <!-- ══════════════════════════════════════════════════════════════════════════
          SWIPER ГАЛЕРЕЯ
+         singleImage: true - режим одного большого изображения
+         imageHeight: высота изображений в пикселях (по умолчанию 350)
+         imageBorderRadius: border-radius в пикселях
          ══════════════════════════════════════════════════════════════════════════ -->
-    <div class="swiper gallery-swiper">
+    <div class="swiper gallery-swiper {{#if singleImage}}gallery-swiper--single{{/if}}" {{#if imageHeight}}data-image-height="{{imageHeight}}"{{/if}}>
       <div class="swiper-wrapper">
         {{#each images}}
         <div class="swiper-slide">
           <div class="gallery-item">
             {{#if this.src}}
             <!-- ИЗОБРАЖЕНИЕ - изменить src="..." для замены картинки -->
-            <img src="{{this.src}}" alt="{{this.alt}}" class="img-fluid" loading="lazy">
+            <img src="{{this.src}}" alt="{{this.alt}}" class="img-fluid" loading="lazy" style="{{#if ../imageHeight}}height: {{../imageHeight}}px;{{/if}} {{#if ../imageBorderRadius}}border-radius: {{../imageBorderRadius}}px;{{/if}}">
             {{else}}
-            <div class="img-placeholder" style="background-color: #7f7f7f;"></div>
+            <div class="img-placeholder" style="background-color: #7f7f7f; {{#if ../imageHeight}}height: {{../imageHeight}}px;{{/if}} {{#if ../imageBorderRadius}}border-radius: {{../imageBorderRadius}}px;{{/if}}"></div>
             {{/if}}
           </div>
         </div>
         {{/each}}
       </div>
 
-      <!-- Пагинация (точки) -->
+      {{#unless singleImage}}
+      <!-- Пагинация (точки) - скрыта в режиме singleImage -->
       <div class="swiper-pagination"></div>
+      {{/unless}}
 
       {{#if showArrows}}
       <!-- Стрелки навигации -->
@@ -48,7 +53,11 @@
 <script>
   (function() {
     function initGallerySwiper() {
-      new Swiper('.gallery-swiper', {
+      // Проверяем режим single image
+      var swiperEl = document.querySelector('.gallery-swiper');
+      var isSingle = swiperEl && swiperEl.classList.contains('gallery-swiper--single');
+
+      var swiperConfig = {
         slidesPerView: 1,
         spaceBetween: 15,
         loop: true,
@@ -60,13 +69,19 @@
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
-        breakpoints: {
+        grabCursor: true,
+      };
+
+      // В режиме single всегда показываем 1 слайд
+      if (!isSingle) {
+        swiperConfig.breakpoints = {
           576: { slidesPerView: 2, spaceBetween: 15 },
           768: { slidesPerView: 2, spaceBetween: 20 },
           992: { slidesPerView: 3, spaceBetween: 20 },
-        },
-        grabCursor: true,
-      });
+        };
+      }
+
+      new Swiper('.gallery-swiper', swiperConfig);
     }
 
     // Инициализация: если DOM уже загружен - сразу, иначе ждём
