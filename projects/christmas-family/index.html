@@ -125,7 +125,7 @@
 
           <!-- СПИСОК - пункты с буллетами (опционально) -->
 
-          <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ (убрать: hideLineDivider: true в config) -->
+          <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ - удалить этот блок если не нужна -->
           <div class="line-divider mb-4" style="max-width: 618px; border-bottom: 1px solid #3D3D3D;"></div>
 
           <!-- КНОПКА CTA - призыв к действию -->
@@ -187,7 +187,7 @@
 
           <!-- СПИСОК - пункты с буллетами (опционально) -->
 
-          <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ (убрать: hideLineDivider: true в config) -->
+          <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ - удалить этот блок если не нужна -->
           <div class="line-divider mb-4" style="max-width: 618px; border-bottom: 1px solid #3D3D3D;"></div>
 
           <!-- КНОПКА CTA - призыв к действию -->
@@ -360,7 +360,7 @@
             <!-- ЗАГОЛОВОК КАРТОЧКИ -->
             <h3 class="text-bold-small mb-3">Liebevoll dekoriertes Set mit Weihnachtszauber</h3>
 
-            <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ (убрать: hideLineDivider: true в config) -->
+            <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ - удалить этот блок если не нужна -->
             <div class="benefit-divider mb-3" style="max-width: 158px; border-bottom: 1px solid #3D3D3D;"></div>
 
             <!-- ОПИСАНИЕ КАРТОЧКИ -->
@@ -381,7 +381,7 @@
             <!-- ЗАГОЛОВОК КАРТОЧКИ -->
             <h3 class="text-bold-small mb-3">Ganz viel Raum für echte Familienmomente</h3>
 
-            <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ (убрать: hideLineDivider: true в config) -->
+            <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ - удалить этот блок если не нужна -->
             <div class="benefit-divider mb-3" style="max-width: 158px; border-bottom: 1px solid #3D3D3D;"></div>
 
             <!-- ОПИСАНИЕ КАРТОЧКИ -->
@@ -402,7 +402,7 @@
             <!-- ЗАГОЛОВОК КАРТОЧКИ -->
             <h3 class="text-bold-small mb-3">Wunderschöne Erinnerungen zum Verschenken</h3>
 
-            <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ (убрать: hideLineDivider: true в config) -->
+            <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ - удалить этот блок если не нужна -->
             <div class="benefit-divider mb-3" style="max-width: 158px; border-bottom: 1px solid #3D3D3D;"></div>
 
             <!-- ОПИСАНИЕ КАРТОЧКИ -->
@@ -539,77 +539,114 @@ Ich melde mich so schnell wie möglich bei dir.</p>
 </section>
 
 
-<!-- Full Width Image Section -->
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  FULLWIDTH IMAGE - Полноширинное изображение                              ║
+     ║  Растягивается на всю ширину экрана (без container)                       ║
+     ║  Идеально для больших атмосферных фото между секциями                     ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
 <section class="fullwidth-image" aria-label="Familienfotografie">
+
+  <!-- Placeholder - показывается если нет изображения -->
+  <!-- Изменить: background-color и height в style="..." -->
   <div class="fullwidth-image__placeholder" style="background-color: #7F7F7F; height: 656pxpx;"></div>
+
 </section>
 
 
-<!-- FAQ Section -->
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  FAQ - Часто задаваемые вопросы (аккордеон)                               ║
+     ║  Фон: изменить style="background-color: ..."                              ║
+     ║  Первый вопрос открыт по умолчанию, остальные закрыты                     ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
 <section class="faq section-padding" style="background-color: #F5EDE0;">
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <!-- Section Title -->
+
+        <!-- ЗАГОЛОВОК СЕКЦИИ - изменить текст между тегами -->
         <h2 class="text-h3 mb-5">Häufige Fragen zum Fotoshooting</h2>
 
-        <!-- FAQ Items -->
+        <!-- ════════════════════════════════════════════════════════════════════════
+             СПИСОК ВОПРОСОВ (Аккордеон)
+             Для каждого вопроса: изменить текст в <h3> и <p>
+             ════════════════════════════════════════════════════════════════════════ -->
         <div class="faq-list">
           <div class="faq-item active" data-index="0">
+
+            <!-- ВОПРОС - изменить текст в <h3> -->
             <button type="button" class="faq-question d-flex justify-content-between align-items-start w-100 text-start bg-transparent border-0 p-0" aria-expanded="true" aria-controls="faq-answer-0">
               <h3 class="text-bold-big mb-0 flex-grow-1">Für wen ist das Fotoshooting gedacht?</h3>
               <span class="faq-toggle ms-3" aria-hidden="true">−</span>
             </button>
 
+            <!-- ОТВЕТ - изменить текст в <p> -->
             <div class="faq-answer mt-3 " id="faq-answer-0" role="region">
               <p class="text-medium-small mb-0">Das Fotoshooting ist für alle Familien gedacht – ob mit Kindern, Großeltern oder als Paar. Jeder ist willkommen!</p>
             </div>
 
+            <!-- Разделитель между вопросами -->
             <div class="faq-divider my-4" style="border-bottom: 1px solid #3D3D3D;"></div>
+
           </div>
           <div class="faq-item " data-index="1">
+
+            <!-- ВОПРОС - изменить текст в <h3> -->
             <button type="button" class="faq-question d-flex justify-content-between align-items-start w-100 text-start bg-transparent border-0 p-0" aria-expanded="false" aria-controls="faq-answer-1">
               <h3 class="text-bold-big mb-0 flex-grow-1">Gibt es eine Frist in der das Angebot gilt?</h3>
               <span class="faq-toggle ms-3" aria-hidden="true">+</span>
             </button>
 
+            <!-- ОТВЕТ - изменить текст в <p> -->
             <div class="faq-answer mt-3 d-none" id="faq-answer-1" role="region">
               <p class="text-medium-small mb-0">Ja, die kostenlosen Fotoshootings sind nur bis zum 20.11.25 verfügbar. Sichere dir jetzt deinen Termin!</p>
             </div>
 
+            <!-- Разделитель между вопросами -->
             <div class="faq-divider my-4" style="border-bottom: 1px solid #3D3D3D;"></div>
+
           </div>
           <div class="faq-item " data-index="2">
+
+            <!-- ВОПРОС - изменить текст в <h3> -->
             <button type="button" class="faq-question d-flex justify-content-between align-items-start w-100 text-start bg-transparent border-0 p-0" aria-expanded="false" aria-controls="faq-answer-2">
               <h3 class="text-bold-big mb-0 flex-grow-1">Ist das Fotoshooting wirklich kostenlos?</h3>
               <span class="faq-toggle ms-3" aria-hidden="true">+</span>
             </button>
 
+            <!-- ОТВЕТ - изменить текст в <p> -->
             <div class="faq-answer mt-3 d-none" id="faq-answer-2" role="region">
               <p class="text-medium-small mb-0">Ja, das Fotoshooting selbst ist komplett kostenlos. Du entscheidest danach selbst, ob und welche Bilder du kaufen möchtest – ganz ohne Kaufzwang.</p>
             </div>
 
+            <!-- Разделитель между вопросами -->
             <div class="faq-divider my-4" style="border-bottom: 1px solid #3D3D3D;"></div>
+
           </div>
           <div class="faq-item " data-index="3">
+
+            <!-- ВОПРОС - изменить текст в <h3> -->
             <button type="button" class="faq-question d-flex justify-content-between align-items-start w-100 text-start bg-transparent border-0 p-0" aria-expanded="false" aria-controls="faq-answer-3">
               <h3 class="text-bold-big mb-0 flex-grow-1">Ist das Fotoshooting wirklich kostenlos?</h3>
               <span class="faq-toggle ms-3" aria-hidden="true">+</span>
             </button>
 
+            <!-- ОТВЕТ - изменить текст в <p> -->
             <div class="faq-answer mt-3 d-none" id="faq-answer-3" role="region">
               <p class="text-medium-small mb-0">Ja, das Fotoshooting ist kostenlos. Du bezahlst nur für die Bilder, die du am Ende auswählst und behalten möchtest.</p>
             </div>
 
+            <!-- Разделитель между вопросами -->
+
           </div>
         </div>
 
-        <!-- CTA Button -->
+        <!-- КНОПКА - изменить текст и href="..." -->
         <div class="faq-cta mt-5 text-center">
           <a href="#contact" class="btn btn-primary-custom">
             Jetzt Termin sichern
           </a>
         </div>
+
       </div>
     </div>
   </div>
@@ -753,7 +790,7 @@ Ich melde mich so schnell wie möglich bei dir.</p>
           <h2 class="text-bold-big mb-4">Hi, ich bin Jenni – dein Kameramädle!</h2>
 
 
-          <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ (убрать: hideLineDivider: true в config) -->
+          <!-- ЛИНИЯ-РАЗДЕЛИТЕЛЬ - удалить этот блок если не нужна -->
           <div class="line-divider mb-4" style="max-width: 471px; border-bottom: 1px solid #3D3D3D;"></div>
 
           <!-- БИОГРАФИЯ / ОПИСАНИЕ - основной текст -->
