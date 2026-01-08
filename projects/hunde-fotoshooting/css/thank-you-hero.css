@@ -53,6 +53,7 @@
   color: #ffffff;
   background-color: #E2C08D;
   border: none;
+  border-radius: 30px;
   text-decoration: none;
   transition: all 0.3s ease;
   margin-bottom: 30px;
@@ -93,6 +94,7 @@
   color: #000000;
   background-color: transparent;
   border: 1px solid #000000;
+  border-radius: 30px;
   text-decoration: none;
   transition: all 0.3s ease;
 }

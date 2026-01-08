@@ -477,6 +477,8 @@ Store Figma references in `landings/<name>/FIGMA.md`:
 | Missing text element | Count ALL text blocks in Figma - verify each renders |
 | **Line divider wrong position** | Check WHERE the line is in Figma - between which elements? |
 | Line between texts, not before CTA | Use `description` + `description2` fields for split content |
+| **Buttons with border-radius: 0** | Figma uses `rounded-[30px]` → ALL buttons need `border-radius: 30px` |
+| **Wrong image border-radius** | Check Figma: hero/gallery=50px, benefits=35px, services=25px, about=30px |
 
 ### 5. Verification Process
 ```
@@ -540,6 +542,23 @@ min-height: 70px;
 | Hero CTA | 286px | 70px |
 | Quiz option | **300px fixed** | 66px (or 92px multiline) |
 | Outline button | auto | 60px |
+
+### 8a. Border-Radius Reference (CRITICAL!)
+| Element | Figma | CSS File |
+|---------|-------|----------|
+| **Buttons (all)** | **30px** | common.css, quiz-*.css, thank-you-hero.css |
+| **Form inputs** | **30px** | quiz-form.css |
+| Hero image | 50px | hero-fullwidth.css |
+| Gallery images | 50px | gallery.css |
+| Benefits images | 35px | benefits.css |
+| Process cards | 20px | process.css |
+| Services images | 25px | services.css |
+| FAQ cards | 30px | faq-cards.css |
+| Fullwidth main image | 50px | fullwidth-image.css |
+| Fullwidth overlaps | 50px | fullwidth-image.css |
+| About photo | 30px | about.css |
+
+**Common mistake**: Using `border-radius: 0` for buttons - Figma uses **rounded 30px**!
 
 ### 9. Quiz Buttons - CRITICAL
 ```css

@@ -29,7 +29,7 @@
 }
 
 .services-flat .service-image .img-placeholder {
-  border-radius: 20px;
+  border-radius: 25px;
 }
 
 .service-image {
@@ -41,6 +41,7 @@
 .service-image .img-placeholder {
   max-width: 100%;
   height: auto;
+  border-radius: 25px;
 }
 
 /* Responsive adjustments */

@@ -51,7 +51,7 @@
 }
 
 /* Button styles */
-/* FIGMA: Кнопки прямоугольные, высота 70px (primary) / 60px (outline) */
+/* FIGMA: Кнопки закруглённые (30px), высота 70px (primary) / 60px (outline) */
 .btn-primary-custom {
   background-color: var(--brand-accent);
   border: none;
@@ -63,7 +63,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0;
+  border-radius: 30px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -85,7 +85,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0;
+  border-radius: 30px;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 

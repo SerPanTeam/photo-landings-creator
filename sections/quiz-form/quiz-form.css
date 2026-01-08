@@ -52,6 +52,7 @@
   color: #000000;
   background-color: transparent;
   border: 1px solid #000000;
+  border-radius: 30px;
   outline: none;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -123,6 +124,7 @@
   color: #ffffff;
   background-color: #E2C08D;
   border: none;
+  border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
