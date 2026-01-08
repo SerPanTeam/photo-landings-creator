@@ -1,16 +1,16 @@
 <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  LEGAL FOOTER - Юридический подвал (ссылки + копирайт)                    ║
+     ║  LEGAL FOOTER - Юридический подвал (ссылки)                               ║
      ║  Фон: backgroundColor | Изменить: style="background-color: #F5EDE0;"      ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
 <section class="legal-footer" style="background-color: {{backgroundColor}};">
   <div class="container">
-    <div class="row align-items-center">
+    <div class="row align-items-center justify-content-center">
 
       <!-- ════════════════════════════════════════════════════════════════════════
            ЮРИДИЧЕСКИЕ ССЫЛКИ
-           Impressum, Datenschutz, AGB и т.д.
+           Impressum, Datenschutz, Cookie Richtlinien
            ════════════════════════════════════════════════════════════════════════ -->
-      <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+      <div class="col-12 text-center">
         <nav class="legal-links">
           {{#each links}}
           <!-- ССЫЛКА - изменить href="..." и текст между > и </a> -->
@@ -18,14 +18,6 @@
           {{#unless @last}}<span class="legal-separator">·</span>{{/unless}}
           {{/each}}
         </nav>
-      </div>
-
-      <!-- ════════════════════════════════════════════════════════════════════════
-           КОПИРАЙТ
-           Например: "© 2025 Möst Fotografie. Alle Rechte vorbehalten."
-           ════════════════════════════════════════════════════════════════════════ -->
-      <div class="col-md-6 text-center text-md-end">
-        <p class="copyright mb-0">{{copyright}}</p>
       </div>
 
     </div>

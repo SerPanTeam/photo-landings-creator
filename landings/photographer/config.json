@@ -257,9 +257,7 @@
           { "text": "Impressum", "href": "/impressum" },
           { "text": "Datenschutzerklärung", "href": "/datenschutz" },
           { "text": "Cookie Richtlinien", "href": "/cookies" }
-        ],
-        "copyright": "© 2025 Dorett Dornbusch. Alle Rechte vorbehalten."
-      }
+        ]}
     }
   ]
 }

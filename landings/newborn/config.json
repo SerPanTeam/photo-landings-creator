@@ -267,9 +267,7 @@
           {"text": "Impressum", "url": "/impressum"},
           {"text": "Datenschutzerklärung", "url": "/datenschutz"},
           {"text": "Cookie Richtlinien", "url": "/cookies"}
-        ],
-        "copyright": "© 2025 Möst Fotografie. Alle Rechte vorbehalten."
-      }
+        ]}
     }
   ]
 }
