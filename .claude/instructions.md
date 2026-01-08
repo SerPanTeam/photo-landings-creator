@@ -477,8 +477,10 @@ Store Figma references in `landings/<name>/FIGMA.md`:
 | Missing text element | Count ALL text blocks in Figma - verify each renders |
 | **Line divider wrong position** | Check WHERE the line is in Figma - between which elements? |
 | Line between texts, not before CTA | Use `description` + `description2` fields for split content |
-| **Buttons with border-radius: 0** | Figma uses `rounded-[30px]` → ALL buttons need `border-radius: 30px` |
-| **Wrong image border-radius** | Check Figma: hero/gallery=50px, benefits=35px, services=25px, about=30px |
+| **Quiz buttons fully rounded** | Quiz buttons have ONLY bottom corners rounded (`0 0 30px 30px`) |
+| **Form inputs rounded** | Form inputs are SQUARE (no border-radius), NOT rounded! |
+| **Quiz card with gap** | Quiz image+button must have NO gap between them |
+| **Wrong image border-radius** | Check Figma: quiz-sidebar=40px, hero/gallery=50px, benefits=35px, services=25px |
 
 ### 5. Verification Process
 ```
@@ -544,21 +546,27 @@ min-height: 70px;
 | Outline button | auto | 60px |
 
 ### 8a. Border-Radius Reference (CRITICAL!)
-| Element | Figma | CSS File |
-|---------|-------|----------|
-| **Buttons (all)** | **30px** | common.css, quiz-*.css, thank-you-hero.css |
-| **Form inputs** | **30px** | quiz-form.css |
-| Hero image | 50px | hero-fullwidth.css |
-| Gallery images | 50px | gallery.css |
-| Benefits images | 35px | benefits.css |
-| Process cards | 20px | process.css |
-| Services images | 25px | services.css |
-| FAQ cards | 30px | faq-cards.css |
-| Fullwidth main image | 50px | fullwidth-image.css |
-| Fullwidth overlaps | 50px | fullwidth-image.css |
-| About photo | 30px | about.css |
+| Element | Figma | CSS Value |
+|---------|-------|-----------|
+| **CTA Buttons (hero, process, services)** | **30px** | `border-radius: 30px` |
+| **Quiz option buttons** | **bottom only** | `border-radius: 0 0 30px 30px` |
+| **Quiz option images** | **top only** | `border-radius: 30px 30px 0 0` |
+| **Form inputs** | **0 (square!)** | `border-radius: 0` |
+| **Quiz/Thank-you sidebar image** | **40px** | `border-radius: 40px` |
+| Hero image | 50px | `border-radius: 50px` |
+| Gallery images | 50px | `border-radius: 50px` |
+| Benefits images | 35px | `border-radius: 35px` |
+| Process cards | 20px | `border-radius: 20px` |
+| Services images | 25px | `border-radius: 25px` |
+| FAQ cards | 30px | `border-radius: 30px` |
+| Fullwidth main image | 50px | `border-radius: 50px` |
+| About photo | 30px | `border-radius: 30px` |
 
-**Common mistake**: Using `border-radius: 0` for buttons - Figma uses **rounded 30px**!
+**CRITICAL mistakes to avoid:**
+- Quiz buttons: NOT fully rounded! Only BOTTOM corners (`0 0 30px 30px`)
+- Quiz images: Only TOP corners rounded (`30px 30px 0 0`)
+- Form inputs: SQUARE, no border-radius!
+- Quiz card: NO gap between image and button (they connect)
 
 ### 9. Quiz Buttons - CRITICAL
 ```css
