@@ -1,0 +1,752 @@
+{
+  "name": "Hunde-Fotoshooting Landing",
+  "lang": "de",
+  "meta": {
+    "title": "Kostenloses Hunde-Fotoshooting",
+    "description": "Sichere dir jetzt dein kostenloses Hunde-Fotoshooting! Professionelle Fotos für dich und deinen pelzigen Freund.",
+    "keywords": "hunde fotoshooting, kostenlos, hund, fotograf, tierfotografie"
+  },
+  "scripts": [
+    "quiz.js"
+  ],
+  "pages": [
+    {
+      "filename": "index.html",
+      "title": "Kostenloses Hunde-Fotoshooting",
+      "sections": [
+        {
+          "type": "hero",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "textColor": "#FFFFFF",
+            "logo": "Logo",
+            "title": "Hunde-Fotoshooting",
+            "titleHighlight": "Kostenloses",
+            "titleHighlightColor": "#E2C08D",
+            "description": "Hallo an alle Hundebesitzer!<br>Aufgepasst: Sichert euch frühzeitig euren Termin!<br>Die Fotoshootings finden nur bis zum<br>23.07.25 statt!",
+            "cta": {
+              "text": "Hier geht's zu den Gutscheinen",
+              "link": "quiz-1.html"
+            },
+            "images": [
+              {
+                "src": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1237&h=641&fit=crop",
+                "width": 1237,
+                "height": 641,
+                "placeholderColor": "#7F7F7F"
+              }
+            ]
+          }
+        },
+        {
+          "type": "promotional",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "title": "Warum kostenlos?",
+            "description": "Weil ich auf meine Qualität vertraue – und sicher bin, dass du deine Bilder lieben wirst.",
+            "description2": "Du entscheidest selbst, ob und welche du kaufen möchtest – ganz ohne Risiko.",
+            "cta": {
+              "text": "Kostenloses Fotoshooting sichern",
+              "link": "quiz-1.html",
+              "showArrow": false
+            },
+            "image": ""
+          }
+        },
+        {
+          "type": "benefits",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "items": [
+              {
+                "title": "Hunde-Fotoshooting – liebevoll & natürlich",
+                "description": "Viel Zeit und Raum für besondere Momente mit deinem Haustier – ganz entspannt, in vertrauter Umgebung und mit viel Geduld für einzigartige Aufnahmen.",
+                "icon": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=350&h=300&fit=crop"
+              },
+              {
+                "title": "Professionelles Hunde-Fotoshooting",
+                "description": "Ich nehme mir Zeit für euch und halte mit viel Geduld und einem geschulten Auge die besondere Verbindung zwischen dir und deinem Tier in liebevollen Bildern fest.",
+                "icon": "https://images.unsplash.com/photo-1534361960057-19889db9621e?w=350&h=300&fit=crop"
+              },
+              {
+                "title": "Hunde-Fotoshooting mit Herz, Stil und Persönlichkeit",
+                "description": "Professionelle Aufnahmen, mit viel Geduld und Liebe zum Detail – individuell auf euch abgestimmt. Denn jedes Tier ist einzigartig, und genau das soll man auf den Bildern sehen und spüren.",
+                "icon": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=350&h=300&fit=crop"
+              }
+            ]
+          }
+        },
+        {
+          "type": "gallery",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "showArrows": true,
+            "images": [
+              {
+                "src": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=400&fit=crop",
+                "alt": "Hund Portrait"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1534361960057-19889db9621e?w=400&h=400&fit=crop",
+                "alt": "Hund spielend"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=400&h=400&fit=crop",
+                "alt": "Golden Retriever"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?w=400&h=400&fit=crop",
+                "alt": "Hund im Freien"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=400&h=400&fit=crop",
+                "alt": "Welpe"
+              },
+              {
+                "src": "https://images.unsplash.com/photo-1558788353-f76d92427f16?w=400&h=400&fit=crop",
+                "alt": "Hund lächelnd"
+              }
+            ]
+          }
+        },
+        {
+          "type": "features",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "centeredTitle": "Sichert euch jetzt einen Gutschein für ein kostenloses Hunde-Fotoshooting.",
+            "description": "Dauer bis zum Gutschein: ≈ 30 Sekunden",
+            "cta": {
+              "text": "Jetzt Gutschein sichern",
+              "link": "quiz-1.html",
+              "isButton": true
+            },
+            "hideLineDivider": true
+          }
+        },
+        {
+          "type": "process",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "title": "Wie läuft das mit dem kostenlosen Hunde-Fotoshooting ab?",
+            "ctaCentered": true,
+            "cta": {
+              "text": "Kostenloses Fotoshooting sichern",
+              "link": "quiz-1.html"
+            },
+            "steps": [
+              {
+                "title": "1. Eintragen",
+                "description": "Beantworte ein paar kurze Fragen im Quiz, damit ich besser einschätzen kann, wie viel Zeit ich für dein persönliches Shooting einplanen darf.\n\nMelde dich jetzt für dein kostenloses Fotoshooting an und sichere dir deinen exklusiven Gutschein!",
+                "icon": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=76&h=75&fit=crop"
+              },
+              {
+                "title": "2. Termin vereinbaren",
+                "description": "Ich melde mich bei dir, um die Details zu besprechen und einen passenden Termin für das Fotoshooting zu finden.",
+                "icon": "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=76&h=75&fit=crop"
+              },
+              {
+                "title": "3. Let's start: Fotoshooting",
+                "description": "Während des kostenlosen Fotoshootings entstehen vielfältige und einzigartige Aufnahmen, damit du eine große Auswahl an Bildern hast und deine persönlichen Favoriten wählen kannst.",
+                "icon": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=76&h=75&fit=crop"
+              },
+              {
+                "title": "4. Bildauswahl",
+                "description": "Nach dem Shooting darfst du dir in Ruhe die Bilder anschauen und genau die auswählen, die dir wirklich gefallen.\n\nDu kaufst nur, was dich begeistert – ganz ohne Druck oder Verpflichtung.",
+                "icon": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=76&h=75&fit=crop"
+              }
+            ]
+          }
+        },
+        {
+          "type": "benefits",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "layout": "2x2",
+            "cardStyle": "plain",
+            "iconSize": 75,
+            "items": [
+              {
+                "title": "Ganz viel Zeit & Raum für dich und deinen pelzigen Freund",
+                "icon": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=74&h=75&fit=crop"
+              },
+              {
+                "title": "Professionelle Fotografin aus Leidenschaft und Professionalität",
+                "icon": "https://images.unsplash.com/photo-1534361960057-19889db9621e?w=71&h=75&fit=crop"
+              },
+              {
+                "title": "Kostenfreies Fotoshooting",
+                "icon": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=74&h=79&fit=crop"
+              },
+              {
+                "title": "Hohe Qualität der Fotos hautnah erleben",
+                "icon": "https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?w=72&h=75&fit=crop"
+              }
+            ]
+          }
+        },
+        {
+          "type": "fullwidth-image",
+          "content": {
+            "src": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1233&h=656&fit=crop",
+            "alt": "Hunde-Fotoshooting",
+            "backgroundColor": "#7F7F7F",
+            "height": 656
+          }
+        },
+        {
+          "type": "faq-cards",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "title": "Häufige Fragen zum Fotoshooting",
+            "items": [
+              {
+                "q": "Question 1",
+                "a": "Antwort auf Question 1"
+              },
+              {
+                "q": "Question 2",
+                "a": "Antwort auf Question 2"
+              },
+              {
+                "q": "Question 3",
+                "a": "Antwort auf Question 3"
+              },
+              {
+                "q": "Question 4",
+                "a": "Antwort auf Question 4"
+              }
+            ]
+          }
+        },
+        {
+          "type": "services",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "title": "Das ganze Jahr über finden immer wieder verschiedene Aktionen zu Fotoshootings statt.",
+            "cta": {
+              "text": "Jetzt kostenloses Fotoshooting sichern",
+              "link": "quiz-1.html"
+            },
+            "items": [
+              {
+                "title": "Family Time",
+                "description": "Haltet die unbeschwerte Freude eurer Familie in liebevollen, natürlichen Bildern fest – voller Nähe, Lachen und echter Momente. Mit viel Feingefühl entstehen Aufnahmen, die euch ein Leben lang begleiten und eure Verbundenheit authentisch zeigen.",
+                "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=280&h=280&fit=crop"
+              },
+              {
+                "title": "Babybauch & Newborn",
+                "description": "Vom wachsenden Babybauch bis zu den ersten zauberhaften Momenten mit deinem Neugeborenen – ich halte diese unwiederbringliche Zeit in liebevollen Bildern fest, die ein Leben lang begleiten.",
+                "image": "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=280&h=280&fit=crop"
+              },
+              {
+                "title": "Hunde-Fotoshooting",
+                "description": "Ein kreatives Shooting voller unvergesslicher Erinnerungen – perfekt für dich und deinen vierbeinigen Freund – mit ganz viel Herz, Persönlichkeit und Emotion.",
+                "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=280&h=280&fit=crop"
+              },
+              {
+                "title": "Kinder-Fotoshooting",
+                "description": "Haltet die unbeschwerte Freude eurer Kinder in liebevollen, natürlichen Bildern fest – voller Lachen, Neugier und echter Momente. Mit viel Feingefühl entstehen Aufnahmen, die euch ein Leben lang begleiten und die Persönlichkeit eurer Kleinen authentisch zeigen.",
+                "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=280&h=280&fit=crop"
+              }
+            ]
+          }
+        },
+        {
+          "type": "about",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "greeting": "Willkommen bei",
+            "name": "Möst Fotografie",
+            "bio": "Ich bin Maren Möst – ausgebildete Fotografin und Mediengestalterin mit einem Bachelor in Medienwirtschaft. Nach mehreren Jahren im Medienbereich, unter anderem beim SWR und bei Bavaria Film, habe ich mich ganz der Fotografie verschrieben.\n\nIn meinem Studio kombiniere ich technisches Know-how mit einem künstlerischen Blick fürs Detail. Ich liebe es, echte Momente einzufangen – ruhig, authentisch und mit Gefühl. Meine Erfahrung aus der Filmwelt und der Mediengestaltung hilft mir dabei, Geschichten nicht nur festzuhalten, sondern sichtbar zu machen.\n\nOb Babybauch, Familie oder Porträt – für mich steht der Mensch im Mittelpunkt. Mit viel Ruhe und einem sicheren Gespür für Atmosphäre entstehen Bilder, die bleiben.",
+            "photo": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=551&h=608&fit=crop"
+          }
+        },
+        {
+          "type": "footer",
+          "content": {
+            "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41433.67774467847!2d10.5478!3d49.3009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a2f1f9f6cf06cd%3A0x41d25a40937aab0!2sAnsbach!5e0!3m2!1sde!2sde",
+            "height": "435"
+          }
+        },
+        {
+          "type": "legal-footer",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "links": [
+              {
+                "text": "Impressum",
+                "href": "impressum.html"
+              },
+              {
+                "text": "Datenschutzerklärung",
+                "href": "datenschutz.html"
+              },
+              {
+                "text": "Cookie Richtlinien",
+                "href": "cookies.html"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "filename": "quiz-1.html",
+      "title": "Kennst du mich bereits? - Quiz",
+      "sections": [
+        {
+          "type": "quiz-header",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "textColor": "#3D3D3D",
+            "logo": "Logo",
+            "logoLink": "index.html",
+            "progress": "Weiter zum Gutschein"
+          }
+        },
+        {
+          "type": "quiz-question",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "textColor": "#000000",
+            "questionId": "q1",
+            "question": "Kennst du mich bereits?",
+            "optionsCount": "3",
+            "options": [
+              {
+                "text": "Ja, na klar!",
+                "value": "ja_klar",
+                "link": "quiz-2.html",
+                "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=300&h=300&fit=crop"
+              },
+              {
+                "text": "Ja, vom Hören",
+                "value": "vom_hoeren",
+                "link": "quiz-2.html",
+                "image": "https://images.unsplash.com/photo-1534361960057-19889db9621e?w=300&h=300&fit=crop"
+              },
+              {
+                "text": "Nein, noch nicht",
+                "value": "nein",
+                "link": "quiz-2.html",
+                "image": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=300&h=300&fit=crop"
+              }
+            ]
+          }
+        },
+        {
+          "type": "legal-footer",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "links": [
+              {
+                "text": "Impressum",
+                "href": "impressum.html"
+              },
+              {
+                "text": "Datenschutzerklärung",
+                "href": "datenschutz.html"
+              },
+              {
+                "text": "Cookie Richtlinien",
+                "href": "cookies.html"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "filename": "quiz-2.html",
+      "title": "Wer wird mit dabei sein? - Quiz",
+      "sections": [
+        {
+          "type": "quiz-header",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "textColor": "#3D3D3D",
+            "logo": "Logo",
+            "logoLink": "index.html",
+            "progress": "Noch 3 Fragen bis zum Gutschein"
+          }
+        },
+        {
+          "type": "quiz-question",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "textColor": "#000000",
+            "questionId": "q2",
+            "question": "Wer wird mit dabei sein?",
+            "optionsCount": "3",
+            "options": [
+              {
+                "text": "Mein pelziger Freund",
+                "value": "ein_hund",
+                "link": "quiz-3.html",
+                "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=300&h=300&fit=crop"
+              },
+              {
+                "text": "Meine pelzige Freunde",
+                "value": "mehrere_hunde",
+                "link": "quiz-3.html",
+                "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=300&h=300&fit=crop"
+              },
+              {
+                "text": "Die ganze Familie",
+                "value": "familie",
+                "link": "quiz-3.html",
+                "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=300&h=300&fit=crop"
+              }
+            ]
+          }
+        },
+        {
+          "type": "legal-footer",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "links": [
+              {
+                "text": "Impressum",
+                "href": "impressum.html"
+              },
+              {
+                "text": "Datenschutzerklärung",
+                "href": "datenschutz.html"
+              },
+              {
+                "text": "Cookie Richtlinien",
+                "href": "cookies.html"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "filename": "quiz-3.html",
+      "title": "Wie alt ist dein Hund? - Quiz",
+      "sections": [
+        {
+          "type": "quiz-header",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "textColor": "#3D3D3D",
+            "logo": "Logo",
+            "logoLink": "index.html",
+            "progress": "Noch 2 Fragen bis zum Gutschein"
+          }
+        },
+        {
+          "type": "quiz-question",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "textColor": "#000000",
+            "questionId": "q3",
+            "question": "Wie alt ist dein Hund?",
+            "optionsCount": "4",
+            "options": [
+              {
+                "text": "Unter 1 Jahr",
+                "value": "unter_1",
+                "link": "quiz-4.html",
+                "image": "https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=300&h=300&fit=crop"
+              },
+              {
+                "text": "1–3 Jahre",
+                "value": "1_3",
+                "link": "quiz-4.html",
+                "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=300&h=300&fit=crop"
+              },
+              {
+                "text": "4–7 Jahre",
+                "value": "4_7",
+                "link": "quiz-4.html",
+                "image": "https://images.unsplash.com/photo-1534361960057-19889db9621e?w=300&h=300&fit=crop"
+              },
+              {
+                "text": "Über 7 Jahre",
+                "value": "ueber_7",
+                "link": "quiz-4.html",
+                "image": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=300&h=300&fit=crop"
+              }
+            ]
+          }
+        },
+        {
+          "type": "legal-footer",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "links": [
+              {
+                "text": "Impressum",
+                "href": "impressum.html"
+              },
+              {
+                "text": "Datenschutzerklärung",
+                "href": "datenschutz.html"
+              },
+              {
+                "text": "Cookie Richtlinien",
+                "href": "cookies.html"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "filename": "quiz-4.html",
+      "title": "Eigenschaften deines Hundes - Quiz",
+      "sections": [
+        {
+          "type": "quiz-header",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "textColor": "#3D3D3D",
+            "logo": "Logo",
+            "logoLink": "index.html",
+            "progress": "Noch 1 Fragen bis zum Gutschein"
+          }
+        },
+        {
+          "type": "quiz-question",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "textColor": "#000000",
+            "questionId": "q4",
+            "question": "Welche Eigenschaften beschreiben deinen Hund am besten?",
+            "optionsCount": "4",
+            "options": [
+              {
+                "text": "Ruhig und gelassen",
+                "value": "ruhig",
+                "link": "quiz-form.html",
+                "image": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=300&h=300&fit=crop"
+              },
+              {
+                "text": "Verspielt und energiegeladen",
+                "value": "verspielt",
+                "link": "quiz-form.html",
+                "image": "https://images.unsplash.com/photo-1534361960057-19889db9621e?w=300&h=300&fit=crop",
+                "multiline": true
+              },
+              {
+                "text": "Schüchtern oder ängstlich",
+                "value": "schuechtern",
+                "link": "quiz-form.html",
+                "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=300&h=300&fit=crop",
+                "multiline": true
+              },
+              {
+                "text": "Neugierig und aufgeschlossen",
+                "value": "neugierig",
+                "link": "quiz-form.html",
+                "image": "https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?w=300&h=300&fit=crop",
+                "multiline": true
+              }
+            ]
+          }
+        },
+        {
+          "type": "legal-footer",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "links": [
+              {
+                "text": "Impressum",
+                "href": "impressum.html"
+              },
+              {
+                "text": "Datenschutzerklärung",
+                "href": "datenschutz.html"
+              },
+              {
+                "text": "Cookie Richtlinien",
+                "href": "cookies.html"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "filename": "quiz-form.html",
+      "title": "Jetzt anmelden - Quiz",
+      "sections": [
+        {
+          "type": "quiz-header",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "textColor": "#3D3D3D",
+            "logo": "Logo",
+            "logoLink": "index.html",
+            "progress": "Klasse, jetzt zum Gutschein"
+          }
+        },
+        {
+          "type": "quiz-form",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "textColor": "#000000",
+            "subtitle": "Trag dich jetzt ein und sichere dir dein",
+            "title": "kostenloses Hunde-Fotoshooting",
+            "deadline": "Das Fotoshooting findet nur bis zum 23.07.2025 statt! Schnell sein lohnt sich - ich freue mich auf euch!",
+            "namePlaceholder": "Dein Vor- und Nachname",
+            "emailPlaceholder": "Deine E-Mail Adresse",
+            "phonePlaceholder": "Deine Telefonnummer",
+            "availabilityPlaceholder": "Wann seid ihr erreichbar (Mehrfachauswahl)",
+            "availabilityOptions": [
+              {
+                "value": "morgens",
+                "text": "Morgens (9-12 Uhr)"
+              },
+              {
+                "value": "mittags",
+                "text": "Mittags (12-15 Uhr)"
+              },
+              {
+                "value": "nachmittags",
+                "text": "Nachmittags (15-18 Uhr)"
+              },
+              {
+                "value": "abends",
+                "text": "Abends (18-20 Uhr)"
+              }
+            ],
+            "privacyText": "Ich akzeptiere die",
+            "privacyLinkText": "Datenschutzbestimmungen",
+            "privacyLink": "datenschutz.html",
+            "submitText": "Jetzt Gutschein sichern!",
+            "sideText": "Deine Privatsphäre ist bei mir sicher – ich schätze dein Vertrauen.",
+            "sideImage": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=549&h=822&fit=crop"
+          }
+        },
+        {
+          "type": "footer",
+          "content": {
+            "backgroundColor": "#FFFFFF",
+            "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41433.67774467847!2d10.5478!3d49.3009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a2f1f9f6cf06cd%3A0x41d25a40937aab0!2sAnsbach!5e0!3m2!1sde!2sde",
+            "height": "399"
+          }
+        },
+        {
+          "type": "legal-footer",
+          "content": {
+            "backgroundColor": "#FFFFFF",
+            "links": [
+              {
+                "text": "Impressum",
+                "href": "impressum.html"
+              },
+              {
+                "text": "Datenschutzerklärung",
+                "href": "datenschutz.html"
+              },
+              {
+                "text": "Cookie Richtlinien",
+                "href": "cookies.html"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "filename": "thank-you.html",
+      "title": "Herzlichen Glückwunsch! - Anmeldung erfolgreich",
+      "sections": [
+        {
+          "type": "quiz-header",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "textColor": "#3D3D3D",
+            "logo": "Logo",
+            "logoLink": "index.html",
+            "progress": ""
+          }
+        },
+        {
+          "type": "thank-you-hero",
+          "content": {
+            "backgroundColor": "#F5EDE0",
+            "textColor": "#000000",
+            "title": "Herzlichen Glückwunsch!",
+            "subtitle": "Deine Anfrage ist bei uns eingegangen!",
+            "description": "<p>Wir melden uns bald bei dir.</p><p>Du hast die Möglichkeit, dich direkt in unseren Kalender einzutragen und dir deine bevorzugte Zeit zu sichern!</p>",
+            "ctaPrimary": {
+              "text": "Jetzt Termin wählen & sichern!",
+              "link": "#"
+            },
+            "additionalText": "Natürlich kannst du uns auch ganz unkompliziert telefonisch oder per E-Mail erreichen – wir freuen uns auf deine Nachricht!",
+            "secondaryButtons": [
+              {
+                "text": "Jetzt anrufen",
+                "link": "tel:+4912345678"
+              },
+              {
+                "text": "Mail uns!",
+                "link": "mailto:info@example.de"
+              }
+            ],
+            "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=550&h=529&fit=crop"
+          }
+        },
+        {
+          "type": "author-footer",
+          "content": {
+            "backgroundColor": "#EEE3D0",
+            "textColor": "#000000",
+            "accentColor": "#E2C08D",
+            "name": "Yvonne Jadke – Fotograf Hannover",
+            "specialization": "Familienfotos, Businessportraits & Hochzeitsfotografie",
+            "description": "<p>Wir freuen uns darauf, dein Fotograf für jegliche Anlässe zu sein – sei es für Familienfotos, Business-Portraits oder als Hochzeitsfotograf. Auf eine gute Zusammenarbeit!</p><p>Wenn du noch Fragen hast, stehen wir dir jederzeit gerne zur Verfügung.</p>",
+            "socialLinks": [
+              {
+                "type": "facebook",
+                "link": "https://facebook.com/",
+                "title": "Facebook"
+              },
+              {
+                "type": "instagram",
+                "link": "https://instagram.com/",
+                "title": "Instagram"
+              },
+              {
+                "type": "website",
+                "link": "https://example.de/",
+                "title": "Website"
+              }
+            ]
+          }
+        },
+        {
+          "type": "footer",
+          "content": {
+            "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41433.67774467847!2d10.5478!3d49.3009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a2f1f9f6cf06cd%3A0x41d25a40937aab0!2sAnsbach!5e0!3m2!1sde!2sde",
+            "height": "450"
+          }
+        },
+        {
+          "type": "legal-footer",
+          "content": {
+            "backgroundColor": "#EEE3D0",
+            "links": [
+              {
+                "text": "Impressum",
+                "href": "impressum.html"
+              },
+              {
+                "text": "Datenschutzerklärung",
+                "href": "datenschutz.html"
+              },
+              {
+                "text": "Cookie Richtlinien",
+                "href": "cookies.html"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

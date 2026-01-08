@@ -1,0 +1,172 @@
+/* Hero Section Specific Styles */
+
+.hero {
+  position: relative;
+}
+
+.hero-content {
+  z-index: 2;
+}
+
+.hero-images {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hero-image {
+  position: absolute;
+}
+
+/* FIGMA: Image 1 - right side, top: 80px, 428x394px */
+.hero-image:first-child {
+  right: 0;
+  top: 80px;
+  width: 428px;
+  height: 394px;
+  z-index: 1;
+}
+
+/* FIGMA: Image 2 - overlaps from bottom-left of image 1, top: 258px, 306x290px */
+.hero-image:nth-child(2) {
+  right: 230px;
+  top: 258px;
+  width: 306px;
+  height: 290px;
+  z-index: 2;
+}
+
+/* FIGMA: Hero button - 286x70px */
+.hero .btn-primary-custom {
+  min-width: 286px;
+  min-height: 70px;
+  max-width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .hero-images {
+    margin-top: 40px;
+    min-height: 400px;
+  }
+
+  .hero-image:first-child {
+    right: 50%;
+    transform: translateX(50%);
+    width: 80%;
+    height: auto;
+  }
+
+  .hero-image:nth-child(2) {
+    right: 50%;
+    transform: translateX(70%);
+    top: 120px;
+    width: 60%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero.section-padding {
+    min-height: auto;
+  }
+
+  .hero-content {
+    padding-top: 20px;
+  }
+
+  .hero-images {
+    min-height: 200px;
+    margin-top: 30px;
+  }
+
+  .hero-image:first-child {
+    width: 55%;
+    max-width: 200px;
+    right: 30%;
+    transform: translateX(50%);
+  }
+
+  .hero-image:nth-child(2) {
+    width: 45%;
+    max-width: 160px;
+    top: 50px;
+    right: 45%;
+    transform: translateX(70%);
+  }
+}
+
+@media (max-width: 576px) {
+  /* Убираем фиксированную высоту секции */
+  .hero {
+    min-height: auto !important;
+  }
+
+  /* Порядок: Лого (вне row) -> Картинки -> Текст -> Кнопка */
+  .hero-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-text-col {
+    order: 2;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .hero-images-col {
+    order: 1;
+    margin-bottom: 25px !important;
+  }
+
+  .hero-content {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .hero-title {
+    margin-top: 0 !important;
+  }
+
+  .hero-images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    min-height: auto !important;
+  }
+
+  /* Убираем absolute позиционирование на мобильном */
+  .hero-image {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    transform: none !important;
+  }
+
+  /* Первая картинка */
+  .hero-image:first-child {
+    width: 55%;
+    max-width: none;
+    z-index: 1;
+  }
+
+  /* Вторая картинка - накладывается */
+  .hero-image:nth-child(2) {
+    width: 55%;
+    max-width: none;
+    margin-left: -15%;
+    margin-top: 25px;
+    z-index: 2;
+  }
+
+  .hero .btn-primary-custom {
+    display: flex;
+    min-width: auto;
+    width: 100%;
+    padding: 0 20px;
+  }
+}

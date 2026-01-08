@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sichere dir jetzt dein kostenloses Hunde-Fotoshooting! Professionelle Fotos für dich und deinen pelzigen Freund.">
+  <meta name="keywords" content="hunde fotoshooting, kostenlos, hund, fotograf, tierfotografie">
+  <title>Eigenschaften deines Hundes - Quiz</title>
+
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://script.google.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; img-src 'self' https: data:; font-src 'self' https: data:; frame-src https://www.google.com https://maps.google.com; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://cdn.jsdelivr.net">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="css/base-styles.css" rel="stylesheet">
+  <link href="css/common.css" rel="stylesheet">
+
+  <!-- Section-specific CSS -->
+  <link href="css/hero.css" rel="stylesheet">
+  <link href="css/promotional.css" rel="stylesheet">
+  <link href="css/benefits.css" rel="stylesheet">
+  <link href="css/gallery.css" rel="stylesheet">
+  <link href="css/features.css" rel="stylesheet">
+  <link href="css/process.css" rel="stylesheet">
+  <link href="css/fullwidth-image.css" rel="stylesheet">
+  <link href="css/faq-cards.css" rel="stylesheet">
+  <link href="css/services.css" rel="stylesheet">
+  <link href="css/about.css" rel="stylesheet">
+  <link href="css/footer.css" rel="stylesheet">
+  <link href="css/legal-footer.css" rel="stylesheet">
+  <link href="css/quiz-header.css" rel="stylesheet">
+  <link href="css/quiz-question.css" rel="stylesheet">
+  <link href="css/quiz-form.css" rel="stylesheet">
+  <link href="css/thank-you-hero.css" rel="stylesheet">
+  <link href="css/author-footer.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  QUIZ HEADER - Шапка страницы квиза (лого + прогресс)                     ║
+     ║  Фон: backgroundColor | Текст: textColor                                   ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+<header class="quiz-header" style="background-color: #F5EDE0;">
+  <div class="container">
+    <div class="quiz-header__content">
+
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ЛОГОТИП
+           ════════════════════════════════════════════════════════════════════════ -->
+      <div class="quiz-header__logo">
+        <a href="index.html" class="quiz-header__logo-text text-bold-big" style="color: #3D3D3D;">
+          Logo
+        </a>
+      </div>
+
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ПРОГРЕСС / ПОДЗАГОЛОВОК
+           ════════════════════════════════════════════════════════════════════════ -->
+      <div class="quiz-header__progress">
+        <p class="text-medium-small" style="color: #3D3D3D;">Noch 1 Fragen bis zum Gutschein</p>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  QUIZ QUESTION - Секция вопроса с вариантами ответов                       ║
+     ║  Поддерживает 2-4 варианта ответа с изображениями                          ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+<section class="quiz-question" style="background-color: #F5EDE0;" data-question-id="q4">
+  <div class="container">
+
+    <!-- ════════════════════════════════════════════════════════════════════════
+         ЗАГОЛОВОК ВОПРОСА
+         ════════════════════════════════════════════════════════════════════════ -->
+    <div class="quiz-question__title">
+      <h1 class="text-h2" style="color: #000000;">Welche Eigenschaften beschreiben deinen Hund am besten?</h1>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════════════
+         КАРТОЧКИ ВАРИАНТОВ (картинка + кнопка)
+         ════════════════════════════════════════════════════════════════════════ -->
+    <div class="quiz-question__cards quiz-question__cards--4">
+      <div class="quiz-question__card">
+        <div class="quiz-question__image-wrapper">
+          <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w&#x3D;300&amp;h&#x3D;300&amp;fit&#x3D;crop" alt="Ruhig und gelassen" class="quiz-question__image">
+        </div>
+        <a href="quiz-form.html"
+           class="quiz-question__option"
+           data-answer="ruhig"
+           onclick="saveQuizAnswer('q4', 'ruhig')">
+          <span class="quiz-question__option-text">Ruhig und gelassen</span>
+        </a>
+      </div>
+      <div class="quiz-question__card">
+        <div class="quiz-question__image-wrapper">
+          <img src="https://images.unsplash.com/photo-1534361960057-19889db9621e?w&#x3D;300&amp;h&#x3D;300&amp;fit&#x3D;crop" alt="Verspielt und energiegeladen" class="quiz-question__image">
+        </div>
+        <a href="quiz-form.html"
+           class="quiz-question__option quiz-question__option--multiline"
+           data-answer="verspielt"
+           onclick="saveQuizAnswer('q4', 'verspielt')">
+          <span class="quiz-question__option-text">Verspielt und energiegeladen</span>
+        </a>
+      </div>
+      <div class="quiz-question__card">
+        <div class="quiz-question__image-wrapper">
+          <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w&#x3D;300&amp;h&#x3D;300&amp;fit&#x3D;crop" alt="Schüchtern oder ängstlich" class="quiz-question__image">
+        </div>
+        <a href="quiz-form.html"
+           class="quiz-question__option quiz-question__option--multiline"
+           data-answer="schuechtern"
+           onclick="saveQuizAnswer('q4', 'schuechtern')">
+          <span class="quiz-question__option-text">Schüchtern oder ängstlich</span>
+        </a>
+      </div>
+      <div class="quiz-question__card">
+        <div class="quiz-question__image-wrapper">
+          <img src="https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?w&#x3D;300&amp;h&#x3D;300&amp;fit&#x3D;crop" alt="Neugierig und aufgeschlossen" class="quiz-question__image">
+        </div>
+        <a href="quiz-form.html"
+           class="quiz-question__option quiz-question__option--multiline"
+           data-answer="neugierig"
+           onclick="saveQuizAnswer('q4', 'neugierig')">
+          <span class="quiz-question__option-text">Neugierig und aufgeschlossen</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  LEGAL FOOTER - Юридический подвал (ссылки)                               ║
+     ║  Фон: backgroundColor | Изменить: style="background-color: #F5EDE0;"      ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+<section class="legal-footer" style="background-color: #F5EDE0;">
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ЮРИДИЧЕСКИЕ ССЫЛКИ
+           Impressum, Datenschutz, Cookie Richtlinien
+           ════════════════════════════════════════════════════════════════════════ -->
+      <div class="col-12 text-center">
+        <nav class="legal-links">
+          <!-- ССЫЛКА - изменить href="..." и текст между > и </a> -->
+          <a href="impressum.html" class="legal-link">Impressum</a>
+          <span class="legal-separator">·</span>
+          <!-- ССЫЛКА - изменить href="..." и текст между > и </a> -->
+          <a href="datenschutz.html" class="legal-link">Datenschutzerklärung</a>
+          <span class="legal-separator">·</span>
+          <!-- ССЫЛКА - изменить href="..." и текст между > и </a> -->
+          <a href="cookies.html" class="legal-link">Cookie Richtlinien</a>
+          
+        </nav>
+      </div>
+
+    </div>
+
+
+  </div>
+</section>
+
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <!-- Common JS -->
+  <script src="js/common.js"></script>
+
+  <!-- Page-specific JS -->
+  <script src="js/quiz.js"></script>
+</body>
+</html>

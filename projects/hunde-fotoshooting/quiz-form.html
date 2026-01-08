@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sichere dir jetzt dein kostenloses Hunde-Fotoshooting! Professionelle Fotos für dich und deinen pelzigen Freund.">
+  <meta name="keywords" content="hunde fotoshooting, kostenlos, hund, fotograf, tierfotografie">
+  <title>Jetzt anmelden - Quiz</title>
+
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://script.google.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; img-src 'self' https: data:; font-src 'self' https: data:; frame-src https://www.google.com https://maps.google.com; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://cdn.jsdelivr.net">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="css/base-styles.css" rel="stylesheet">
+  <link href="css/common.css" rel="stylesheet">
+
+  <!-- Section-specific CSS -->
+  <link href="css/hero.css" rel="stylesheet">
+  <link href="css/promotional.css" rel="stylesheet">
+  <link href="css/benefits.css" rel="stylesheet">
+  <link href="css/gallery.css" rel="stylesheet">
+  <link href="css/features.css" rel="stylesheet">
+  <link href="css/process.css" rel="stylesheet">
+  <link href="css/fullwidth-image.css" rel="stylesheet">
+  <link href="css/faq-cards.css" rel="stylesheet">
+  <link href="css/services.css" rel="stylesheet">
+  <link href="css/about.css" rel="stylesheet">
+  <link href="css/footer.css" rel="stylesheet">
+  <link href="css/legal-footer.css" rel="stylesheet">
+  <link href="css/quiz-header.css" rel="stylesheet">
+  <link href="css/quiz-question.css" rel="stylesheet">
+  <link href="css/quiz-form.css" rel="stylesheet">
+  <link href="css/thank-you-hero.css" rel="stylesheet">
+  <link href="css/author-footer.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  QUIZ HEADER - Шапка страницы квиза (лого + прогресс)                     ║
+     ║  Фон: backgroundColor | Текст: textColor                                   ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+<header class="quiz-header" style="background-color: #F5EDE0;">
+  <div class="container">
+    <div class="quiz-header__content">
+
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ЛОГОТИП
+           ════════════════════════════════════════════════════════════════════════ -->
+      <div class="quiz-header__logo">
+        <a href="index.html" class="quiz-header__logo-text text-bold-big" style="color: #3D3D3D;">
+          Logo
+        </a>
+      </div>
+
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ПРОГРЕСС / ПОДЗАГОЛОВОК
+           ════════════════════════════════════════════════════════════════════════ -->
+      <div class="quiz-header__progress">
+        <p class="text-medium-small" style="color: #3D3D3D;">Klasse, jetzt zum Gutschein</p>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  QUIZ FORM - Форма регистрации на фотосессию                               ║
+     ║  Включает: поля ввода, чекбокс согласия, кнопку отправки                   ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+<section class="quiz-form" style="background-color: #F5EDE0;">
+  <div class="container">
+    <div class="row">
+
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ЛЕВАЯ КОЛОНКА - Форма
+           ════════════════════════════════════════════════════════════════════════ -->
+      <div class="col-lg-6">
+        <div class="quiz-form__content">
+
+          <!-- Заголовок -->
+          <div class="quiz-form__header">
+            <p class="quiz-form__subtitle text-bold-small" style="color: #000000;">Trag dich jetzt ein und sichere dir dein</p>
+            <h2 class="quiz-form__title text-bold-big" style="color: #000000;">kostenloses Hunde-Fotoshooting</h2>
+            <p class="quiz-form__deadline text-medium-small" style="color: #000000;">Das Fotoshooting findet nur bis zum 23.07.2025 statt! Schnell sein lohnt sich - ich freue mich auf euch!</p>
+          </div>
+
+          <!-- Форма -->
+          <form id="quiz-registration-form" class="quiz-form__form" onsubmit="return submitQuizForm(event)">
+
+            <!-- Имя -->
+            <div class="quiz-form__field">
+              <input type="text"
+                     name="name"
+                     id="form-name"
+                     class="quiz-form__input"
+                     placeholder="Dein Vor- und Nachname"
+                     required>
+            </div>
+
+            <!-- Email -->
+            <div class="quiz-form__field">
+              <input type="email"
+                     name="email"
+                     id="form-email"
+                     class="quiz-form__input"
+                     placeholder="Deine E-Mail Adresse"
+                     required>
+            </div>
+
+            <!-- Телефон -->
+            <div class="quiz-form__field">
+              <input type="tel"
+                     name="phone"
+                     id="form-phone"
+                     class="quiz-form__input"
+                     placeholder="Deine Telefonnummer"
+                     required>
+            </div>
+
+            <!-- Доступность -->
+            <div class="quiz-form__field">
+              <select name="availability"
+                      id="form-availability"
+                      class="quiz-form__input quiz-form__select"
+                      required>
+                <option value="" disabled selected>Wann seid ihr erreichbar (Mehrfachauswahl)</option>
+                <option value="morgens">Morgens (9-12 Uhr)</option>
+                <option value="mittags">Mittags (12-15 Uhr)</option>
+                <option value="nachmittags">Nachmittags (15-18 Uhr)</option>
+                <option value="abends">Abends (18-20 Uhr)</option>
+              </select>
+            </div>
+
+            <!-- Согласие на обработку данных -->
+            <div class="quiz-form__checkbox-wrapper">
+              <input type="checkbox"
+                     name="privacy"
+                     id="form-privacy"
+                     class="quiz-form__checkbox"
+                     required>
+              <label for="form-privacy" class="quiz-form__checkbox-label text-medium-small">
+                Ich akzeptiere die
+                <a href="datenschutz.html" target="_blank" class="quiz-form__privacy-link">Datenschutzbestimmungen</a>.
+              </label>
+            </div>
+
+            <!-- Кнопка отправки -->
+            <button type="submit" class="quiz-form__submit btn-primary-custom">
+              Jetzt Gutschein sichern!
+            </button>
+
+          </form>
+        </div>
+      </div>
+
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ПРАВАЯ КОЛОНКА - Изображение и информация
+           ════════════════════════════════════════════════════════════════════════ -->
+      <div class="col-lg-6">
+        <div class="quiz-form__sidebar">
+
+          <!-- Изображение -->
+          <div class="quiz-form__image-wrapper">
+            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w&#x3D;549&amp;h&#x3D;822&amp;fit&#x3D;crop" alt="Familien-Fotoshooting" class="quiz-form__image">
+          </div>
+
+          <!-- Текст под изображением -->
+          <p class="quiz-form__side-text text-medium-small" style="color: #000000;">Deine Privatsphäre ist bei mir sicher – ich schätze dein Vertrauen.</p>
+
+          <p class="quiz-form__important-title text-bold-small" style="color: #000000;">WICHTIG! Bitte halte deinen Termin ein oder informiere mich rechtzeitig über eventuelle Änderungen.</p>
+
+          <p class="quiz-form__important-text text-medium-small" style="color: #000000;">Da mein Zeitplan während des Aktionszeitraums besonders straff ist, plane ich meine Termine äußerst präzise. Kurzfristige Absagen bedeuten leider, dass andere diese einzigartige Gelegenheit verpassen könnten. Vielen Dank für dein Verständnis und deine Kooperation.</p>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  FOOTER - Подвал с картой Google Maps                                     ║
+     ║  Фон: backgroundColor | Карта: mapUrl (ссылка на Google Maps Embed)       ║
+     ║  Высота: height (например: "450px")                                       ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+<footer class="footer" style="background-color: #FFFFFF;" id="contact">
+  <div class="container-fluid p-0">
+    <div class="row g-0">
+      <div class="col-12">
+
+        <!-- ══════════════════════════════════════════════════════════════════════════
+             GOOGLE MAPS - встроенная карта
+             Изменить src="..." на свою ссылку Google Maps Embed
+             ══════════════════════════════════════════════════════════════════════════ -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb&#x3D;!1m18!1m12!1m3!1d41433.67774467847!2d10.5478!3d49.3009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a2f1f9f6cf06cd%3A0x41d25a40937aab0!2sAnsbach!5e0!3m2!1sde!2sde"
+          width="100%"
+          height="399"
+          style="border:0;"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          sandbox="allow-scripts allow-same-origin"
+          title="Standort auf Google Maps">
+        </iframe>
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  LEGAL FOOTER - Юридический подвал (ссылки)                               ║
+     ║  Фон: backgroundColor | Изменить: style="background-color: #F5EDE0;"      ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+<section class="legal-footer" style="background-color: #FFFFFF;">
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+
+      <!-- ════════════════════════════════════════════════════════════════════════
+           ЮРИДИЧЕСКИЕ ССЫЛКИ
+           Impressum, Datenschutz, Cookie Richtlinien
+           ════════════════════════════════════════════════════════════════════════ -->
+      <div class="col-12 text-center">
+        <nav class="legal-links">
+          <!-- ССЫЛКА - изменить href="..." и текст между > и </a> -->
+          <a href="impressum.html" class="legal-link">Impressum</a>
+          <span class="legal-separator">·</span>
+          <!-- ССЫЛКА - изменить href="..." и текст между > и </a> -->
+          <a href="datenschutz.html" class="legal-link">Datenschutzerklärung</a>
+          <span class="legal-separator">·</span>
+          <!-- ССЫЛКА - изменить href="..." и текст между > и </a> -->
+          <a href="cookies.html" class="legal-link">Cookie Richtlinien</a>
+          
+        </nav>
+      </div>
+
+    </div>
+
+
+  </div>
+</section>
+
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <!-- Common JS -->
+  <script src="js/common.js"></script>
+
+  <!-- Page-specific JS -->
+  <script src="js/quiz.js"></script>
+</body>
+</html>

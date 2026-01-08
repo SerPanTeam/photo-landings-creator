@@ -1,0 +1,98 @@
+/* Process/Steps Section Specific Styles */
+
+.process {
+  position: relative;
+}
+
+.process-step {
+  padding: 20px 0;
+}
+
+.process-step-header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.process-icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.process-icon img,
+.process-icon .img-placeholder {
+  display: block;
+}
+
+.process-divider {
+  margin-top: 20px;
+  border-bottom: 1px solid var(--brand-text);
+}
+
+/* FIGMA: Центрированная кнопка CTA - 476x71px */
+.process .btn-primary-custom {
+  min-width: 476px;
+  min-height: 71px;
+  max-width: 100%;
+}
+
+/* Horizontal 4-column Layout */
+.process-horizontal .process-step-boxed {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  padding: 25px;
+  height: 100%;
+}
+
+.process-horizontal .process-step-header {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.process-horizontal .process-icon {
+  display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Horizontal layout: icon and title in one row */
+  .process-step-header {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .process-step {
+    margin-bottom: 20px;
+  }
+
+  .process-icon img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .process-icon .img-placeholder {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .process-icon img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .process-icon .img-placeholder {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .process .btn-primary-custom {
+    display: flex;
+    min-width: auto;
+    width: 100%;
+    padding: 0 20px;
+  }
+}
