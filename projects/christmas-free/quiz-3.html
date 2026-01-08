@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sichere dir jetzt dein kostenloses Familien-Fotoshooting zu Weihnachten in Aalen!">
-  <meta name="keywords" content="fotoshooting, familie, weihnachten, kostenlos, aalen">
-  <title>Familien-Fotoshooting Erfahrung - Quiz</title>
+  <meta name="description" content="Sichere dir jetzt dein kostenloses Familien-Fotoshooting zu Weihnachten in Hannover!">
+  <meta name="keywords" content="fotoshooting, familie, weihnachten, kostenlos, hannover">
+  <title>Familiengröße - Quiz</title>
 
   <!-- Security Headers -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://script.google.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; img-src 'self' https: data:; font-src 'self' https: data:; frame-src https://www.google.com https://maps.google.com; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://cdn.jsdelivr.net">
@@ -61,7 +61,7 @@
            ПРОГРЕСС / ПОДЗАГОЛОВОК
            ════════════════════════════════════════════════════════════════════════ -->
       <div class="quiz-header__progress">
-        <p class="text-medium-small" style="color: #3D3D3D;">3 Fragen bis zum Gutschein</p>
+        <p class="text-medium-small" style="color: #3D3D3D;">1 Fragen bis zum Gutschein</p>
       </div>
 
     </div>
@@ -80,33 +80,55 @@
          ЗАГОЛОВОК ВОПРОСА
          ════════════════════════════════════════════════════════════════════════ -->
     <div class="quiz-question__title">
-      <h1 class="text-h2" style="color: #000000;">Schon mal ein Familien-Fotoshooting gehabt?</h1>
+      <h1 class="text-h2" style="color: #000000;">Wie groß ist eure Familie?</h1>
     </div>
 
     <!-- ════════════════════════════════════════════════════════════════════════
          КАРТОЧКИ ВАРИАНТОВ (картинка + кнопка)
          ════════════════════════════════════════════════════════════════════════ -->
-    <div class="quiz-question__cards quiz-question__cards--2">
+    <div class="quiz-question__cards quiz-question__cards--4">
       <div class="quiz-question__card">
         <div class="quiz-question__image-wrapper">
-          <img src="https://picsum.photos/seed/xmasq3a/300/300" alt="Ja, das war der Hammer!" class="quiz-question__image">
+          <img src="https://images.unsplash.com/photo-1516914943479-89db7d9ae7f2?w&#x3D;300&amp;h&#x3D;300&amp;fit&#x3D;crop" alt="2 Personen" class="quiz-question__image">
         </div>
         <a href="quiz-4.html"
            class="quiz-question__option"
-           data-answer="ja_hammer"
-           onclick="saveQuizAnswer('q3', 'ja_hammer')">
-          <span class="quiz-question__option-text">Ja, das war der Hammer!</span>
+           data-answer="2_personen"
+           onclick="saveQuizAnswer('q3', '2_personen')">
+          <span class="quiz-question__option-text">2 Personen</span>
         </a>
       </div>
       <div class="quiz-question__card">
         <div class="quiz-question__image-wrapper">
-          <img src="https://picsum.photos/seed/xmasq3b/300/300" alt="Nein, bisher noch nicht!" class="quiz-question__image">
+          <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w&#x3D;300&amp;h&#x3D;300&amp;fit&#x3D;crop" alt="3–4 Personen" class="quiz-question__image">
         </div>
         <a href="quiz-4.html"
            class="quiz-question__option"
-           data-answer="nein"
-           onclick="saveQuizAnswer('q3', 'nein')">
-          <span class="quiz-question__option-text">Nein, bisher noch nicht!</span>
+           data-answer="3_4_personen"
+           onclick="saveQuizAnswer('q3', '3_4_personen')">
+          <span class="quiz-question__option-text">3–4 Personen</span>
+        </a>
+      </div>
+      <div class="quiz-question__card">
+        <div class="quiz-question__image-wrapper">
+          <img src="https://images.unsplash.com/photo-1581952976147-5a2d15560349?w&#x3D;300&amp;h&#x3D;300&amp;fit&#x3D;crop" alt="5 oder mehr Personen" class="quiz-question__image">
+        </div>
+        <a href="quiz-4.html"
+           class="quiz-question__option"
+           data-answer="5_plus_personen"
+           onclick="saveQuizAnswer('q3', '5_plus_personen')">
+          <span class="quiz-question__option-text">5 oder mehr Personen</span>
+        </a>
+      </div>
+      <div class="quiz-question__card">
+        <div class="quiz-question__image-wrapper">
+          <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?w&#x3D;300&amp;h&#x3D;300&amp;fit&#x3D;crop" alt="Noch unklar – wir entscheiden spontan" class="quiz-question__image">
+        </div>
+        <a href="quiz-4.html"
+           class="quiz-question__option quiz-question__option--multiline"
+           data-answer="unklar"
+           onclick="saveQuizAnswer('q3', 'unklar')">
+          <span class="quiz-question__option-text">Noch unklar – wir entscheiden spontan</span>
         </a>
       </div>
     </div>

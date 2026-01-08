@@ -3,8 +3,8 @@
   "lang": "de",
   "meta": {
     "title": "Kostenloses Familien-Fotoshooting - Weihnachtsaktion",
-    "description": "Sichere dir jetzt dein kostenloses Familien-Fotoshooting zu Weihnachten in Aalen!",
-    "keywords": "fotoshooting, familie, weihnachten, kostenlos, aalen"
+    "description": "Sichere dir jetzt dein kostenloses Familien-Fotoshooting zu Weihnachten in Hannover!",
+    "keywords": "fotoshooting, familie, weihnachten, kostenlos, hannover"
   },
   "scripts": [
     "quiz.js"
@@ -30,13 +30,13 @@
             },
             "images": [
               {
-                "src": "https://picsum.photos/seed/xmas1/428/394",
+                "src": "https://images.unsplash.com/photo-1512909006721-3d6018887383?w=428&h=394&fit=crop",
                 "width": 428,
                 "height": 394,
                 "placeholderColor": "#A19F9F"
               },
               {
-                "src": "https://picsum.photos/seed/xmas2/306/290",
+                "src": "https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w=306&h=290&fit=crop",
                 "width": 306,
                 "height": 290,
                 "placeholderColor": "#7F7F7F"
@@ -56,7 +56,7 @@
               "link": "quiz-1.html",
               "showArrow": true
             },
-            "image": "https://picsum.photos/seed/xmaspromo/428/533"
+            "image": "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=428&h=533&fit=crop"
           }
         },
         {
@@ -72,7 +72,7 @@
             },
             "tagline": "Familienmomente, die das Herz berühren",
             "taglineColor": "#E2C08D",
-            "image": "https://picsum.photos/seed/xmasfeatures/428/440"
+            "image": "https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w=428&h=440&fit=crop"
           }
         },
         {
@@ -82,28 +82,28 @@
             "showArrows": true,
             "images": [
               {
-                "src": "https://picsum.photos/seed/xmasgal1/400/400",
-                "alt": "Familienfoto 1"
+                "src": "https://images.unsplash.com/photo-1512909006721-3d6018887383?w=400&h=400&fit=crop",
+                "alt": "Weihnachtsfamilie"
               },
               {
-                "src": "https://picsum.photos/seed/xmasgal2/400/400",
-                "alt": "Familienfoto 2"
+                "src": "https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w=400&h=400&fit=crop",
+                "alt": "Familie Weihnachten"
               },
               {
-                "src": "https://picsum.photos/seed/xmasgal3/400/400",
-                "alt": "Familienfoto 3"
+                "src": "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=400&h=400&fit=crop",
+                "alt": "Kinder Weihnachten"
               },
               {
-                "src": "https://picsum.photos/seed/xmasgal4/400/400",
-                "alt": "Familienfoto 4"
+                "src": "https://images.unsplash.com/photo-1576919228236-a097c32a5cd4?w=400&h=400&fit=crop",
+                "alt": "Weihnachtsfoto"
               },
               {
-                "src": "https://picsum.photos/seed/xmasgal5/400/400",
-                "alt": "Familienfoto 5"
+                "src": "https://images.unsplash.com/photo-1543589077-47d81606c1bf?w=400&h=400&fit=crop",
+                "alt": "Familie Geschenke"
               },
               {
-                "src": "https://picsum.photos/seed/xmasgal6/400/400",
-                "alt": "Familienfoto 6"
+                "src": "https://images.unsplash.com/photo-1512909006721-3d6018887383?w=400&h=400&fit=crop",
+                "alt": "Weihnachtsshooting"
               }
             ]
           }
@@ -117,17 +117,17 @@
               {
                 "title": "Liebevoll dekoriertes Set mit Weihnachtszauber",
                 "description": "Gemütliche Atmosphäre mit stimmungsvoller Deko – perfekt für eure festlichen Familienfotos.",
-                "icon": "https://picsum.photos/seed/xmasicon1/150/150"
+                "icon": "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=150&h=150&fit=crop"
               },
               {
                 "title": "Ganz viel Raum für echte Familienmomente",
                 "description": "Ob Kuscheln, Lachen oder einfach Zusammensein – ich halte eure Verbindung in natürlichen Bildern fest.",
-                "icon": "https://picsum.photos/seed/xmasicon2/150/150"
+                "icon": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=150&h=150&fit=crop"
               },
               {
                 "title": "Wunderschöne Erinnerungen zum Verschenken",
                 "description": "Echte, emotionale Bilder, die ihr lieben – und zu Weihnachten verschenken – werdet.",
-                "icon": "https://picsum.photos/seed/xmasicon3/150/150"
+                "icon": "https://images.unsplash.com/photo-1543589077-47d81606c1bf?w=150&h=150&fit=crop"
               }
             ]
           }
@@ -146,22 +146,22 @@
               {
                 "title": "1. Eintragen",
                 "description": "Mach das Quiz und beantworte die Fragen, damit ich genügend Zeit für euch einplanen kann.\n\nTrag dich ein und sichere dir deinen unschlagbaren Gutschein!\nIch melde mich so schnell wie möglich bei dir.",
-                "icon": "https://picsum.photos/seed/xmasstep1/76/75"
+                "icon": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=76&h=75&fit=crop"
               },
               {
                 "title": "2. Shootingzeit",
                 "description": "Während des Fotoshootings entstehen vielfältige und einzigartige Aufnahmen, damit ihr eine große Auswahl an Bildern habt und eure persönlichen Favoriten wählen könnt.",
-                "icon": "https://picsum.photos/seed/xmasstep2/76/75"
+                "icon": "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=76&h=75&fit=crop"
               },
               {
                 "title": "3. Wähle dein Lieblingsbild/er aus",
                 "description": "Nach dem Fotoshooting könnt ihr in Ruhe eure Lieblingsbilder auswählen und entscheiden, welche ihr erwerben möchtet – ganz ohne Kaufzwang.",
-                "icon": "https://picsum.photos/seed/xmasstep3/76/75"
+                "icon": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=76&h=75&fit=crop"
               },
               {
                 "title": "4. Ergebnis",
                 "description": "Unvergängliche Erinnerungen in digitaler Form – jederzeit abrufbar, zum Teilen mit euren Liebsten oder für den besonderen Moment zum Wiedererleben.",
-                "icon": "https://picsum.photos/seed/xmasstep4/76/75"
+                "icon": "https://images.unsplash.com/photo-1606567595334-d39972c85dfd?w=76&h=75&fit=crop"
               }
             ]
           }
@@ -169,7 +169,7 @@
         {
           "type": "fullwidth-image",
           "content": {
-            "src": "https://picsum.photos/seed/xmasfullwidth/1439/656",
+            "src": "https://images.unsplash.com/photo-1512909006721-3d6018887383?w=1439&h=656&fit=crop",
             "alt": "Familienfotografie",
             "backgroundColor": "#7F7F7F",
             "height": 656
@@ -213,22 +213,22 @@
               {
                 "title": "Family Time",
                 "description": "Die magische Möglichkeit, lebendige Erinnerungen mit deinen Liebsten und engsten Vertrauten einzufangen.",
-                "image": "https://picsum.photos/seed/xmasservice1/300/300"
+                "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=300&h=300&fit=crop"
               },
               {
                 "title": "Kinder-Fotoshooting",
                 "description": "Haltet die unbeschwerte Freude eurer Kinder in liebevollen, natürlichen Bildern fest.",
-                "image": "https://picsum.photos/seed/xmasservice2/300/300"
+                "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=300&h=300&fit=crop"
               },
               {
                 "title": "Babybauch & Newborn",
                 "description": "Schwangerschaft auf einzigartige Weise in Bildern festhalten und diese wertvollen Momente für immer bewahren.",
-                "image": "https://picsum.photos/seed/xmasservice3/300/300"
+                "image": "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=300&h=300&fit=crop"
               },
               {
                 "title": "Und vieles mehr!",
                 "description": "",
-                "image": "https://picsum.photos/seed/xmasservice4/300/300"
+                "image": "https://images.unsplash.com/photo-1576919228236-a097c32a5cd4?w=300&h=300&fit=crop"
               }
             ]
           }
@@ -238,15 +238,15 @@
           "content": {
             "backgroundColor": "#F5EDE0",
             "greeting": "",
-            "name": "Hi, ich bin Jenni – dein Kameramädle!",
-            "bio": "Ich liebe es, besondere Momente einzufangen und sie für dich unvergesslich zu machen. Mein Studio ist ein Ort, an dem du dich fallen lassen kannst – ganz ohne Zeitdruck und Stress.\n\nMir ist wichtig, dass du dich bei mir wohlfühlst und einfach du selbst sein kannst. Ich lache gern mit meinen Kunden und freue mich, wenn aus einem Fotoshooting ein richtig schönes Erlebnis wird.\n\nÜber 500 Babys durfte ich schon fotografieren und jede Familie, jedes Paar ist für mich einzigartig. Genau diese Emotionen will ich für dich in liebevollen Bildern festhalten – Erinnerungen, die dich ein Leben lang begleiten.",
-            "photo": "https://picsum.photos/seed/jenni/466/560"
+            "name": "Hi, ich bin Yvonne Jadke – Fotograf Hannover!",
+            "bio": "Ich liebe es, besondere Momente einzufangen und sie für dich unvergesslich zu machen. Mein Studio ist ein Ort, an dem du dich fallen lassen kannst – ganz ohne Zeitdruck und Stress.\n\nMir ist wichtig, dass du dich bei mir wohlfühlst und einfach du selbst sein kannst. Ich lache gern mit meinen Kunden und freue mich, wenn aus einem Fotoshooting ein richtig schönes Erlebnis wird.\n\nJede Familie, jedes Paar ist für mich einzigartig. Genau diese Emotionen will ich für dich in liebevollen Bildern festhalten – Erinnerungen, die dich ein Leben lang begleiten.",
+            "photo": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=466&h=560&fit=crop"
           }
         },
         {
           "type": "footer",
           "content": {
-            "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42201.95399533!2d10.0534!3d48.8378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47992a2e8e4e1e5b%3A0x41d25a40937a1e0!2sAalen!5e0!3m2!1sde!2sde!4v1704067200000",
+            "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77837.95399533!2d9.7320!3d52.3759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b00d259c4f73a1%3A0x4236659fda043d0!2sHannover!5e0!3m2!1sde!2sde!4v1704067200000",
             "height": "450"
           }
         },
@@ -282,7 +282,7 @@
             "textColor": "#3D3D3D",
             "logo": "Logo",
             "logoLink": "index.html",
-            "progress": "Weiter zum Gutschein"
+            "progress": "3 Fragen bis zum Gutschein"
           }
         },
         {
@@ -298,25 +298,25 @@
                 "text": "Ja, vom Hören",
                 "value": "vom_hoeren",
                 "link": "quiz-2.html",
-                "image": "https://picsum.photos/seed/xmasq1a/300/300"
+                "image": "https://images.unsplash.com/photo-1512909006721-3d6018887383?w=300&h=300&fit=crop"
               },
               {
                 "text": "Ja, na klar!",
                 "value": "na_klar",
                 "link": "quiz-2.html",
-                "image": "https://picsum.photos/seed/xmasq1b/300/300"
+                "image": "https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w=300&h=300&fit=crop"
               },
               {
                 "text": "Schon sehr lang",
                 "value": "sehr_lang",
                 "link": "quiz-2.html",
-                "image": "https://picsum.photos/seed/xmasq1c/300/300"
+                "image": "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=300&h=300&fit=crop"
               },
               {
                 "text": "Nein, noch nicht",
                 "value": "noch_nicht",
                 "link": "quiz-2.html",
-                "image": "https://picsum.photos/seed/xmasq1d/300/300"
+                "image": "https://images.unsplash.com/photo-1576919228236-a097c32a5cd4?w=300&h=300&fit=crop"
               }
             ]
           }
@@ -344,7 +344,7 @@
     },
     {
       "filename": "quiz-2.html",
-      "title": "Welches Bild gefällt dir? - Quiz",
+      "title": "Tierische Familienmitglieder - Quiz",
       "sections": [
         {
           "type": "quiz-header",
@@ -353,7 +353,7 @@
             "textColor": "#3D3D3D",
             "logo": "Logo",
             "logoLink": "index.html",
-            "progress": "4 Fragen bis zum Gutschein"
+            "progress": "2 Fragen bis zum Gutschein"
           }
         },
         {
@@ -362,32 +362,27 @@
             "backgroundColor": "#F5EDE0",
             "textColor": "#000000",
             "questionId": "q2",
-            "question": "Welches Bild gefällt dir am Besten?",
-            "optionsCount": "4",
+            "question": "Gibt es bei euch auch tierische Familienmitglieder?",
+            "optionsCount": "3",
             "options": [
               {
-                "text": "1",
-                "value": "1",
+                "text": "Ja, unbedingt!",
+                "value": "ja_unbedingt",
                 "link": "quiz-3.html",
-                "image": "https://picsum.photos/seed/xmasq2a/300/300"
+                "image": "https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=300&h=300&fit=crop"
               },
               {
-                "text": "2",
-                "value": "2",
+                "text": "Nein",
+                "value": "nein",
                 "link": "quiz-3.html",
-                "image": "https://picsum.photos/seed/xmasq2b/300/300"
+                "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=300&h=300&fit=crop"
               },
               {
-                "text": "3",
-                "value": "3",
+                "text": "Vielleicht – sind noch unsicher",
+                "value": "vielleicht",
                 "link": "quiz-3.html",
-                "image": "https://picsum.photos/seed/xmasq2c/300/300"
-              },
-              {
-                "text": "4",
-                "value": "4",
-                "link": "quiz-3.html",
-                "image": "https://picsum.photos/seed/xmasq2d/300/300"
+                "image": "https://images.unsplash.com/photo-1543589077-47d81606c1bf?w=300&h=300&fit=crop",
+                "multiline": true
               }
             ]
           }
@@ -415,7 +410,7 @@
     },
     {
       "filename": "quiz-3.html",
-      "title": "Familien-Fotoshooting Erfahrung - Quiz",
+      "title": "Familiengröße - Quiz",
       "sections": [
         {
           "type": "quiz-header",
@@ -424,7 +419,7 @@
             "textColor": "#3D3D3D",
             "logo": "Logo",
             "logoLink": "index.html",
-            "progress": "3 Fragen bis zum Gutschein"
+            "progress": "1 Fragen bis zum Gutschein"
           }
         },
         {
@@ -433,20 +428,33 @@
             "backgroundColor": "#F5EDE0",
             "textColor": "#000000",
             "questionId": "q3",
-            "question": "Schon mal ein Familien-Fotoshooting gehabt?",
-            "optionsCount": "2",
+            "question": "Wie groß ist eure Familie?",
+            "optionsCount": "4",
             "options": [
               {
-                "text": "Ja, das war der Hammer!",
-                "value": "ja_hammer",
+                "text": "2 Personen",
+                "value": "2_personen",
                 "link": "quiz-4.html",
-                "image": "https://picsum.photos/seed/xmasq3a/300/300"
+                "image": "https://images.unsplash.com/photo-1516914943479-89db7d9ae7f2?w=300&h=300&fit=crop"
               },
               {
-                "text": "Nein, bisher noch nicht!",
-                "value": "nein",
+                "text": "3–4 Personen",
+                "value": "3_4_personen",
                 "link": "quiz-4.html",
-                "image": "https://picsum.photos/seed/xmasq3b/300/300"
+                "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=300&h=300&fit=crop"
+              },
+              {
+                "text": "5 oder mehr Personen",
+                "value": "5_plus_personen",
+                "link": "quiz-4.html",
+                "image": "https://images.unsplash.com/photo-1581952976147-5a2d15560349?w=300&h=300&fit=crop"
+              },
+              {
+                "text": "Noch unklar – wir entscheiden spontan",
+                "value": "unklar",
+                "link": "quiz-4.html",
+                "image": "https://images.unsplash.com/photo-1512909006721-3d6018887383?w=300&h=300&fit=crop",
+                "multiline": true
               }
             ]
           }
@@ -474,7 +482,7 @@
     },
     {
       "filename": "quiz-4.html",
-      "title": "Wer wird dabei sein? - Quiz",
+      "title": "Familien-Fotoshooting Erfahrung - Quiz",
       "sections": [
         {
           "type": "quiz-header",
@@ -483,7 +491,7 @@
             "textColor": "#3D3D3D",
             "logo": "Logo",
             "logoLink": "index.html",
-            "progress": "2 Fragen bis zum Gutschein"
+            "progress": "Fast geschafft!"
           }
         },
         {
@@ -492,27 +500,20 @@
             "backgroundColor": "#F5EDE0",
             "textColor": "#000000",
             "questionId": "q4",
-            "question": "Wer wird mit dabei sein?",
-            "optionsCount": "3",
+            "question": "Schon mal ein Familien - Fotoshooting gehabt?",
+            "optionsCount": "2",
             "options": [
               {
-                "text": "Nur wir als Elternpaar",
-                "value": "elternpaar",
+                "text": "Ja, das war der Hammer!",
+                "value": "ja_hammer",
                 "link": "quiz-form.html",
-                "image": "https://picsum.photos/seed/xmasq4a/300/300"
+                "image": "https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w=300&h=300&fit=crop"
               },
               {
-                "text": "Eltern und die Kinder",
-                "value": "mit_kindern",
+                "text": "Nein, bisher noch nicht!",
+                "value": "nein_bisher_nicht",
                 "link": "quiz-form.html",
-                "image": "https://picsum.photos/seed/xmasq4b/300/300"
-              },
-              {
-                "text": "Wir nehmen auch unser Haustier mit",
-                "value": "mit_haustier",
-                "link": "quiz-form.html",
-                "multiline": true,
-                "image": "https://picsum.photos/seed/xmasq4c/300/300"
+                "image": "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=300&h=300&fit=crop"
               }
             ]
           }
@@ -557,9 +558,8 @@
           "content": {
             "backgroundColor": "#F5EDE0",
             "textColor": "#000000",
-            "subtitle": "Trage dich jetzt ein und sichere dir dein Platz für ein",
-            "title": "Kostenloses Familien-Fotoshooting zu Weihnachten!",
-            "deadline": "Die kostenlosen Fotoshootings sind nur bis zum 20.11.25 verfügbar.",
+            "subtitle": "Nur für kurze Zeit",
+            "title": "Special-Gutschein:\nFamilien-Fotoshooting\nKOSTENLOS",
             "namePlaceholder": "Dein Vor- und Nachname",
             "emailPlaceholder": "Deine E-Mail Adresse",
             "phonePlaceholder": "Deine Telefonnummer",
@@ -585,25 +585,23 @@
             "privacyText": "Ich akzeptiere die",
             "privacyLinkText": "Datenschutzbestimmungen",
             "privacyLink": "datenschutz.html",
-            "submitText": "Jetzt kostenloses Shooting sichern!",
-            "sideText": "Deine Privatsphäre ist bei mir sicher – ich schätze dein Vertrauen.",
-            "importantTitle": "WICHTIG! Bitte halte deinen Termin ein oder informiere mich rechtzeitig über eventuelle Änderungen.",
-            "importantText": "Da mein Zeitplan während des Aktionszeitraums besonders straff ist, plane ich meine Termine äußerst präzise. Kurzfristige Absagen bedeuten leider, dass andere diese einzigartige Gelegenheit verpassen könnten. Vielen Dank für dein Verständnis und deine Kooperation.",
-            "sideImage": "https://picsum.photos/seed/xmasquizform/549/437"
+            "submitText": "Sende mir den Gutschein zu!",
+            "sideText": "Deine Sicherheit ist unser größtes Anliegen – Vertraue uns und schütze deine Privatsphäre!",
+            "sideImage": "https://images.unsplash.com/photo-1512909006721-3d6018887383?w=549&h=822&fit=crop"
           }
         },
         {
           "type": "footer",
           "content": {
-            "backgroundColor": "#D9D9D9",
-            "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42201.95399533!2d10.0534!3d48.8378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47992a2e8e4e1e5b%3A0x41d25a40937a1e0!2sAalen!5e0!3m2!1sde!2sde!4v1704067200000",
-            "height": "450"
+            "backgroundColor": "#FFFFFF",
+            "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77837.95399533!2d9.7320!3d52.3759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b00d259c4f73a1%3A0x4236659fda043d0!2sHannover!5e0!3m2!1sde!2sde!4v1704067200000",
+            "height": "399"
           }
         },
         {
           "type": "legal-footer",
           "content": {
-            "backgroundColor": "#D9D9D9",
+            "backgroundColor": "#FFFFFF",
             "links": [
               {
                 "text": "Impressum",
@@ -658,7 +656,7 @@
                 "link": "mailto:info@kameramadle.de"
               }
             ],
-            "image": "https://picsum.photos/seed/xmasthankyou/550/529"
+            "image": "https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w=550&h=529&fit=crop"
           }
         },
         {
@@ -667,9 +665,9 @@
             "backgroundColor": "#EEE3D0",
             "textColor": "#000000",
             "accentColor": "#E2C08D",
-            "name": "Jenni – dein Kameramädle",
-            "specialization": "Familienfotos, Kinderfotos & Weihnachtsfotografie",
-            "description": "<p>Ich freue mich darauf, dein Fotograf für jegliche Anlässe zu sein – sei es für Familienfotos, Kinderportraits oder festliche Weihnachtsbilder. Auf eine gute Zusammenarbeit!</p><p>Wenn du noch Fragen hast, stehe ich dir jederzeit gerne zur Verfügung.</p>",
+            "name": "Yvonne Jadke – Fotograf Hannover",
+            "specialization": "Familienfotos, Businessportraits & Hochzeitsfotografie",
+            "description": "<p>Wir freuen uns darauf, dein Fotograf für jegliche Anlässe zu sein – sei es für Familienfotos, Business-Portraits oder als Hochzeitsfotograf. Auf eine gute Zusammenarbeit!</p><p>Wenn du noch Fragen hast, stehen wir dir jederzeit gerne zur Verfügung.</p>",
             "socialLinks": [
               {
                 "type": "facebook",
@@ -683,7 +681,7 @@
               },
               {
                 "type": "website",
-                "link": "https://kameramadle.de/",
+                "link": "https://yvonne-jadke.de/",
                 "title": "Website"
               }
             ]
@@ -692,7 +690,7 @@
         {
           "type": "footer",
           "content": {
-            "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42201.95399533!2d10.0534!3d48.8378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47992a2e8e4e1e5b%3A0x41d25a40937a1e0!2sAalen!5e0!3m2!1sde!2sde!4v1704067200000",
+            "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77837.95399533!2d9.7320!3d52.3759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b00d259c4f73a1%3A0x4236659fda043d0!2sHannover!5e0!3m2!1sde!2sde!4v1704067200000",
             "height": "450"
           }
         },

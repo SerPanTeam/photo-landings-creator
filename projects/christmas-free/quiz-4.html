@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sichere dir jetzt dein kostenloses Familien-Fotoshooting zu Weihnachten in Aalen!">
-  <meta name="keywords" content="fotoshooting, familie, weihnachten, kostenlos, aalen">
-  <title>Wer wird dabei sein? - Quiz</title>
+  <meta name="description" content="Sichere dir jetzt dein kostenloses Familien-Fotoshooting zu Weihnachten in Hannover!">
+  <meta name="keywords" content="fotoshooting, familie, weihnachten, kostenlos, hannover">
+  <title>Familien-Fotoshooting Erfahrung - Quiz</title>
 
   <!-- Security Headers -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://script.google.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; img-src 'self' https: data:; font-src 'self' https: data:; frame-src https://www.google.com https://maps.google.com; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://cdn.jsdelivr.net">
@@ -61,7 +61,7 @@
            ПРОГРЕСС / ПОДЗАГОЛОВОК
            ════════════════════════════════════════════════════════════════════════ -->
       <div class="quiz-header__progress">
-        <p class="text-medium-small" style="color: #3D3D3D;">2 Fragen bis zum Gutschein</p>
+        <p class="text-medium-small" style="color: #3D3D3D;">Fast geschafft!</p>
       </div>
 
     </div>
@@ -80,44 +80,33 @@
          ЗАГОЛОВОК ВОПРОСА
          ════════════════════════════════════════════════════════════════════════ -->
     <div class="quiz-question__title">
-      <h1 class="text-h2" style="color: #000000;">Wer wird mit dabei sein?</h1>
+      <h1 class="text-h2" style="color: #000000;">Schon mal ein Familien - Fotoshooting gehabt?</h1>
     </div>
 
     <!-- ════════════════════════════════════════════════════════════════════════
          КАРТОЧКИ ВАРИАНТОВ (картинка + кнопка)
          ════════════════════════════════════════════════════════════════════════ -->
-    <div class="quiz-question__cards quiz-question__cards--3">
+    <div class="quiz-question__cards quiz-question__cards--2">
       <div class="quiz-question__card">
         <div class="quiz-question__image-wrapper">
-          <img src="https://picsum.photos/seed/xmasq4a/300/300" alt="Nur wir als Elternpaar" class="quiz-question__image">
+          <img src="https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w&#x3D;300&amp;h&#x3D;300&amp;fit&#x3D;crop" alt="Ja, das war der Hammer!" class="quiz-question__image">
         </div>
         <a href="quiz-form.html"
            class="quiz-question__option"
-           data-answer="elternpaar"
-           onclick="saveQuizAnswer('q4', 'elternpaar')">
-          <span class="quiz-question__option-text">Nur wir als Elternpaar</span>
+           data-answer="ja_hammer"
+           onclick="saveQuizAnswer('q4', 'ja_hammer')">
+          <span class="quiz-question__option-text">Ja, das war der Hammer!</span>
         </a>
       </div>
       <div class="quiz-question__card">
         <div class="quiz-question__image-wrapper">
-          <img src="https://picsum.photos/seed/xmasq4b/300/300" alt="Eltern und die Kinder" class="quiz-question__image">
+          <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w&#x3D;300&amp;h&#x3D;300&amp;fit&#x3D;crop" alt="Nein, bisher noch nicht!" class="quiz-question__image">
         </div>
         <a href="quiz-form.html"
            class="quiz-question__option"
-           data-answer="mit_kindern"
-           onclick="saveQuizAnswer('q4', 'mit_kindern')">
-          <span class="quiz-question__option-text">Eltern und die Kinder</span>
-        </a>
-      </div>
-      <div class="quiz-question__card">
-        <div class="quiz-question__image-wrapper">
-          <img src="https://picsum.photos/seed/xmasq4c/300/300" alt="Wir nehmen auch unser Haustier mit" class="quiz-question__image">
-        </div>
-        <a href="quiz-form.html"
-           class="quiz-question__option quiz-question__option--multiline"
-           data-answer="mit_haustier"
-           onclick="saveQuizAnswer('q4', 'mit_haustier')">
-          <span class="quiz-question__option-text">Wir nehmen auch unser Haustier mit</span>
+           data-answer="nein_bisher_nicht"
+           onclick="saveQuizAnswer('q4', 'nein_bisher_nicht')">
+          <span class="quiz-question__option-text">Nein, bisher noch nicht!</span>
         </a>
       </div>
     </div>

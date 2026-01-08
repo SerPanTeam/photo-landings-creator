@@ -28,13 +28,13 @@
             },
             "images": [
               {
-                "src": "https://picsum.photos/seed/family1/428/394",
+                "src": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=428&h=394&fit=crop",
                 "width": 428,
                 "height": 394,
                 "placeholderColor": "#A19F9F"
               },
               {
-                "src": "https://picsum.photos/seed/family2/306/290",
+                "src": "https://images.unsplash.com/photo-1581952976147-5a2d15560349?w=306&h=290&fit=crop",
                 "width": 306,
                 "height": 290,
                 "placeholderColor": "#7F7F7F"
@@ -52,7 +52,7 @@
               "text": "Hier geht's zur Fotoshooting-Aktion",
               "link": "quiz-1.html"
             },
-            "image": "https://picsum.photos/seed/promo/500/440"
+            "image": "https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?w=500&h=440&fit=crop"
           }
         },
         {
@@ -68,7 +68,7 @@
             },
             "tagline": "– für dich, für dein Kind, für immer –",
             "taglineColor": "#E2C08D",
-            "image": "https://picsum.photos/seed/features1/428/440"
+            "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=428&h=440&fit=crop"
           }
         },
         {
@@ -78,28 +78,28 @@
             "showArrows": true,
             "images": [
               {
-                "src": "https://picsum.photos/seed/gallery1/400/400",
-                "alt": "Familienfoto 1"
+                "src": "https://images.unsplash.com/photo-1484665754804-74b091911472?w=400&h=400&fit=crop",
+                "alt": "Familie mit Kindern"
               },
               {
-                "src": "https://picsum.photos/seed/gallery2/400/400",
-                "alt": "Familienfoto 2"
+                "src": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=400&h=400&fit=crop",
+                "alt": "Familienportrait"
               },
               {
-                "src": "https://picsum.photos/seed/gallery3/400/400",
-                "alt": "Familienfoto 3"
+                "src": "https://images.unsplash.com/photo-1571210862729-78a52d3779a2?w=400&h=400&fit=crop",
+                "alt": "Eltern mit Kind"
               },
               {
-                "src": "https://picsum.photos/seed/gallery4/400/400",
-                "alt": "Familienfoto 4"
+                "src": "https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?w=400&h=400&fit=crop",
+                "alt": "Glückliche Familie"
               },
               {
-                "src": "https://picsum.photos/seed/gallery5/400/400",
-                "alt": "Familienfoto 5"
+                "src": "https://images.unsplash.com/photo-1581952976147-5a2d15560349?w=400&h=400&fit=crop",
+                "alt": "Familienfoto Outdoor"
               },
               {
-                "src": "https://picsum.photos/seed/gallery6/400/400",
-                "alt": "Familienfoto 6"
+                "src": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400&h=400&fit=crop",
+                "alt": "Familienshooting"
               }
             ]
           }
@@ -112,17 +112,17 @@
               {
                 "title": "Viel Zeit & Raum",
                 "description": "für Momente für dich und deine Familie",
-                "icon": "https://picsum.photos/seed/icon1/150/150"
+                "icon": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=150&h=150&fit=crop"
               },
               {
                 "title": "Professionelle Fotografin",
                 "description": "aus Leidenschaft und Professionalität",
-                "icon": "https://picsum.photos/seed/icon2/150/150"
+                "icon": "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=150&h=150&fit=crop"
               },
               {
                 "title": "Hohe Qualität",
                 "description": "der Fotos hautnah erleben",
-                "icon": "https://picsum.photos/seed/icon3/150/150"
+                "icon": "https://images.unsplash.com/photo-1606567595334-d39972c85dfd?w=150&h=150&fit=crop"
               }
             ]
           }
@@ -140,22 +140,22 @@
               {
                 "title": "1. Eintragen",
                 "description": "Gehe das Quiz durch und beantworte die Fragen, damit ich genügend Zeit für dich einplanen kann. Melde dich für das Fotoshooting an und sichere dir deinen exklusiven Gutschein!",
-                "icon": "https://picsum.photos/seed/step1/76/75"
+                "icon": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=76&h=75&fit=crop"
               },
               {
                 "title": "2. Shootingzeit",
                 "description": "Während des Fotoshootings entstehen vielfältige und einzigartige Aufnahmen, damit ihr eine große Auswahl an Bildern habt und eure persönlichen Favoriten wählen könnt.",
-                "icon": "https://picsum.photos/seed/step2/76/75"
+                "icon": "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=76&h=75&fit=crop"
               },
               {
                 "title": "3. Wähle dein Lieblingsbild/er aus",
                 "description": "Nach dem Fotoshooting könnt ihr in Ruhe eure Lieblingsbilder auswählen.",
-                "icon": "https://picsum.photos/seed/step3/76/75"
+                "icon": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=76&h=75&fit=crop"
               },
               {
                 "title": "4. Ergebnis",
                 "description": "Unvergängliche Erinnerungen in digitaler Form – jederzeit abrufbar, zum Teilen mit euren Liebsten oder für den besonderen Moment zum Wiedererleben.",
-                "icon": "https://picsum.photos/seed/step4/76/75"
+                "icon": "https://images.unsplash.com/photo-1606567595334-d39972c85dfd?w=76&h=75&fit=crop"
               }
             ]
           }
@@ -163,7 +163,7 @@
         {
           "type": "fullwidth-image",
           "content": {
-            "src": "https://picsum.photos/seed/fullwidth/1440/656",
+            "src": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1440&h=656&fit=crop",
             "alt": "Familienfotografie",
             "backgroundColor": "#7F7F7F",
             "height": 656
@@ -211,22 +211,22 @@
               {
                 "title": "Family Time",
                 "description": "Die magische Möglichkeit, lebendige Erinnerungen mit deinen Liebsten und engsten Vertrauten einzufangen.",
-                "image": "https://picsum.photos/seed/service1/300/200"
+                "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=300&h=200&fit=crop"
               },
               {
                 "title": "Kinder-Fotoshooting",
                 "description": "Haltet die unbeschwerte Freude eurer Kinder in liebevollen, natürlichen Bildern fest.",
-                "image": "https://picsum.photos/seed/service2/300/200"
+                "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=300&h=200&fit=crop"
               },
               {
                 "title": "Babybauch & Newborn",
                 "description": "Schwangerschaft und Neugeborene in liebevollen Bildern festhalten – Erinnerungen, die bleiben.",
-                "image": "https://picsum.photos/seed/service3/300/200"
+                "image": "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=300&h=200&fit=crop"
               },
               {
                 "title": "Portraitfotografie",
                 "description": "Authentisch, ausdrucksstark, zeitlos – ich halte deine Persönlichkeit in einzigartigen Bildern fest.",
-                "image": "https://picsum.photos/seed/service4/300/200"
+                "image": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=300&h=200&fit=crop"
               }
             ]
           }
@@ -238,7 +238,7 @@
             "greeting": "Willkommen bei",
             "name": "Dorett Dornbusch",
             "bio": "Ich bin Dorett (Fotografenmeisterin), und liebe es, besondere Momente in authentischen Bildern festzuhalten.\n\nIn meinem Studio in Dortmund-Huckarde sorge ich für eine entspannte Atmosphäre, damit natürliche und emotionale Aufnahmen entstehen.\n\nMit meiner positiven Art nehme ich dir die Nervosität und mache das Shooting zu einem entspannten Erlebnis – gerne per Du!",
-            "photo": "https://picsum.photos/seed/photographer/400/500"
+            "photo": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=500&fit=crop"
           }
         },
         {
@@ -296,25 +296,25 @@
                 "text": "Ja, vom Hören",
                 "value": "vom_hoeren",
                 "link": "quiz-2.html",
-                "image": "https://picsum.photos/seed/q1a/300/300"
+                "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=300&h=300&fit=crop"
               },
               {
                 "text": "Ja, na klar!",
                 "value": "na_klar",
                 "link": "quiz-2.html",
-                "image": "https://picsum.photos/seed/q1b/300/300"
+                "image": "https://images.unsplash.com/photo-1581952976147-5a2d15560349?w=300&h=300&fit=crop"
               },
               {
                 "text": "Schon sehr lang",
                 "value": "sehr_lang",
                 "link": "quiz-2.html",
-                "image": "https://picsum.photos/seed/q1c/300/300"
+                "image": "https://images.unsplash.com/photo-1571210862729-78a52d3779a2?w=300&h=300&fit=crop"
               },
               {
                 "text": "Nein, noch nicht",
                 "value": "noch_nicht",
                 "link": "quiz-2.html",
-                "image": "https://picsum.photos/seed/q1d/300/300"
+                "image": "https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?w=300&h=300&fit=crop"
               }
             ]
           }
@@ -367,25 +367,25 @@
                 "text": "1",
                 "value": "1",
                 "link": "quiz-3.html",
-                "image": "https://picsum.photos/seed/q2a/300/300"
+                "image": "https://images.unsplash.com/photo-1484665754804-74b091911472?w=300&h=300&fit=crop"
               },
               {
                 "text": "2",
                 "value": "2",
                 "link": "quiz-3.html",
-                "image": "https://picsum.photos/seed/q2b/300/300"
+                "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=300&h=300&fit=crop"
               },
               {
                 "text": "3",
                 "value": "3",
                 "link": "quiz-3.html",
-                "image": "https://picsum.photos/seed/q2c/300/300"
+                "image": "https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?w=300&h=300&fit=crop"
               },
               {
                 "text": "4",
                 "value": "4",
                 "link": "quiz-3.html",
-                "image": "https://picsum.photos/seed/q2d/300/300"
+                "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=300&h=300&fit=crop"
               }
             ]
           }
@@ -438,13 +438,13 @@
                 "text": "Ja, das war der Hammer!",
                 "value": "ja_hammer",
                 "link": "quiz-4.html",
-                "image": "https://picsum.photos/seed/q3a/300/300"
+                "image": "https://images.unsplash.com/photo-1581952976147-5a2d15560349?w=300&h=300&fit=crop"
               },
               {
                 "text": "Nein, bisher noch nicht!",
                 "value": "nein",
                 "link": "quiz-4.html",
-                "image": "https://picsum.photos/seed/q3b/300/300"
+                "image": "https://images.unsplash.com/photo-1571210862729-78a52d3779a2?w=300&h=300&fit=crop"
               }
             ]
           }
@@ -497,20 +497,20 @@
                 "text": "Nur wir als Elternpaar",
                 "value": "elternpaar",
                 "link": "quiz-form.html",
-                "image": "https://picsum.photos/seed/q4a/300/300"
+                "image": "https://images.unsplash.com/photo-1516914943479-89db7d9ae7f2?w=300&h=300&fit=crop"
               },
               {
                 "text": "Eltern und die Kinder",
                 "value": "mit_kindern",
                 "link": "quiz-form.html",
-                "image": "https://picsum.photos/seed/q4b/300/300"
+                "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=300&h=300&fit=crop"
               },
               {
                 "text": "Wir nehmen auch unser Haustier mit",
                 "value": "mit_haustier",
                 "link": "quiz-form.html",
                 "multiline": true,
-                "image": "https://picsum.photos/seed/q4c/300/300"
+                "image": "https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=300&h=300&fit=crop"
               }
             ]
           }
@@ -587,7 +587,7 @@
             "sideText": "Deine Privatsphäre ist bei mir sicher – ich schätze dein Vertrauen.",
             "importantTitle": "WICHTIG! Bitte halte deinen Termin ein oder informiere mich rechtzeitig über eventuelle Änderungen.",
             "importantText": "Da mein Zeitplan während des Aktionszeitraums besonders straff ist, plane ich meine Termine äußerst präzise. Kurzfristige Absagen bedeuten leider, dass andere diese einzigartige Gelegenheit verpassen könnten. Vielen Dank für dein Verständnis und deine Kooperation.",
-            "sideImage": "https://picsum.photos/seed/quizform/549/437"
+            "sideImage": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=549&h=437&fit=crop"
           }
         },
         {
@@ -656,7 +656,7 @@
                 "link": "mailto:info@example.com"
               }
             ],
-            "image": "https://picsum.photos/seed/thankyou/550/529"
+            "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=550&h=529&fit=crop"
           }
         },
         {

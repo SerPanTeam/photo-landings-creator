@@ -6,15 +6,10 @@ Universal landing page generator for photographers. Create professional landing 
 
 ## Live Demos
 
-| Demo | Type | Description |
-|------|------|-------------|
-| [Family Quiz](https://serpanteam.github.io/photo-landings-creator/projects/family-quiz/) | Multi-page | Quiz funnel (7 pages) |
-| [Christmas Free](https://serpanteam.github.io/photo-landings-creator/projects/christmas-free/) | Multi-page | Free photoshoot promo (7 pages) |
-| [Christmas Family](https://serpanteam.github.io/photo-landings-creator/projects/christmas-family/) | Single-page | Christmas landing |
-| [Photographer](https://serpanteam.github.io/photo-landings-creator/projects/photographer/) | Single-page | Basic portfolio |
-| [Newborn](https://serpanteam.github.io/photo-landings-creator/projects/newborn/) | Single-page | Newborn photography |
-| [Mutter & Kind](https://serpanteam.github.io/photo-landings-creator/projects/mutter-kind/) | Single-page | Mother & child |
-| [Free Photoshoot](https://serpanteam.github.io/photo-landings-creator/projects/free-photoshoot/) | Single-page | Free photoshoot promo |
+| Demo | Type | Pages | Description |
+|------|------|-------|-------------|
+| [Family Quiz](https://serpanteam.github.io/photo-landings-creator/projects/family-quiz/) | Multi-page | 7 | Quiz funnel for family photoshoot (Yvonne Jadke, Hannover) |
+| [Christmas Free](https://serpanteam.github.io/photo-landings-creator/projects/christmas-free/) | Multi-page | 7 | Free Christmas photoshoot promo (Yvonne Jadke, Hannover) |
 
 ## Quick Start
 
@@ -32,22 +27,6 @@ node builder/builder.js christmas-free
 
 Output: `projects/<landing-name>/`
 
-## Example Templates
-
-Ready-to-use templates (copy and customize for your needs):
-
-| Template | Type | Pages | Use Case |
-|----------|------|-------|----------|
-| `family-quiz` | Multi-page | 7 | Quiz funnel for family photoshoot |
-| `christmas-free` | Multi-page | 7 | Free Christmas photoshoot promo |
-| `christmas-family` | Single-page | 1 | Christmas family landing |
-| `photographer` | Single-page | 1 | Basic photographer portfolio |
-| `newborn` | Single-page | 1 | Newborn photography |
-| `mutter-kind` | Single-page | 1 | Mother & child photoshoot |
-| `free-photoshoot` | Single-page | 1 | Free photoshoot promo |
-
-To create your own: copy any template folder in `landings/`, rename it, and edit `config.json`.
-
 ## Project Structure
 
 ```
@@ -60,11 +39,15 @@ landing/
 │   └── ...
 │
 ├── landings/              # Landing configurations
-│   └── <landing-name>/
-│       ├── config.json    # Sections + content
-│       ├── FIGMA.md       # Figma node references
-│       ├── js/            # Custom scripts
-│       └── assets/        # Landing-specific images
+│   ├── family-quiz/       # Quiz funnel template
+│   │   ├── config.json    # Sections + content
+│   │   ├── FIGMA.md       # Figma node references
+│   │   └── js/quiz.js     # Quiz logic
+│   │
+│   └── christmas-free/    # Free photoshoot template
+│       ├── config.json
+│       ├── FIGMA.md
+│       └── js/quiz.js
 │
 ├── projects/              # Built output (generated)
 ├── assets/                # Shared CSS/JS/icons
@@ -134,27 +117,18 @@ landing/
 
 ## Config.json Examples
 
-### Single Page
-```json
-{
-  "name": "Landing Name",
-  "lang": "de",
-  "meta": { "title": "...", "description": "..." },
-  "sections": [
-    { "type": "hero", "content": { "title": "..." } },
-    { "type": "faq", "content": { "items": [...] } }
-  ]
-}
-```
-
 ### Multi-Page (Quiz)
 ```json
 {
   "name": "Quiz Landing",
+  "lang": "de",
+  "meta": { "title": "...", "description": "..." },
   "scripts": ["quiz.js"],
   "pages": [
     { "filename": "index.html", "sections": [...] },
-    { "filename": "quiz-1.html", "sections": [...] }
+    { "filename": "quiz-1.html", "sections": [...] },
+    { "filename": "quiz-form.html", "sections": [...] },
+    { "filename": "thank-you.html", "sections": [...] }
   ]
 }
 ```
@@ -212,9 +186,9 @@ landing/
 ```
 index.html (main landing)
     └──> quiz-1.html (4 options)
-            └──> quiz-2.html (4 options)
-                    └──> quiz-3.html (2 options, centered)
-                            └──> quiz-4.html (3 options, centered)
+            └──> quiz-2.html (3-4 options)
+                    └──> quiz-3.html (2-4 options)
+                            └──> quiz-4.html (2-3 options)
                                     └──> quiz-form.html (registration)
                                             └──> thank-you.html (success)
 ```
@@ -227,6 +201,33 @@ Each landing has a `FIGMA.md` with node IDs for design verification:
 # Use Figma MCP tools
 mcp__figma__get_screenshot({ nodeId: "233-22" })
 mcp__figma__get_design_context({ nodeId: "233-22" })
+```
+
+## Creating a New Landing
+
+1. Copy an existing landing folder:
+   ```bash
+   cp -r landings/family-quiz landings/my-landing
+   ```
+
+2. Edit `config.json` with your content
+3. Update images in `config.json` (use Unsplash URLs or local assets)
+4. Build:
+   ```bash
+   node builder/builder.js my-landing
+   ```
+
+## Image Sources
+
+Both landings use [Unsplash](https://unsplash.com/) for high-quality stock photos:
+- Family photography
+- Christmas themed
+- Children portraits
+- Newborn/maternity
+
+Example URL format:
+```
+https://images.unsplash.com/photo-XXXX?w=WIDTH&h=HEIGHT&fit=crop
 ```
 
 ## Technical Info

@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sichere dir jetzt dein kostenloses Familien-Fotoshooting zu Weihnachten in Aalen!">
-  <meta name="keywords" content="fotoshooting, familie, weihnachten, kostenlos, aalen">
-  <title>Welches Bild gefällt dir? - Quiz</title>
+  <meta name="description" content="Sichere dir jetzt dein kostenloses Familien-Fotoshooting zu Weihnachten in Hannover!">
+  <meta name="keywords" content="fotoshooting, familie, weihnachten, kostenlos, hannover">
+  <title>Tierische Familienmitglieder - Quiz</title>
 
   <!-- Security Headers -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://script.google.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; img-src 'self' https: data:; font-src 'self' https: data:; frame-src https://www.google.com https://maps.google.com; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://cdn.jsdelivr.net">
@@ -61,7 +61,7 @@
            ПРОГРЕСС / ПОДЗАГОЛОВОК
            ════════════════════════════════════════════════════════════════════════ -->
       <div class="quiz-header__progress">
-        <p class="text-medium-small" style="color: #3D3D3D;">4 Fragen bis zum Gutschein</p>
+        <p class="text-medium-small" style="color: #3D3D3D;">2 Fragen bis zum Gutschein</p>
       </div>
 
     </div>
@@ -80,55 +80,44 @@
          ЗАГОЛОВОК ВОПРОСА
          ════════════════════════════════════════════════════════════════════════ -->
     <div class="quiz-question__title">
-      <h1 class="text-h2" style="color: #000000;">Welches Bild gefällt dir am Besten?</h1>
+      <h1 class="text-h2" style="color: #000000;">Gibt es bei euch auch tierische Familienmitglieder?</h1>
     </div>
 
     <!-- ════════════════════════════════════════════════════════════════════════
          КАРТОЧКИ ВАРИАНТОВ (картинка + кнопка)
          ════════════════════════════════════════════════════════════════════════ -->
-    <div class="quiz-question__cards quiz-question__cards--4">
+    <div class="quiz-question__cards quiz-question__cards--3">
       <div class="quiz-question__card">
         <div class="quiz-question__image-wrapper">
-          <img src="https://picsum.photos/seed/xmasq2a/300/300" alt="1" class="quiz-question__image">
+          <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w&#x3D;300&amp;h&#x3D;300&amp;fit&#x3D;crop" alt="Ja, unbedingt!" class="quiz-question__image">
         </div>
         <a href="quiz-3.html"
            class="quiz-question__option"
-           data-answer="1"
-           onclick="saveQuizAnswer('q2', '1')">
-          <span class="quiz-question__option-text">1</span>
+           data-answer="ja_unbedingt"
+           onclick="saveQuizAnswer('q2', 'ja_unbedingt')">
+          <span class="quiz-question__option-text">Ja, unbedingt!</span>
         </a>
       </div>
       <div class="quiz-question__card">
         <div class="quiz-question__image-wrapper">
-          <img src="https://picsum.photos/seed/xmasq2b/300/300" alt="2" class="quiz-question__image">
+          <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w&#x3D;300&amp;h&#x3D;300&amp;fit&#x3D;crop" alt="Nein" class="quiz-question__image">
         </div>
         <a href="quiz-3.html"
            class="quiz-question__option"
-           data-answer="2"
-           onclick="saveQuizAnswer('q2', '2')">
-          <span class="quiz-question__option-text">2</span>
+           data-answer="nein"
+           onclick="saveQuizAnswer('q2', 'nein')">
+          <span class="quiz-question__option-text">Nein</span>
         </a>
       </div>
       <div class="quiz-question__card">
         <div class="quiz-question__image-wrapper">
-          <img src="https://picsum.photos/seed/xmasq2c/300/300" alt="3" class="quiz-question__image">
+          <img src="https://images.unsplash.com/photo-1543589077-47d81606c1bf?w&#x3D;300&amp;h&#x3D;300&amp;fit&#x3D;crop" alt="Vielleicht – sind noch unsicher" class="quiz-question__image">
         </div>
         <a href="quiz-3.html"
-           class="quiz-question__option"
-           data-answer="3"
-           onclick="saveQuizAnswer('q2', '3')">
-          <span class="quiz-question__option-text">3</span>
-        </a>
-      </div>
-      <div class="quiz-question__card">
-        <div class="quiz-question__image-wrapper">
-          <img src="https://picsum.photos/seed/xmasq2d/300/300" alt="4" class="quiz-question__image">
-        </div>
-        <a href="quiz-3.html"
-           class="quiz-question__option"
-           data-answer="4"
-           onclick="saveQuizAnswer('q2', '4')">
-          <span class="quiz-question__option-text">4</span>
+           class="quiz-question__option quiz-question__option--multiline"
+           data-answer="vielleicht"
+           onclick="saveQuizAnswer('q2', 'vielleicht')">
+          <span class="quiz-question__option-text">Vielleicht – sind noch unsicher</span>
         </a>
       </div>
     </div>
