@@ -78,7 +78,7 @@
             "showArrows": true,
             "images": [
               {
-                "src": "https://images.unsplash.com/photo-1484665754804-74b091911472?w=400&h=400&fit=crop",
+                "src": "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=400&h=400&fit=crop",
                 "alt": "Familie mit Kindern"
               },
               {
@@ -367,7 +367,7 @@
                 "text": "1",
                 "value": "1",
                 "link": "quiz-3.html",
-                "image": "https://images.unsplash.com/photo-1484665754804-74b091911472?w=300&h=300&fit=crop"
+                "image": "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=300&h=300&fit=crop"
               },
               {
                 "text": "2",
