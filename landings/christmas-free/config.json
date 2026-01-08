@@ -6,7 +6,9 @@
     "description": "Sichere dir jetzt dein kostenloses Familien-Fotoshooting zu Weihnachten in Aalen!",
     "keywords": "fotoshooting, familie, weihnachten, kostenlos, aalen"
   },
-  "scripts": ["quiz.js"],
+  "scripts": [
+    "quiz.js"
+  ],
   "pages": [
     {
       "filename": "index.html",
@@ -27,8 +29,18 @@
               "link": "quiz-1.html"
             },
             "images": [
-              { "src": "https://picsum.photos/seed/xmas1/428/394", "width": 428, "height": 394, "placeholderColor": "#A19F9F" },
-              { "src": "https://picsum.photos/seed/xmas2/306/290", "width": 306, "height": 290, "placeholderColor": "#7F7F7F" }
+              {
+                "src": "https://picsum.photos/seed/xmas1/428/394",
+                "width": 428,
+                "height": 394,
+                "placeholderColor": "#A19F9F"
+              },
+              {
+                "src": "https://picsum.photos/seed/xmas2/306/290",
+                "width": 306,
+                "height": 290,
+                "placeholderColor": "#7F7F7F"
+              }
             ]
           }
         },
@@ -69,12 +81,30 @@
             "backgroundColor": "#EEE3D0",
             "showArrows": true,
             "images": [
-              { "src": "https://picsum.photos/seed/xmasgal1/400/400", "alt": "Familienfoto 1" },
-              { "src": "https://picsum.photos/seed/xmasgal2/400/400", "alt": "Familienfoto 2" },
-              { "src": "https://picsum.photos/seed/xmasgal3/400/400", "alt": "Familienfoto 3" },
-              { "src": "https://picsum.photos/seed/xmasgal4/400/400", "alt": "Familienfoto 4" },
-              { "src": "https://picsum.photos/seed/xmasgal5/400/400", "alt": "Familienfoto 5" },
-              { "src": "https://picsum.photos/seed/xmasgal6/400/400", "alt": "Familienfoto 6" }
+              {
+                "src": "https://picsum.photos/seed/xmasgal1/400/400",
+                "alt": "Familienfoto 1"
+              },
+              {
+                "src": "https://picsum.photos/seed/xmasgal2/400/400",
+                "alt": "Familienfoto 2"
+              },
+              {
+                "src": "https://picsum.photos/seed/xmasgal3/400/400",
+                "alt": "Familienfoto 3"
+              },
+              {
+                "src": "https://picsum.photos/seed/xmasgal4/400/400",
+                "alt": "Familienfoto 4"
+              },
+              {
+                "src": "https://picsum.photos/seed/xmasgal5/400/400",
+                "alt": "Familienfoto 5"
+              },
+              {
+                "src": "https://picsum.photos/seed/xmasgal6/400/400",
+                "alt": "Familienfoto 6"
+              }
             ]
           }
         },
@@ -225,8 +255,18 @@
           "content": {
             "backgroundColor": "#F5EDE0",
             "links": [
-              { "text": "Impressum", "href": "impressum.html" },
-              { "text": "Datenschutzerklärung", "href": "datenschutz.html" }
+              {
+                "text": "Impressum",
+                "href": "impressum.html"
+              },
+              {
+                "text": "Datenschutzerklärung",
+                "href": "datenschutz.html"
+              },
+              {
+                "text": "Cookie Richtlinien",
+                "href": "cookies.html"
+              }
             ],
             "copyright": "© 2025 Jenni - Kameramädle. Alle Rechte vorbehalten."
           }
@@ -256,10 +296,30 @@
             "question": "Kennst du mich bereits?",
             "optionsCount": "4",
             "options": [
-              { "text": "Ja, vom Hören", "value": "vom_hoeren", "link": "quiz-2.html", "image": "https://picsum.photos/seed/xmasq1a/300/300" },
-              { "text": "Ja, na klar!", "value": "na_klar", "link": "quiz-2.html", "image": "https://picsum.photos/seed/xmasq1b/300/300" },
-              { "text": "Schon sehr lang", "value": "sehr_lang", "link": "quiz-2.html", "image": "https://picsum.photos/seed/xmasq1c/300/300" },
-              { "text": "Nein, noch nicht", "value": "noch_nicht", "link": "quiz-2.html", "image": "https://picsum.photos/seed/xmasq1d/300/300" }
+              {
+                "text": "Ja, vom Hören",
+                "value": "vom_hoeren",
+                "link": "quiz-2.html",
+                "image": "https://picsum.photos/seed/xmasq1a/300/300"
+              },
+              {
+                "text": "Ja, na klar!",
+                "value": "na_klar",
+                "link": "quiz-2.html",
+                "image": "https://picsum.photos/seed/xmasq1b/300/300"
+              },
+              {
+                "text": "Schon sehr lang",
+                "value": "sehr_lang",
+                "link": "quiz-2.html",
+                "image": "https://picsum.photos/seed/xmasq1c/300/300"
+              },
+              {
+                "text": "Nein, noch nicht",
+                "value": "noch_nicht",
+                "link": "quiz-2.html",
+                "image": "https://picsum.photos/seed/xmasq1d/300/300"
+              }
             ]
           }
         },
@@ -268,8 +328,18 @@
           "content": {
             "backgroundColor": "#F5EDE0",
             "links": [
-              { "text": "Impressum", "href": "impressum.html" },
-              { "text": "Datenschutzerklärung", "href": "datenschutz.html" }
+              {
+                "text": "Impressum",
+                "href": "impressum.html"
+              },
+              {
+                "text": "Datenschutzerklärung",
+                "href": "datenschutz.html"
+              },
+              {
+                "text": "Cookie Richtlinien",
+                "href": "cookies.html"
+              }
             ],
             "copyright": "© 2025 Jenni - Kameramädle. Alle Rechte vorbehalten."
           }
@@ -299,10 +369,30 @@
             "question": "Welches Bild gefällt dir am Besten?",
             "optionsCount": "4",
             "options": [
-              { "text": "1", "value": "1", "link": "quiz-3.html", "image": "https://picsum.photos/seed/xmasq2a/300/300" },
-              { "text": "2", "value": "2", "link": "quiz-3.html", "image": "https://picsum.photos/seed/xmasq2b/300/300" },
-              { "text": "3", "value": "3", "link": "quiz-3.html", "image": "https://picsum.photos/seed/xmasq2c/300/300" },
-              { "text": "4", "value": "4", "link": "quiz-3.html", "image": "https://picsum.photos/seed/xmasq2d/300/300" }
+              {
+                "text": "1",
+                "value": "1",
+                "link": "quiz-3.html",
+                "image": "https://picsum.photos/seed/xmasq2a/300/300"
+              },
+              {
+                "text": "2",
+                "value": "2",
+                "link": "quiz-3.html",
+                "image": "https://picsum.photos/seed/xmasq2b/300/300"
+              },
+              {
+                "text": "3",
+                "value": "3",
+                "link": "quiz-3.html",
+                "image": "https://picsum.photos/seed/xmasq2c/300/300"
+              },
+              {
+                "text": "4",
+                "value": "4",
+                "link": "quiz-3.html",
+                "image": "https://picsum.photos/seed/xmasq2d/300/300"
+              }
             ]
           }
         },
@@ -311,8 +401,18 @@
           "content": {
             "backgroundColor": "#F5EDE0",
             "links": [
-              { "text": "Impressum", "href": "impressum.html" },
-              { "text": "Datenschutzerklärung", "href": "datenschutz.html" }
+              {
+                "text": "Impressum",
+                "href": "impressum.html"
+              },
+              {
+                "text": "Datenschutzerklärung",
+                "href": "datenschutz.html"
+              },
+              {
+                "text": "Cookie Richtlinien",
+                "href": "cookies.html"
+              }
             ],
             "copyright": "© 2025 Jenni - Kameramädle. Alle Rechte vorbehalten."
           }
@@ -342,8 +442,18 @@
             "question": "Schon mal ein Familien-Fotoshooting gehabt?",
             "optionsCount": "2",
             "options": [
-              { "text": "Ja, das war der Hammer!", "value": "ja_hammer", "link": "quiz-4.html", "image": "https://picsum.photos/seed/xmasq3a/300/300" },
-              { "text": "Nein, bisher noch nicht!", "value": "nein", "link": "quiz-4.html", "image": "https://picsum.photos/seed/xmasq3b/300/300" }
+              {
+                "text": "Ja, das war der Hammer!",
+                "value": "ja_hammer",
+                "link": "quiz-4.html",
+                "image": "https://picsum.photos/seed/xmasq3a/300/300"
+              },
+              {
+                "text": "Nein, bisher noch nicht!",
+                "value": "nein",
+                "link": "quiz-4.html",
+                "image": "https://picsum.photos/seed/xmasq3b/300/300"
+              }
             ]
           }
         },
@@ -352,8 +462,18 @@
           "content": {
             "backgroundColor": "#F5EDE0",
             "links": [
-              { "text": "Impressum", "href": "impressum.html" },
-              { "text": "Datenschutzerklärung", "href": "datenschutz.html" }
+              {
+                "text": "Impressum",
+                "href": "impressum.html"
+              },
+              {
+                "text": "Datenschutzerklärung",
+                "href": "datenschutz.html"
+              },
+              {
+                "text": "Cookie Richtlinien",
+                "href": "cookies.html"
+              }
             ],
             "copyright": "© 2025 Jenni - Kameramädle. Alle Rechte vorbehalten."
           }
@@ -383,9 +503,25 @@
             "question": "Wer wird mit dabei sein?",
             "optionsCount": "3",
             "options": [
-              { "text": "Nur wir als Elternpaar", "value": "elternpaar", "link": "quiz-form.html", "image": "https://picsum.photos/seed/xmasq4a/300/300" },
-              { "text": "Eltern und die Kinder", "value": "mit_kindern", "link": "quiz-form.html", "image": "https://picsum.photos/seed/xmasq4b/300/300" },
-              { "text": "Wir nehmen auch unser Haustier mit", "value": "mit_haustier", "link": "quiz-form.html", "multiline": true, "image": "https://picsum.photos/seed/xmasq4c/300/300" }
+              {
+                "text": "Nur wir als Elternpaar",
+                "value": "elternpaar",
+                "link": "quiz-form.html",
+                "image": "https://picsum.photos/seed/xmasq4a/300/300"
+              },
+              {
+                "text": "Eltern und die Kinder",
+                "value": "mit_kindern",
+                "link": "quiz-form.html",
+                "image": "https://picsum.photos/seed/xmasq4b/300/300"
+              },
+              {
+                "text": "Wir nehmen auch unser Haustier mit",
+                "value": "mit_haustier",
+                "link": "quiz-form.html",
+                "multiline": true,
+                "image": "https://picsum.photos/seed/xmasq4c/300/300"
+              }
             ]
           }
         },
@@ -394,8 +530,18 @@
           "content": {
             "backgroundColor": "#F5EDE0",
             "links": [
-              { "text": "Impressum", "href": "impressum.html" },
-              { "text": "Datenschutzerklärung", "href": "datenschutz.html" }
+              {
+                "text": "Impressum",
+                "href": "impressum.html"
+              },
+              {
+                "text": "Datenschutzerklärung",
+                "href": "datenschutz.html"
+              },
+              {
+                "text": "Cookie Richtlinien",
+                "href": "cookies.html"
+              }
             ],
             "copyright": "© 2025 Jenni - Kameramädle. Alle Rechte vorbehalten."
           }
@@ -429,10 +575,22 @@
             "phonePlaceholder": "Deine Telefonnummer",
             "availabilityPlaceholder": "Wann seid ihr erreichbar (Mehrfachauswahl)",
             "availabilityOptions": [
-              { "value": "morgens", "text": "Morgens (9-12 Uhr)" },
-              { "value": "mittags", "text": "Mittags (12-15 Uhr)" },
-              { "value": "nachmittags", "text": "Nachmittags (15-18 Uhr)" },
-              { "value": "abends", "text": "Abends (18-20 Uhr)" }
+              {
+                "value": "morgens",
+                "text": "Morgens (9-12 Uhr)"
+              },
+              {
+                "value": "mittags",
+                "text": "Mittags (12-15 Uhr)"
+              },
+              {
+                "value": "nachmittags",
+                "text": "Nachmittags (15-18 Uhr)"
+              },
+              {
+                "value": "abends",
+                "text": "Abends (18-20 Uhr)"
+              }
             ],
             "privacyText": "Ich akzeptiere die",
             "privacyLinkText": "Datenschutzbestimmungen",
@@ -457,8 +615,18 @@
           "content": {
             "backgroundColor": "#D9D9D9",
             "links": [
-              { "text": "Impressum", "href": "impressum.html" },
-              { "text": "Datenschutzerklärung", "href": "datenschutz.html" }
+              {
+                "text": "Impressum",
+                "href": "impressum.html"
+              },
+              {
+                "text": "Datenschutzerklärung",
+                "href": "datenschutz.html"
+              },
+              {
+                "text": "Cookie Richtlinien",
+                "href": "cookies.html"
+              }
             ],
             "copyright": "© 2025 Jenni - Kameramädle. Alle Rechte vorbehalten."
           }
@@ -493,8 +661,14 @@
             },
             "additionalText": "Natürlich kannst du uns auch ganz unkompliziert telefonisch oder per E-Mail erreichen – wir freuen uns auf deine Nachricht!",
             "secondaryButtons": [
-              { "text": "Jetzt anrufen", "link": "tel:+4912345678" },
-              { "text": "Mail uns!", "link": "mailto:info@kameramadle.de" }
+              {
+                "text": "Jetzt anrufen",
+                "link": "tel:+4912345678"
+              },
+              {
+                "text": "Mail uns!",
+                "link": "mailto:info@kameramadle.de"
+              }
             ],
             "image": "https://picsum.photos/seed/xmasthankyou/550/529"
           }
@@ -509,9 +683,21 @@
             "specialization": "Familienfotos, Kinderfotos & Weihnachtsfotografie",
             "description": "<p>Ich freue mich darauf, dein Fotograf für jegliche Anlässe zu sein – sei es für Familienfotos, Kinderportraits oder festliche Weihnachtsbilder. Auf eine gute Zusammenarbeit!</p><p>Wenn du noch Fragen hast, stehe ich dir jederzeit gerne zur Verfügung.</p>",
             "socialLinks": [
-              { "type": "facebook", "link": "https://facebook.com/", "title": "Facebook" },
-              { "type": "instagram", "link": "https://instagram.com/", "title": "Instagram" },
-              { "type": "website", "link": "https://kameramadle.de/", "title": "Website" }
+              {
+                "type": "facebook",
+                "link": "https://facebook.com/",
+                "title": "Facebook"
+              },
+              {
+                "type": "instagram",
+                "link": "https://instagram.com/",
+                "title": "Instagram"
+              },
+              {
+                "type": "website",
+                "link": "https://kameramadle.de/",
+                "title": "Website"
+              }
             ]
           }
         },
@@ -527,8 +713,18 @@
           "content": {
             "backgroundColor": "#EEE3D0",
             "links": [
-              { "text": "Impressum", "href": "impressum.html" },
-              { "text": "Datenschutzerklärung", "href": "datenschutz.html" }
+              {
+                "text": "Impressum",
+                "href": "impressum.html"
+              },
+              {
+                "text": "Datenschutzerklärung",
+                "href": "datenschutz.html"
+              },
+              {
+                "text": "Cookie Richtlinien",
+                "href": "cookies.html"
+              }
             ],
             "copyright": "© 2025 Jenni - Kameramädle. Alle Rechte vorbehalten."
           }
