@@ -265,8 +265,8 @@
         "backgroundColor": "#F5EDE0",
         "links": [
           {"text": "Impressum", "url": "/impressum"},
-          {"text": "Datenschutz", "url": "/datenschutz"},
-          {"text": "AGB", "url": "/agb"}
+          {"text": "Datenschutzerklärung", "url": "/datenschutz"},
+          {"text": "Cookie Richtlinien", "url": "/cookies"}
         ],
         "copyright": "© 2025 Möst Fotografie. Alle Rechte vorbehalten."
       }

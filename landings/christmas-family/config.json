@@ -252,8 +252,8 @@
         "backgroundColor": "#F5EDE0",
         "links": [
           {"text": "Impressum", "href": "/impressum"},
-          {"text": "Datenschutz", "href": "/datenschutz"},
-          {"text": "AGB", "href": "/agb"}
+          {"text": "Datenschutzerklärung", "href": "/datenschutz"},
+          {"text": "Cookie Richtlinien", "href": "/cookies"}
         ],
         "copyright": "© 2025 Fotografie. Alle Rechte vorbehalten."
       }
