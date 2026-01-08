@@ -15,7 +15,7 @@
           {{#each links}}
           <!-- ССЫЛКА - изменить href="..." и текст между > и </a> -->
           <a href="{{this.href}}" class="legal-link">{{this.text}}</a>
-          {{#unless @last}}<span class="legal-separator">|</span>{{/unless}}
+          {{#unless @last}}<span class="legal-separator">·</span>{{/unless}}
           {{/each}}
         </nav>
       </div>
