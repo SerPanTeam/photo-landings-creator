@@ -182,14 +182,23 @@ Body: 22px Medium
   "content": {
     "backgroundColor": "#F5EDE0",
     "title": "Main Title",
+    "centeredTitle": "Centered title above",
+    "centeredTitleHighlight": "highlighted part",
     "subtitle": "Subtitle (italic, under title)",
     "description": "Description with HTML",
     "image": "url",
     "tagline": "– tagline text –",
     "taglineColor": "#E2C08D",
-    "cta": { "text": "Link", "link": "#" }
+    "ctaAfterTitle": true,
+    "cta": { "text": "Link", "link": "#", "isButton": true }
   }
 }
+```
+
+**ctaAfterTitle: true** - кнопка и description в одной строке после заголовка:
+```
+[centeredTitle - слева]
+[description - col-6 слева] [CTA - col-6 справа]
 ```
 
 ### benefits
@@ -421,6 +430,17 @@ Body: 22px Medium
 ```
 
 ## Figma Integration
+
+### ОБЯЗАТЕЛЬНО: Протокол проверки
+
+**ПЕРЕД любой работой с Figma** (верстка, проверка, синхронизация):
+1. Прочитать: `.claude/figma-verification-protocol.md`
+2. Следовать чек-листу из протокола
+3. Проверять X/Y координаты для определения layout строк
+
+**Ключевое правило:** Элементы с близкими Y-координатами (±50px) = одна строка в Bootstrap!
+
+### MCP Figma Tools
 
 Use MCP Figma tools for design comparison:
 
