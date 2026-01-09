@@ -56,24 +56,66 @@
   .services .row > div:nth-child(4) .service-card {
     margin-top: 0;
   }
+
+  /* Улучшенный line-height для заголовка */
+  .services h2 {
+    line-height: 1.3;
+  }
 }
 
 @media (max-width: 768px) {
-  .service-image .img-placeholder {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
+  /* Уменьшаем padding для больших изображений */
+  .service-card {
+    padding: 20px 0;
+  }
+
+  /* Изображения на полную ширину колонки */
+  .service-image .img-placeholder,
+  .service-image img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
     aspect-ratio: 1 / 1;
   }
 
-  .service-image img {
-    max-width: 250px;
+  /* Улучшенный line-height для заголовка */
+  .services h2 {
+    line-height: 1.4;
+  }
+
+  /* Отступы для текста карточки */
+  .service-card h3,
+  .service-card p {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
 @media (max-width: 576px) {
+  /* Убираем padding полностью на маленьких экранах */
+  .service-card {
+    padding: 15px 0;
+  }
+
+  /* Изображения на полную ширину с уменьшенным border-radius */
   .service-image .img-placeholder,
   .service-image img {
-    max-width: 200px;
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 15px !important;
+  }
+
+  /* Кнопка на всю ширину на мобильных */
+  .services .btn-primary-custom,
+  .services .btn-outline-custom {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Отступы для текста */
+  .service-card h3,
+  .service-card p {
+    padding-left: 8px;
+    padding-right: 8px;
   }
 }
