@@ -29,9 +29,9 @@
           <!-- ИКОНКА/ИЗОБРАЖЕНИЕ - изменить src="..." для замены -->
           <div class="benefit-icon" style="{{#if ../iconWidth}}width: {{../iconWidth}}px; height: {{../iconHeight}}px;{{else if ../iconSize}}width: {{../iconSize}}px; height: {{../iconSize}}px;{{/if}}">
             {{#if this.icon}}
-            <img src="{{this.icon}}" alt="{{this.title}}" class="img-fluid" style="{{#if ../imageBorderRadius}}border-radius: {{../imageBorderRadius}}px;{{/if}}{{#if ../iconWidth}}width: {{../iconWidth}}px; height: {{../iconHeight}}px; object-fit: cover;{{/if}}">
+            <img src="{{this.icon}}" alt="{{this.title}}" class="img-fluid" style="{{#ifDefined ../imageBorderRadius}}border-radius: {{../imageBorderRadius}}px;{{/ifDefined}}{{#if ../iconWidth}}width: {{../iconWidth}}px; height: {{../iconHeight}}px; object-fit: cover;{{/if}}">
             {{else}}
-            <div class="img-placeholder" style="width: {{#if ../iconWidth}}{{../iconWidth}}{{else if ../iconSize}}{{../iconSize}}{{else}}150{{/if}}px; height: {{#if ../iconHeight}}{{../iconHeight}}{{else if ../iconSize}}{{../iconSize}}{{else}}150{{/if}}px; background-color: #7f7f7f; {{#if ../imageBorderRadius}}border-radius: {{../imageBorderRadius}}px;{{/if}}"></div>
+            <div class="img-placeholder" style="width: {{#if ../iconWidth}}{{../iconWidth}}{{else if ../iconSize}}{{../iconSize}}{{else}}150{{/if}}px; height: {{#if ../iconHeight}}{{../iconHeight}}{{else if ../iconSize}}{{../iconSize}}{{else}}150{{/if}}px; background-color: #7f7f7f; {{#ifDefined ../imageBorderRadius}}border-radius: {{../imageBorderRadius}}px;{{/ifDefined}}"></div>
             {{/if}}
           </div>
 

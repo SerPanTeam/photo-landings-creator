@@ -93,6 +93,11 @@ Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
   return (arg1 === arg2) ? options.fn(this) : options.inverse(this);
 });
 
+// Helper to check if value is defined (including 0, false, empty string)
+Handlebars.registerHelper('ifDefined', function(value, options) {
+  return (value !== undefined && value !== null) ? options.fn(this) : options.inverse(this);
+});
+
 // Helper for conditional inequality
 Handlebars.registerHelper('unlessEquals', function(arg1, arg2, options) {
   return (arg1 !== arg2) ? options.fn(this) : options.inverse(this);

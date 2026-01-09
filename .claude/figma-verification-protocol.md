@@ -269,6 +269,49 @@ curl -o assets/icons/icon-name.png "http://localhost:3845/assets/xxx.png"
 [description - col-6] [CTA - col-6]  ← НЕПРАВИЛЬНО!
 ```
 
+### 2026-01-09: Benefits - квадратные иконки
+
+**Проблема:** Маленькие иконки (75×75px) были круглыми, а в Figma - квадратные.
+
+**Причина:** CSS применяет `border-radius: 35px` по умолчанию (для обратной совместимости).
+
+**Решение:** Для квадратных иконок добавить `imageBorderRadius: 0` в config:
+```json
+// Скруглённые углы (по умолчанию или явно)
+{ "imageBorderRadius": 35 }
+
+// Квадратные иконки
+{ "iconSize": 75, "imageBorderRadius": 0 }
+```
+
+**Важно:** Добавлен helper `{{#ifDefined}}` в builder для корректной обработки значения 0.
+
+### 2026-01-09: Services - layout flat vs cascade
+
+**Проблема:** Картинки Services были "лесенкой" (cascade), а в Figma - на одном уровне.
+
+**Figma координаты - проверить Y всех изображений:**
+```
+Image 1: top-[6148px]
+Image 2: top-[6148px]  ← Все Y одинаковые = flat
+Image 3: top-[6148px]
+Image 4: top-[6148px]
+```
+
+**Решение:** Добавить `layout: "flat"` в config:
+```json
+{
+  "type": "services",
+  "content": {
+    "layout": "flat"  // убирает лесенку
+  }
+}
+```
+
+**Варианты layout:**
+- По умолчанию: cascade/лесенка (+26px, +56px, +86px)
+- `"layout": "flat"`: все карточки на одном уровне
+
 ---
 
 ## 9. QUIZ BUTTONS CSS

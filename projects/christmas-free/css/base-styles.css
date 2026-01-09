@@ -48,6 +48,16 @@
   --breakpoint-xxl: 1440px;
 }
 
+/* ============================================================================
+   BACKGROUND CLASSES - Use these instead of inline styles
+   Client can change colors by editing :root variables above
+   ============================================================================ */
+.bg-brand-primary { background-color: var(--brand-primary); }
+.bg-brand-secondary { background-color: var(--brand-secondary); }
+.bg-brand-accent { background-color: var(--brand-accent); }
+.bg-brand-white { background-color: var(--color-white); }
+.bg-brand-dark { background-color: var(--brand-dark); }
+
 /* Apply base styles globally */
 html, body {
   font-family: var(--font-family);

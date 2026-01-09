@@ -168,6 +168,7 @@
             "layout": "2x2",
             "cardStyle": "plain",
             "iconSize": 75,
+            "imageBorderRadius": 0,
             "items": [
               {
                 "title": "Ganz viel Zeit & Raum für dich und deinen pelzigen Freund",
@@ -249,6 +250,7 @@
           "type": "services",
           "content": {
             "backgroundColor": "#F5EDE0",
+            "layout": "flat",
             "title": "Das ganze Jahr über finden immer wieder verschiedene Aktionen zu Fotoshootings statt.",
             "ctaCentered": true,
             "cta": {
