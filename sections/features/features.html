@@ -9,9 +9,12 @@
     <!-- ══════════════════════════════════════════════════════════════════════════
          ЦЕНТРИРОВАННЫЙ ЗАГОЛОВОК - отображается над основным контентом
          Поддерживает centeredTitleHighlight для выделения части заголовка другим цветом
+         ctaAfterTitle: кнопка справа от заголовка, description ниже
          ══════════════════════════════════════════════════════════════════════════ -->
-    <div class="row {{#unless ctaAfterTitle}}mb-5{{/unless}}">
-      <div class="col-12 {{#unless ctaAlign}}{{#unless ctaAfterTitle}}text-center{{/unless}}{{/unless}}">
+    {{#if ctaAfterTitle}}
+    <!-- Строка: заголовок слева, CTA справа -->
+    <div class="row mb-3 align-items-center">
+      <div class="col-md-8">
         <h2 class="text-h2">
           {{#if centeredTitleHighlight}}
           <span style="color: {{centeredTitleColor}};">{{centeredTitle}}</span>
@@ -21,15 +24,7 @@
           {{/if}}
         </h2>
       </div>
-    </div>
-
-    {{#if ctaAfterTitle}}
-    <!-- Строка: описание слева, CTA справа -->
-    <div class="row mb-4 align-items-center">
-      <div class="col-md-6">
-        <span class="text-bold-big">{{{description}}}</span>
-      </div>
-      <div class="col-md-6 text-end">
+      <div class="col-md-4 text-end">
         {{#if cta.isButton}}
         <a href="{{cta.link}}" class="btn btn-primary-custom">
           {{cta.text}}
@@ -40,6 +35,25 @@
           {{#if cta.showArrow}}<span class="ms-2">→</span>{{/if}}
         </a>
         {{/if}}
+      </div>
+    </div>
+    <!-- Description ниже -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <span class="text-bold-big">{{{description}}}</span>
+      </div>
+    </div>
+    {{else}}
+    <div class="row mb-5">
+      <div class="col-12 {{#unless ctaAlign}}text-center{{/unless}}">
+        <h2 class="text-h2">
+          {{#if centeredTitleHighlight}}
+          <span style="color: {{centeredTitleColor}};">{{centeredTitle}}</span>
+          <span style="color: {{centeredTitleHighlightColor}};">{{centeredTitleHighlight}}</span>
+          {{else}}
+          {{centeredTitle}}
+          {{/if}}
+        </h2>
       </div>
     </div>
     {{/if}}

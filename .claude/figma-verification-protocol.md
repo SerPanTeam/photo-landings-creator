@@ -233,16 +233,18 @@ curl -o assets/icons/icon-name.png "http://localhost:3845/assets/xxx.png"
 
 ## 8. НАЙДЕННЫЕ И ИСПРАВЛЕННЫЕ ОШИБКИ
 
-### 2024-01-09: Features секция - ctaAfterTitle
+### 2026-01-09: Features секция - ctaAfterTitle (v2)
 
-**Проблема:** Кнопка и подзаголовок были вертикально, а в Figma - горизонтально в одной строке.
+**Проблема:** Кнопка была под заголовком, а в Figma - справа от заголовка на одной строке.
 
 **Figma координаты:**
-- Title: y=2984, x=102 (left)
-- Button: y=3046, x=1018 (right)
-- Subtitle: y=3175, x=102 (left)
+- Title: y=2984, x=102 (left), height=166px → до y=3150
+- Button: y=3046, x=1018 (right) ← **внутри высоты заголовка!**
+- Description: y=3175, x=102 (left) ← ниже
 
-**Решение:** Добавлена опция `ctaAfterTitle: true`:
+**Ключевое наблюдение:** Кнопка (y=3046) находится ВНУТРИ вертикального диапазона заголовка (2984-3150), значит они на одной строке!
+
+**Решение:** Опция `ctaAfterTitle: true` - кнопка РЯДОМ с заголовком:
 ```json
 {
   "type": "features",
@@ -257,8 +259,14 @@ curl -o assets/icons/icon-name.png "http://localhost:3845/assets/xxx.png"
 
 **Результат:**
 ```
-[centeredTitle - слева]
-[description - col-6 слева] [CTA - col-6 справа]
+[centeredTitle - col-md-8] [CTA - col-md-4 справа]
+[description - col-12]
+```
+
+**НЕ путать с:**
+```
+[centeredTitle - col-12]
+[description - col-6] [CTA - col-6]  ← НЕПРАВИЛЬНО!
 ```
 
 ---
