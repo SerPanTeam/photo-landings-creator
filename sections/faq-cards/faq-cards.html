@@ -1,10 +1,10 @@
 <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  FAQ CARDS - Секция "Частые вопросы" (карточки с аккордеоном)             ║
-     ║  Фон: backgroundColor | Изменить: style="background-color: #F5EDE0;"      ║
+     ║  Фон: через CSS класс {{bgClass}} (редактируется в css/base-styles.css)   ║
      ║  Карточки: белый фон, скруглённые углы, иконка +/-                        ║
      ║  layout: "2x2" - сетка 2 столбца                                          ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-<section class="faq-cards section-padding {{#ifEquals layout '2x2'}}faq-cards--grid{{/ifEquals}}" style="background-color: {{backgroundColor}};">
+<section class="faq-cards section-padding {{#ifEquals layout '2x2'}}faq-cards--grid{{/ifEquals}} {{bgClass}}">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12">

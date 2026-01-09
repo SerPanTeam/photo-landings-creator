@@ -1,15 +1,15 @@
 <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  PROCESS - Секция с шагами/этапами процесса                               ║
-     ║  Фон карточек: backgroundColor | Фон заголовка: titleBackgroundColor      ║
+     ║  Фон: через CSS класс {{bgClass}} (редактируется в css/base-styles.css)   ║
      ║  Варианты layout: horizontal (4 в ряд), vertical (2x2 сетка)              ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
 
-{{#if titleBackgroundColor}}
+{{#if titleBgClass}}
 <!-- ══════════════════════════════════════════════════════════════════════════
      ЗАГОЛОВОК НА ОТДЕЛЬНОМ ФОНЕ
-     Используется когда titleBackgroundColor отличается от backgroundColor
+     Используется когда titleBgClass отличается от bgClass
      ══════════════════════════════════════════════════════════════════════════ -->
-<div class="process-title-wrapper section-padding pb-0" style="background-color: {{titleBackgroundColor}};">
+<div class="process-title-wrapper section-padding pb-0 {{titleBgClass}}">
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
@@ -20,7 +20,7 @@
 </div>
 {{/if}}
 
-<section class="process {{#unless titleBackgroundColor}}section-padding{{/unless}} {{#if layout}}process-{{layout}}{{/if}}" style="background-color: {{backgroundColor}}; {{#if titleBackgroundColor}}padding-top: 60px;{{/if}}">
+<section class="process {{#unless titleBgClass}}section-padding{{/unless}} {{#if layout}}process-{{layout}}{{/if}} {{bgClass}}" {{#if titleBgClass}}style="padding-top: 60px;"{{/if}}>
   <div class="container">
 
     <!-- ЗАГОЛОВОК СЕКЦИИ (когда нет отдельного фона для заголовка) -->

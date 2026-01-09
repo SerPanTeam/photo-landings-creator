@@ -1,9 +1,9 @@
 <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  PROMOTIONAL - Промо-секция с изображением слева и текстом справа         ║
-     ║  Фон: изменить style="background-color: ..."                              ║
+     ║  Фон: через CSS класс {{bgClass}} (редактируется в css/base-styles.css)   ║
      ║  centered: true - режим без изображения, центрированный текст             ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-<section class="promotional section-padding {{#if centered}}promotional--centered{{/if}}" style="background-color: {{backgroundColor}};">
+<section class="promotional section-padding {{#if centered}}promotional--centered{{/if}} {{bgClass}}">
   <div class="container">
     {{#if centered}}
     <!-- ════════════════════════════════════════════════════════════════════════

@@ -47,6 +47,20 @@ CSS переменные (Design Tokens):
 }
 ```
 
+### Фоновые классы (для секций)
+
+Секции используют CSS классы вместо inline-стилей:
+
+| Класс | CSS переменная | Цвет по умолчанию |
+|-------|----------------|-------------------|
+| `.bg-brand-primary` | `var(--brand-primary)` | #F5EDE0 |
+| `.bg-brand-secondary` | `var(--brand-secondary)` | #EEE3D0 |
+| `.bg-brand-accent` | `var(--brand-accent)` | #E2C08D |
+| `.bg-brand-white` | `var(--color-white)` | #FFFFFF |
+| `.bg-brand-dark` | `var(--brand-dark)` | #171717 |
+
+**Для изменения цветов** — редактируйте `:root` в `base-styles.css`.
+
 ### common.css
 
 Переиспользуемые классы:

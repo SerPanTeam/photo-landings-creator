@@ -1,6 +1,6 @@
 <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  GALLERY - Галерея изображений (Swiper.js слайдер)                        ║
-     ║  Фон: backgroundColor | Изменить: style="background-color: #F5EDE0;"      ║
+     ║  Фон: через CSS класс {{bgClass}} (редактируется в css/base-styles.css)   ║
      ║  Стрелки: showArrows: true/false                                          ║
      ║  Пагинация: showPagination: true/false                                    ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
@@ -8,7 +8,7 @@
 <!-- Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-<section class="gallery section-padding {{#if singleImage}}gallery--single{{/if}}" style="background-color: {{backgroundColor}};" aria-label="Fotogalerie">
+<section class="gallery section-padding {{#if singleImage}}gallery--single{{/if}} {{bgClass}}" aria-label="Fotogalerie">
   <div class="container">
 
     <!-- ══════════════════════════════════════════════════════════════════════════

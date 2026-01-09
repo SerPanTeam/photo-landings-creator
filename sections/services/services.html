@@ -1,9 +1,9 @@
 <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  SERVICES - Секция с услугами (карточки с изображениями)                  ║
-     ║  Фон: backgroundColor | Изменить: style="background-color: #EEE3D0;"      ║
+     ║  Фон: через CSS класс {{bgClass}} (редактируется в css/base-styles.css)   ║
      ║  Варианты layout: flat (центрированный), grid (сетка)                     ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-<section class="services section-padding {{#if layout}}services-{{layout}}{{/if}}" style="background-color: {{backgroundColor}};">
+<section class="services section-padding {{#if layout}}services-{{layout}}{{/if}} {{bgClass}}">
   <div class="container">
 
     <!-- ══════════════════════════════════════════════════════════════════════════

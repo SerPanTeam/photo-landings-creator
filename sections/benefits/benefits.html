@@ -1,9 +1,9 @@
 <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  BENEFITS - Секция с преимуществами (карточки с иконками)                 ║
-     ║  Фон: backgroundColor | Изменить: style="background-color: #EEE3D0;"      ║
+     ║  Фон: через CSS класс {{bgClass}} (редактируется в css/base-styles.css)   ║
      ║  Варианты layout: 3col (3 колонки), 4col (4 колонки), 2x2 (сетка 2x2)     ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-<section class="benefits section-padding {{#if layout}}benefits-{{layout}}{{/if}}" style="background-color: {{backgroundColor}};">
+<section class="benefits section-padding {{#if layout}}benefits-{{layout}}{{/if}} {{bgClass}}">
   <div class="container">
 
     {{#if title}}

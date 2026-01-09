@@ -29,6 +29,9 @@
   },
   "backgrounds": {
     "hero": "primary",
+    "hero-dark": "primary",
+    "hero-centered": "primary",
+    "hero-fullwidth": "primary",
     "promotional": "secondary",
     "benefits": "primary",
     "gallery": "primary",

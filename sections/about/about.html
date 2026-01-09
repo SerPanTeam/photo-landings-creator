@@ -1,9 +1,9 @@
 <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  ABOUT - Секция "О нас" / "О фотографе"                                   ║
-     ║  Фон: backgroundColor | Изменить: style="background-color: #F5EDE0;"      ║
+     ║  Фон: через CSS класс {{bgClass}} (редактируется в css/base-styles.css)   ║
      ║  Фото слева/справа: photoPosition: "left" или "right"                     ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-<section class="about section-padding" style="background-color: {{backgroundColor}};">
+<section class="about section-padding {{bgClass}}">
   <div class="container">
     <div class="row align-items-center {{#ifEquals photoPosition 'right'}}flex-row-reverse{{/ifEquals}}">
 

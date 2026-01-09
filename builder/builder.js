@@ -377,11 +377,23 @@ class LandingBuilder {
 
     const themeVars = {};
 
-    // Apply background color from theme if not specified in content
-    if (!sectionContent.backgroundColor) {
-      const defaultBg = this.getDefaultBackground(sectionType);
-      if (defaultBg) {
-        themeVars.backgroundColor = defaultBg;
+    // Get background key from theme (e.g., "primary", "secondary", "white")
+    const bgKey = this.theme.backgrounds?.[sectionType];
+
+    // Set bgClass for CSS variable-based backgrounds
+    if (bgKey) {
+      themeVars.bgClass = `bg-brand-${bgKey}`;
+    } else {
+      // Default to primary if no mapping
+      themeVars.bgClass = 'bg-brand-primary';
+    }
+
+    // Handle special case: process section with separate title background
+    if (sectionType === 'process' && sectionContent.titleBackgroundColor) {
+      // Map titleBackgroundColor to titleBgClass
+      const titleBgKey = this.mapColorToKey(sectionContent.titleBackgroundColor);
+      if (titleBgKey) {
+        themeVars.titleBgClass = `bg-brand-${titleBgKey}`;
       }
     }
 
@@ -393,6 +405,19 @@ class LandingBuilder {
     }
 
     return themeVars;
+  }
+
+  // Map a hex color back to theme key
+  mapColorToKey(hexColor) {
+    if (!this.theme?.colors || !hexColor) return null;
+
+    const normalizedHex = hexColor.toUpperCase();
+    for (const [key, value] of Object.entries(this.theme.colors)) {
+      if (value.toUpperCase() === normalizedHex) {
+        return key;
+      }
+    }
+    return null;
   }
 
   // Build sections for a single page

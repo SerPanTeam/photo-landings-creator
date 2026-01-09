@@ -1,8 +1,8 @@
 <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  FEATURES - Секция с описанием и изображениями                            ║
-     ║  Фон: backgroundColor | Изменить: style="background-color: #F5EDE0;"      ║
+     ║  Фон: через CSS класс {{bgClass}} (редактируется в css/base-styles.css)   ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-<section class="features section-padding {{#if layout}}features-{{layout}}{{/if}}" style="background-color: {{backgroundColor}};">
+<section class="features section-padding {{#if layout}}features-{{layout}}{{/if}} {{bgClass}}">
   <div class="container">
 
     {{#if centeredTitle}}
