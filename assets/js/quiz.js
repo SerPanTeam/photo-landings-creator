@@ -3,6 +3,9 @@
  * QUIZ.JS - Логика квиза с localStorage и Google Sheets
  * ============================================================================
  *
+ * Общий модуль для всех лендингов с quiz-воронкой.
+ * Автоматически копируется builder.js при наличии quiz-страниц.
+ *
  * Функции:
  * - Сохранение ответов в localStorage
  * - Отправка данных на Google Sheets через Apps Script
@@ -17,12 +20,26 @@ const QUIZ_CONFIG = {
   // Google Apps Script Web App URL (заменить на реальный после настройки)
   googleScriptUrl: 'YOUR_GOOGLE_SCRIPT_URL_HERE',
 
-  // Ключ для localStorage
-  storageKey: 'family_quiz_data',
+  // Ключ для localStorage (будет переопределён из data-атрибута)
+  storageKey: 'quiz_data',
 
   // Страница успеха
   successPage: 'thank-you.html'
 };
+
+// Переопределение конфига из data-атрибутов на body
+(function initConfig() {
+  const body = document.body;
+  if (body.dataset.quizStorageKey) {
+    QUIZ_CONFIG.storageKey = body.dataset.quizStorageKey;
+  }
+  if (body.dataset.quizGoogleScript) {
+    QUIZ_CONFIG.googleScriptUrl = body.dataset.quizGoogleScript;
+  }
+  if (body.dataset.quizSuccessPage) {
+    QUIZ_CONFIG.successPage = body.dataset.quizSuccessPage;
+  }
+})();
 
 // ============================================================================
 // QUIZ DATA MANAGEMENT
