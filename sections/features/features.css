@@ -140,6 +140,22 @@
   .features-image:nth-child(2) {
     top: 100px;
   }
+
+  /* ctaAfterTitle: кнопка под заголовком на мобильных */
+  .features .row.align-items-center > .col-md-4.text-end {
+    text-align: center !important;
+    margin-top: 15px;
+  }
+
+  .features .row.align-items-center > .col-md-8 .text-h2 {
+    text-align: center;
+  }
+
+  /* Кнопка на всю ширину на мобильных */
+  .features .btn-primary-custom {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 576px) {

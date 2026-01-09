@@ -26,11 +26,11 @@
   max-width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: 35px;
+  border-radius: 35px; /* default, override with imageBorderRadius: 0 in config */
 }
 
 .benefit-icon .img-placeholder {
-  border-radius: 35px;
+  border-radius: 35px; /* default, override with imageBorderRadius: 0 in config */
 }
 
 /* For large images - remove flex centering constraints */
@@ -93,9 +93,16 @@
   }
 
   .benefit-icon {
-    width: 80px;
-    height: 80px;
+    width: 80px !important;
+    height: 80px !important;
+    min-width: 80px;
     margin-bottom: 0;
+  }
+
+  .benefit-icon img {
+    width: 80px !important;
+    height: 80px !important;
+    object-fit: cover;
   }
 
   .benefit-icon .img-placeholder {
@@ -106,8 +113,14 @@
 
 @media (max-width: 576px) {
   .benefit-icon {
-    width: 70px;
-    height: 70px;
+    width: 70px !important;
+    height: 70px !important;
+    min-width: 70px;
+  }
+
+  .benefit-icon img {
+    width: 70px !important;
+    height: 70px !important;
   }
 
   .benefit-icon .img-placeholder {

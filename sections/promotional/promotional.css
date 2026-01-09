@@ -52,4 +52,10 @@
   .promotional-image .img-placeholder {
     max-width: 280px;
   }
+
+  /* Кнопка на всю ширину на мобильных */
+  .promotional .btn-primary-custom {
+    width: 100%;
+    max-width: 100%;
+  }
 }
