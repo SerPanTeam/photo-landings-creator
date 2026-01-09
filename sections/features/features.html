@@ -24,9 +24,12 @@
     </div>
 
     {{#if ctaAfterTitle}}
-    <!-- CTA сразу после заголовка (справа) -->
-    <div class="row mb-4">
-      <div class="col-12 text-end">
+    <!-- Строка: описание слева, CTA справа -->
+    <div class="row mb-4 align-items-center">
+      <div class="col-md-6">
+        <span class="text-bold-big">{{{description}}}</span>
+      </div>
+      <div class="col-md-6 text-end">
         {{#if cta.isButton}}
         <a href="{{cta.link}}" class="btn btn-primary-custom">
           {{cta.text}}
@@ -68,9 +71,11 @@
 
           <!-- ОПИСАНИЕ - основной текст секции -->
           <!-- Поддерживает HTML: <p>, <br>, <strong>, <em> -->
+          {{#unless ctaAfterTitle}}
           <div class="text-medium-small mb-4" style="max-width: 520px;">
             {{{description}}}
           </div>
+          {{/unless}}
 
           <!-- СПИСОК - пункты с буллетами (опционально) -->
           {{#if bulletPoints}}
