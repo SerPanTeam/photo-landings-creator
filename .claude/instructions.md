@@ -460,150 +460,17 @@ Store Figma references in `landings/<name>/FIGMA.md`:
 | quiz-1.html | 137-51 |
 ```
 
-## CRITICAL: Figma Comparison Checklist
+## CRITICAL: Figma Verification Protocol
 
-**ALWAYS verify these when comparing with Figma:**
+**Полный протокол проверки:** `.claude/figma-verification-protocol.md`
 
-### 1. Element Positions (MUST CHECK)
-- [ ] **top/left/right/bottom values** - Extract exact pixel values from `get_design_context`
-- [ ] **Image overlap direction** - Which image is in front? From which side?
-- [ ] **Z-index order** - Verify stacking order matches Figma
-
-### 2. Element Sizes (MUST CHECK)
-- [ ] **Button dimensions** - Both WIDTH and HEIGHT (not just height!)
-- [ ] **Image dimensions** - Exact width/height in pixels
-- [ ] **Container min-height** - Section minimum heights
-
-### 3. Spacing (MUST CHECK)
-- [ ] **Padding** - Top, right, bottom, left
-- [ ] **Margins** - Between elements
-- [ ] **Gap** - Between flex/grid items
-
-### 4. Common Mistakes to Avoid
-| Mistake | How to Fix |
-|---------|------------|
-| Only checking height, not width | Always verify BOTH dimensions |
-| Assuming image positions | Extract `top`, `left` from Figma code |
-| Wrong overlap direction | Check which element has higher z-index AND position |
-| Missing section elements | Count ALL elements in Figma vs implementation |
-| Wrong field name in config | Check template uses `{{fieldName}}` - match EXACTLY |
-| `subtitle` vs `description` | Hero uses `description`, NOT `subtitle` |
-| Missing subtitle in features | Features supports `subtitle` for italic text under title |
-| `slogan` vs `tagline` | Features supports both, prefer `tagline` + `taglineColor` |
-| Quiz buttons different widths | Use `width: 300px` + `max-width: 300px`, NOT `min-width` |
-| Using `min-width` for buttons | `min-width` allows expansion → use fixed `width` instead |
-| Wrong icon style | Compare SVG visually with Figma - icons8 style differs from generic |
-| Custom SVG instead of Figma asset | DOWNLOAD icons from Figma, don't create manually |
-| Missing text element | Count ALL text blocks in Figma - verify each renders |
-| **Line divider wrong position** | Check WHERE the line is in Figma - between which elements? |
-| Line between texts, not before CTA | Use `description` + `description2` fields for split content |
-| **Quiz buttons fully rounded** | Quiz buttons have ONLY bottom corners rounded (`0 0 30px 30px`) |
-| **Form inputs rounded** | Form inputs are SQUARE (no border-radius), NOT rounded! |
-| **Quiz card with gap** | Quiz image+button must have NO gap between them |
-| **Wrong image border-radius** | Check Figma: quiz-sidebar=40px, hero/gallery=50px, benefits=35px, services=25px |
-
-### 5. Verification Process
-```
-1. Call get_design_context({ nodeId: "X-X" })
-2. Call get_screenshot({ nodeId: "X-X" })
-3. Extract ALL position values (top, left, right, bottom)
-4. Extract ALL size values (width, height, min-width, min-height)
-5. Compare with CSS in sections/<name>/<name>.css
-6. COUNT all text elements - verify each has matching field in config
-7. CHECK icons - if Figma uses images, download them (don't create SVGs)
-8. CHECK line dividers - WHERE exactly is each line? Between which elements?
-9. Fix discrepancies BEFORE marking as verified
-```
-
-### 5a. Line Dividers - CRITICAL
-Check the EXACT position of line dividers in Figma:
-| Section | Line Position |
-|---------|---------------|
-| promotional | BETWEEN description and description2 (use both fields!) |
-| features | After description, BEFORE CTA link |
-| about | After name/title, BEFORE bio |
-| benefits | Under each card title (built into template) |
-
-**Common mistake**: Assuming line is always before CTA. CHECK in Figma!
-
-### 6. Icons - CRITICAL
-```bash
-# Download icons from Figma MCP (localhost URLs)
-curl -o assets/icons/icon-name.svg "http://localhost:3845/assets/xxx.svg"
-curl -o assets/icons/icon-name.png "http://localhost:3845/assets/xxx.png"
-```
-- Icons stored in: `assets/icons/`
-- Builder copies to: `projects/<landing>/assets/icons/`
-- Template uses: `<img src="assets/icons/icon-name.svg">`
-- **NEVER create icons manually** - always download from Figma!
-
-### 7. Hero Section Specific Rules
-```css
-/* Image 1 (larger, back): */
-top: 80px;      /* NOT 0px! */
-right: 0;
-width: 428px;
-height: 394px;
-z-index: 1;
-
-/* Image 2 (smaller, front, overlaps from bottom-left): */
-top: 258px;     /* NOT 178px! */
-right: 230px;   /* Overlaps from LEFT side */
-width: 306px;
-height: 290px;
-z-index: 2;
-
-/* Button: */
-min-width: 286px;  /* MUST have explicit width */
-min-height: 70px;
-```
-
-### 8. Button Size Reference
-| Context | Width | Height |
-|---------|-------|--------|
-| Hero CTA | 286px | 70px |
-| Quiz option | **300px fixed** | 66px (or 92px multiline) |
-| Outline button | auto | 60px |
-
-### 8a. Border-Radius Reference (CRITICAL!)
-| Element | Figma | CSS Value |
-|---------|-------|-----------|
-| **CTA Buttons (hero, process, services)** | **30px** | `border-radius: 30px` |
-| **Quiz option buttons** | **bottom only** | `border-radius: 0 0 30px 30px` |
-| **Quiz option images** | **top only** | `border-radius: 30px 30px 0 0` |
-| **Form inputs** | **0 (square!)** | `border-radius: 0` |
-| **Quiz/Thank-you sidebar image** | **40px** | `border-radius: 40px` |
-| Hero image | 50px | `border-radius: 50px` |
-| Gallery images | 50px | `border-radius: 50px` |
-| Benefits images | 35px | `border-radius: 35px` |
-| Process cards | 20px | `border-radius: 20px` |
-| Services images | 25px | `border-radius: 25px` |
-| FAQ cards | 30px | `border-radius: 30px` |
-| Fullwidth main image | 50px | `border-radius: 50px` |
-| About photo | 30px | `border-radius: 30px` |
-
-**CRITICAL mistakes to avoid:**
-- Quiz buttons: NOT fully rounded! Only BOTTOM corners (`0 0 30px 30px`)
-- Quiz images: Only TOP corners rounded (`30px 30px 0 0`)
-- Form inputs: SQUARE, no border-radius!
-- Quiz card: NO gap between image and button (they connect)
-
-### 9. Quiz Buttons - CRITICAL
-```css
-/* ALL quiz buttons MUST have SAME fixed width */
-.quiz-question__option {
-  flex: 0 0 300px;
-  width: 300px;
-  max-width: 300px;  /* Prevent expansion! */
-  height: 66px;
-}
-
-/* Multiline buttons: same width, taller height */
-.quiz-question__option--multiline {
-  height: 92px;
-}
-```
-**Common mistake**: Using `min-width` allows buttons to expand with content → uneven widths!
+Протокол содержит:
+- Алгоритм проверки (5 шагов)
+- Правила позиционирования (X/Y координаты → Bootstrap rows)
+- Размеры элементов и border-radius
+- Чек-листы по каждой секции
+- Таблицу частых ошибок
+- Документацию исправленных багов
 
 ## Common Patterns
 
