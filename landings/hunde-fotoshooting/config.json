@@ -117,7 +117,7 @@
             "centeredTitleHighlight": "kostenloses Hunde-Fotoshooting.",
             "centeredTitleHighlightColor": "#000000",
             "description": "<span class=\"text-bold-big\">Dauer bis zum Gutschein: ≈ 30 Sekunden</span>",
-            "ctaAlign": "right",
+            "ctaAfterTitle": true,
             "cta": {
               "text": "Jetzt Gutschein sichern",
               "link": "quiz-1.html",

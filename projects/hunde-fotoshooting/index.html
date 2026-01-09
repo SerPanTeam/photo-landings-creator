@@ -314,7 +314,7 @@
          ЦЕНТРИРОВАННЫЙ ЗАГОЛОВОК - отображается над основным контентом
          Поддерживает centeredTitleHighlight для выделения части заголовка другим цветом
          ══════════════════════════════════════════════════════════════════════════ -->
-    <div class="row mb-5">
+    <div class="row ">
       <div class="col-12 ">
         <h2 class="text-h2">
           <span style="color: #3D3D3D;">Sichert euch jetzt einen Gutschein für ein</span>
@@ -323,13 +323,23 @@
       </div>
     </div>
 
+    <!-- CTA сразу после заголовка (справа) -->
+    <div class="row mb-4">
+      <div class="col-12 text-end">
+        <a href="quiz-1.html" class="btn btn-primary-custom">
+          Jetzt Gutschein sichern
+        </a>
+      </div>
+    </div>
+
+
     <div class="row align-items-center  justify-content-center">
 
       <!-- ════════════════════════════════════════════════════════════════════════
            ЛЕВАЯ КОЛОНКА - Текстовый контент
            ════════════════════════════════════════════════════════════════════════ -->
       <div class="col-lg-12 col-md-12 mb-4 mb-lg-0">
-        <div class="features-content text-center" style="max-width: 800px; margin: 0 auto;">
+        <div class="features-content " style="max-width: 800px; margin: 0 auto;">
 
 
 
@@ -347,11 +357,7 @@
           <!-- Изменить текст: между > и </a> -->
           <!-- Изменить ссылку: href="..." -->
           <!-- ctaAlign: left, right, center (default: left) -->
-          <div class="features-cta mb-4 text-end ">
-            <a href="quiz-1.html" class="btn btn-primary-custom">
-              Jetzt Gutschein sichern
-            </a>
-          </div>
+          <!-- ctaAfterTitle: true - кнопка выводится после заголовка, не здесь -->
 
         </div>
       </div>
