@@ -129,7 +129,58 @@ class LandingBuilder {
     }
 
     this.config = this.loadConfig();
+    this.theme = this.loadTheme();
     this.outputDir = path.join(this.rootDir, 'projects', this.landingName);
+  }
+
+  // Load theme configuration
+  loadTheme() {
+    const themeName = this.config.theme || 'default';
+    const themePath = path.join(this.rootDir, 'assets', 'themes', `${themeName}.json`);
+
+    if (!fs.existsSync(themePath)) {
+      console.warn(`⚠ Theme "${themeName}" not found, using inline colors`);
+      return null;
+    }
+
+    try {
+      const themeContent = fs.readFileSync(themePath, 'utf8');
+      const theme = JSON.parse(themeContent);
+      console.log(`🎨 Using theme: ${theme.name || themeName}`);
+      return theme;
+    } catch (error) {
+      console.warn(`⚠ Failed to load theme: ${error.message}`);
+      return null;
+    }
+  }
+
+  // Resolve color from theme (e.g., "primary" -> "#F5EDE0")
+  resolveThemeColor(colorKey) {
+    if (!this.theme || !this.theme.colors) return null;
+
+    // Direct color key
+    if (this.theme.colors[colorKey]) {
+      return this.theme.colors[colorKey];
+    }
+
+    // Already a hex color
+    if (colorKey && colorKey.startsWith('#')) {
+      return colorKey;
+    }
+
+    return null;
+  }
+
+  // Get default background color for a section type from theme
+  getDefaultBackground(sectionType) {
+    if (!this.theme || !this.theme.backgrounds) return null;
+
+    const bgKey = this.theme.backgrounds[sectionType];
+    if (bgKey) {
+      return this.resolveThemeColor(bgKey);
+    }
+
+    return null;
   }
 
   // SECURITY: Prevent path traversal attacks
@@ -307,14 +358,41 @@ class LandingBuilder {
       defaultVars = JSON.parse(fs.readFileSync(defaultVarsPath, 'utf8'));
     }
 
-    // Merge with content from config
-    const variables = { ...defaultVars, ...sectionContent };
+    // Apply theme colors if available
+    const themeVars = this.applyThemeToSection(sectionType, sectionContent);
+
+    // Merge: defaults < theme < config (config overrides everything)
+    const variables = { ...defaultVars, ...themeVars, ...sectionContent };
 
     // Load and compile template
     const templateSource = fs.readFileSync(templatePath, 'utf8');
     const template = Handlebars.compile(templateSource);
 
     return template(variables);
+  }
+
+  // Apply theme colors to section variables
+  applyThemeToSection(sectionType, sectionContent) {
+    if (!this.theme) return {};
+
+    const themeVars = {};
+
+    // Apply background color from theme if not specified in content
+    if (!sectionContent.backgroundColor) {
+      const defaultBg = this.getDefaultBackground(sectionType);
+      if (defaultBg) {
+        themeVars.backgroundColor = defaultBg;
+      }
+    }
+
+    // Apply accent color for CTA buttons, highlights, etc.
+    if (this.theme.colors) {
+      themeVars.accentColor = this.theme.colors.accent;
+      themeVars.textColor = themeVars.textColor || this.theme.colors.text;
+      themeVars.placeholderColor = this.theme.colors.placeholder;
+    }
+
+    return themeVars;
   }
 
   // Build sections for a single page

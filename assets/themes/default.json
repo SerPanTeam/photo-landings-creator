@@ -1,0 +1,51 @@
+{
+  "name": "Default Photography Theme",
+  "description": "Warm, elegant theme for photography landing pages",
+  "colors": {
+    "primary": "#F5EDE0",
+    "secondary": "#EEE3D0",
+    "accent": "#E2C08D",
+    "text": "#3D3D3D",
+    "textDark": "#000000",
+    "white": "#FFFFFF",
+    "placeholder": "#7F7F7F"
+  },
+  "typography": {
+    "fontFamily": "'Inter', sans-serif",
+    "h1": "55px",
+    "h2": "45px",
+    "h3": "35px",
+    "h4": "28px",
+    "body": "22px"
+  },
+  "spacing": {
+    "section": "80px",
+    "sectionMobile": "40px"
+  },
+  "borders": {
+    "radiusButton": "30px",
+    "radiusCard": "20px",
+    "radiusImage": "40px"
+  },
+  "backgrounds": {
+    "hero": "primary",
+    "promotional": "secondary",
+    "benefits": "primary",
+    "gallery": "primary",
+    "features": "primary",
+    "process": "secondary",
+    "faq": "primary",
+    "faq-cards": "primary",
+    "services": "secondary",
+    "about": "primary",
+    "testimonials": "secondary",
+    "footer": "white",
+    "legal-footer": "primary",
+    "quiz-header": "primary",
+    "quiz-question": "primary",
+    "quiz-form": "primary",
+    "thank-you-hero": "primary",
+    "author-footer": "secondary",
+    "fullwidth-image": "secondary"
+  }
+}

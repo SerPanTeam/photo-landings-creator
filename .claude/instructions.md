@@ -612,3 +612,18 @@ quiz-form.html → thank-you.html
 7. **ALWAYS run `get_design_context` AND `get_screenshot`** before verifying Figma match
 8. **Extract EXACT pixel values** from Figma code - never assume positions
 9. **Check BOTH width AND height** for all buttons and images
+
+## Git Commits
+
+**NEVER include in commit messages:**
+- `Generated with [Claude Code]` or similar
+- `Co-Authored-By: Claude` or any AI attribution
+- Links to claude.com
+
+**Use clean, conventional commit format:**
+```
+feat: Add feature description
+fix: Fix bug description
+refactor: Refactor description
+docs: Documentation update
+```
