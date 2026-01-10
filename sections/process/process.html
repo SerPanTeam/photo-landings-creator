@@ -67,13 +67,12 @@
 
           <div class="process-step-header mb-3">
             {{#unlessEquals ../layout 'horizontal'}}
-            <!-- ИКОНКА ШАГА - изменить src="..." для замены -->
+            <!-- ИКОНКА ШАГА - галочка SVG -->
             <div class="process-icon">
-              {{#if this.icon}}
-              <img src="{{this.icon}}" alt="{{this.title}}" style="width: 76px; height: 75px;">
-              {{else}}
-              <div class="img-placeholder" style="width: 76px; height: 75px; background-color: #7f7f7f;"></div>
-              {{/if}}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+                <circle cx="16" cy="16" r="15" stroke="#3D3D3D" stroke-width="2" fill="transparent"/>
+                <path d="M10 16L14 20L22 12" stroke="#3D3D3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </svg>
             </div>
             {{/unlessEquals}}
 
