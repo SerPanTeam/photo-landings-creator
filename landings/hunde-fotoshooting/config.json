@@ -657,7 +657,7 @@
         {
           "type": "footer",
           "content": {
-            "backgroundColor": "#FFFFFF",
+            "backgroundColor": "#F5EDE0",
             "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41433.67774467847!2d10.5478!3d49.3009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a2f1f9f6cf06cd%3A0x41d25a40937aab0!2sAnsbach!5e0!3m2!1sde!2sde",
             "height": "399"
           }
@@ -665,7 +665,7 @@
         {
           "type": "legal-footer",
           "content": {
-            "backgroundColor": "#FFFFFF",
+            "backgroundColor": "#F5EDE0",
             "links": [
               {
                 "text": "Impressum",
@@ -755,6 +755,7 @@
         {
           "type": "footer",
           "content": {
+            "backgroundColor": "#F5EDE0",
             "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41433.67774467847!2d10.5478!3d49.3009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a2f1f9f6cf06cd%3A0x41d25a40937aab0!2sAnsbach!5e0!3m2!1sde!2sde",
             "height": "450"
           }
@@ -762,7 +763,7 @@
         {
           "type": "legal-footer",
           "content": {
-            "backgroundColor": "#EEE3D0",
+            "backgroundColor": "#F5EDE0",
             "links": [
               {
                 "text": "Impressum",
