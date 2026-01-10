@@ -10,19 +10,32 @@
 
 .process-step-header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: flex-start;
   gap: 15px;
 }
 
 .process-icon {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-shrink: 0;
+  width: 32px;
+  height: 32px;
 }
 
 .process-icon img,
+.process-icon svg,
 .process-icon .img-placeholder {
   display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Title takes remaining space */
+.process-step-header h3 {
+  flex: 1;
+  min-width: 0;
 }
 
 .process-divider {

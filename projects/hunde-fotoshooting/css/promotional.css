@@ -18,8 +18,30 @@
   max-width: 100%;
 }
 
+/* CTA link with border and animation */
+.promotional-cta a {
+  border: 2px solid #000000;
+  border-radius: 30px;
+  padding: 15px 30px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
 .promotional-cta a:hover {
-  opacity: 0.8;
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: translateX(5px);
+  border-color: var(--brand-accent);
+}
+
+/* Arrow animation on hover */
+.promotional-cta a span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.promotional-cta a:hover span {
+  transform: translateX(5px);
 }
 
 /* Responsive adjustments */

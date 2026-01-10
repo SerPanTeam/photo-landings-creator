@@ -8,8 +8,30 @@
   max-width: 100%;
 }
 
+/* CTA link with border and animation */
+.features-cta a {
+  border: 2px solid #000000;
+  border-radius: 30px;
+  padding: 15px 30px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
 .features-cta a:hover {
-  opacity: 0.8;
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: translateX(5px);
+  border-color: var(--brand-accent);
+}
+
+/* Arrow animation on hover */
+.features-cta a span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.features-cta a:hover span {
+  transform: translateX(5px);
 }
 
 .features-frame {
@@ -139,6 +161,22 @@
 
   .features-image:nth-child(2) {
     top: 100px;
+  }
+
+  /* ctaAfterTitle: кнопка под заголовком на мобильных */
+  .features .row.align-items-center > .col-md-4.text-end {
+    text-align: center !important;
+    margin-top: 15px;
+  }
+
+  .features .row.align-items-center > .col-md-8 .text-h2 {
+    text-align: center;
+  }
+
+  /* Кнопка на всю ширину на мобильных */
+  .features .btn-primary-custom {
+    width: 100%;
+    max-width: 100%;
   }
 }
 

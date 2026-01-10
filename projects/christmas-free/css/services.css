@@ -8,20 +8,25 @@
   padding: 20px 10px;
 }
 
-/* Cascade effect - each card shifts down */
-.services .row > div:nth-child(2) .service-card {
-  margin-top: 26px;
-}
-
-.services .row > div:nth-child(3) .service-card {
-  margin-top: 56px;
-}
-
-.services .row > div:nth-child(4) .service-card {
+/* Cascade effect - ascending order (1st lowest, 4th highest) */
+.services .row > div:nth-child(1) .service-card {
   margin-top: 86px;
 }
 
+.services .row > div:nth-child(2) .service-card {
+  margin-top: 56px;
+}
+
+.services .row > div:nth-child(3) .service-card {
+  margin-top: 26px;
+}
+
+.services .row > div:nth-child(4) .service-card {
+  margin-top: 0;
+}
+
 /* Flat layout - no cascade */
+.services-flat .row > div:nth-child(1) .service-card,
 .services-flat .row > div:nth-child(2) .service-card,
 .services-flat .row > div:nth-child(3) .service-card,
 .services-flat .row > div:nth-child(4) .service-card {
@@ -51,6 +56,7 @@
   }
 
   /* Reset cascade on tablet */
+  .services .row > div:nth-child(1) .service-card,
   .services .row > div:nth-child(2) .service-card,
   .services .row > div:nth-child(3) .service-card,
   .services .row > div:nth-child(4) .service-card {

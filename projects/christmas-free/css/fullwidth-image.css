@@ -82,37 +82,39 @@
 
 @media (max-width: 768px) {
   .fullwidth-image__img {
-    min-height: 300px;
+    min-height: 250px;
+    width: 100% !important;
     object-fit: cover;
   }
 
   .fullwidth-image--with-overlaps {
-    padding: 60px 0;
+    padding: 50px 0;
   }
 
   .fullwidth-image--with-overlaps .fullwidth-image__img,
   .fullwidth-image--with-overlaps .fullwidth-image__placeholder {
-    border-radius: 25px;
+    border-radius: 15px;
+    width: 100% !important;
   }
 
   .fullwidth-image__overlap--top-right {
-    top: -60px;
+    top: -40px;
     right: 5%;
   }
 
   .fullwidth-image__overlap--bottom-left {
-    bottom: -60px;
+    bottom: -40px;
     left: 5%;
   }
 
   .fullwidth-image__overlap {
-    width: 150px !important;
-    height: 100px !important;
+    width: 120px !important;
+    height: 80px !important;
   }
 
   .fullwidth-image__overlap img,
   .fullwidth-image__overlap-placeholder {
-    border-radius: 25px !important;
+    border-radius: 15px !important;
   }
 }
 

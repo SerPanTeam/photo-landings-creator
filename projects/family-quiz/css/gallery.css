@@ -143,7 +143,8 @@
   .gallery-item img,
   .gallery-item .img-placeholder {
     height: 280px !important;
-    border-radius: 25px !important;
+    width: 100% !important;
+    border-radius: 15px !important;
   }
 
   /* Hide arrows on mobile, use swipe */
@@ -155,8 +156,9 @@
   /* Single mode responsive */
   .gallery--single .gallery-item img,
   .gallery--single .gallery-item .img-placeholder {
-    height: 350px !important;
-    border-radius: 25px !important;
+    height: 300px !important;
+    width: 100% !important;
+    border-radius: 15px !important;
   }
 
   /* Show arrows in single mode on tablets */
@@ -169,8 +171,9 @@
 @media (max-width: 576px) {
   .gallery-item img,
   .gallery-item .img-placeholder {
-    height: 250px !important;
-    border-radius: 15px !important;
+    height: 220px !important;
+    width: 100% !important;
+    border-radius: 10px !important;
   }
 
   .gallery-swiper .swiper-pagination-bullet {
@@ -182,7 +185,8 @@
   .gallery--single .gallery-item img,
   .gallery--single .gallery-item .img-placeholder {
     height: 250px !important;
-    border-radius: 20px !important;
+    width: 100% !important;
+    border-radius: 10px !important;
   }
 
   /* Hide arrows on mobile for single mode too */
