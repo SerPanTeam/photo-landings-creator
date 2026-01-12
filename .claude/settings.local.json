@@ -7,7 +7,9 @@
       "mcp__figma__get_screenshot",
       "mcp__figma__get_metadata",
       "Bash(cat:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(node builder/screenshot.js:*)",
+      "Bash(node screenshot-last-sections.js:*)"
     ]
   }
 }
